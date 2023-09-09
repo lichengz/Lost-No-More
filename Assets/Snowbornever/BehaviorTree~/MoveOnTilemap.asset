@@ -1,0 +1,113 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d285eb63c2cdd74180de7cfceaa96ad, type: 3}
+  m_Name: MoveOnTilemap
+  m_EditorClassIdentifier: 
+  rootNode:
+    rid: 1030696688774021121
+  nodes:
+  - rid: 1030696688774021121
+  - rid: 1030696688774021122
+  - rid: 1030696688774021123
+  - rid: 1030696688774021124
+  - rid: 1030696688774021125
+  treeState: 0
+  blackboard:
+    keys:
+    - rid: 1030696688774021126
+  viewPosition: {x: 399.33334, y: -12.666667, z: 0}
+  viewScale: {x: 0.57175326, y: 0.57175326, z: 1}
+  references:
+    version: 2
+    RefIds:
+    - rid: 1030696688774021121
+      type: {class: RootNode, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: ddcbd572-b638-466d-9e0d-28392d976cbf
+        position: {x: 0, y: 0}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        child:
+          rid: 1030696688774021122
+    - rid: 1030696688774021122
+      type: {class: Repeat, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 0008436ce5434dc45b2f48d9a0cb42d1
+        position: {x: 0, y: 210}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        child:
+          rid: 1030696688774021123
+        restartOnSuccess: 1
+        restartOnFailure: 0
+        maxRepeats: 0
+    - rid: 1030696688774021123
+      type: {class: Sequencer, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 9abf65bd61b931a46bfa86bff8e67f4e
+        position: {x: 0, y: 450}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 1030696688774021124
+        - rid: 1030696688774021125
+    - rid: 1030696688774021124
+      type: {class: RandomPositionOnTileMap, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 0f53d0b8fcf1b2741994ca6963ccdd4f
+        position: {x: -277.7833, y: 688.7278}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        min: {x: -10, y: -10}
+        max: {x: 10, y: 10}
+        result:
+          reference:
+            rid: 1030696688774021126
+          defaultValue: {x: 0, y: 0}
+    - rid: 1030696688774021125
+      type: {class: MoveTowardsTileMap, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: ed7260ff0893afc42be5f13813289ab9
+        position: {x: 15, y: 690}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        targetPosition:
+          reference:
+            rid: 1030696688774021126
+          defaultValue: {x: 0, y: 0}
+    - rid: 1030696688774021126
+      type: {class: Vector2Key, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        name: Pos
+        typeName: UnityEngine.Vector2, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        value: {x: 0, y: 0}

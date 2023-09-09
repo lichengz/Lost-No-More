@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: MenuScenes
+  m_EditorClassIdentifier: 
+  m_GroupName: MenuScenes
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 28278d745c1dada479734fbac2a50b03
+  m_SerializeEntries:
+  - m_GUID: 6ebfc49736f1df34d83b32e16d44f901
+    m_Address: Assets/Snowbornever/Scenes/Menus/MainMenu.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: e0d4dd9d1fb2c27429b674d1383e2169, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 01f7631a7ee6474488aafcc3fd5b745d, type: 2}
+    - {fileID: 11400000, guid: b8b000caaad25d44aa7f15b5b7e1d20e, type: 2}

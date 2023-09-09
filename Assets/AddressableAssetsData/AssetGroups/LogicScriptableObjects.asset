@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: LogicScriptableObjects
+  m_EditorClassIdentifier: 
+  m_GroupName: LogicScriptableObjects
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 82b548f7fe1980b418c7eec08647a52b
+  m_SerializeEntries:
+  - m_GUID: cf5f6b342ebce404ab2f2d70d7b9edf0
+    m_Address: Assets/Snowbornever/ScriptableObjects/EventChannels
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f86c99c7648085741a0db8f8050776d8
+    m_Address: Assets/Snowbornever/ScriptableObjects/Input
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 350f007900383bb498b0b44aa6129b13
+    m_Address: Assets/Snowbornever/ScriptableObjects/RuntimeAnchors
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f78547c01850b0545bb7b094db4bef55
+    m_Address: Assets/Snowbornever/ScriptableObjects/StateMachine
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 86336cc370977d84daae031d45260986
+    m_Address: Assets/Snowbornever/ScriptableObjects/SaveSystem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 40023d77bd4bf4209924c5ed16d3e189
+    m_Address: Assets/Snowbornever/ScriptableObjects/Interactions
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1725275e153e64ce8b2f15db2076445c
+    m_Address: Assets/Snowbornever/ScriptableObjects/Gameplay
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e4428dec107cd4b3999c0c113b2813a4
+    m_Address: Assets/Snowbornever/ScriptableObjects/Paths
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: e0d4dd9d1fb2c27429b674d1383e2169, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 2b3848f805edc7a48aac3b3b4395a751, type: 2}
+    - {fileID: 11400000, guid: 3fc925ef26391f54094be6d397d9121e, type: 2}

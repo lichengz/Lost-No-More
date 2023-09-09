@@ -1,10 +1,11 @@
 ﻿using System;
+using TopDownCharacter2D.Controllers;
 using UnityEngine;
 
 /// <summary>
 /// <para>This component consumes input on the InputReader and stores its values. The input is then read, and manipulated, by the StateMachines's Actions.</para>
 /// </summary>
-public class Protagonist : MonoBehaviour
+public class Protagonist : TopDownCharacterController
 {
 	[SerializeField] private InputReader _inputReader = default;
 	[SerializeField] private TransformAnchor _gameplayCameraTransform = default;
@@ -15,7 +16,7 @@ public class Protagonist : MonoBehaviour
 	//These fields are read and manipulated by the StateMachine actions
 	[NonSerialized] public bool jumpInput;
 	[NonSerialized] public bool extraActionInput;
-	[NonSerialized] public bool attackInput;
+	public bool attackInput => IsAttacking;
 	[NonSerialized] public Vector2 movementInput; //Initial input coming from the Protagonist script
 	[NonSerialized] public Vector2 movementVector; //Final movement vector, manipulated by the StateMachine actions
 	[NonSerialized] public ControllerColliderHit lastHit;
@@ -39,6 +40,7 @@ public class Protagonist : MonoBehaviour
 		_inputReader.JumpEvent += OnJumpInitiated;
 		_inputReader.JumpCanceledEvent += OnJumpCanceled;
 		_inputReader.MoveEvent += OnMove;
+		_inputReader.LookEvent += OnLook;
 		_inputReader.StartedRunning += OnStartedRunning;
 		_inputReader.StoppedRunning += OnStoppedRunning;
 		_inputReader.AttackEvent += OnStartedAttack;
@@ -51,14 +53,21 @@ public class Protagonist : MonoBehaviour
 		_inputReader.JumpEvent -= OnJumpInitiated;
 		_inputReader.JumpCanceledEvent -= OnJumpCanceled;
 		_inputReader.MoveEvent -= OnMove;
+		_inputReader.LookEvent -= OnLook;
 		_inputReader.StartedRunning -= OnStartedRunning;
 		_inputReader.StoppedRunning -= OnStoppedRunning;
 		_inputReader.AttackEvent -= OnStartedAttack;
 		//...
 	}
 
+	private void Awake()
+	{
+		base.Awake();
+	}
+
 	private void Update()
 	{
+		base.Update();
 		RecalculateMovement();
 	}
 
@@ -120,7 +129,7 @@ public class Protagonist : MonoBehaviour
 
 	private void OnJumpInitiated()
 	{
-		jumpInput = true;
+		// jumpInput = true;
 	}
 
 	private void OnJumpCanceled()
@@ -133,8 +142,13 @@ public class Protagonist : MonoBehaviour
 	private void OnStartedRunning() => isRunning = true;
 
 
-	private void OnStartedAttack() => attackInput = true;
+	private void OnStartedAttack() => IsAttacking = true;
 
 	// Triggered from Animation Event
-	public void ConsumeAttackInput() => attackInput = false;
+	public void ConsumeAttackInput() => IsAttacking = false;
+
+	private void OnLook(Vector2 look)
+	{
+		HandleAim(look);
+	}
 }

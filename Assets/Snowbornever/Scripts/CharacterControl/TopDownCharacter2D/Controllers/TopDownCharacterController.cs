@@ -88,7 +88,6 @@ namespace TopDownCharacter2D.Controllers
         {
             target.z = 0;
             var currentCellPos=tilemap.WorldToCell(_rb.position);
-            path.Clear();
             pathfinder.GenerateAstarPath(currentCellPos, Vector3Int.FloorToInt(target), out path);
             StopAllCoroutines();
             StartCoroutine(MovePathCoroutine());
@@ -124,11 +123,25 @@ namespace TopDownCharacter2D.Controllers
             {
                 _timeSinceLastAttack += Time.deltaTime;
             }
-
             if (IsAttacking && _timeSinceLastAttack > Stats.CurrentStats.attackConfig.delay)
             {
                 _timeSinceLastAttack = 0f;
                 onAttackEvent.Invoke(Stats.CurrentStats.attackConfig);
+                IsAttacking = false;
+            }
+        }
+
+        protected void HandleAim(Vector2 look)
+        {
+            if (!(look.normalized == look))
+            {
+                Vector2 worldPos = Camera.main.ScreenToWorldPoint(look);
+                look = (worldPos - (Vector2) transform.position).normalized;
+            }
+
+            if (look.magnitude >= .9f)
+            {
+                LookEvent.Invoke(look);
             }
         }
 

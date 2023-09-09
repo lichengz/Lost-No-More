@@ -96,7 +96,6 @@ GameObject:
   - component: {fileID: 8127585959316505608}
   - component: {fileID: 3320632338594923533}
   - component: {fileID: 4668513031300450213}
-  - component: {fileID: 2162116633758808318}
   - component: {fileID: 8210321524277904729}
   - component: {fileID: 1102416628506473674}
   - component: {fileID: 5099656663963612667}
@@ -107,6 +106,7 @@ GameObject:
   - component: {fileID: 542874621157220721}
   - component: {fileID: 1486412096189005305}
   - component: {fileID: 6167273545085288567}
+  - component: {fileID: -8850940645323317601}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -229,21 +229,6 @@ MonoBehaviour:
     maxHealth: 10
     speed: 5
     attackConfig: {fileID: 11400000, guid: 0ee21540de5e3614d8c83a5bda429bec, type: 2}
---- !u!114 &2162116633758808318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7638343534337580418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b4b580f07ea489889ce3aee11554290, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tilemap: {fileID: 0}
-  tiles: []
-  path: []
 --- !u!114 &8210321524277904729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -343,6 +328,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45f6466be0a32e746abeb31b2a794001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tilemap: {fileID: 0}
+  tiles: []
+  path: []
   _inputReader: {fileID: 11400000, guid: 945ec0365077176418488737deed54be, type: 2}
   _gameplayCameraTransform: {fileID: 0}
 --- !u!114 &3867125236162498359
@@ -420,6 +408,21 @@ MonoBehaviour:
   _updateHealthUI: {fileID: 11400000, guid: 2447a760b3f9f134f8730aa53c8d2ece, type: 2}
   _deathEvent: {fileID: 11400000, guid: 0a29544909be226418bc1677ec369790, type: 2}
   _restoreHealth: {fileID: 11400000, guid: de4a39f85969d44cba990125224ff7ef, type: 2}
+--- !u!114 &-8850940645323317601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7638343534337580418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19ae9f83edb74d3d854cf6668f8de1a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recoilStrength: 1
+  projectileSizeModifyRecoil: 1
+  projectileSpawnPosition: {fileID: 5060665670375494338}
 --- !u!1 &8983955389799877034
 GameObject:
   m_ObjectHideFlags: 0

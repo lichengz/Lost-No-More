@@ -38,7 +38,7 @@ public class ReplaceTool : EditorWindow
 	}
 
 	// Register menu item to open Window
-	[MenuItem("ChopChop/Replace with Prefab")]
+	[MenuItem("Snowbornever/Replace with Prefab")]
 	public static void ShowWindow()
 	{
 		var window = GetWindow<ReplaceTool>();

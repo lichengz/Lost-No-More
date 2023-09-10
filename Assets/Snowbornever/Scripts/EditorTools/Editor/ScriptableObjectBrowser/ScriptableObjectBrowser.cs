@@ -53,7 +53,7 @@ class ScriptableObjectBrowser : EditorWindow
 		}
 	}
 
-	[MenuItem("ChopChop/Scriptable Object Browser")]
+	[MenuItem("Snowbornever/Scriptable Object Browser")]
 	private static void ShowWindow()
 	{
 		GetWindow<ScriptableObjectBrowser>("Scriptable Objects");
@@ -146,7 +146,7 @@ class ScriptableObjectBrowser : EditorWindow
 	private void GetTypes()
 	{
 		string[] GUIDs = AssetDatabase.FindAssets("t:ScriptableObject",
-			new string[] { "Assets/ScriptableObjects" });
+			new string[] { "Assets/Snowbornever/ScriptableObjects" });
 		ScriptableObject[] SOs = new ScriptableObject[GUIDs.Length];
 
 		for (int i = 0; i < GUIDs.Length; i++)

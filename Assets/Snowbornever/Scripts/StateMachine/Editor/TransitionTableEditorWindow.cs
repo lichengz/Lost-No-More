@@ -9,13 +9,13 @@ namespace UOP1.StateMachine.Editor
 	internal class TransitionTableEditorWindow : EditorWindow
 	{
 		private static TransitionTableEditorWindow _window;
-		private static readonly string _uxmlPath = "Assets/Scripts/StateMachine/Editor/TransitionTableEditorWindow.uxml";
-		private static readonly string _ussPath = "Assets/Scripts/StateMachine/Editor/TransitionTableEditorWindow.uss";
+		private static readonly string _uxmlPath = "Assets/Snowbornever/Scripts/StateMachine/Editor/TransitionTableEditorWindow.uxml";
+		private static readonly string _ussPath = "Assets/Snowbornever/Scripts/StateMachine/Editor/TransitionTableEditorWindow.uss";
 		private bool _doRefresh;
 
 		private UnityEditor.Editor _transitionTableEditor;
 
-		[MenuItem("State Machine Editor", menuItem = "ChopChop/State Machine Editor")]
+		[MenuItem("State Machine Editor", menuItem = "Snowbornever/State Machine Editor")]
 		internal static void Display()
 		{
 			if (_window == null)

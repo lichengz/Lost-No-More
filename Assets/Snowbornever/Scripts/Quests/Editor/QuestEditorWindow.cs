@@ -23,7 +23,7 @@ public class QuestEditorWindow : EditorWindow
 	private int _idStepSelected = default;
 
 	//Note: Hidden from the tools because it's not fully functional at the moment
-	//[MenuItem("ChopChop/Quest Editor")]
+	[MenuItem("Snowbornever/Quest Editor")]
 	public static void ShowWindow()
 	{
 		QuestEditorWindow wnd = GetWindow<QuestEditorWindow>();
@@ -297,7 +297,7 @@ public class QuestEditorWindow : EditorWindow
 		questId = _currentSeletedQuest.IdQuest;
 		int stepId = 0;
 		stepId = _currentSeletedQuest.Steps.FindIndex(o => o == _currentSelectedStep) + 1;
-		AssetDatabase.CreateAsset(asset, "Assets/ScriptableObjects/Quests/Questline" + questlineId + "/Quest" + questId + "/Step" + stepId + "/SD-S" + stepId + "-Q" + questId + "-QL" + questlineId + ".asset");
+		AssetDatabase.CreateAsset(asset, "Assets/Snowbornever/ScriptableObjects/Quests/Questline" + questlineId + "/Quest" + questId + "/Step" + stepId + "/SD-S" + stepId + "-Q" + questId + "-QL" + questlineId + ".asset");
 
 		EditorUtility.SetDirty(asset);
 		EditorUtility.SetDirty(_currentSeletedQuest);
@@ -318,7 +318,7 @@ public class QuestEditorWindow : EditorWindow
 		int stepId = 0;
 		stepId = _currentSeletedQuest.Steps.FindIndex(o => o == _currentSelectedStep) + 1;
 
-		AssetDatabase.CreateAsset(asset, "Assets/ScriptableObjects/Quests/Questline" + questlineId + "/Quest" + questId + "/Step" + stepId + "/CD-S" + stepId + "-Q" + questId + "-QL" + questlineId + ".asset");
+		AssetDatabase.CreateAsset(asset, "Assets/Snowbornever/ScriptableObjects/Quests/Questline" + questlineId + "/Quest" + questId + "/Step" + stepId + "/CD-S" + stepId + "-Q" + questId + "-QL" + questlineId + ".asset");
 		_currentSelectedStep.CompleteDialogue = asset;
 		asset.DialogueType = DialogueType.CompletionDialogue;
 		//	asset.CreateLine();
@@ -338,7 +338,7 @@ public class QuestEditorWindow : EditorWindow
 		questId = _currentSeletedQuest.IdQuest;
 		int stepId = 0;
 		stepId = _currentSeletedQuest.Steps.FindIndex(o => o == _currentSelectedStep) + 1;
-		AssetDatabase.CreateAsset(asset, "Assets/ScriptableObjects/Quests/Questline" + questlineId + "/Quest" + questId + "/Step" + stepId + "/ID-S" + stepId + "-Q" + questId + "-QL" + questlineId + ".asset");
+		AssetDatabase.CreateAsset(asset, "Assets/Snowbornever/ScriptableObjects/Quests/Questline" + questlineId + "/Quest" + questId + "/Step" + stepId + "/ID-S" + stepId + "-Q" + questId + "-QL" + questlineId + ".asset");
 
 		asset.DialogueType = DialogueType.IncompletionDialogue;
 		//asset.CreateLine();
@@ -368,7 +368,7 @@ public class QuestEditorWindow : EditorWindow
 		//Clear actor conversations area
 		ScrollView actorConversationsVE = rootVisualElement.Q<ScrollView>("actor-conversations");
 		// Import UXML
-		var stepVisualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/Scripts/Quests/Editor/StepDetail.uxml");
+		var stepVisualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Snowbornever/Scripts/Quests/Editor/StepDetail.uxml");
 		VisualElement stepVE = stepVisualTree.CloneTree();
 		VisualElement dialogueAreaVE = stepVE.Q<VisualElement>("dialogue-area");
 
@@ -421,7 +421,7 @@ public class QuestEditorWindow : EditorWindow
 	private void LoadAndInitOptionsDialogueLineUXML(DialogueDataSO completeDialogue, DialogueDataSO incompleteDialogue, VisualElement parent)
 	{
 		// Import UXML
-		var dialogueVisualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/Scripts/Quests/Editor/DialogueLine.uxml");
+		var dialogueVisualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Snowbornever/Scripts/Quests/Editor/DialogueLine.uxml");
 		VisualElement dialogueVE = dialogueVisualTree.CloneTree();
 
 		// Set line
@@ -498,7 +498,7 @@ public class QuestEditorWindow : EditorWindow
 	private Image LoadActorImage(string actorName)
 	{
 		Image actorPreview = new Image();
-		Texture2D texture = (Texture2D)AssetDatabase.LoadAssetAtPath($"Assets/Scripts/Quests/Editor/ActorImages/{actorName}.png", typeof(Texture2D));
+		Texture2D texture = (Texture2D)AssetDatabase.LoadAssetAtPath($"Assets/Snowbornever/Scripts/Quests/Editor/ActorImages/{actorName}.png", typeof(Texture2D));
 		actorPreview.image = texture;
 		return actorPreview;
 	}
@@ -533,9 +533,9 @@ public class QuestEditorWindow : EditorWindow
 		id++;
 		QuestlineSO asset = ScriptableObject.CreateInstance<QuestlineSO>();
 		asset.SetQuestlineId(id);
-		if (!AssetDatabase.IsValidFolder("Assets/ScriptableObjects/Quests/Questline" + id))
-			AssetDatabase.CreateFolder("Assets/ScriptableObjects/Quests", "Questline" + id);
-		AssetDatabase.CreateAsset(asset, "Assets/ScriptableObjects/Quests/Questline" + id + "/QL" + id + ".asset");
+		if (!AssetDatabase.IsValidFolder("Assets/Snowbornever/ScriptableObjects/Quests/Questline" + id))
+			AssetDatabase.CreateFolder("Assets/Snowbornever/ScriptableObjects/Quests", "Questline" + id);
+		AssetDatabase.CreateAsset(asset, "Assets/Snowbornever/ScriptableObjects/Quests/Questline" + id + "/QL" + id + ".asset");
 		EditorUtility.SetDirty(asset);
 		AssetDatabase.SaveAssets();
 		//refresh
@@ -566,9 +566,9 @@ public class QuestEditorWindow : EditorWindow
 		questId = _currentSelectedQuestLine.Quests.Count + 1;
 
 
-		if (!AssetDatabase.IsValidFolder("Assets/ScriptableObjects/Quests/Questline" + questlineId + "/Quest" + questId))
-			AssetDatabase.CreateFolder("Assets/ScriptableObjects/Quests/Questline" + questlineId, "Quest" + questId);
-		AssetDatabase.CreateAsset(asset, "Assets/ScriptableObjects/Quests/Questline" + questlineId + "/Quest" + questId + "/Q" + questId + "-QL" + questlineId + ".asset");
+		if (!AssetDatabase.IsValidFolder("Assets/Snowbornever/ScriptableObjects/Quests/Questline" + questlineId + "/Quest" + questId))
+			AssetDatabase.CreateFolder("Assets/Snowbornever/ScriptableObjects/Quests/Questline" + questlineId, "Quest" + questId);
+		AssetDatabase.CreateAsset(asset, "Assets/Snowbornever/ScriptableObjects/Quests/Questline" + questlineId + "/Quest" + questId + "/Q" + questId + "-QL" + questlineId + ".asset");
 		asset.SetQuestId(questId);
 		_currentSelectedQuestLine.Quests.Add(asset);
 		EditorUtility.SetDirty(asset);
@@ -622,9 +622,9 @@ public class QuestEditorWindow : EditorWindow
 		questId = _currentSeletedQuest.IdQuest;
 		int stepId = 0;
 		stepId = _currentSeletedQuest.Steps.Count + 1;
-		if (!AssetDatabase.IsValidFolder("Assets/ScriptableObjects/Quests/Questline" + questlineId + "/Quest" + questId + "/Step" + stepId))
-			AssetDatabase.CreateFolder("Assets/ScriptableObjects/Quests/Questline" + questlineId + "/Quest" + questId, "Step" + stepId);
-		AssetDatabase.CreateAsset(asset, "Assets/ScriptableObjects/Quests/Questline" + questlineId + "/Quest" + questId + "/Step" + stepId + "/S" + stepId + "-Q" + questId + "-QL" + questlineId + ".asset");
+		if (!AssetDatabase.IsValidFolder("Assets/Snowbornever/ScriptableObjects/Quests/Questline" + questlineId + "/Quest" + questId + "/Step" + stepId))
+			AssetDatabase.CreateFolder("Assets/Snowbornever/ScriptableObjects/Quests/Questline" + questlineId + "/Quest" + questId, "Step" + stepId);
+		AssetDatabase.CreateAsset(asset, "Assets/Snowbornever/ScriptableObjects/Quests/Questline" + questlineId + "/Quest" + questId + "/Step" + stepId + "/S" + stepId + "-Q" + questId + "-QL" + questlineId + ".asset");
 		_currentSeletedQuest.Steps.Add(asset);
 		EditorUtility.SetDirty(asset);
 		EditorUtility.SetDirty(_currentSeletedQuest);

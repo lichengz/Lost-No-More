@@ -39,18 +39,18 @@ public class SceneLoader : MonoBehaviour
 	{
 		_loadLocation.OnLoadingRequested += LoadLocation;
 		_loadMenu.OnLoadingRequested += LoadMenu;
-// #if UNITY_EDITOR
-// 		_coldStartupLocation.OnLoadingRequested += LocationColdStartup;
-// #endif
+#if UNITY_EDITOR
+		_coldStartupLocation.OnLoadingRequested += LocationColdStartup;
+#endif
 	}
 
 	private void OnDisable()
 	{
 		_loadLocation.OnLoadingRequested -= LoadLocation;
 		_loadMenu.OnLoadingRequested -= LoadMenu;
-// #if UNITY_EDITOR
-// 		_coldStartupLocation.OnLoadingRequested -= LocationColdStartup;
-// #endif
+#if UNITY_EDITOR
+		_coldStartupLocation.OnLoadingRequested -= LocationColdStartup;
+#endif
 	}
 
 #if UNITY_EDITOR

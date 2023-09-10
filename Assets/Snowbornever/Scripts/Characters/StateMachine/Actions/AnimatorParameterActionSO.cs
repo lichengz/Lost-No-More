@@ -58,7 +58,6 @@ public class AnimatorParameterAction : StateAction
 
 	private void SetParameter()
 	{
-		return;
 		switch (_originSO.parameterType)
 		{
 			case AnimatorParameterActionSO.ParameterType.Bool:

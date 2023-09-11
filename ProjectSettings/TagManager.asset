@@ -14,8 +14,8 @@ TagManager:
   - character
   - interactable
   - bottom
-  - 
-  - 
+  - Ground Soft
+  - Ground Hard
   - 
   - 
   - 
@@ -41,6 +41,18 @@ TagManager:
   - name: Bottom
     uniqueID: 1161173501
     locked: 0
+  - name: Background
+    uniqueID: 2642797251
+    locked: 0
+  - name: Near Background
+    uniqueID: 1865510913
+    locked: 0
+  - name: Cave
+    uniqueID: 1587156355
+    locked: 0
+  - name: Exterior
+    uniqueID: 2121739199
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
@@ -52,4 +64,7 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 1304480043
+    locked: 0
+  - name: Near Foreground
+    uniqueID: 3770579299
     locked: 0

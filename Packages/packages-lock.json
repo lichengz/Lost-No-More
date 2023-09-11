@@ -1,12 +1,5 @@
 {
   "dependencies": {
-    "com.fluid.behavior-tree": {
-      "version": "2.2.3",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://registry.npmjs.org"
-    },
     "com.unity.2d.animation": {
       "version": "9.0.3",
       "depth": 0,
@@ -324,16 +317,6 @@
         "com.unity.shadergraph": "14.0.8",
         "com.unity.render-pipelines.core": "14.0.8"
       }
-    },
-    "com.unity.visualscripting": {
-      "version": "1.9.0",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.ugui": "1.0.0",
-        "com.unity.modules.jsonserialize": "1.0.0"
-      },
-      "url": "https://packages.unity.com"
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",

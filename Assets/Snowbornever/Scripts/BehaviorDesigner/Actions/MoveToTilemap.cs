@@ -5,27 +5,27 @@ using TopDownCharacter2D.Controllers;
 
 public class MoveToTilemap : CharacterAction
 {
-	public SharedVector2 pos;
-
 	public override void OnStart()
 	{
-		characterController.MovePath(pos.Value);
+		if (characterController.Path.Count > 0)
+		{
+			Vector2 targetPos = characterController.tilemap.CellToWorld(characterController.Path[0]);
+			float distance = DistanceFunc(targetPos, body.position);
+			if (distance > 0.1f)
+			{
+				characterController.OnMoveEvent.Invoke((targetPos - body.position).normalized);
+			}
+			characterController.Path.RemoveAt(0);
+		}
 	}
 
 	public override TaskStatus OnUpdate()
 	{
-		if (characterController.isReachEnd)
-		{
-			return TaskStatus.Success;
-		}
-		else if(body.velocity.magnitude < 0.1f)
-		{
-			// run into a wall
-			return TaskStatus.Failure;
-		}
-		else
-		{
-			return TaskStatus.Running;
-		}
+		return TaskStatus.Success;
+	}
+	
+	private float DistanceFunc(Vector3 a, Vector3 b)
+	{
+		return (a - b).sqrMagnitude;
 	}
 }

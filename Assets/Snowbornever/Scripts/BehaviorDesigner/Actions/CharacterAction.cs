@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class CharacterAction : Action
 {
+    protected LayerMask wallLayerMask = LayerMask.GetMask("interactable");
     protected Rigidbody2D body;
     protected Animator animator;
     protected TopDownCharacterController characterController;

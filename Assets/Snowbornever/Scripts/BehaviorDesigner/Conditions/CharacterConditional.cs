@@ -1,20 +1,20 @@
 ﻿using BehaviorDesigner.Runtime.Tasks;
 using Core.Character;
 using Core.Combat;
+using TopDownCharacter2D.Controllers;
 using UnityEngine;
 
 public class CharacterCondition : Conditional
 {
+    protected LayerMask wallLayerMask = LayerMask.GetMask("interactable");
     protected Rigidbody2D body;
     protected Animator animator;
-    protected Damageable damageable;
-    protected PlayerController player;
+    protected TopDownCharacterController characterController;
 
     public override void OnAwake()
     {
         body = GetComponent<Rigidbody2D>();
-        player = PlayerController.Instance;
-        damageable = GetComponent<Damageable>();
+        characterController = GetComponent<TopDownCharacterController>();
         animator = gameObject.GetComponentInChildren<Animator>();
     }
 }

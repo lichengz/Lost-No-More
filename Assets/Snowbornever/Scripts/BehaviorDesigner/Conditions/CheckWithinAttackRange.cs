@@ -4,7 +4,7 @@ using UnityEngine;
 using BehaviorDesigner.Runtime;
 using BehaviorDesigner.Runtime.Tasks;
 
-public class CheckWithinAttackRange : CharacterAction
+public class CheckWithinAttackRange : CharacterCondition
 {
     [SerializeField] private float attackRange = 5f;
     

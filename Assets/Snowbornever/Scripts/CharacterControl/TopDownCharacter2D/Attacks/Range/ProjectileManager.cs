@@ -43,7 +43,7 @@ namespace TopDownCharacter2D.Attacks.Range
             GameObject projectileObject = _projectilesPool.GetPooledObject();
 
             projectileObject.transform.position = startPosition;
-            RangedAttackController rangedAttack = projectileObject.GetComponent<RangedAttackController>();
+            BulletController rangedAttack = projectileObject.GetComponent<BulletController>();
             rangedAttack.InitializeAttack(direction, config, this);
 
             projectileObject.SetActive(true);

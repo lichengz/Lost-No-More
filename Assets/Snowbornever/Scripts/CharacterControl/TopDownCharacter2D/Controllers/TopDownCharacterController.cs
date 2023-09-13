@@ -48,6 +48,11 @@ namespace TopDownCharacter2D.Controllers
         }
 
         private List<Vector3Int> path;
+
+        public List<Vector3Int> Path
+        {
+            get { return path; }
+        }
         public bool isReachEnd => path.Count == 0;
         public Vector3 velocity => _rb.velocity;
         public bool jumpEnabled => false;
@@ -95,13 +100,13 @@ namespace TopDownCharacter2D.Controllers
             HandleAttackDelay();
         }
         
-        public void MovePath(Vector3 target)
+        public void SchedulePath(Vector3 target)
         {
             target.z = 0;
             var currentCellPos=tilemap.WorldToCell(_rb.position);
             pathfinder.GenerateAstarPath(currentCellPos, Vector3Int.FloorToInt(target), out path);
-            StopAllCoroutines();
-            StartCoroutine(MovePathCoroutine());
+            // StopAllCoroutines();
+            // StartCoroutine(MovePathCoroutine());
         }
 
         IEnumerator MovePathCoroutine()
@@ -116,8 +121,13 @@ namespace TopDownCharacter2D.Controllers
                     distance = DistanceFunc(targetPos, _rb.position);
                     yield return null;
                 }
-                path.RemoveAt(0);
+                if(path.Count > 0) path.RemoveAt(0);
             }
+        }
+
+        public void ClearPath()
+        {
+            path.Clear();
         }
 
         /// <summary>

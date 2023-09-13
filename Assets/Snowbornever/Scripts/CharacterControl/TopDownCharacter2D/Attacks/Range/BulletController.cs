@@ -6,7 +6,7 @@ namespace TopDownCharacter2D.Attacks.Range
     /// <summary>
     ///     This script handles the logic of a single bullet
     /// </summary>
-    public class RangedAttackController : MonoBehaviour
+    public class BulletController : MonoBehaviour
     {
         [Tooltip("The layer of the walls of the level")] [SerializeField]
         private LayerMask levelCollisionLayer;

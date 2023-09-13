@@ -11,13 +11,13 @@ TagManager:
   - 
   - Water
   - UI
-  - character
+  - player
   - interactable
   - bottom
   - Ground Soft
   - Ground Hard
-  - hitbox
-  - 
+  - bullet
+  - enemy
   - 
   - 
   - 

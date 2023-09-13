@@ -18,7 +18,7 @@ MonoBehaviour:
   speed: 15
   target:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 4096
   duration: 2
   spread: 0
   numberOfProjectilesPerShot: 1

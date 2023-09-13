@@ -4,7 +4,7 @@ using UnityEngine;
 using BehaviorDesigner.Runtime;
 using BehaviorDesigner.Runtime.Tasks;
 
-public class CheckWithinFollowRange : CharacterAction
+public class CheckWithinFollowRange : CharacterCondition
 {
     [SerializeField] private float followRange = 10f;
     

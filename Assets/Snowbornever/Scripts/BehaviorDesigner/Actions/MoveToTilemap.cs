@@ -3,25 +3,25 @@ using BehaviorDesigner.Runtime;
 using BehaviorDesigner.Runtime.Tasks;
 using TopDownCharacter2D.Controllers;
 
-public class MoveToTilemap : Action
+public class MoveToTilemap : CharacterAction
 {
 	public SharedVector2 pos;
-	private TopDownCharacterController _topDownCharacterController;
 
-	public override void OnAwake()
-	{
-		_topDownCharacterController = GetComponent<TopDownCharacterController>();
-	}
 	public override void OnStart()
 	{
-		_topDownCharacterController.MovePath(pos.Value);
+		characterController.MovePath(pos.Value);
 	}
 
 	public override TaskStatus OnUpdate()
 	{
-		if (_topDownCharacterController.isReachEnd)
+		if (characterController.isReachEnd)
 		{
 			return TaskStatus.Success;
+		}
+		else if(body.velocity.magnitude < 0.1f)
+		{
+			// run into a wall
+			return TaskStatus.Failure;
 		}
 		else
 		{

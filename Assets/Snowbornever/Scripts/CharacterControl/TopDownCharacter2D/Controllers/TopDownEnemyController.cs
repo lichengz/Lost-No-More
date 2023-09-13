@@ -6,7 +6,7 @@ namespace TopDownCharacter2D.Controllers
     /// <summary>
     ///     A basic controller for an enemy
     /// </summary>
-    public abstract class TopDownEnemyController : TopDownCharacterController
+    public class TopDownEnemyController : TopDownCharacterController
     {
         [Tooltip("The tag of the target of this enemy")] [SerializeField]
         private string targetTag = "Player";

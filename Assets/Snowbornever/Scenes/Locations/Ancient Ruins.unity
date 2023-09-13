@@ -166,7 +166,7 @@ GameObject:
   - component: {fileID: 52773210}
   - component: {fileID: 52773209}
   - component: {fileID: 52773211}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1374,7 +1374,8 @@ GameObject:
   - component: {fileID: 834225060}
   - component: {fileID: 834225062}
   - component: {fileID: 834225061}
-  m_Layer: 0
+  - component: {fileID: 834225063}
+  m_Layer: 9
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2567,6 +2568,42 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &834225063
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834225059}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0
+  m_UseDelaunayMesh: 0
 --- !u!1 &880177153
 GameObject:
   m_ObjectHideFlags: 0
@@ -7475,7 +7512,7 @@ GameObject:
   m_Component:
   - component: {fileID: 899653103}
   - component: {fileID: 899653102}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7708,7 +7745,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 4540255442126730747, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
@@ -7857,29 +7895,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6761192757634862033, guid: 83bd7f5dd26487941b12c598c54a1c5e, type: 3}
-      propertyPath: m_Name
-      value: Enemy_Range
-      objectReference: {fileID: 0}
-    - target: {fileID: 6761192757634862033, guid: 83bd7f5dd26487941b12c598c54a1c5e, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6761192757634862036, guid: 83bd7f5dd26487941b12c598c54a1c5e, type: 3}
+    - target: {fileID: 2417806085254258135, guid: 83bd7f5dd26487941b12c598c54a1c5e, type: 3}
       propertyPath: tilemap
       value: 
       objectReference: {fileID: 834225062}
-    - target: {fileID: 6761192757634862036, guid: 83bd7f5dd26487941b12c598c54a1c5e, type: 3}
-      propertyPath: tiles.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6761192757634862036, guid: 83bd7f5dd26487941b12c598c54a1c5e, type: 3}
-      propertyPath: tiles.Array.data[0].tile
-      value: 
-      objectReference: {fileID: 11400000, guid: dd07ab366f3f4604180b61ede4fd437c, type: 2}
-    - target: {fileID: 6761192757634862036, guid: 83bd7f5dd26487941b12c598c54a1c5e, type: 3}
-      propertyPath: tiles.Array.data[0].movable
-      value: 1
+    - target: {fileID: 6761192757634862033, guid: 83bd7f5dd26487941b12c598c54a1c5e, type: 3}
+      propertyPath: m_Name
+      value: Enemy_Range
       objectReference: {fileID: 0}
     - target: {fileID: 6761192757634862038, guid: 83bd7f5dd26487941b12c598c54a1c5e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7921,77 +7943,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6761192757634862043, guid: 83bd7f5dd26487941b12c598c54a1c5e, type: 3}
-      propertyPath: tilemap
-      value: 
-      objectReference: {fileID: 834225062}
-    - target: {fileID: 6761192757634862043, guid: 83bd7f5dd26487941b12c598c54a1c5e, type: 3}
-      propertyPath: tiles.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6761192757634862043, guid: 83bd7f5dd26487941b12c598c54a1c5e, type: 3}
-      propertyPath: tiles.Array.data[0].tile
-      value: 
-      objectReference: {fileID: 11400000, guid: dd07ab366f3f4604180b61ede4fd437c, type: 2}
-    - target: {fileID: 6761192757634862043, guid: 83bd7f5dd26487941b12c598c54a1c5e, type: 3}
-      propertyPath: tiles.Array.data[0].movable
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6761192757634862033, guid: 83bd7f5dd26487941b12c598c54a1c5e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1253602562}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83bd7f5dd26487941b12c598c54a1c5e, type: 3}
---- !u!1 &1253602545 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6761192757634862033, guid: 83bd7f5dd26487941b12c598c54a1c5e, type: 3}
-  m_PrefabInstance: {fileID: 1253602544}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1253602562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1253602545}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d7b55c7ecdb49a4a89fa5e6f9022861, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startWhenEnabled: 1
-  asynchronousLoad: 0
-  pauseWhenDisabled: 0
-  restartWhenComplete: 0
-  logTaskChanges: 0
-  group: 0
-  resetValuesOnRestart: 0
-  externalBehavior: {fileID: 0}
-  mBehaviorSource:
-    behaviorName: Behavior
-    behaviorDescription: 
-    mTaskData:
-      types: []
-      parentIndex: 
-      startIndex: 
-      variableStartIndex: 
-      JSONSerialization: '{"EntryTask":{"Type":"BehaviorDesigner.Runtime.Tasks.EntryTask","NodeData":{"Offset":"(300,9.666672)"},"ID":0,"Name":"Entry","Instant":true},"RootTask":{"Type":"BehaviorDesigner.Runtime.Tasks.Repeater","NodeData":{"Offset":"(0,119.666672)"},"ID":1,"Name":"Repeater","Instant":true,"SharedIntcount":{"Type":"BehaviorDesigner.Runtime.SharedInt","Name":null,"Int32mValue":0},"SharedBoolrepeatForever":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"SharedBoolendOnFailure":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-1,134.666656)"},"ID":2,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"RandomPos2d","NodeData":{"Offset":"(-262,171.666656)"},"ID":3,"Name":"Random
-        Pos 2d","Instant":true,"SharedVector2pos":{"Type":"BehaviorDesigner.Runtime.SharedVector2","Name":"position","IsShared":true,"Vector2mValue":"(0,0)"},"Vector2min":"(-5,-5)","Vector2max":"(5,5)"},{"Type":"MoveToTilemap","NodeData":{"Offset":"(-8,168.666656)"},"ID":4,"Name":"Move
-        To Tilemap","Instant":false,"SharedVector2pos":{"Type":"BehaviorDesigner.Runtime.SharedVector2","Name":"position","IsShared":true,"Vector2mValue":"(0,0)"}}]}]},"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedVector2","Name":"position","IsShared":true,"Vector2mValue":"(0,0)"}]}'
-      fieldSerializationData:
-        typeName: []
-        fieldNameHash: 
-        startIndex: 
-        dataPosition: 
-        unityObjects: []
-        byteData: 
-        byteDataArray: 
-      Version: 1.7.7
-  gizmoViewMode: 2
-  showBehaviorDesignerGizmo: 1
 --- !u!1 &1343509752
 GameObject:
   m_ObjectHideFlags: 0

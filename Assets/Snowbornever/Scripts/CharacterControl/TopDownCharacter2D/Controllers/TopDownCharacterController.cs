@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TopDownCharacter2D.Attacks;
 using TopDownCharacter2D.Stats;
@@ -16,6 +17,16 @@ namespace TopDownCharacter2D.Controllers
     public abstract class TopDownCharacterController : MonoBehaviour
     {
         private Rigidbody2D _rb;
+        
+        [Tooltip("The origin point of the arm to aim with")]
+        public Transform armPivot;
+        
+        [Tooltip("The renderer of the arm used to aim")]
+        public SpriteRenderer armRenderer;
+        
+        [Tooltip("The main renderer of the character")]
+        public List<SpriteRenderer> characterRenderers;
+        
         private float _timeSinceLastAttack = float.MaxValue;
 
         protected bool IsAttacking { get; set; }
@@ -36,7 +47,7 @@ namespace TopDownCharacter2D.Controllers
             public float movementCost;
         }
 
-        public List<Vector3Int> path;
+        private List<Vector3Int> path;
         public bool isReachEnd => path.Count == 0;
         public Vector3 velocity => _rb.velocity;
         public bool jumpEnabled => false;

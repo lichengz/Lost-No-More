@@ -39,7 +39,7 @@ namespace TopDownCharacter2D
 
         private void FixedUpdate()
         {
-            if (!_damageable.GetHit)
+            if (!transform.CompareTag("Player") || !_damageable.GetHit)
             {
                 ApplyMovement(_movementDirection);
             }

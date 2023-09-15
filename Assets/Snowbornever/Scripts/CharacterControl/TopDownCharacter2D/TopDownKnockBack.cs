@@ -37,7 +37,7 @@ namespace TopDownCharacter2D
             {
                 return;
             }
-
+            
             Vector2 direction = -(other.position - transform.position).normalized;
 
             _rb.AddForce(direction * (knockBackPower * 100f), ForceMode2D.Impulse);

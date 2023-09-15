@@ -48,6 +48,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fc3326c22606bf47abe245d1db3c2e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stun: 0
+  knockBack: 1
   levelCollisionLayer:
     serializedVersion: 2
     m_Bits: 128

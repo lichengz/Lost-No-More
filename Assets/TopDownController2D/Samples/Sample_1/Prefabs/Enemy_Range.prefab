@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6761192757128134433}
   - component: {fileID: 6761192757128134439}
   - component: {fileID: 6761192757128134438}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: DustParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4908,7 +4908,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6761192757217055800}
   - component: {fileID: 6761192757217055801}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: WeaponSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5076,13 +5076,13 @@ GameObject:
   - component: {fileID: 6761192757634862043}
   - component: {fileID: 3624052806124672439}
   - component: {fileID: 6761192757634862045}
-  - component: {fileID: 6761192757634862018}
   - component: {fileID: 6761192757634862019}
   - component: {fileID: 6761192757634862016}
   - component: {fileID: 1789450364}
   - component: {fileID: 2417806085254258135}
   - component: {fileID: 2374872452509898309}
-  m_Layer: 12
+  - component: {fileID: 5995577323107265361}
+  m_Layer: 0
   m_Name: Enemy_Range
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5245,43 +5245,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &6761192757634862018
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6761192757634862033}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 377df98bde7799f48adfefb534708c0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthChangeDelay: 0.05
-  onDamage:
-    m_PersistentCalls:
-      m_Calls: []
-  onHeal:
-    m_PersistentCalls:
-      m_Calls: []
-  onDeath:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6761192757634862019}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnDeath
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onInvincibilityEnd:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &6761192757634862019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5400,6 +5363,27 @@ MonoBehaviour:
       Version: 1.7.7
   gizmoViewMode: 2
   showBehaviorDesignerGizmo: 1
+--- !u!114 &5995577323107265361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6761192757634862033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5645a5c5271ed1c419e7a9b472fbbcb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageEventDelay: 0.5
+  _healthConfigSO: {fileID: 11400000, guid: e45145042f2750b448851311cae4a1ec, type: 2}
+  _currentHealthSO: {fileID: 11400000, guid: e6d00b70d6fb2d74ca64564daeee4e81, type: 2}
+  _getHitEffectSO: {fileID: 11400000, guid: 7e34341ff0908c5428cb93633ed5cad5, type: 2}
+  _mainMeshRenderer: {fileID: 6761192758136934756}
+  _droppableRewardSO: {fileID: 11400000, guid: 6158158d6ef9a3d47827f7851295bcef, type: 2}
+  _updateHealthUI: {fileID: 11400000, guid: 59515261afc01114b90d96c81858db30, type: 2}
+  _deathEvent: {fileID: 11400000, guid: f466952bb13506e48b778b8998af834f, type: 2}
+  _restoreHealth: {fileID: 11400000, guid: 255722da59964bb49bacfd5a697a9162, type: 2}
 --- !u!1 &6761192757660047610
 GameObject:
   m_ObjectHideFlags: 0
@@ -5410,7 +5394,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6761192757660047611}
   - component: {fileID: 6761192757660047608}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5493,7 +5477,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6761192757735821569}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: WeaponPivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5527,7 +5511,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6761192757736673262}
   - component: {fileID: 6761192757736673263}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5611,7 +5595,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6761192758136934759}
   - component: {fileID: 6761192758136934756}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5694,7 +5678,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6761192758683902259}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: BulletSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

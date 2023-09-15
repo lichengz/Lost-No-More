@@ -20,6 +20,7 @@ namespace TopDownCharacter2D
         private Vector2 _movementDirection = Vector2.zero;
         private Rigidbody2D _rb;
         private CharacterStatsHandler _stats;
+        private Damageable _damageable;
 
         [Range(0.01f, 1f)] public float stepTime;
 
@@ -28,6 +29,7 @@ namespace TopDownCharacter2D
             _controller = GetComponent<TopDownCharacterController>();
             _stats = GetComponent<CharacterStatsHandler>();
             _rb = GetComponent<Rigidbody2D>();
+            _damageable = GetComponent<Damageable>();
         }
 
         private void Start()
@@ -35,18 +37,12 @@ namespace TopDownCharacter2D
             _controller.OnMoveEvent.AddListener(Move);
         }
 
-        // private void Update()
-        // {
-        //     if (Input.GetMouseButtonDown(1) )
-        //     {
-        //         var target = tilemap.WorldToCell(Camera.main.ScreenToWorldPoint(Input.mousePosition));
-        //         MovePath(target);
-        //     }
-        // }
-
         private void FixedUpdate()
         {
-            ApplyMovement(_movementDirection);
+            if (!_damageable.GetHit)
+            {
+                ApplyMovement(_movementDirection);
+            }
         }
 
         /// <summary>

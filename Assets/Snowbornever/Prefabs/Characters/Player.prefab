@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4532826878502545686}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: BulletSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6144511779009281444}
   - component: {fileID: 3333975056124375864}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1543684274021897275}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: WeaponPivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -158,7 +158,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7691967373344687538}
   - component: {fileID: 3588711569614533681}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: WeaponSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -255,7 +255,7 @@ GameObject:
   - component: {fileID: -8850940645323317601}
   - component: {fileID: 6361855182263705020}
   - component: {fileID: 3510791494366125247}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -390,6 +390,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae62162626f244488af6aff00addad84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stunEventDelay: 0.5
+  _stunned: 0
   stepTime: 0
 --- !u!114 &5099656663963612667
 MonoBehaviour:
@@ -516,6 +518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5645a5c5271ed1c419e7a9b472fbbcb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageEventDelay: 0.5
   _healthConfigSO: {fileID: 11400000, guid: e45145042f2750b448851311cae4a1ec, type: 2}
   _currentHealthSO: {fileID: 11400000, guid: 9f77d45699a310c4c893d07ae96f341a, type: 2}
   _getHitEffectSO: {fileID: 11400000, guid: 670b8ed8d060e674aa8c90b1187ea592, type: 2}
@@ -719,7 +722,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2459686634687767591, guid: f9c2915636332344e81b1379bcc1913c, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6816982044914189781, guid: f9c2915636332344e81b1379bcc1913c, type: 3}
       propertyPath: m_LocalPosition.x

@@ -1,3 +1,4 @@
+using DG.Tweening;
 using TopDownCharacter2D.Health;
 using UnityEngine;
 
@@ -6,8 +7,14 @@ namespace TopDownCharacter2D.Attacks.Range
     /// <summary>
     ///     This script handles the logic of a single bullet
     /// </summary>
-    public class BulletController : MonoBehaviour
+    public class AttackController : MonoBehaviour
     {
+        [Tooltip("The damage stuns target")] [SerializeField]
+        private bool stun;
+
+        [Tooltip("The damage knock back target")] [SerializeField]
+        private bool knockBack;
+
         [Tooltip("The layer of the walls of the level")] [SerializeField]
         private LayerMask levelCollisionLayer;
 
@@ -62,11 +69,15 @@ namespace TopDownCharacter2D.Attacks.Range
             }
             else if (_config.target.value == (_config.target.value | (1 << other.gameObject.layer)))
             {
-                HealthSystem health = other.gameObject.GetComponent<HealthSystem>();
+                Damageable health = other.transform.parent.GetComponent<Damageable>();
                 if (health != null)
                 {
-                    health.ChangeHealth(-_config.power);
-                    TopDownKnockBack knockBack = other.gameObject.GetComponent<TopDownKnockBack>();
+                    health.ReceiveAnAttack(-(int)_config.power);
+                }
+
+                if (knockBack)
+                {
+                    TopDownKnockBack knockBack = other.transform.parent.GetComponent<TopDownKnockBack>();
                     if (knockBack != null)
                     {
                         knockBack.ApplyKnockBack(transform);
@@ -118,6 +129,7 @@ namespace TopDownCharacter2D.Attacks.Range
             {
                 _projectileManager.CreateImpactParticlesAtPosition(pos, _config);
             }
+
             gameObject.SetActive(false);
         }
     }

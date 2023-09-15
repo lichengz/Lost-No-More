@@ -3,6 +3,10 @@ using UnityEngine.Events;
 
 public class Damageable : MonoBehaviour
 {
+	[Tooltip("The delay between two health changes in seconds")]
+	[SerializeField] private float damageEventDelay = .5f;
+	private float _timeSinceLastChange = float.MaxValue;
+	
 	[Header("Health")]
 	[SerializeField] private HealthConfigSO _healthConfigSO;
 	[SerializeField] private HealthSO _currentHealthSO;

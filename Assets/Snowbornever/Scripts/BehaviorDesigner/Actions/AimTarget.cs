@@ -17,12 +17,12 @@ public class AimTarget : CharacterAction
     {
         float rotZ = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        characterController.armRenderer.flipY = Mathf.Abs(rotZ) > 90f;
+        characterController.weaponRenderer.flipY = Mathf.Abs(rotZ) > 90f;
         foreach (SpriteRenderer charRenderer in characterController.characterRenderers)
         {
-            charRenderer.flipX = characterController.armRenderer.flipY;
+            charRenderer.flipX = characterController.weaponRenderer.flipY;
         }
 
-        characterController.armPivot.rotation = Quaternion.Euler(0, 0, rotZ);
+        characterController.weaponPivot.rotation = Quaternion.Euler(0, 0, rotZ);
     }
 }

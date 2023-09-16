@@ -19,23 +19,34 @@ namespace TopDownCharacter2D
 
 
         [SerializeField] [Tooltip("The start point of the projectiles")]
-        private Transform projectileSpawnPosition;
+        private Transform projectileSpawnPosition => _controller.projectileSpawnPosition;
 
         private Vector2 _aimDirection = Vector2.right;
         private ProjectileManager projectileManager;
         private TopDownCharacterController _controller;
         private Rigidbody2D _rb;
 
+        [SerializeField]
+        public VoidEventChannelSO equipRangeWeapon;
+
 
         private void Awake()
         {
             _rb = GetComponent<Rigidbody2D>();
             _controller = GetComponent<TopDownCharacterController>();
+            projectileManager = ProjectileManager.instance;
+
+            equipRangeWeapon.OnEventRaised += EquipRangeWeapon;
         }
 
-        private void Start()
+        private void EquipRangeWeapon()
         {
-            projectileManager = ProjectileManager.instance;
+            _controller.OnAttackEvent.AddListener(OnShoot);
+            _controller.LookEvent.AddListener(OnAim);
+        }
+        
+        private void UnEquipRangeWeapon()
+        {
             _controller.OnAttackEvent.AddListener(OnShoot);
             _controller.LookEvent.AddListener(OnAim);
         }

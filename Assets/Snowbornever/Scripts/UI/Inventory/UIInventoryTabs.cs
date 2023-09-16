@@ -34,7 +34,7 @@ public class UIInventoryTabs : MonoBehaviour
 				//fill
 				_instantiatedGameObjects[i].SetTab(typesList[i], isSelected);
 				_instantiatedGameObjects[i].gameObject.SetActive(true);
-				_instantiatedGameObjects[i].TabClicked += ChangeTab;
+				_instantiatedGameObjects[i].TabClicked = ChangeTab;
 
 			}
 			else if (i < _instantiatedGameObjects.Count)

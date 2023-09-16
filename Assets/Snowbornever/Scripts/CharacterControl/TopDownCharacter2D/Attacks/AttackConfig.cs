@@ -7,6 +7,9 @@ namespace TopDownCharacter2D.Attacks
     /// </summary>
     public abstract class AttackConfig : ScriptableObject
     {
+        [Tooltip("The prefab of the weapon")]
+        public GameObject weaponPrefab;
+        
         [Tooltip("The scale of the attack")]
         public float size;
 

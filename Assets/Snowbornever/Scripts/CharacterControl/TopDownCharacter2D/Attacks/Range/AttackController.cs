@@ -69,15 +69,15 @@ namespace TopDownCharacter2D.Attacks.Range
             }
             else if (_config.target.value == (_config.target.value | (1 << other.gameObject.layer)))
             {
-                Damageable health = other.transform.parent.GetComponent<Damageable>();
+                Damageable health = other.GetComponent<Damageable>();
                 if (health != null)
                 {
-                    health.ReceiveAnAttack(-(int)_config.power);
+                    health.ReceiveAnAttack((int)_config.power);
                 }
 
                 if (knockBack)
                 {
-                    TopDownKnockBack knockBack = other.transform.parent.GetComponent<TopDownKnockBack>();
+                    TopDownKnockBack knockBack = other.GetComponent<TopDownKnockBack>();
                     if (knockBack != null)
                     {
                         knockBack.ApplyKnockBack(transform);

@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Inventory
   m_EditorClassIdentifier: 
   _items:
+  - _item: {fileID: 11400000, guid: d274aec8d4fed2a488fb04f1451d1d1a, type: 2}
+    Amount: 1
   - _item: {fileID: 11400000, guid: 540c35ca6164bf3438e37e4f8087d47c, type: 2}
     Amount: 1
   - _item: {fileID: 11400000, guid: 42396f680e5649c4b91e2b29ff34f811, type: 2}

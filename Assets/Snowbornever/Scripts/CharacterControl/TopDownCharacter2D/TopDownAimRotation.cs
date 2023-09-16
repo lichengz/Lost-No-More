@@ -11,13 +11,13 @@ namespace TopDownCharacter2D
     public class TopDownAimRotation : MonoBehaviour
     {
         [SerializeField] [Tooltip("The renderer of the arm used to aim")]
-        private SpriteRenderer armRenderer;
+        private SpriteRenderer weaponRenderer => _controller.weaponRenderer;
 
         [SerializeField] [Tooltip("The main renderer of the character")]
-        private List<SpriteRenderer> characterRenderers;
+        private List<SpriteRenderer> characterRenderers => _controller.characterRenderers;
 
         [SerializeField] [Tooltip("The origin point of the arm to aim with")]
-        private Transform armPivot;
+        private Transform weaponPivot => _controller.weaponPivot;
 
         private TopDownCharacterController _controller;
 
@@ -46,15 +46,16 @@ namespace TopDownCharacter2D
         /// <param name="direction"> The new aim direction </param>
         private void RotateArm(Vector2 direction)
         {
+            if (!_controller.isWeaponInited) return;
             float rotZ = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-            armRenderer.flipY = Mathf.Abs(rotZ) > 90f;
+            weaponRenderer.flipY = Mathf.Abs(rotZ) > 90f;
             foreach (SpriteRenderer charRenderer in characterRenderers)
             {
-                charRenderer.flipX = armRenderer.flipY;
+                charRenderer.flipX = weaponRenderer.flipY;
             }
 
-            armPivot.rotation = Quaternion.Euler(0, 0, rotZ);
+            weaponPivot.rotation = Quaternion.Euler(0, 0, rotZ);
         }
     }
 }

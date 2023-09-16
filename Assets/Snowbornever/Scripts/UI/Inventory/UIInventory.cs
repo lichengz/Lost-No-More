@@ -82,7 +82,7 @@ public class UIInventory : MonoBehaviour
 		}
 	}
 
-	public void FillInventory(InventoryTabType _selectedTabType = InventoryTabType.CookingItem, bool isNearPot = false)
+	public void FillInventory(InventoryTabType _selectedTabType = InventoryTabType.Customization, bool isNearPot = false)
 	{
 		_isNearPot = isNearPot;
 

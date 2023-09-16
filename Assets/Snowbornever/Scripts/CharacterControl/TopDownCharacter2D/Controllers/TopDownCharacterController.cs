@@ -17,12 +17,23 @@ namespace TopDownCharacter2D.Controllers
     public abstract class TopDownCharacterController : MonoBehaviour
     {
         private Rigidbody2D _rb;
+
+        [SerializeField]
+        public VoidEventChannelSO equipMeleeWeapon;
+        
+        [SerializeField]
+        public VoidEventChannelSO equipRangeWeapon;
         
         [Tooltip("The origin point of the arm to aim with")]
-        public Transform armPivot;
+        public Transform weaponPivot;
+
+        [HideInInspector]
+        public Transform projectileSpawnPosition;
         
-        [Tooltip("The renderer of the arm used to aim")]
-        public SpriteRenderer armRenderer;
+        [HideInInspector]
+        public SpriteRenderer weaponRenderer;
+        
+        public bool isWeaponInited { get; set; }
         
         [Tooltip("The main renderer of the character")]
         public List<SpriteRenderer> characterRenderers;
@@ -95,6 +106,11 @@ namespace TopDownCharacter2D.Controllers
             pathfinder = new Pathfinder<Vector3Int>(DistanceFunc, connectionsAndCosts);
         }
 
+        protected void Start()
+        {
+            InitializeWeapon();
+        }
+
         protected virtual void Update()
         {
             HandleAttackDelay();
@@ -128,6 +144,24 @@ namespace TopDownCharacter2D.Controllers
         public void ClearPath()
         {
             path.Clear();
+        }
+
+        private void InitializeWeapon()
+        {
+            GameObject weapon = Instantiate(Stats.CurrentStats.attackConfig.weaponPrefab, weaponPivot);
+            WeaponController weaponController = weapon.GetComponent<WeaponController>();
+            weaponRenderer = weaponController.weaponRenderer;
+            projectileSpawnPosition = weaponController.projectileSpawnPosition;
+            isWeaponInited = true;
+            switch (weaponController.weaponType)
+            {
+                case WeaponController.WeaponType.Melee:
+                    equipMeleeWeapon.RaiseEvent();
+                    break;
+                case WeaponController.WeaponType.Range:
+                    equipRangeWeapon.RaiseEvent();
+                    break;
+            }
         }
 
         /// <summary>

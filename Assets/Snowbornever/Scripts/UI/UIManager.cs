@@ -11,8 +11,8 @@ public class UIManager : MonoBehaviour
 	[SerializeField] private UIPopup _popupPanel = default;
 	[SerializeField] private UIDialogueManager _dialogueController = default;
 	[SerializeField] private UIInventory _inventoryPanel = default;
-	[SerializeField] private UIInteraction _interactionPanel = default;
-	[SerializeField] private GameObject _switchTabDisplay = default;
+	// [SerializeField] private UIInteraction _interactionPanel = default;
+	// [SerializeField] private GameObject _switchTabDisplay = default;
 	[SerializeField] private UIItemForAnimation _cookingAnimation = default;
 	[SerializeField] private UIPause _pauseScreen = default;
 	[SerializeField] private UISettingsController _settingScreen = default;
@@ -74,8 +74,8 @@ public class UIManager : MonoBehaviour
 		_dialogueController.gameObject.SetActive(false);
 		_inventoryPanel.gameObject.SetActive(false);
 		_pauseScreen.gameObject.SetActive(false);
-		_interactionPanel.gameObject.SetActive(false);
-		_switchTabDisplay.SetActive(false);
+		// _interactionPanel.gameObject.SetActive(false);
+		// _switchTabDisplay.SetActive(false);
 		_cookingAnimation.gameObject.SetActive(false);
 
 		Time.timeScale = 1;
@@ -85,7 +85,7 @@ public class UIManager : MonoBehaviour
 	{
 		bool isProtagonistTalking = (actor == _mainProtagonist);
 		_dialogueController.SetDialogue(dialogueLine, actor, isProtagonistTalking);
-		_interactionPanel.gameObject.SetActive(false);
+		// _interactionPanel.gameObject.SetActive(false);
 		_dialogueController.gameObject.SetActive(true);
 	}
 
@@ -203,7 +203,7 @@ public class UIManager : MonoBehaviour
 		if (_gameStateManager.CurrentGameState == GameState.Gameplay)
 		{
 			isForCooking = true;
-			_interactionPanel.gameObject.SetActive(false);
+			// _interactionPanel.gameObject.SetActive(false);
 			OpenInventoryScreen();
 		}
 	}
@@ -235,7 +235,7 @@ public class UIManager : MonoBehaviour
 		}
 
 		_inventoryPanel.gameObject.SetActive(true);
-		_switchTabDisplay.SetActive(true);
+		// _switchTabDisplay.SetActive(true);
 		_inputReader.EnableMenuInput();
 
 		_gameStateManager.UpdateGameState(GameState.Inventory);
@@ -248,7 +248,7 @@ public class UIManager : MonoBehaviour
 		_inputReader.MenuCloseEvent -= CloseInventoryScreen;
 		_inputReader.CloseInventoryEvent -= CloseInventoryScreen;
 
-		_switchTabDisplay.SetActive(false);
+		// _switchTabDisplay.SetActive(false);
 		_inventoryPanel.gameObject.SetActive(false);
 
 		if (isForCooking)
@@ -263,19 +263,19 @@ public class UIManager : MonoBehaviour
 
 	void SetInteractionPanel(bool isOpen, InteractionType interactionType)
 	{
-		if (_gameStateManager.CurrentGameState != GameState.Combat)
-		{
-			if (isOpen)
-			{
-				_interactionPanel.FillInteractionPanel(interactionType);
-			}
-
-			_interactionPanel.gameObject.SetActive(isOpen);
-		}
-		else if (!isOpen)
-		{
-			_interactionPanel.gameObject.SetActive(isOpen);
-		}
+		// if (_gameStateManager.CurrentGameState != GameState.Combat)
+		// {
+		// 	if (isOpen)
+		// 	{
+		// 		_interactionPanel.FillInteractionPanel(interactionType);
+		// 	}
+		//
+		// 	_interactionPanel.gameObject.SetActive(isOpen);
+		// }
+		// else if (!isOpen)
+		// {
+		// 	_interactionPanel.gameObject.SetActive(isOpen);
+		// }
 	}
 
 	public void PlayCookingAnimation(ItemSO itemToCook)

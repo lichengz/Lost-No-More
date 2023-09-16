@@ -55,7 +55,7 @@ public class ShootTarget : CharacterAction
     /// <param name="angle"> Modification to the direction of the shot</param>
     private void CreateProjectile(RangedAttackConfig rangedAttackConfig, float angle)
     {
-        ProjectileManager.instance.ShootBullet(projectileSpawnPosition.position, RotateVector2(directionToTarget.Value.normalized, angle),
+        ProjectileManager.instance.ShootBullet(characterController.projectileSpawnPosition.position, RotateVector2(directionToTarget.Value.normalized, angle),
             rangedAttackConfig);
     }
 

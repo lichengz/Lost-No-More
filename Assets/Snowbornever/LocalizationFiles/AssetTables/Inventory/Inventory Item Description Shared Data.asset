@@ -139,6 +139,10 @@ MonoBehaviour:
     m_Key: Gun
     m_Metadata:
       m_Items: []
+  - m_Id: 374020632031100928
+    m_Key: Sword
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

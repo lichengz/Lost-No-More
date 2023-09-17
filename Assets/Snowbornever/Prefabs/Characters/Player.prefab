@@ -126,18 +126,18 @@ GameObject:
   - component: {fileID: 8179573950085412907}
   - component: {fileID: 8127585959316505608}
   - component: {fileID: 1922533964451116184}
+  - component: {fileID: 3510791494366125247}
   - component: {fileID: 4668513031300450213}
   - component: {fileID: 8210321524277904729}
-  - component: {fileID: 5099656663963612667}
   - component: {fileID: 1708795365229658252}
   - component: {fileID: 8107770444008684101}
   - component: {fileID: 3867125236162498359}
   - component: {fileID: 542874621157220721}
   - component: {fileID: 1486412096189005305}
   - component: {fileID: 6167273545085288567}
-  - component: {fileID: -8850940645323317601}
   - component: {fileID: 6361855182263705020}
-  - component: {fileID: 3510791494366125247}
+  - component: {fileID: -8850940645323317601}
+  - component: {fileID: 1961741076631191618}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -236,6 +236,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!95 &3510791494366125247
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7638343534337580418}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e974b37796d1bc547949ba7d719f228f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &4668513031300450213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,7 +273,7 @@ MonoBehaviour:
     statsChangeType: 2
     maxHealth: 10
     speed: 5
-    attackConfig: {fileID: 11400000, guid: 0ee21540de5e3614d8c83a5bda429bec, type: 2}
+    attackConfig: {fileID: 11400000, guid: 0cf96b9cba974f14e8b302e35d6a1dbb, type: 2}
 --- !u!114 &8210321524277904729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,31 +287,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stepTime: 0
---- !u!114 &5099656663963612667
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7638343534337580418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 377df98bde7799f48adfefb534708c0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthChangeDelay: 0.5
-  onDamage:
-    m_PersistentCalls:
-      m_Calls: []
-  onHeal:
-    m_PersistentCalls:
-      m_Calls: []
-  onDeath:
-    m_PersistentCalls:
-      m_Calls: []
-  onInvincibilityEnd:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &1708795365229658252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -317,8 +313,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45f6466be0a32e746abeb31b2a794001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  equipMeleeWeapon: {fileID: 0}
-  equipRangeWeapon: {fileID: 11400000, guid: 84c48f920becce84b985399bfdb14e70, type: 2}
   weaponPivot: {fileID: 1543684274021897275}
   projectileSpawnPosition: {fileID: 0}
   weaponRenderer: {fileID: 0}
@@ -327,6 +321,8 @@ MonoBehaviour:
   tiles: []
   _inputReader: {fileID: 11400000, guid: 945ec0365077176418488737deed54be, type: 2}
   _gameplayCameraTransform: {fileID: 0}
+  equipMeleeWeapon: {fileID: 11400000, guid: fc3eeee67357e7146b1ff2bc9b04cef2, type: 2}
+  equipRangeWeapon: {fileID: 11400000, guid: 84c48f920becce84b985399bfdb14e70, type: 2}
 --- !u!114 &3867125236162498359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -403,6 +399,19 @@ MonoBehaviour:
   _updateHealthUI: {fileID: 11400000, guid: 2447a760b3f9f134f8730aa53c8d2ece, type: 2}
   _deathEvent: {fileID: 11400000, guid: 0a29544909be226418bc1677ec369790, type: 2}
   _restoreHealth: {fileID: 11400000, guid: de4a39f85969d44cba990125224ff7ef, type: 2}
+--- !u!114 &6361855182263705020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7638343534337580418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48187ebcaf5f40b1a85c377de069a771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unEquipWeapons: {fileID: 11400000, guid: 167047f52dd29d34c9cbd6b4a754c0a8, type: 2}
 --- !u!114 &-8850940645323317601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -417,9 +426,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   recoilStrength: 1
   projectileSizeModifyRecoil: 1
-  projectileSpawnPosition: {fileID: 0}
   equipRangeWeapon: {fileID: 11400000, guid: 84c48f920becce84b985399bfdb14e70, type: 2}
---- !u!114 &6361855182263705020
+  unEquipWeapons: {fileID: 11400000, guid: 167047f52dd29d34c9cbd6b4a754c0a8, type: 2}
+--- !u!114 &1961741076631191618
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -428,30 +437,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 7638343534337580418}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48187ebcaf5f40b1a85c377de069a771, type: 3}
+  m_Script: {fileID: 11500000, guid: 12d29ef4b7fd48cd95a0736eb0d8e71a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &3510791494366125247
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7638343534337580418}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e974b37796d1bc547949ba7d719f228f, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  attackObject: {fileID: 5921577697177155323, guid: b71474726cd9ef34e9e15441dcab3545, type: 3}
+  equipMeleeWeapon: {fileID: 11400000, guid: fc3eeee67357e7146b1ff2bc9b04cef2, type: 2}
+  unEquipWeapons: {fileID: 11400000, guid: 167047f52dd29d34c9cbd6b4a754c0a8, type: 2}
 --- !u!1 &8983955389799877034
 GameObject:
   m_ObjectHideFlags: 0

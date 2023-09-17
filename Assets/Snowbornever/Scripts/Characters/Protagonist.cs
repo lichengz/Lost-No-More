@@ -1,4 +1,5 @@
 ﻿using System;
+using TopDownCharacter2D.Attacks;
 using TopDownCharacter2D.Controllers;
 using UnityEngine;
 
@@ -28,6 +29,22 @@ public class Protagonist : TopDownCharacterController
 	public const float GRAVITY_COMEBACK_MULTIPLIER = .03f;
 	public const float GRAVITY_DIVIDER = .6f;
 	public const float AIR_RESISTANCE = 5f;
+	
+	[SerializeField] public EquipMeleeWeaponEventChannelSO equipMeleeWeapon;
+	[SerializeField] public EquipRangeWeaponEventChannelSO equipRangeWeapon;
+
+	private void InitializePlayerWeapon(AttackConfig attackConfig)
+	{
+		foreach (Transform child in weaponPivot) {
+			Destroy(child.gameObject);
+		}
+		Stats.CurrentStats.attackConfig = attackConfig;
+		GameObject weapon = Instantiate(attackConfig.weaponPrefab, weaponPivot);
+		WeaponController weaponController = weapon.GetComponent<WeaponController>();
+		weaponRenderer = weaponController.weaponRenderer;
+		projectileSpawnPosition = weaponController.projectileSpawnPosition;
+		isWeaponInited = true;
+	}
 
 	private void OnControllerColliderHit(ControllerColliderHit hit)
 	{
@@ -44,6 +61,8 @@ public class Protagonist : TopDownCharacterController
 		_inputReader.StartedRunning += OnStartedRunning;
 		_inputReader.StoppedRunning += OnStoppedRunning;
 		_inputReader.AttackEvent += OnStartedAttack;
+		equipMeleeWeapon.OnEventRaised += InitializePlayerWeapon;
+		equipRangeWeapon.OnEventRaised += InitializePlayerWeapon;
 		//...
 	}
 
@@ -57,12 +76,9 @@ public class Protagonist : TopDownCharacterController
 		_inputReader.StartedRunning -= OnStartedRunning;
 		_inputReader.StoppedRunning -= OnStoppedRunning;
 		_inputReader.AttackEvent -= OnStartedAttack;
+		equipMeleeWeapon.OnEventRaised -= InitializePlayerWeapon;
+		equipRangeWeapon.OnEventRaised -= InitializePlayerWeapon;
 		//...
-	}
-
-	private void Awake()
-	{
-		base.Awake();
 	}
 
 	private void Update()

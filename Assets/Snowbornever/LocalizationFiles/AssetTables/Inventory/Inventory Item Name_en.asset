@@ -149,6 +149,10 @@ MonoBehaviour:
     m_Localized: Gun
     m_Metadata:
       m_Items: []
+  - m_Id: 374023462221611008
+    m_Localized: Sword
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

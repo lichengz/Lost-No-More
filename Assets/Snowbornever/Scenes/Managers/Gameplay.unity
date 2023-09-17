@@ -390,6 +390,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1970466629595806518, guid: d97a65931a4ba5a4b88be8f2352c3b68, type: 3}
+      propertyPath: _UnEquipWeapons
+      value: 
+      objectReference: {fileID: 11400000, guid: 167047f52dd29d34c9cbd6b4a754c0a8, type: 2}
     - target: {fileID: 1970466629595806519, guid: d97a65931a4ba5a4b88be8f2352c3b68, type: 3}
       propertyPath: m_Name
       value: InventoryManager

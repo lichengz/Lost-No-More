@@ -10,15 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4a685ae18494b34e819615474595277, type: 3}
-  m_Name: PlayerSwordSlash
+  m_Name: PlayerSwordConfig
   m_EditorClassIdentifier: 
+  weaponPrefab: {fileID: 4150184995874024751, guid: 3288e07d3f52e704da28a10dc4438b9b, type: 3}
   size: 1.8
   delay: 0.3
   power: 1
   speed: 0.2
   target:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 4096
   swingAngle: 80
   thrustDistance: 0.2
   swingCurve:

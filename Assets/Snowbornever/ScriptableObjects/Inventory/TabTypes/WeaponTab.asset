@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9f8f7281064b84c348cf9f265dbd2335, type: 3}
-  m_Name: CustomizationTab
+  m_Name: WeaponTab
   m_EditorClassIdentifier: 
   _tabName:
     m_TableReference:

@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58a5b32581978a141a66d240261449d0, type: 3}
-  m_Name: Gun
+  m_Script: {fileID: 11500000, guid: 9428b3463d0ab734fb4ab104e7edc204, type: 3}
+  m_Name: GunItem 1
   m_EditorClassIdentifier: 
-  _guid: d274aec8d4fed2a488fb04f1451d1d1a
+  _guid: 5c27babf1c8e02444a9ea11f31522bc3
   _name:
     m_TableReference:
       m_TableCollectionName: GUID:41b74adf4121a468e9dbe8958eb2f813
@@ -35,6 +35,7 @@ MonoBehaviour:
   _healthResorationValue: 0
   _itemType: {fileID: 11400000, guid: ee81531f56f7f944485268fe581c6965, type: 2}
   _prefab: {fileID: 7171763657831072391, guid: 9ef2a35a4b5a4cc41a7f65cac4eae047, type: 3}
+  _rangedAttackConfig: {fileID: 11400000, guid: 032a40c09aaa0cc4dac2b6c58732812d, type: 2}
   references:
     version: 2
     RefIds: []

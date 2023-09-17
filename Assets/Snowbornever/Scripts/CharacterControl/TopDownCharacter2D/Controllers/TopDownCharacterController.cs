@@ -7,6 +7,9 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Tilemaps;
 using Aoiti.Pathfinding;
+using TopDownCharacter2D.Attacks.Melee;
+using TopDownCharacter2D.Attacks.Range;
+using Random = UnityEngine.Random;
 
 namespace TopDownCharacter2D.Controllers
 {
@@ -18,31 +21,23 @@ namespace TopDownCharacter2D.Controllers
     {
         private Rigidbody2D _rb;
 
-        [SerializeField]
-        public VoidEventChannelSO equipMeleeWeapon;
-        
-        [SerializeField]
-        public VoidEventChannelSO equipRangeWeapon;
-        
         [Tooltip("The origin point of the arm to aim with")]
         public Transform weaponPivot;
 
-        [HideInInspector]
-        public Transform projectileSpawnPosition;
-        
-        [HideInInspector]
-        public SpriteRenderer weaponRenderer;
-        
+        [HideInInspector] public Transform projectileSpawnPosition;
+
+        [HideInInspector] public SpriteRenderer weaponRenderer;
+
         public bool isWeaponInited { get; set; }
-        
+
         [Tooltip("The main renderer of the character")]
         public List<SpriteRenderer> characterRenderers;
-        
+
         private float _timeSinceLastAttack = float.MaxValue;
 
         protected bool IsAttacking { get; set; }
         protected CharacterStatsHandler Stats { get; private set; }
-        
+
         Vector3Int[] directions = new Vector3Int[4]
             { Vector3Int.left, Vector3Int.right, Vector3Int.up, Vector3Int.down };
 
@@ -64,6 +59,7 @@ namespace TopDownCharacter2D.Controllers
         {
             get { return path; }
         }
+
         public bool isReachEnd => path.Count == 0;
         public Vector3 velocity => _rb.velocity;
         public bool jumpEnabled => false;
@@ -75,7 +71,7 @@ namespace TopDownCharacter2D.Controllers
         {
             return (a - b).sqrMagnitude;
         }
-        
+
         public float DistanceFunc(Vector3 a, Vector3 b)
         {
             return (a - b).sqrMagnitude;
@@ -115,11 +111,11 @@ namespace TopDownCharacter2D.Controllers
         {
             HandleAttackDelay();
         }
-        
+
         public void SchedulePath(Vector3 target)
         {
             target.z = 0;
-            var currentCellPos=tilemap.WorldToCell(_rb.position);
+            var currentCellPos = tilemap.WorldToCell(_rb.position);
             pathfinder.GenerateAstarPath(currentCellPos, Vector3Int.FloorToInt(target), out path);
             // StopAllCoroutines();
             // StartCoroutine(MovePathCoroutine());
@@ -137,7 +133,8 @@ namespace TopDownCharacter2D.Controllers
                     distance = DistanceFunc(targetPos, _rb.position);
                     yield return null;
                 }
-                if(path.Count > 0) path.RemoveAt(0);
+
+                if (path.Count > 0) path.RemoveAt(0);
             }
         }
 
@@ -146,22 +143,26 @@ namespace TopDownCharacter2D.Controllers
             path.Clear();
         }
 
-        private void InitializeWeapon()
+        protected virtual void InitializeWeapon()
         {
+            if (transform.CompareTag("Player")) return;
             GameObject weapon = Instantiate(Stats.CurrentStats.attackConfig.weaponPrefab, weaponPivot);
             WeaponController weaponController = weapon.GetComponent<WeaponController>();
             weaponRenderer = weaponController.weaponRenderer;
             projectileSpawnPosition = weaponController.projectileSpawnPosition;
             isWeaponInited = true;
-            switch (weaponController.weaponType)
+        }
+
+        public WeaponController.WeaponType GetWeaponType()
+        {
+            if (Stats.CurrentStats.attackConfig is RangedAttackConfig)
             {
-                case WeaponController.WeaponType.Melee:
-                    equipMeleeWeapon.RaiseEvent();
-                    break;
-                case WeaponController.WeaponType.Range:
-                    equipRangeWeapon.RaiseEvent();
-                    break;
+                return WeaponController.WeaponType.Range;
+            }else if (Stats.CurrentStats.attackConfig is MeleeAttackConfig)
+            {
+                return WeaponController.WeaponType.Melee;
             }
+            return WeaponController.WeaponType.Melee;
         }
 
         /// <summary>
@@ -178,6 +179,7 @@ namespace TopDownCharacter2D.Controllers
             {
                 _timeSinceLastAttack += Time.deltaTime;
             }
+
             if (IsAttacking && _timeSinceLastAttack > Stats.CurrentStats.attackConfig.delay)
             {
                 _timeSinceLastAttack = 0f;
@@ -191,7 +193,7 @@ namespace TopDownCharacter2D.Controllers
             if (!(look.normalized == look))
             {
                 Vector2 worldPos = Camera.main.ScreenToWorldPoint(look);
-                look = (worldPos - (Vector2) transform.position).normalized;
+                look = (worldPos - (Vector2)transform.position).normalized;
             }
 
             if (look.magnitude >= .9f)

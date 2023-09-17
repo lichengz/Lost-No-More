@@ -1,7 +1,9 @@
-﻿using TopDownCharacter2D.Attacks;
+﻿using System;
+using TopDownCharacter2D.Attacks;
 using TopDownCharacter2D.Attacks.Range;
 using TopDownCharacter2D.Controllers;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace TopDownCharacter2D
 {
@@ -27,28 +29,39 @@ namespace TopDownCharacter2D
         private Rigidbody2D _rb;
 
         [SerializeField]
-        public VoidEventChannelSO equipRangeWeapon;
-
+        private EquipRangeWeaponEventChannelSO equipRangeWeapon;
+        [SerializeField] 
+        private VoidEventChannelSO unEquipWeapons;
 
         private void Awake()
         {
             _rb = GetComponent<Rigidbody2D>();
             _controller = GetComponent<TopDownCharacterController>();
             projectileManager = ProjectileManager.instance;
-
-            equipRangeWeapon.OnEventRaised += EquipRangeWeapon;
         }
 
-        private void EquipRangeWeapon()
+        private void OnEnable()
+        {
+            equipRangeWeapon.OnEventRaised += EquipRangeWeapon;
+            unEquipWeapons.OnEventRaised += UnEquipRangeWeapon;
+        }
+
+        private void OnDisable()
+        {
+            equipRangeWeapon.OnEventRaised -= EquipRangeWeapon;
+            unEquipWeapons.OnEventRaised -= UnEquipRangeWeapon;
+        }
+
+        public void EquipRangeWeapon(RangedAttackConfig config)
         {
             _controller.OnAttackEvent.AddListener(OnShoot);
             _controller.LookEvent.AddListener(OnAim);
         }
         
-        private void UnEquipRangeWeapon()
+        public void UnEquipRangeWeapon()
         {
-            _controller.OnAttackEvent.AddListener(OnShoot);
-            _controller.LookEvent.AddListener(OnAim);
+            _controller.OnAttackEvent.RemoveListener(OnShoot);
+            _controller.LookEvent.RemoveListener(OnAim);
         }
 
         /// <summary>

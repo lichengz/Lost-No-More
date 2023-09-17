@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pixelplacement;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -16,6 +18,17 @@ public class InventoryManager : MonoBehaviour
 	[SerializeField] private ItemEventChannelSO _addItemEvent = default;
 	[SerializeField] private ItemEventChannelSO _removeItemEvent = default;
 	
+	[SerializeField] private VoidEventChannelSO _UnEquipWeapons;
+	[SerializeField] private EquipMeleeWeaponEventChannelSO _equipMeleeWeaponEventChannel = default;
+	[SerializeField] private EquipRangeWeaponEventChannelSO _equipRangeWeaponEventChannel = default;
+
+	private void Awake()
+	{
+		List<ItemStack> weapons = _currentInventory.GetWeapons();
+		if (weapons.Count == 0) return;
+		EquipWeapon(weapons[0].Item );
+	}
+
 	private void OnEnable()
 	{
 		_cookRecipeEvent.OnEventRaised += CookRecipeEventRaised;
@@ -106,7 +119,21 @@ public class InventoryManager : MonoBehaviour
 	//This empty function is left here for the possibility of adding decorative 3D items
 	private void EquipItemEventRaised(ItemSO item)
 	{
+		EquipWeapon(item);
+	}
 
+	private void EquipWeapon(ItemSO item)
+	{
+		_UnEquipWeapons.RaiseEvent();
+		if (item is ItemMeleeWeaponSO)
+		{
+			ItemMeleeWeaponSO weapon = (ItemMeleeWeaponSO)item;
+			_equipMeleeWeaponEventChannel.RaiseEvent(weapon.MeleeAttackConfig);
+		}else if (item is ItemRangeWeaponSO)
+		{
+			ItemRangeWeaponSO weapon = (ItemRangeWeaponSO)item;
+			_equipRangeWeaponEventChannel.RaiseEvent(weapon.RangedAttackConfig);
+		}
 	}
 }
 

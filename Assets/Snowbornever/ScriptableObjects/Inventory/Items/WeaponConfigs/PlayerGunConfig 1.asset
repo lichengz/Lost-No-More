@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2aca20c846ab409baaeb6c4782674e6c, type: 3}
-  m_Name: PlayerShootConfig
+  m_Name: PlayerGunConfig 1
   m_EditorClassIdentifier: 
   weaponPrefab: {fileID: 7171763657831072391, guid: 9ef2a35a4b5a4cc41a7f65cac4eae047, type: 3}
-  size: 0.6
+  size: 2
   delay: 0.15
-  power: 1
-  speed: 15
+  power: 2
+  speed: 50
   target:
     serializedVersion: 2
     m_Bits: 4096
@@ -24,4 +24,4 @@ MonoBehaviour:
   spread: 0
   numberOfProjectilesPerShot: 1
   multipleProjectilesAngle: 7
-  projectileColor: {r: 1, g: 0.8455281, b: 0, a: 1}
+  projectileColor: {r: 1, g: 0, b: 0.6049175, a: 1}

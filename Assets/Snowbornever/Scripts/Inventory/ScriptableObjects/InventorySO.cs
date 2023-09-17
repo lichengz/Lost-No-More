@@ -7,6 +7,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Inventory", menuName = "Inventory/Inventory")]
 public class InventorySO : ScriptableObject
 {
+	[SerializeField] private InventoryTabSO _weaponTab;
+
 	[Tooltip("The collection of items and their quantities.")]
 	[SerializeField] private List<ItemStack> _items = new List<ItemStack>();
 	[SerializeField] private List<ItemStack> _defaultItems = new List<ItemStack>();
@@ -95,6 +97,13 @@ public class InventorySO : ScriptableObject
 		}
 
 		return 0;
+	}
+	
+	public List<ItemStack> GetWeapons()
+	{
+		List<ItemStack> weapons = new List<ItemStack>();
+		weapons = Items.FindAll(o => o.Item.ItemType.TabType == _weaponTab);
+		return weapons;
 	}
 
 	public bool[] IngredientsAvailability(List<ItemStack> ingredients)

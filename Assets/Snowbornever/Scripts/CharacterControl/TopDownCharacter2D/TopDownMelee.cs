@@ -1,4 +1,5 @@
-﻿using TopDownCharacter2D.Attacks;
+﻿using System;
+using TopDownCharacter2D.Attacks;
 using TopDownCharacter2D.Attacks.Melee;
 using TopDownCharacter2D.Controllers;
 using UnityEngine;
@@ -13,20 +14,40 @@ namespace TopDownCharacter2D
     {
         [SerializeField] private GameObject attackObject;
 
-        [SerializeField] [Tooltip("The pivot point of the attack")]
-        private Transform attackPivot;
-
         private Vector2 _attackDirection;
 
 
         private TopDownCharacterController _controller;
+        
+        [SerializeField]
+        private EquipMeleeWeaponEventChannelSO equipMeleeWeapon;
+        [SerializeField] 
+        private VoidEventChannelSO unEquipWeapons;
 
         private void Awake()
         {
             _controller = GetComponent<TopDownCharacterController>();
         }
 
-        private void Start()
+        private void OnEnable()
+        {
+            equipMeleeWeapon.OnEventRaised += EquipMeleeWeapon;
+            unEquipWeapons.OnEventRaised += UnEquipMeleeWeapon;
+        }
+        
+        private void OnDisable()
+        {
+            equipMeleeWeapon.OnEventRaised -= EquipMeleeWeapon;
+            unEquipWeapons.OnEventRaised -= UnEquipMeleeWeapon;
+        }
+
+        private void EquipMeleeWeapon(MeleeAttackConfig config)
+        {
+            _controller.OnAttackEvent.AddListener(Attack);
+            _controller.LookEvent.AddListener(Rotate);
+        }
+        
+        private void UnEquipMeleeWeapon()
         {
             _controller.OnAttackEvent.AddListener(Attack);
             _controller.LookEvent.AddListener(Rotate);
@@ -53,6 +74,7 @@ namespace TopDownCharacter2D
         /// <param name="attackConfig"> The configuration on the melee attack</param>
         private void InstantiateAttack(MeleeAttackConfig attackConfig)
         {
+            Transform attackPivot = _controller.projectileSpawnPosition;
             attackPivot.localRotation = Quaternion.identity;
             GameObject obj = Instantiate(attackObject, attackPivot.position,
                 Quaternion.Euler(0, 0, Vector2.SignedAngle(Vector2.right, _attackDirection)), attackPivot);

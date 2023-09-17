@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fafac715ff920c4383fed91a38a351e, type: 3}
+  m_Script: {fileID: 11500000, guid: 5abec5ce2b0bd0144867d77f2af5e59a, type: 3}
   m_Name: EquipMeleeWeapon
   m_EditorClassIdentifier: 
   _guid: 

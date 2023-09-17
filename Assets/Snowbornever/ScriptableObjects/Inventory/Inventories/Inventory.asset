@@ -12,8 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b39a296438081ff4c99abec393d12d54, type: 3}
   m_Name: Inventory
   m_EditorClassIdentifier: 
+  _weaponTab: {fileID: 11400000, guid: b7f665e7113d54635b9cd79218983b7e, type: 2}
   _items:
-  - _item: {fileID: 11400000, guid: d274aec8d4fed2a488fb04f1451d1d1a, type: 2}
+  - _item: {fileID: 11400000, guid: 5c27babf1c8e02444a9ea11f31522bc3, type: 2}
+    Amount: 1
+  - _item: {fileID: 11400000, guid: a0ca86b3ecc4860498144ce2655b1f12, type: 2}
+    Amount: 1
+  - _item: {fileID: 11400000, guid: aeff0385e3ee7bc4e8195787743d24f5, type: 2}
     Amount: 1
   - _item: {fileID: 11400000, guid: 540c35ca6164bf3438e37e4f8087d47c, type: 2}
     Amount: 1

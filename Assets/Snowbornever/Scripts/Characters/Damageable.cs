@@ -53,12 +53,16 @@ public class Damageable : MonoBehaviour
 	{
 		if(_restoreHealth != null)
 			_restoreHealth.OnEventRaised += Cure;
+		if(_deathEvent != null)
+			_deathEvent.OnEventRaised += Die;
 	}
 
 	private void OnDisable()
 	{
 		if(_restoreHealth != null)
 			_restoreHealth.OnEventRaised -= Cure;
+		if(_restoreHealth != null)
+			_deathEvent.OnEventRaised -= Die;
 	}
 
 	public void ReceiveAnAttack(int damage)
@@ -117,5 +121,10 @@ public class Damageable : MonoBehaviour
 
 		if (_updateHealthUI != null)
 			_updateHealthUI.RaiseEvent();
+	}
+
+	private void Die()
+	{
+		Destroy(gameObject);
 	}
 }

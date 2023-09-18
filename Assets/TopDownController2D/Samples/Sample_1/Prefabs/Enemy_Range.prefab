@@ -5167,8 +5167,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56e79f2f2d5f487fa4d74973eaab049e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  equipMeleeWeapon: {fileID: 11400000, guid: ed1e101c8d8e52c4fa054888a65705be, type: 2}
-  equipRangeWeapon: {fileID: 11400000, guid: 84c48f920becce84b985399bfdb14e70, type: 2}
   weaponPivot: {fileID: 6761192757735821569}
   projectileSpawnPosition: {fileID: 0}
   weaponRenderer: {fileID: 0}
@@ -5250,7 +5248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageEventDelay: 0.5
   _healthConfigSO: {fileID: 11400000, guid: 44d526ea4f78a054ab49bdd55beb7147, type: 2}
-  _currentHealthSO: {fileID: 11400000, guid: e6d00b70d6fb2d74ca64564daeee4e81, type: 2}
+  _currentHealthSO: {fileID: 0}
   _getHitEffectSO: {fileID: 11400000, guid: 7e34341ff0908c5428cb93633ed5cad5, type: 2}
   _mainMeshRenderer: {fileID: 6761192758136934756}
   _droppableRewardSO: {fileID: 11400000, guid: 6158158d6ef9a3d47827f7851295bcef, type: 2}

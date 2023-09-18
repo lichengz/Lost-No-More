@@ -13,10 +13,10 @@ TagManager:
   - UI
   - player
   - interactable
-  - bottom
+  - obstacles
   - Ground Soft
   - Ground Hard
-  - bullet
+  - hitbox
   - enemy
   - 
   - 

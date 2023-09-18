@@ -49,8 +49,8 @@ namespace TopDownCharacter2D
         
         private void UnEquipMeleeWeapon()
         {
-            _controller.OnAttackEvent.AddListener(Attack);
-            _controller.LookEvent.AddListener(Rotate);
+            _controller.OnAttackEvent.RemoveListener(Attack);
+            _controller.LookEvent.RemoveListener(Rotate);
         }
 
         private void Attack(AttackConfig config)
@@ -79,7 +79,7 @@ namespace TopDownCharacter2D
             GameObject obj = Instantiate(attackObject, attackPivot.position,
                 Quaternion.Euler(0, 0, Vector2.SignedAngle(Vector2.right, _attackDirection)), attackPivot);
             MeleeAttackController attackController = obj.GetComponent<MeleeAttackController>();
-            attackController.InitializeAttack(attackConfig);
+            attackController.InitializeAttack(attackConfig, _controller.weaponRenderer);
         }
     }
 }

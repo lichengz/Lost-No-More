@@ -1,4 +1,5 @@
-﻿using TopDownCharacter2D.Health;
+﻿using System.Collections.Generic;
+using TopDownCharacter2D.Health;
 using UnityEngine;
 
 namespace TopDownCharacter2D.Attacks.Melee
@@ -18,6 +19,7 @@ namespace TopDownCharacter2D.Attacks.Melee
         private float _timeActive;
 
         private Transform _transform;
+        private SpriteRenderer weaponSprite;
 
         private void Update()
         {
@@ -31,6 +33,7 @@ namespace TopDownCharacter2D.Attacks.Melee
             //  Destroy the attack after the time of the attack speed
             if (_timeActive > attackConfig.speed)
             {
+                weaponSprite.enabled = true;
                 DestroyAttack();
             }
 
@@ -45,10 +48,10 @@ namespace TopDownCharacter2D.Attacks.Melee
         {
             if (attackConfig.target.value == (attackConfig.target.value | (1 << other.gameObject.layer)))
             {
-                HealthSystem health = other.gameObject.GetComponent<HealthSystem>();
+                Damageable health = other.GetComponent<Damageable>();
                 if (health != null)
                 {
-                    health.ChangeHealth(-attackConfig.power);
+                    health.ReceiveAnAttack((int)attackConfig.power);
                     TopDownKnockBack knockBack = other.gameObject.GetComponent<TopDownKnockBack>();
                     if (knockBack != null)
                     {
@@ -62,8 +65,18 @@ namespace TopDownCharacter2D.Attacks.Melee
         ///     Initializes the properties of the attack
         /// </summary>
         /// <param name="attackConfig"> The configuration of the attack </param>
-        public void InitializeAttack(MeleeAttackConfig attackConfig)
+        public void InitializeAttack(MeleeAttackConfig attackConfig, SpriteRenderer parentSprite = null)
         {
+            if (parentSprite != null)
+            {
+                weaponSprite = parentSprite;
+                weaponSprite.enabled = false;
+                SpriteRenderer childSprite = GetComponentInChildren<SpriteRenderer>();
+                if (childSprite != null)
+                {
+                    childSprite.sprite = parentSprite.sprite;
+                }
+            }
             _transform = transform;
             this.attackConfig = attackConfig;
 

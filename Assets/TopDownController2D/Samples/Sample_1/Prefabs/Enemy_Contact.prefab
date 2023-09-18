@@ -127,10 +127,9 @@ GameObject:
   - component: {fileID: 977709029691615450}
   - component: {fileID: 977709029691615397}
   - component: {fileID: 977709029691615393}
-  - component: {fileID: 977709029691615453}
+  - component: {fileID: 2238051644365204714}
   - component: {fileID: 977709029691615454}
   - component: {fileID: 3914305125170438023}
-  - component: {fileID: 977709029691615399}
   - component: {fileID: 6949978699556857508}
   - component: {fileID: 7237944963745782417}
   - component: {fileID: 6875515459840673958}
@@ -204,8 +203,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!60 &977709029691615453
-PolygonCollider2D:
+--- !u!61 &2238051644365204714
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -236,7 +235,7 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.4}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -246,17 +245,9 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.2347455, y: 0.38304102}
-      - {x: -0.24669218, y: 0.3798751}
-      - {x: -0.37561393, y: 0.23683771}
-      - {x: -0.36771035, y: -0.3448069}
-      - {x: -0.2528395, y: -0.49754414}
-      - {x: 0.2548774, y: -0.49752373}
-      - {x: 0.33977377, y: -0.39884382}
-      - {x: 0.36918306, y: 0.24224477}
-  m_UseDelaunayMesh: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.6}
+  m_EdgeRadius: 0
 --- !u!95 &977709029691615454
 Animator:
   serializedVersion: 5
@@ -292,48 +283,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageEventDelay: 0.5
   _healthConfigSO: {fileID: 11400000, guid: c940db1dd221921439b72d2ecc2b90fe, type: 2}
-  _currentHealthSO: {fileID: 11400000, guid: 4165033af6b31f64198e786a7683d37d, type: 2}
+  _currentHealthSO: {fileID: 0}
   _getHitEffectSO: {fileID: 11400000, guid: 7e34341ff0908c5428cb93633ed5cad5, type: 2}
   _mainMeshRenderer: {fileID: 977709030571607415}
   _droppableRewardSO: {fileID: 11400000, guid: 6158158d6ef9a3d47827f7851295bcef, type: 2}
   _updateHealthUI: {fileID: 11400000, guid: 889e16b451ada1245be162d1948e4dcf, type: 2}
   _deathEvent: {fileID: 11400000, guid: c46745621565bf04095b9d792fe7a5f9, type: 2}
   _restoreHealth: {fileID: 11400000, guid: de9c20d7b79a7534cb4665a6627803c0, type: 2}
---- !u!58 &977709029691615399
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 977709029691615451}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.09374428}
-  serializedVersion: 2
-  m_Radius: 0.6288986
 --- !u!114 &6949978699556857508
 MonoBehaviour:
   m_ObjectHideFlags: 0

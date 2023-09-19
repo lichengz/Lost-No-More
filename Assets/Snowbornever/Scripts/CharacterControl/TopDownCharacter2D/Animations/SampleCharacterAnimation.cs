@@ -1,5 +1,7 @@
-﻿using TopDownCharacter2D.Health;
+﻿using System;
+using TopDownCharacter2D.Health;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace TopDownController2D.Scripts.TopDownCharacter2D.Animations
 {
@@ -11,19 +13,23 @@ namespace TopDownController2D.Scripts.TopDownCharacter2D.Animations
         
         [SerializeField] private bool createDustOnWalk = true;
         [SerializeField] private ParticleSystem dustParticleSystem;
-        
+        private NavMeshAgent _agent;
+        private Rigidbody2D _rb;
+
         private HealthSystem _healthSystem;
         
         protected override void Awake()
         {
             base.Awake();
             _healthSystem = GetComponent<HealthSystem>();
+            _agent = GetComponent<NavMeshAgent>();
+            _rb = GetComponent<Rigidbody2D>();
         }
 
         protected void Start()
         {
             controller.OnAttackEvent.AddListener(_ => Attacking());
-            controller.OnMoveEvent.AddListener(Move);
+            // controller.OnMoveEvent.AddListener(Move);
 
             if (_healthSystem != null)
             {
@@ -32,13 +38,18 @@ namespace TopDownController2D.Scripts.TopDownCharacter2D.Animations
             }
         }
 
+        private void Update()
+        {
+            animator.SetBool(IsWalking, _rb.velocity.magnitude > .5f || (_agent != null && _agent.velocity.magnitude > 0.5f));
+        }
+
         /// <summary>
         ///     To call when the character moves, change the animation to the walking one
         /// </summary>
         /// <param name="movementDirection"> The new movement direction </param>
         private void Move(Vector2 movementDirection)
         {
-            animator.SetBool(IsWalking, movementDirection.magnitude > .5f);
+            animator.SetBool(IsWalking, movementDirection.magnitude > .5f || (_agent != null && _agent.velocity.magnitude > 0.5f));
         }
 
         /// <summary>

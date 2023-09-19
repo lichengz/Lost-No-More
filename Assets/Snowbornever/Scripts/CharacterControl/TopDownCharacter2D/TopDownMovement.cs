@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TopDownCharacter2D.Controllers;
 using TopDownCharacter2D.Stats;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace TopDownCharacter2D
 {
@@ -21,6 +22,7 @@ namespace TopDownCharacter2D
         private Rigidbody2D _rb;
         private CharacterStatsHandler _stats;
         private Damageable _damageable;
+        private NavMeshAgent _agent;
 
         [Range(0.01f, 1f)] public float stepTime;
 
@@ -30,11 +32,24 @@ namespace TopDownCharacter2D
             _stats = GetComponent<CharacterStatsHandler>();
             _rb = GetComponent<Rigidbody2D>();
             _damageable = GetComponent<Damageable>();
+            _agent = GetComponent<NavMeshAgent>();
         }
 
         private void Start()
         {
             _controller.OnMoveEvent.AddListener(Move);
+            _controller.OnMoveNavMeshEvent.AddListener(MoveNavMesh);
+
+        }
+        
+        void Update()
+        {
+            if (_agent != null && Input.GetMouseButtonDown(1) )
+            {
+                var target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                target.z = 0;
+                _agent.destination = target;
+            }
         }
 
         private void FixedUpdate()
@@ -52,6 +67,11 @@ namespace TopDownCharacter2D
         private void Move(Vector2 direction)
         {
             _movementDirection = direction;
+        }
+        
+        private void MoveNavMesh(Vector2 target)
+        {
+            _agent.destination = target;
         }
 
         /// <summary>

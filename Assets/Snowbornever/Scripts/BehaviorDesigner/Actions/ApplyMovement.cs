@@ -13,11 +13,11 @@ public class ApplyMovement : CharacterAction
 
     public override void OnStart()
     {
-        characterController.OnMoveEvent.Invoke(direction.Value);
-        movementTween = DOVirtual.DelayedCall(duration, () =>
-        {
-            characterController.OnMoveEvent.Invoke(Vector2.zero);
-        }, false);
+        // characterController.OnMoveEvent.Invoke(direction.Value);
+        // movementTween = DOVirtual.DelayedCall(duration, () =>
+        // {
+        //     characterController.OnMoveEvent.Invoke(Vector2.zero);
+        // }, false);
     }
 
     public override TaskStatus OnUpdate()

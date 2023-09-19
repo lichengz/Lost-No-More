@@ -204,10 +204,12 @@ namespace TopDownCharacter2D.Controllers
 
         #region Events
 
+        private readonly MoveEvent onMoveNavMeshEvent = new MoveEvent();
         private readonly MoveEvent onMoveEvent = new MoveEvent();
         private readonly AttackEvent onAttackEvent = new AttackEvent();
         private readonly LookEvent onLookEvent = new LookEvent();
 
+        public UnityEvent<Vector2> OnMoveNavMeshEvent => onMoveNavMeshEvent;
         public UnityEvent<Vector2> OnMoveEvent => onMoveEvent;
         public UnityEvent<AttackConfig> OnAttackEvent => onAttackEvent;
         public UnityEvent<Vector2> LookEvent => onLookEvent;

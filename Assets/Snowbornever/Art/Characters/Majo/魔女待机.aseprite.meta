@@ -2,7 +2,12 @@ fileFormatVersion: 2
 guid: fb9f1895d3e5731468babd38bedf0b9a
 ScriptedImporter:
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: "\u9B54\u5973\u5F85\u673A_Clip"
+    second: {fileID: 7400000, guid: e4c22d067a2ba7c479e1d9a69a64a058, type: 2}
   serializedVersion: 2
   userData: 
   assetBundleName: 
@@ -35,7 +40,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 100
+    spritePixelsToUnits: 64
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -95,7 +100,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 0
+  platformSettingsDirtyTick: 638307122011307659
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,7 +126,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: "\u9B54\u5973\u5F85\u673A_Frame_0"
     originalName: 
-    pivot: {x: 0.61627907, y: -0.21428572}
+    pivot: {x: 0.6279069, y: -0.47142857}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -141,7 +146,7 @@ ScriptedImporter:
     uvTransform: {x: 76, y: 319}
   - name: "\u9B54\u5973\u5F85\u673A_Frame_1"
     originalName: 
-    pivot: {x: 0.625, y: -0.23188406}
+    pivot: {x: 0.6363636, y: -0.49275362}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -161,7 +166,7 @@ ScriptedImporter:
     uvTransform: {x: 76, y: 242}
   - name: "\u9B54\u5973\u5F85\u673A_Frame_2"
     originalName: 
-    pivot: {x: 0.625, y: -0.30769232}
+    pivot: {x: 0.6363636, y: -0.58461547}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -181,7 +186,7 @@ ScriptedImporter:
     uvTransform: {x: 76, y: 397}
   - name: "\u9B54\u5973\u5F85\u673A_Frame_3"
     originalName: 
-    pivot: {x: 0.6413044, y: -0.30769232}
+    pivot: {x: 0.65217394, y: -0.58461547}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -201,7 +206,7 @@ ScriptedImporter:
     uvTransform: {x: 128, y: 79}
   - name: "\u9B54\u5973\u5F85\u673A_Frame_4"
     originalName: 
-    pivot: {x: 0.49193546, y: -0.3030303}
+    pivot: {x: 0.49999997, y: -0.57575756}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -221,7 +226,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 78}
   - name: "\u9B54\u5973\u5F85\u673A_Frame_5"
     originalName: 
-    pivot: {x: 0.4140625, y: -0.3030303}
+    pivot: {x: 0.421875, y: -0.57575756}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -241,7 +246,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: "\u9B54\u5973\u5F85\u673A_Frame_6"
     originalName: 
-    pivot: {x: 0.42741936, y: -0.3030303}
+    pivot: {x: 0.43548384, y: -0.57575756}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -261,7 +266,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 152}
   - name: "\u9B54\u5973\u5F85\u673A_Frame_7"
     originalName: 
-    pivot: {x: 0.49074072, y: -0.3030303}
+    pivot: {x: 0.5, y: -0.57575756}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -281,7 +286,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 226}
   - name: "\u9B54\u5973\u5F85\u673A_Frame_8"
     originalName: 
-    pivot: {x: 0.61627907, y: -0.30769232}
+    pivot: {x: 0.6279069, y: -0.58461547}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -301,7 +306,7 @@ ScriptedImporter:
     uvTransform: {x: 128, y: 226}
   - name: "\u9B54\u5973\u5F85\u673A_Frame_9"
     originalName: 
-    pivot: {x: 0.6413044, y: -0.29850748}
+    pivot: {x: 0.65217394, y: -0.5671642}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -321,7 +326,7 @@ ScriptedImporter:
     uvTransform: {x: 128, y: 4}
   - name: "\u9B54\u5973\u5F85\u673A_Frame_10"
     originalName: 
-    pivot: {x: 0.625, y: -0.28169012}
+    pivot: {x: 0.6363636, y: -0.53521127}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -341,7 +346,7 @@ ScriptedImporter:
     uvTransform: {x: 76, y: 4}
   - name: "\u9B54\u5973\u5F85\u673A_Frame_11"
     originalName: 
-    pivot: {x: 0.6413044, y: -0.26666668}
+    pivot: {x: 0.65217394, y: -0.5066667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -361,7 +366,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 383}
   - name: "\u9B54\u5973\u5F85\u673A_Frame_12"
     originalName: 
-    pivot: {x: 0.64893615, y: -0.26666668}
+    pivot: {x: 0.65957445, y: -0.5066667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -381,7 +386,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 300}
   - name: "\u9B54\u5973\u5F85\u673A_Frame_13"
     originalName: 
-    pivot: {x: 0.61627907, y: -0.2777778}
+    pivot: {x: 0.6279069, y: -0.5277778}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -401,7 +406,7 @@ ScriptedImporter:
     uvTransform: {x: 76, y: 83}
   - name: "\u9B54\u5973\u5F85\u673A_Frame_14"
     originalName: 
-    pivot: {x: 0.61627907, y: -0.28169012}
+    pivot: {x: 0.6279069, y: -0.53521127}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -421,7 +426,7 @@ ScriptedImporter:
     uvTransform: {x: 76, y: 163}
   - name: "\u9B54\u5973\u5F85\u673A_Frame_15"
     originalName: 
-    pivot: {x: 0.61627907, y: -0.3030303}
+    pivot: {x: 0.6279069, y: -0.57575756}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -451,134 +456,170 @@ ScriptedImporter:
     - name: "\u9B54\u5973\u5F85\u673A_Frame_0"
       frameIndex: 0
       cellRect:
-        x: 20
-        y: 15
+        x: 33
+        y: 33
         width: 43
         height: 70
       spriteId: 2dff5c8555fe5444fab3998bd32a373c
     - name: "\u9B54\u5973\u5F85\u673A_Frame_1"
       frameIndex: 1
       cellRect:
-        x: 19
-        y: 16
+        x: 32
+        y: 34
         width: 44
         height: 69
       spriteId: 5868e1c641af7f249bc950bb758dfb7c
     - name: "\u9B54\u5973\u5F85\u673A_Frame_2"
       frameIndex: 2
       cellRect:
-        x: 19
-        y: 20
+        x: 32
+        y: 38
         width: 44
         height: 65
       spriteId: 888e0da3ef9c3614398db422b765e244
     - name: "\u9B54\u5973\u5F85\u673A_Frame_3"
       frameIndex: 3
       cellRect:
-        x: 17
-        y: 20
+        x: 30
+        y: 38
         width: 46
         height: 65
       spriteId: 35b5c3ba39fba954ea69d191136f27d9
     - name: "\u9B54\u5973\u5F85\u673A_Frame_4"
       frameIndex: 4
       cellRect:
-        x: 16
-        y: 20
+        x: 29
+        y: 38
         width: 62
         height: 66
       spriteId: 4de3153071fbaa64fb298e4c29ef78c4
     - name: "\u9B54\u5973\u5F85\u673A_Frame_5"
       frameIndex: 5
       cellRect:
-        x: 20
-        y: 20
+        x: 33
+        y: 38
         width: 64
         height: 66
       spriteId: afdc47ac97129e3429e17043ca5ad0d3
     - name: "\u9B54\u5973\u5F85\u673A_Frame_6"
       frameIndex: 6
       cellRect:
-        x: 20
-        y: 20
+        x: 33
+        y: 38
         width: 62
         height: 66
       spriteId: 1ffe1f61a11fbc641b96c0d8c1625fe3
     - name: "\u9B54\u5973\u5F85\u673A_Frame_7"
       frameIndex: 7
       cellRect:
-        x: 20
-        y: 20
+        x: 33
+        y: 38
         width: 54
         height: 66
       spriteId: cc4f0688239fc3641885521aafd0b5b0
     - name: "\u9B54\u5973\u5F85\u673A_Frame_8"
       frameIndex: 8
       cellRect:
-        x: 20
-        y: 20
+        x: 33
+        y: 38
         width: 43
         height: 65
       spriteId: ef5bef8997683dc4e8351bad6ed74203
     - name: "\u9B54\u5973\u5F85\u673A_Frame_9"
       frameIndex: 9
       cellRect:
-        x: 17
-        y: 20
+        x: 30
+        y: 38
         width: 46
         height: 67
       spriteId: 25549c3a83c4598498600336fe278374
     - name: "\u9B54\u5973\u5F85\u673A_Frame_10"
       frameIndex: 10
       cellRect:
-        x: 19
-        y: 20
+        x: 32
+        y: 38
         width: 44
         height: 71
       spriteId: 4d67e88204cad2841ba9cc2c030a8a4f
     - name: "\u9B54\u5973\u5F85\u673A_Frame_11"
       frameIndex: 11
       cellRect:
-        x: 17
-        y: 20
+        x: 30
+        y: 38
         width: 46
         height: 75
       spriteId: dc8ef2b48015217448f9aefa3c73a2b2
     - name: "\u9B54\u5973\u5F85\u673A_Frame_12"
       frameIndex: 12
       cellRect:
-        x: 16
-        y: 20
+        x: 29
+        y: 38
         width: 47
         height: 75
       spriteId: 5bb4becfcd210e444b7e30a3760c6d27
     - name: "\u9B54\u5973\u5F85\u673A_Frame_13"
       frameIndex: 13
       cellRect:
-        x: 20
-        y: 20
+        x: 33
+        y: 38
         width: 43
         height: 72
       spriteId: 5287e60a1beb14b41b505d17c9d4005f
     - name: "\u9B54\u5973\u5F85\u673A_Frame_14"
       frameIndex: 14
       cellRect:
-        x: 20
-        y: 20
+        x: 33
+        y: 38
         width: 43
         height: 71
       spriteId: e7fe1c1e7bbd47d4882e0a4af32102f3
     - name: "\u9B54\u5973\u5F85\u673A_Frame_15"
       frameIndex: 15
       cellRect:
-        x: 20
-        y: 20
+        x: 33
+        y: 38
         width: 43
         height: 66
       spriteId: 2a55244b4b89c4d4c95cfc2ee1be8c7c
     linkedCells: []
     parentIndex: -1
-  platformSettings: []
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 93, y: 104}
+  canvasSize: {x: 120, y: 140}

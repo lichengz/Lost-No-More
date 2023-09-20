@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EnemySwordConfig
   m_EditorClassIdentifier: 
   weaponPrefab: {fileID: 4150184995874024751, guid: 3288e07d3f52e704da28a10dc4438b9b, type: 3}
-  size: 1.8
+  size: 1
   delay: 0.3
   power: 1
   speed: 0.2

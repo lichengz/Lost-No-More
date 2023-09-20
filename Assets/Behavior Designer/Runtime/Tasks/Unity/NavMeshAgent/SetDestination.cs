@@ -11,7 +11,7 @@ namespace BehaviorDesigner.Runtime.Tasks.Unity.UnityNavMeshAgent
         public SharedGameObject targetGameObject;
         [SharedRequired]
         [Tooltip("The NavMeshAgent destination")]
-        public SharedVector3 destination;
+        public SharedVector2 destination;
 
         // cache the navmeshagent component
         private NavMeshAgent navMeshAgent;
@@ -39,7 +39,7 @@ namespace BehaviorDesigner.Runtime.Tasks.Unity.UnityNavMeshAgent
         public override void OnReset()
         {
             targetGameObject = null;
-            destination = Vector3.zero;
+            destination = Vector2.zero;
         }
     }
 }

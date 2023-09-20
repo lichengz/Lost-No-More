@@ -17,12 +17,19 @@ public class AimTarget : CharacterAction
     {
         float rotZ = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        characterController.weaponRenderer.flipY = Mathf.Abs(rotZ) > 90f;
-        foreach (SpriteRenderer charRenderer in characterController.characterRenderers)
+        if (characterController.GetWeaponType() == WeaponController.WeaponType.Melee)
         {
-            charRenderer.flipX = characterController.weaponRenderer.flipY;
+            characterController.weaponRenderer.flipX = Mathf.Abs(rotZ) > 90f;
         }
+        else
+        {
+            characterController.weaponRenderer.flipY = Mathf.Abs(rotZ) > 90f;
+            foreach (SpriteRenderer charRenderer in characterController.characterRenderers)
+            {
+                charRenderer.flipX = characterController.weaponRenderer.flipY;
+            }
 
-        characterController.weaponPivot.rotation = Quaternion.Euler(0, 0, rotZ);
+            characterController.weaponPivot.rotation = Quaternion.Euler(0, 0, rotZ);
+        }
     }
 }

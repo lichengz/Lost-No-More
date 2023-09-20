@@ -9,6 +9,7 @@ public class LookForTarget : CharacterAction
     private string targetTag = "Player";
     
     public SharedTransform target;
+    public SharedVector2 targetPos;
     public SharedFloat distanceToTarget;
     public SharedVector2 directionToTarget;
 
@@ -19,6 +20,7 @@ public class LookForTarget : CharacterAction
         targetTransform = FindClosestTarget();
         target.Value = targetTransform;
         if (targetTransform == null) return TaskStatus.Running;
+        targetPos.Value = targetTransform.position;
         distanceToTarget.Value = DistanceToTarget();
         directionToTarget.Value = DirectionToTarget();
         return TaskStatus.Success;

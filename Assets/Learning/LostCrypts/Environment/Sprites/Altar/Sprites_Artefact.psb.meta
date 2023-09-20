@@ -843,5 +843,5 @@ ScriptedImporter:
   textureAssetName: artefact Texture
   prefabAssetName: artefact Prefab
   spriteLibAssetName: artefact Sprite Lib
-  skeletonAssetName: Sprites_Artefact Skeleton
+  skeletonAssetName: 
   secondarySpriteTextures: []

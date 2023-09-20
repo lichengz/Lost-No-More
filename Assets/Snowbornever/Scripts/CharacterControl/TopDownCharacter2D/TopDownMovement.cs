@@ -39,12 +39,16 @@ namespace TopDownCharacter2D
         {
             _controller.OnMoveEvent.AddListener(Move);
             _controller.OnMoveNavMeshEvent.AddListener(MoveNavMesh);
-
+            if (_agent != null)
+            {
+                _agent.updateRotation = false;
+                _agent.updateUpAxis = false;
+            }
         }
-        
+
         void Update()
         {
-            if (_agent != null && Input.GetMouseButtonDown(1) )
+            if (_agent != null && _agent.isActiveAndEnabled && Input.GetMouseButtonDown(1))
             {
                 var target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 target.z = 0;
@@ -54,7 +58,7 @@ namespace TopDownCharacter2D
 
         private void FixedUpdate()
         {
-            if (!transform.CompareTag("Player") || !_damageable.GetHit)
+            if (transform.CompareTag("Player") && !_damageable.GetHit)
             {
                 ApplyMovement(_movementDirection);
             }
@@ -68,7 +72,7 @@ namespace TopDownCharacter2D
         {
             _movementDirection = direction;
         }
-        
+
         private void MoveNavMesh(Vector2 target)
         {
             _agent.destination = target;

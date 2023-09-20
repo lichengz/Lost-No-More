@@ -12,6 +12,10 @@ public class CharacterAction : Action
     protected Animator animator;
     protected TopDownCharacterController characterController;
     protected NavMeshAgent agent;
+    
+    protected readonly int IsWalking = Animator.StringToHash("IsWalking");
+    protected readonly int Attack = Animator.StringToHash("Attack");
+    protected readonly int IsHurt = Animator.StringToHash("IsHurt");
 
     public override void OnAwake()
     {

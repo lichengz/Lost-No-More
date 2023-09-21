@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: PlayerGunConfig 1
   m_EditorClassIdentifier: 
   weaponPrefab: {fileID: 7171763657831072391, guid: 9ef2a35a4b5a4cc41a7f65cac4eae047, type: 3}
+  projectile: {fileID: 138633536859697717, guid: 88b2db9adf11d5b44806096434021ea3, type: 3}
   size: 2
   delay: 0.15
   power: 2

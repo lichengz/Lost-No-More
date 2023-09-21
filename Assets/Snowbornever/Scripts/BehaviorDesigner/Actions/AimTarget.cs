@@ -9,6 +9,7 @@ public class AimTarget : CharacterAction
     public SharedVector2 directionToTarget;
     public override TaskStatus OnUpdate()
     {
+        characterController.LookEvent.Invoke(directionToTarget.Value);
         RotateArm(directionToTarget.Value);
         return TaskStatus.Success;
     }

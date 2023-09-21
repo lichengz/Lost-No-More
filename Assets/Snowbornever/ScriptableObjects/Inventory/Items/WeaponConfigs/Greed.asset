@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4a685ae18494b34e819615474595277, type: 3}
-  m_Name: EnemySwordConfig
+  m_Name: Greed
   m_EditorClassIdentifier: 
   weaponPrefab: {fileID: 4150184995874024751, guid: 3288e07d3f52e704da28a10dc4438b9b, type: 3}
   projectile: {fileID: 5921577697177155323, guid: b71474726cd9ef34e9e15441dcab3545, type: 3}

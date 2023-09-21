@@ -83,7 +83,7 @@ public class Protagonist : TopDownCharacterController
 
 	private void Update()
 	{
-		base.Update();
+		// base.Update();
 		RecalculateMovement();
 	}
 
@@ -158,7 +158,10 @@ public class Protagonist : TopDownCharacterController
 	private void OnStartedRunning() => isRunning = true;
 
 
-	private void OnStartedAttack() => IsAttacking = true;
+	private void OnStartedAttack()
+	{
+		HandleAttackDelay();
+	}
 
 	// Triggered from Animation Event
 	public void ConsumeAttackInput() => IsAttacking = false;

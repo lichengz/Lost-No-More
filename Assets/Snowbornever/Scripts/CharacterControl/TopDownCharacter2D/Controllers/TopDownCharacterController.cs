@@ -36,7 +36,7 @@ namespace TopDownCharacter2D.Controllers
         private float _timeSinceLastAttack = float.MaxValue;
 
         protected bool IsAttacking { get; set; }
-        protected CharacterStatsHandler Stats { get; private set; }
+        public CharacterStatsHandler Stats { get; private set; }
 
         Vector3Int[] directions = new Vector3Int[4]
             { Vector3Int.left, Vector3Int.right, Vector3Int.up, Vector3Int.down };
@@ -107,11 +107,6 @@ namespace TopDownCharacter2D.Controllers
             InitializeWeapon();
         }
 
-        protected virtual void Update()
-        {
-            HandleAttackDelay();
-        }
-
         public void SchedulePath(Vector3 target)
         {
             target.z = 0;
@@ -168,23 +163,18 @@ namespace TopDownCharacter2D.Controllers
         /// <summary>
         ///     Only trigger a attack event when the attack delay is over
         /// </summary>
-        private void HandleAttackDelay()
+        protected void HandleAttackDelay()
         {
             if (Stats.CurrentStats.attackConfig == null)
             {
                 return;
             }
 
-            if (_timeSinceLastAttack <= Stats.CurrentStats.attackConfig.delay)
+            if (!IsAttacking)
             {
-                _timeSinceLastAttack += Time.deltaTime;
-            }
-
-            if (IsAttacking && _timeSinceLastAttack > Stats.CurrentStats.attackConfig.delay)
-            {
+                IsAttacking = true;
                 _timeSinceLastAttack = 0f;
                 onAttackEvent.Invoke(Stats.CurrentStats.attackConfig);
-                IsAttacking = false;
             }
         }
 

@@ -8,7 +8,13 @@ public class SpriteFaceTarget : CharacterAction
         {
             foreach (var sprite in characterController.characterRenderers )
             {
-                sprite.flipX = agent.destination.x < transform.position.x;
+                if (agent.destination.x < transform.position.x - 0.5f)
+                {
+                    sprite.flipX = true;
+                }else if (agent.destination.x > transform.position.x + 0.5f)
+                {
+                    sprite.flipX = false;
+                }
             }
         }
         return TaskStatus.Success;

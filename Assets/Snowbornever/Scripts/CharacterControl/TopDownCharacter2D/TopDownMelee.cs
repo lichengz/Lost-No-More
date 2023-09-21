@@ -18,27 +18,34 @@ namespace TopDownCharacter2D
 
 
         private TopDownCharacterController _controller;
-        
-        [SerializeField]
-        private EquipMeleeWeaponEventChannelSO equipMeleeWeapon;
-        [SerializeField] 
-        private VoidEventChannelSO unEquipWeapons;
+
+        [SerializeField] private EquipMeleeWeaponEventChannelSO equipMeleeWeapon;
+        [SerializeField] private VoidEventChannelSO unEquipWeapons;
 
         private void Awake()
         {
             _controller = GetComponent<TopDownCharacterController>();
+            if (!transform.CompareTag("Player"))
+            {
+                // TODO
+                _controller.LookEvent.AddListener(Rotate);
+            }
         }
 
         private void OnEnable()
         {
-            equipMeleeWeapon.OnEventRaised += EquipMeleeWeapon;
-            unEquipWeapons.OnEventRaised += UnEquipMeleeWeapon;
+            if (equipMeleeWeapon != null)
+                equipMeleeWeapon.OnEventRaised += EquipMeleeWeapon;
+            if (unEquipWeapons != null)
+                unEquipWeapons.OnEventRaised += UnEquipMeleeWeapon;
         }
-        
+
         private void OnDisable()
         {
-            equipMeleeWeapon.OnEventRaised -= EquipMeleeWeapon;
-            unEquipWeapons.OnEventRaised -= UnEquipMeleeWeapon;
+            if (equipMeleeWeapon != null)
+                equipMeleeWeapon.OnEventRaised -= EquipMeleeWeapon;
+            if (unEquipWeapons != null)
+                unEquipWeapons.OnEventRaised -= UnEquipMeleeWeapon;
         }
 
         private void EquipMeleeWeapon(MeleeAttackConfig config)
@@ -46,7 +53,7 @@ namespace TopDownCharacter2D
             _controller.OnAttackEvent.AddListener(Attack);
             _controller.LookEvent.AddListener(Rotate);
         }
-        
+
         private void UnEquipMeleeWeapon()
         {
             _controller.OnAttackEvent.RemoveListener(Attack);
@@ -60,7 +67,7 @@ namespace TopDownCharacter2D
                 return;
             }
 
-            InstantiateAttack((MeleeAttackConfig) config);
+            InstantiateAttack((MeleeAttackConfig)config);
         }
 
         private void Rotate(Vector2 rotation)
@@ -76,10 +83,16 @@ namespace TopDownCharacter2D
         {
             Transform attackPivot = _controller.projectileSpawnPosition;
             attackPivot.localRotation = Quaternion.identity;
-            GameObject obj = Instantiate(attackObject, attackPivot.position,
+            GameObject obj = Instantiate(attackConfig.projectile, attackPivot.position,
                 Quaternion.Euler(0, 0, Vector2.SignedAngle(Vector2.right, _attackDirection)), attackPivot);
             MeleeAttackController attackController = obj.GetComponent<MeleeAttackController>();
             attackController.InitializeAttack(attackConfig, _controller.weaponRenderer);
+        }
+
+        public void AttackEvent()
+        {
+            // TODO 
+            InstantiateAttack((MeleeAttackConfig)_controller.Stats.CurrentStats.attackConfig);
         }
     }
 }

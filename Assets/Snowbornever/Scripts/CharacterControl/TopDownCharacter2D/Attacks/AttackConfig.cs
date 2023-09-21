@@ -10,6 +10,9 @@ namespace TopDownCharacter2D.Attacks
         [Tooltip("The prefab of the weapon")]
         public GameObject weaponPrefab;
         
+        [Tooltip("The projectile of the weapon")]
+        public GameObject projectile;
+        
         [Tooltip("The scale of the attack")]
         public float size;
 

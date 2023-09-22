@@ -128,9 +128,10 @@ public class Protagonist : TopDownCharacterController
 				targetSpeed = 1f;
 
 			if (attackInput || blockInput)
-				targetSpeed = .05f;
+				targetSpeed = 0.1f;
 		}
-		// targetSpeed = Mathf.Lerp(_previousSpeed, targetSpeed, Time.deltaTime * 4f);
+		
+		targetSpeed = Mathf.Lerp(_previousSpeed, targetSpeed, targetSpeed < _previousSpeed ? Time.deltaTime * 4f : Time.deltaTime * 10f);
 
 		movementInput = adjustedMovement.normalized * targetSpeed;
 

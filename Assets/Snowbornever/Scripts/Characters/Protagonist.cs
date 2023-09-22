@@ -127,10 +127,10 @@ public class Protagonist : TopDownCharacterController
 			if (isRunning)
 				targetSpeed = 1f;
 
-			if (attackInput)
+			if (attackInput || blockInput)
 				targetSpeed = .05f;
 		}
-		targetSpeed = Mathf.Lerp(_previousSpeed, targetSpeed, Time.deltaTime * 4f);
+		// targetSpeed = Mathf.Lerp(_previousSpeed, targetSpeed, Time.deltaTime * 4f);
 
 		movementInput = adjustedMovement.normalized * targetSpeed;
 
@@ -175,8 +175,15 @@ public class Protagonist : TopDownCharacterController
 	{
 		OnAttackEvent.Invoke(Stats.CurrentStats.attackConfig);
 	}
-	public void ConsumeAttackInput() => IsAttacking = false;
-	public void ConsumeBlockInput() => IsBlocking = false;
+	public void ConsumeAttackInput()
+	{
+		IsAttacking = false;
+	}
+
+	public void ConsumeBlockInput()
+	{
+		IsBlocking = false;
+	}
 
 	private void OnLook(Vector2 look)
 	{

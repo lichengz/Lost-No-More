@@ -9,6 +9,7 @@ using UnityEngine.Tilemaps;
 using Aoiti.Pathfinding;
 using TopDownCharacter2D.Attacks.Melee;
 using TopDownCharacter2D.Attacks.Range;
+using TopDownController2D.Scripts.TopDownCharacter2D.Animations;
 using Random = UnityEngine.Random;
 
 namespace TopDownCharacter2D.Controllers
@@ -20,6 +21,9 @@ namespace TopDownCharacter2D.Controllers
     public abstract class TopDownCharacterController : MonoBehaviour
     {
         protected Rigidbody2D _rb;
+        protected Animator _animator;
+        private static readonly int ComboAttack = Animator.StringToHash("ComboAttacking");
+
 
         [Tooltip("The origin point of the arm to aim with")]
         public Transform weaponPivot;
@@ -98,6 +102,7 @@ namespace TopDownCharacter2D.Controllers
             Stats = GetComponent<CharacterStatsHandler>();
             _rb = GetComponent<Rigidbody2D>();
             pathfinder = new Pathfinder<Vector3Int>(DistanceFunc, connectionsAndCosts);
+            _animator = GetComponent<Animator>();
         }
 
         protected void Start()
@@ -172,6 +177,10 @@ namespace TopDownCharacter2D.Controllers
             {
                 IsAttacking = true;
             }
+            else
+            {
+                TrigerAttackCombo();
+            }
         }
 
         protected void HandleAim(Vector2 look)
@@ -186,6 +195,11 @@ namespace TopDownCharacter2D.Controllers
             {
                 LookEvent.Invoke(look);
             }
+        }
+
+        public void TrigerAttackCombo()
+        {
+            _animator.SetTrigger(ComboAttack);
         }
 
         #region Events

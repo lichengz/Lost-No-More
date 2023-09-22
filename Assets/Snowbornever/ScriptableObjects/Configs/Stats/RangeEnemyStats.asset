@@ -9,7 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e005b717defd93a4c81276fd8caab626, type: 3}
-  m_Name: Player_Health
+  m_Script: {fileID: 11500000, guid: 903e1f771357491b9f6d40108caf961b, type: 3}
+  m_Name: RangeEnemyStats
   m_EditorClassIdentifier: 
-  _initialHealth: 1000
+  statsChangeType: 0
+  maxHealth: 10
+  speed: 3
+  attackConfig: {fileID: 11400000, guid: 0cf96b9cba974f14e8b302e35d6a1dbb, type: 2}

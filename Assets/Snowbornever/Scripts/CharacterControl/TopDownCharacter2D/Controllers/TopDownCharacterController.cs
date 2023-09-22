@@ -176,6 +176,7 @@ namespace TopDownCharacter2D.Controllers
             if (!IsAttacking)
             {
                 IsAttacking = true;
+                ResetTrigerAttackCombo();
             }
             else
             {
@@ -200,6 +201,11 @@ namespace TopDownCharacter2D.Controllers
         public void TrigerAttackCombo()
         {
             _animator.SetTrigger(ComboAttack);
+        }
+        
+        public void ResetTrigerAttackCombo()
+        {
+            _animator.ResetTrigger(ComboAttack);
         }
 
         #region Events

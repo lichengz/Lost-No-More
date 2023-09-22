@@ -14,8 +14,9 @@ namespace TopDownCharacter2D.Stats
         Override
     }
 
-    [Serializable]
-    public class CharacterStats
+    [CreateAssetMenu(fileName = "CharacterStats", menuName = "Stats/CharacterStats")]
+
+    public class CharacterStats : ScriptableObject
     {
         public StatsChangeType statsChangeType;
 

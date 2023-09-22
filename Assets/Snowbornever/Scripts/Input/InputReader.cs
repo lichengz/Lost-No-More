@@ -15,9 +15,11 @@ public class InputReader : DescriptionBaseSO, GameInput.IGameplayActions, GameIn
 	public event UnityAction JumpEvent = delegate { };
 	public event UnityAction JumpCanceledEvent = delegate { };
 	public event UnityAction AttackEvent = delegate { };
+	public event UnityAction BlockEvent = delegate { };
 	public event UnityAction<Vector2> LookEvent = delegate { };
 
 	public event UnityAction AttackCanceledEvent = delegate { };
+	public event UnityAction BlockCancelEvent = delegate { };
 	public event UnityAction InteractEvent = delegate { }; // Used to talk, pickup objects, interact with tools like the cooking cauldron
 	public event UnityAction InventoryActionButtonEvent = delegate { };
 	public event UnityAction SaveActionButtonEvent = delegate { };
@@ -81,6 +83,19 @@ public class InputReader : DescriptionBaseSO, GameInput.IGameplayActions, GameIn
 				break;
 			case InputActionPhase.Canceled:
 				AttackCanceledEvent.Invoke();
+				break;
+		}
+	}
+	
+	public void OnBlock(InputAction.CallbackContext context)
+	{
+		switch (context.phase)
+		{
+			case InputActionPhase.Performed:
+				BlockEvent.Invoke();
+				break;
+			case InputActionPhase.Canceled:
+				BlockCancelEvent.Invoke();
 				break;
 		}
 	}

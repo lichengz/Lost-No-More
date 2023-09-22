@@ -9,8 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09fcb347b6cb3524c9f59fbde36ec7c7, type: 3}
-  m_Name: MoveOnTheGround
+  m_Script: {fileID: 11500000, guid: 903e1f771357491b9f6d40108caf961b, type: 3}
+  m_Name: GreedStats
   m_EditorClassIdentifier: 
-  description: Sets the xz components of the Protagonist's movementVector
-  speed: 5
+  statsChangeType: 0
+  maxHealth: 10
+  speed: 3
+  attackConfig: {fileID: 11400000, guid: 216144a67a66a8a44b56d6f0127c1d1a, type: 2}

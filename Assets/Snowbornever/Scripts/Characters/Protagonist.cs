@@ -18,8 +18,9 @@ public class Protagonist : TopDownCharacterController
 	[NonSerialized] public bool jumpInput;
 	[NonSerialized] public bool extraActionInput;
 	public bool attackInput => IsAttacking;
+	public bool blockInput => IsBlocking;
 	[NonSerialized] public Vector2 movementInput; //Initial input coming from the Protagonist script
-	[NonSerialized] public Vector2 movementVector; //Final movement vector, manipulated by the StateMachine actions
+	public Vector2 movementVector; //Final movement vector, manipulated by the StateMachine actions
 	[NonSerialized] public ControllerColliderHit lastHit;
 	[NonSerialized] public bool isRunning; // Used when using the keyboard to run, brings the normalised speed to 1
 
@@ -61,6 +62,7 @@ public class Protagonist : TopDownCharacterController
 		_inputReader.StartedRunning += OnStartedRunning;
 		_inputReader.StoppedRunning += OnStoppedRunning;
 		_inputReader.AttackEvent += OnStartedAttack;
+		_inputReader.BlockEvent += OnBlockdAttack;
 		equipMeleeWeapon.OnEventRaised += InitializePlayerWeapon;
 		equipRangeWeapon.OnEventRaised += InitializePlayerWeapon;
 		//...
@@ -76,6 +78,7 @@ public class Protagonist : TopDownCharacterController
 		_inputReader.StartedRunning -= OnStartedRunning;
 		_inputReader.StoppedRunning -= OnStoppedRunning;
 		_inputReader.AttackEvent -= OnStartedAttack;
+		_inputReader.BlockEvent -= OnBlockdAttack;
 		equipMeleeWeapon.OnEventRaised -= InitializePlayerWeapon;
 		equipRangeWeapon.OnEventRaised -= InitializePlayerWeapon;
 		//...
@@ -90,7 +93,7 @@ public class Protagonist : TopDownCharacterController
 	private void RecalculateMovement()
 	{
 		float targetSpeed;
-		Vector3 adjustedMovement;
+		Vector2 adjustedMovement = new Vector2(_inputVector.x, _inputVector.y);
 
 		// if (_gameplayCameraTransform.isSet)
 		// {
@@ -102,7 +105,7 @@ public class Protagonist : TopDownCharacterController
 		//
 		// 	//Use the two axes, modulated by the corresponding inputs, and construct the final vector
 		// 	adjustedMovement = cameraRight.normalized * _inputVector.x +
-		// 		cameraForward.normalized * _inputVector.y;
+		// 	                   cameraForward.normalized * _inputVector.y;
 		// }
 		// else
 		// {
@@ -110,12 +113,10 @@ public class Protagonist : TopDownCharacterController
 		// 	Debug.LogWarning("No gameplay camera in the scene. Movement orientation will not be correct.");
 		// 	adjustedMovement = new Vector3(_inputVector.x, 0f, _inputVector.y);
 		// }
-		
-		adjustedMovement = new Vector3(_inputVector.x, _inputVector.y, 0f);
 
 		//Fix to avoid getting a Vector3.zero vector, which would result in the player turning to x:0, z:0
-		// if (_inputVector.sqrMagnitude == 0f)
-		// 	adjustedMovement = transform.forward * (adjustedMovement.magnitude + .01f);
+		if (_inputVector.sqrMagnitude == 0f)
+			adjustedMovement = transform.forward * (adjustedMovement.magnitude + .01f);
 
 		//Accelerate/decelerate
 		targetSpeed = Mathf.Clamp01(_inputVector.magnitude);
@@ -131,7 +132,8 @@ public class Protagonist : TopDownCharacterController
 		}
 		targetSpeed = Mathf.Lerp(_previousSpeed, targetSpeed, Time.deltaTime * 4f);
 
-		movementInput = adjustedMovement.normalized;// * targetSpeed;
+		movementInput = adjustedMovement.normalized * targetSpeed;
+
 		_previousSpeed = targetSpeed;
 	}
 
@@ -162,9 +164,19 @@ public class Protagonist : TopDownCharacterController
 	{
 		HandleAttackDelay();
 	}
+	
+	private void OnBlockdAttack()
+	{
+		IsBlocking = true;
+	}
 
 	// Triggered from Animation Event
+	public void ExecuteAttack()
+	{
+		OnAttackEvent.Invoke(Stats.CurrentStats.attackConfig);
+	}
 	public void ConsumeAttackInput() => IsAttacking = false;
+	public void ConsumeBlockInput() => IsBlocking = false;
 
 	private void OnLook(Vector2 look)
 	{

@@ -610,7 +610,7 @@ MonoBehaviour:
   baseStats:
     statsChangeType: 2
     maxHealth: 10
-    speed: 5
+    speed: 18.76
     attackConfig: {fileID: 11400000, guid: 0ee21540de5e3614d8c83a5bda429bec, type: 2}
 --- !u!114 &1766844560934434725
 MonoBehaviour:
@@ -624,9 +624,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b4b580f07ea489889ce3aee11554290, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponPivot: {fileID: 0}
+  projectileSpawnPosition: {fileID: 0}
+  weaponRenderer: {fileID: 0}
+  characterRenderers: []
   tilemap: {fileID: 0}
   tiles: []
-  path: []
 --- !u!114 &1766844560934434727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -652,11 +655,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48187ebcaf5f40b1a85c377de069a771, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  armRenderer: {fileID: 1766844560173034799}
-  characterRenderers:
-  - {fileID: 1766844560262000346}
-  - {fileID: 1766844559973209103}
-  armPivot: {fileID: 1766844560292611532}
+  unEquipWeapons: {fileID: 0}
 --- !u!95 &1766844560934434722
 Animator:
   serializedVersion: 5
@@ -692,7 +691,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   recoilStrength: 0.5
   projectileSizeModifyRecoil: 1
-  projectileSpawnPosition: {fileID: 1766844559632480837}
+  equipRangeWeapon: {fileID: 0}
+  unEquipWeapons: {fileID: 0}
 --- !u!114 &1766844560934434716
 MonoBehaviour:
   m_ObjectHideFlags: 0

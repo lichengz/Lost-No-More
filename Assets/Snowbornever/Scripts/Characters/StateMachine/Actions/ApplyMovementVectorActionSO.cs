@@ -20,7 +20,7 @@ public class ApplyMovementVectorAction : StateAction
 
 	public override void OnUpdate()
 	{
-		_topDownCharacterController.OnMoveEvent.Invoke(_protagonistScript.movementInput);
+		_topDownCharacterController.OnMoveEvent.Invoke(_protagonistScript.movementVector);
 		_protagonistScript.movementVector = _topDownCharacterController.velocity;
 	}
 }

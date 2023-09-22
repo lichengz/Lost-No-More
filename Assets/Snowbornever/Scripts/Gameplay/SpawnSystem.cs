@@ -2,7 +2,7 @@
 using System.Linq;
 using UnityEngine;
 
-public class SpawnSystem : MonoBehaviour
+public class SpawnSystem : Singleton<SpawnSystem>
 {
 	[Header("Asset References")]
 	[SerializeField] private InputReader _inputReader = default;
@@ -16,6 +16,7 @@ public class SpawnSystem : MonoBehaviour
 
 	private LocationEntrance[] _spawnLocations;
 	private Transform _defaultSpawnPoint;
+	public Protagonist playerInstance;
 
 	private void Awake()
 	{
@@ -56,7 +57,7 @@ public class SpawnSystem : MonoBehaviour
 	private void SpawnPlayer()
 	{
 		Transform spawnLocation = GetSpawnLocation();
-		Protagonist playerInstance = Instantiate(_playerPrefab, spawnLocation.position, spawnLocation.rotation);
+		playerInstance = Instantiate(_playerPrefab, spawnLocation.position, spawnLocation.rotation);
 
 		_playerInstantiatedChannel.RaiseEvent(playerInstance.transform);
 		_playerTransformAnchor.Provide(playerInstance.transform); //the CameraSystem will pick this up to frame the player

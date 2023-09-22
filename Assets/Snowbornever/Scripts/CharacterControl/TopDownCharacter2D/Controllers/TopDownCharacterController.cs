@@ -19,7 +19,7 @@ namespace TopDownCharacter2D.Controllers
     [RequireComponent(typeof(CharacterStatsHandler))]
     public abstract class TopDownCharacterController : MonoBehaviour
     {
-        private Rigidbody2D _rb;
+        protected Rigidbody2D _rb;
 
         [Tooltip("The origin point of the arm to aim with")]
         public Transform weaponPivot;
@@ -32,10 +32,8 @@ namespace TopDownCharacter2D.Controllers
 
         [Tooltip("The main renderer of the character")]
         public List<SpriteRenderer> characterRenderers;
-
-        private float _timeSinceLastAttack = float.MaxValue;
-
-        protected bool IsAttacking { get; set; }
+        public bool IsAttacking { get; set; }
+        public bool IsBlocking { get; set; }
         public CharacterStatsHandler Stats { get; private set; }
 
         Vector3Int[] directions = new Vector3Int[4]
@@ -173,8 +171,6 @@ namespace TopDownCharacter2D.Controllers
             if (!IsAttacking)
             {
                 IsAttacking = true;
-                _timeSinceLastAttack = 0f;
-                onAttackEvent.Invoke(Stats.CurrentStats.attackConfig);
             }
         }
 

@@ -56,13 +56,13 @@ namespace TopDownCharacter2D
             }
         }
 
-        private void FixedUpdate()
-        {
-            if (transform.CompareTag("Player") && !_damageable.GetHit)
-            {
-                ApplyMovement(_movementDirection);
-            }
-        }
+        // private void FixedUpdate()
+        // {
+        //     if (transform.CompareTag("Player") && !_damageable.GetHit)
+        //     {
+        //         ApplyMovement(_movementDirection);
+        //     }
+        // }
 
         /// <summary>
         ///     Changes the current direction of the movement
@@ -70,7 +70,7 @@ namespace TopDownCharacter2D
         /// <param name="direction"></param>
         private void Move(Vector2 direction)
         {
-            _movementDirection = direction;
+            _rb.velocity = direction * _stats.CurrentStats.speed;
         }
 
         private void MoveNavMesh(Vector2 target)
@@ -84,7 +84,7 @@ namespace TopDownCharacter2D
         /// <param name="direction"> The direction in which to move the rigidbody </param>
         private void ApplyMovement(Vector2 direction)
         {
-            _rb.velocity = direction * _stats.CurrentStats.speed;
+            if (_stats != null) _rb.velocity = direction * _stats.CurrentStats.speed;
         }
     }
 }

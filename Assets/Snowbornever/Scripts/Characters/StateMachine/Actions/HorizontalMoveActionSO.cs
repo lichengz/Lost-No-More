@@ -6,7 +6,7 @@ using UOP1.StateMachine.ScriptableObjects;
 public class HorizontalMoveActionSO : StateActionSO<HorizontalMoveAction>
 {
 	[Tooltip("Horizontal XZ plane speed multiplier")]
-	public float speed = 8f;
+	public float speed = 5f;
 }
 
 public class HorizontalMoveAction : StateAction

@@ -10,6 +10,7 @@ public class LookForTarget : CharacterAction
     
     public SharedTransform target;
     public SharedVector2 targetPos;
+    public SharedVector2 dodgePos;
     public SharedFloat distanceToTarget;
     public SharedVector2 directionToTarget;
 
@@ -21,6 +22,7 @@ public class LookForTarget : CharacterAction
         target.Value = targetTransform;
         if (targetTransform == null) return TaskStatus.Running;
         targetPos.Value = targetTransform.position;
+        dodgePos.Value = transform.position + (transform.position - targetTransform.position).normalized * 5;
         distanceToTarget.Value = DistanceToTarget();
         directionToTarget.Value = DirectionToTarget();
         return TaskStatus.Success;

@@ -9,8 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09fcb347b6cb3524c9f59fbde36ec7c7, type: 3}
-  m_Name: MoveOnTheGround
+  m_Script: {fileID: 11500000, guid: 4c70afd7f911db7449d578cc18700875, type: 3}
+  m_Name: IsBlocking_False_OnEnter
   m_EditorClassIdentifier: 
-  description: Sets the xz components of the Protagonist's movementVector
-  speed: 5
+  description: Sets a Parameter on the character's Animator controller
+  parameterType: 0
+  parameterName: IsBlocking
+  boolValue: 0
+  intValue: 0
+  floatValue: 0
+  whenToRun: 0

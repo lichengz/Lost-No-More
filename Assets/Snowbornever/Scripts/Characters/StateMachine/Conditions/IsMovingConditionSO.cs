@@ -20,8 +20,7 @@ public class IsMovingCondition : Condition
 
 	protected override bool Statement()
 	{
-		Vector3 movementVector = _protagonistScript.movementInput;
-		movementVector.z = 0f;
+		Vector2 movementVector = _protagonistScript.movementInput;
 		return movementVector.sqrMagnitude > _originSO.treshold;
 	}
 }

@@ -127,7 +127,7 @@ public class Protagonist : TopDownCharacterController
 			if (isRunning)
 				targetSpeed = 1f;
 
-			if (attackInput || blockInput)
+			if (blockInput)
 				targetSpeed = 0.1f;
 		}
 		

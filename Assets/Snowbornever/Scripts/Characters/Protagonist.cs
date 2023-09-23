@@ -86,7 +86,7 @@ public class Protagonist : TopDownCharacterController
 
 	private void Update()
 	{
-		// base.Update();
+		base.Update();
 		RecalculateMovement();
 	}
 

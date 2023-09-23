@@ -12,11 +12,14 @@ namespace TopDownCharacter2D
     [RequireComponent(typeof(TopDownCharacterController))]
     public class TopDownMelee : MonoBehaviour
     {
+        [Header("Parameters")] [SerializeField] [Range(0.0f, 2f)] [Tooltip("The strength of the rush after an attack")]
+        private float rushStrength = 1f;
+        
         [SerializeField] private GameObject attackObject;
 
         private Vector2 _attackDirection;
 
-
+        private Rigidbody2D _rb;
         private TopDownCharacterController _controller;
 
         [SerializeField] private EquipMeleeWeaponEventChannelSO equipMeleeWeapon;
@@ -24,6 +27,7 @@ namespace TopDownCharacter2D
 
         private void Awake()
         {
+            _rb = GetComponent<Rigidbody2D>();
             _controller = GetComponent<TopDownCharacterController>();
             if (!transform.CompareTag("Player"))
             {
@@ -87,6 +91,13 @@ namespace TopDownCharacter2D
                 Quaternion.Euler(0, 0, Vector2.SignedAngle(Vector2.right, _attackDirection)), attackPivot);
             MeleeAttackController attackController = obj.GetComponent<MeleeAttackController>();
             attackController.InitializeAttack(attackConfig, _controller.weaponRenderer);
+            AddRush();
+        }
+
+        private void AddRush()
+        {
+            if (_rb == null) return;
+            _rb.AddForce(_attackDirection * rushStrength * 100f, ForceMode2D.Impulse);
         }
 
         public void AttackEvent()

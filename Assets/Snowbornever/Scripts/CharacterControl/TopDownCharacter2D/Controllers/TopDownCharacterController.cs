@@ -23,6 +23,9 @@ namespace TopDownCharacter2D.Controllers
         protected Rigidbody2D _rb;
         protected Animator _animator;
         private static readonly int ComboAttack = Animator.StringToHash("ComboAttacking");
+        private static readonly int Combo1 = Animator.StringToHash("Combo1");
+        private static readonly int Combo2 = Animator.StringToHash("Combo2");
+        private static readonly int Combo3 = Animator.StringToHash("Combo3");
 
 
         [Tooltip("The origin point of the arm to aim with")]
@@ -36,6 +39,12 @@ namespace TopDownCharacter2D.Controllers
 
         [Tooltip("The main renderer of the character")]
         public List<SpriteRenderer> characterRenderers;
+
+        private float timeSinceLastAttack = float.MaxValue;
+        private const float comboWindow = 1.5f;
+        private int comboIndex = 0;
+        private int comboLength = 3;
+        
         public bool IsAttacking { get; set; }
         public bool IsBlocking { get; set; }
         public CharacterStatsHandler Stats { get; private set; }
@@ -110,6 +119,14 @@ namespace TopDownCharacter2D.Controllers
             InitializeWeapon();
         }
 
+        protected void Update()
+        {
+            if (timeSinceLastAttack <= comboWindow)
+            {
+                timeSinceLastAttack += Time.deltaTime;
+            }
+        }
+
         public void SchedulePath(Vector3 target)
         {
             target.z = 0;
@@ -175,8 +192,37 @@ namespace TopDownCharacter2D.Controllers
 
             if (!IsAttacking)
             {
+                Debug.Log(timeSinceLastAttack);
+
                 IsAttacking = true;
                 ResetTrigerAttackCombo();
+
+                if (timeSinceLastAttack <= comboWindow)
+                {
+                    if (comboIndex >= 3)
+                    {
+                        comboIndex = 0;
+                    }
+                    comboIndex++;
+                }
+                else
+                {
+                    comboIndex = 1;
+                }
+
+                switch (comboIndex)
+                {
+                    case 1:
+                        _animator.SetTrigger(Combo1);
+                        break;
+                    case 2:
+                        _animator.SetTrigger(Combo2);
+                        break;
+                    case 3:
+                        _animator.SetTrigger(Combo3);
+                        break;
+                }
+                timeSinceLastAttack = 0;
             }
             else
             {

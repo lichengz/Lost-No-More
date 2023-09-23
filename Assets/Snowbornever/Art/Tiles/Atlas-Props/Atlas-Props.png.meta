@@ -34033,7 +34033,9 @@ TextureImporter:
     indices: 
     edges: []
     weights: []
-    secondaryTextures: []
+    secondaryTextures:
+    - texture: {fileID: 2800000, guid: 48960a0a05444ad4dbd975465ee44cea, type: 3}
+      name: _NormalMap
     nameFileIdTable:
       Atlas-Props_0: 2018037349
       Atlas-Props_1: -612796387

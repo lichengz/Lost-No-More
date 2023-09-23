@@ -25,11 +25,6 @@ namespace HappyHarvest
         private WeatherType m_CurrentWeatherType;
         private List<WeatherSystemElement> m_Elements = new List<WeatherSystemElement>();
 
-        private void Awake()
-        {
-            GameManager.Instance.WeatherSystem = this;
-        }
-
         void Start()
         {
             FindAllElements();

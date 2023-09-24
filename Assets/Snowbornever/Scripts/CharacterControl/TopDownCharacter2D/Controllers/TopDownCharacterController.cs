@@ -43,6 +43,7 @@ namespace TopDownCharacter2D.Controllers
         private float timeSinceLastAttack = float.MaxValue;
         private const float comboWindow = 1.5f;
         private int comboIndex = 0;
+        private int cashedComboIndex = 0;
         private int comboLength = 3;
         
         public bool IsAttacking { get; set; }
@@ -192,8 +193,6 @@ namespace TopDownCharacter2D.Controllers
 
             if (!IsAttacking)
             {
-                Debug.Log(timeSinceLastAttack);
-
                 IsAttacking = true;
                 ResetTrigerAttackCombo();
 
@@ -213,12 +212,15 @@ namespace TopDownCharacter2D.Controllers
                 switch (comboIndex)
                 {
                     case 1:
+                        Debug.Log("!!! 1");
                         _animator.SetTrigger(Combo1);
                         break;
                     case 2:
+                        Debug.Log("!!! 2");
                         _animator.SetTrigger(Combo2);
                         break;
                     case 3:
+                        Debug.Log("!!! 3");
                         _animator.SetTrigger(Combo3);
                         break;
                 }
@@ -226,7 +228,7 @@ namespace TopDownCharacter2D.Controllers
             }
             else
             {
-                TrigerAttackCombo();
+                
             }
         }
 

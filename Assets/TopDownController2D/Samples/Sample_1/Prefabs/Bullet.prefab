@@ -52,7 +52,7 @@ MonoBehaviour:
   knockBack: 1
   levelCollisionLayer:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 1
 --- !u!212 &138633536859697716
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -279,4 +279,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.00603503, y: 0}
   serializedVersion: 2
-  m_Radius: 0.26061124
+  m_Radius: 0.1

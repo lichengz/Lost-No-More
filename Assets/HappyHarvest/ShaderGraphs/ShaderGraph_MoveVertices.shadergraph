@@ -1550,7 +1550,7 @@
     "m_Group": {
         "m_Id": ""
     },
-    "m_Name": "WaveSubGraph",
+    "m_Name": "SubGraph_WaveSubGraph",
     "m_DrawState": {
         "m_Expanded": true,
         "m_Position": {
@@ -1592,14 +1592,16 @@
         "98c65291-1d51-4a57-90ba-cc1b54ec76e3",
         "8bf57948-8e9c-47b0-8008-814a981ba177",
         "72fbc9c6-0197-42dc-a1b3-aebc07dcca93",
-        "30346f67-9848-4ef6-b237-e93a7c00c5bd"
+        "30346f67-9848-4ef6-b237-e93a7c00c5bd",
+        "15e92e81-da91-4878-a972-7c554da82bc3"
     ],
     "m_PropertyIds": [
         -1139483908,
         707467524,
         -244980532,
         524527607,
-        -101793567
+        -101793567,
+        -876204300
     ],
     "m_Dropdowns": [],
     "m_DropdownSelectedEntries": []
@@ -1687,7 +1689,7 @@
     "m_Group": {
         "m_Id": ""
     },
-    "m_Name": "Transform",
+    "m_Name": "SubGraph_Transform",
     "m_DrawState": {
         "m_Expanded": true,
         "m_Position": {
@@ -2760,7 +2762,7 @@
     "m_Group": {
         "m_Id": ""
     },
-    "m_Name": "Transform",
+    "m_Name": "SubGraph_Transform",
     "m_DrawState": {
         "m_Expanded": true,
         "m_Position": {
@@ -3468,7 +3470,7 @@
     "m_Group": {
         "m_Id": ""
     },
-    "m_Name": "Transform",
+    "m_Name": "SubGraph_Transform",
     "m_DrawState": {
         "m_Expanded": true,
         "m_Position": {
@@ -3999,10 +4001,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 314.66656494140627,
-            "y": 1155.3333740234375,
-            "width": 103.33358764648438,
-            "height": 36.0001220703125
+            "x": 209.33338928222657,
+            "y": 1154.666748046875,
+            "width": 103.33332824707031,
+            "height": 36.0
         }
     },
     "m_Slots": [

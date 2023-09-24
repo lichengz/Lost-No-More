@@ -1,11 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
-using HappyHarvest;
-using UnityEditor;
-using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UIElements;
+#if UNITY_EDITOR
+using UnityEditor;
+using UnityEditor.UIElements;
+#endif
 
 /// <summary>
 /// Allow to define events that will be triggered at given time in the day. An event have a start and end time which

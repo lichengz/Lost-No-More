@@ -52,8 +52,9 @@ public class CameraManager : MonoBehaviour
 	{
 		Transform target = _protagonistTransformAnchor.Value;
 
+		Vector3 tempFollow = VCam.Follow.position;
 		VCam.Follow = target;
 		VCam.LookAt = target;
-		VCam.OnTargetObjectWarped(target, target.position - VCam.transform.position - Vector3.forward);
+		VCam.OnTargetObjectWarped(target, target.position - tempFollow);
 	}
 }

@@ -7,7 +7,7 @@ public class CameraManager : MonoBehaviour
 {
 	public InputReader inputReader;
 	public Camera mainCamera;
-	public CinemachineVirtualCamera freeLookVCam;
+	public CinemachineVirtualCamera VCam;
 	public CinemachineImpulseSource impulseSource;
 	private bool _isRMBPressed;
 
@@ -52,8 +52,8 @@ public class CameraManager : MonoBehaviour
 	{
 		Transform target = _protagonistTransformAnchor.Value;
 
-		freeLookVCam.Follow = target;
-		freeLookVCam.LookAt = target;
-		freeLookVCam.OnTargetObjectWarped(target, target.position - freeLookVCam.transform.position - Vector3.forward);
+		VCam.Follow = target;
+		VCam.LookAt = target;
+		VCam.OnTargetObjectWarped(target, target.position - VCam.transform.position - Vector3.forward);
 	}
 }

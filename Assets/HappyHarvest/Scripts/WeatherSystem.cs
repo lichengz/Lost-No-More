@@ -57,7 +57,6 @@ namespace HappyHarvest
         {
             m_CurrentWeatherType = newType;
             SwitchAllElementsToCurrentWeather();
-            UIHandler.UpdateWeatherIcons(newType);
         }
 
         void FindAllElements()

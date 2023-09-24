@@ -18,16 +18,10 @@ public class InventoryManager : MonoBehaviour
 	[SerializeField] private ItemEventChannelSO _addItemEvent = default;
 	[SerializeField] private ItemEventChannelSO _removeItemEvent = default;
 	
+	[SerializeField] private VoidEventChannelSO _equipDefaultWeaponEventChannel = default;
 	[SerializeField] private VoidEventChannelSO _UnEquipWeapons;
 	[SerializeField] private EquipMeleeWeaponEventChannelSO _equipMeleeWeaponEventChannel = default;
 	[SerializeField] private EquipRangeWeaponEventChannelSO _equipRangeWeaponEventChannel = default;
-
-	private void Awake()
-	{
-		List<ItemStack> weapons = _currentInventory.GetWeapons();
-		if (weapons.Count == 0) return;
-		EquipWeapon(weapons[0].Item );
-	}
 
 	private void OnEnable()
 	{
@@ -38,6 +32,7 @@ public class InventoryManager : MonoBehaviour
 		_removeItemEvent.OnEventRaised += RemoveItem;
 		_rewardItemEvent.OnEventRaised += AddItemStack;
 		_giveItemEvent.OnEventRaised += RemoveItem;
+		_equipDefaultWeaponEventChannel.OnEventRaised += EquipDefaultWeapon;
 	}
 
 	private void OnDisable()
@@ -47,6 +42,7 @@ public class InventoryManager : MonoBehaviour
 		_equipItemEvent.OnEventRaised -= EquipItemEventRaised;
 		_addItemEvent.OnEventRaised -= AddItem;
 		_removeItemEvent.OnEventRaised -= RemoveItem;
+		_equipDefaultWeaponEventChannel.OnEventRaised -= EquipDefaultWeapon;
 	}
 
 	private void AddItemWithUIUpdate(ItemSO item)
@@ -134,6 +130,13 @@ public class InventoryManager : MonoBehaviour
 			ItemRangeWeaponSO weapon = (ItemRangeWeaponSO)item;
 			_equipRangeWeaponEventChannel.RaiseEvent(weapon.RangedAttackConfig);
 		}
+	}
+
+	private void EquipDefaultWeapon()
+	{
+		List<ItemStack> weapons = _currentInventory.GetWeapons();
+		if (weapons.Count == 0) return;
+		EquipWeapon(weapons[0].Item );
 	}
 }
 

@@ -15,6 +15,7 @@ using HappyHarvest;
 public class DayNightManager : MonoBehaviour
 {
     private static DayNightManager s_Instance;
+    [SerializeField] private FloatEventChannelSO updateTimeChannel;
 
 
 #if UNITY_EDITOR
@@ -126,6 +127,7 @@ public class DayNightManager : MonoBehaviour
 
             if (DayNightHandler != null)
                 DayNightHandler.Tick();
+            updateTimeChannel.RaiseEvent(CurrentDayRatio);
         }
     }
 

@@ -692,6 +692,7 @@ MonoBehaviour:
   movementVector: {x: 0, y: 0}
   equipMeleeWeapon: {fileID: 11400000, guid: fc3eeee67357e7146b1ff2bc9b04cef2, type: 2}
   equipRangeWeapon: {fileID: 11400000, guid: 84c48f920becce84b985399bfdb14e70, type: 2}
+  equipDefaultWeapon: {fileID: 11400000, guid: 86a7d0ad4e1689f4aa72d3821eef42cf, type: 2}
 --- !u!114 &3867125236162498359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -809,6 +810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12d29ef4b7fd48cd95a0736eb0d8e71a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rushStrength: 1
   attackObject: {fileID: 5921577697177155323, guid: b71474726cd9ef34e9e15441dcab3545, type: 3}
   equipMeleeWeapon: {fileID: 11400000, guid: fc3eeee67357e7146b1ff2bc9b04cef2, type: 2}
   unEquipWeapons: {fileID: 11400000, guid: 167047f52dd29d34c9cbd6b4a754c0a8, type: 2}

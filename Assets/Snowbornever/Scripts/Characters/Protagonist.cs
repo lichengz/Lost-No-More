@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using TopDownCharacter2D.Attacks;
 using TopDownCharacter2D.Controllers;
 using UnityEngine;
@@ -20,7 +21,7 @@ public class Protagonist : TopDownCharacterController
 	public bool attackInput => IsAttacking;
 	public bool blockInput => IsBlocking;
 	[NonSerialized] public Vector2 movementInput; //Initial input coming from the Protagonist script
-	public Vector2 movementVector; //Final movement vector, manipulated by the StateMachine actions
+	[NonSerialized] public Vector2 movementVector; //Final movement vector, manipulated by the StateMachine actions
 	[NonSerialized] public ControllerColliderHit lastHit;
 	[NonSerialized] public bool isRunning; // Used when using the keyboard to run, brings the normalised speed to 1
 
@@ -31,8 +32,9 @@ public class Protagonist : TopDownCharacterController
 	public const float GRAVITY_DIVIDER = .6f;
 	public const float AIR_RESISTANCE = 5f;
 	
-	[SerializeField] public EquipMeleeWeaponEventChannelSO equipMeleeWeapon;
-	[SerializeField] public EquipRangeWeaponEventChannelSO equipRangeWeapon;
+	[SerializeField] private EquipMeleeWeaponEventChannelSO equipMeleeWeapon;
+	[SerializeField] private EquipRangeWeaponEventChannelSO equipRangeWeapon;
+	[SerializeField] private VoidEventChannelSO equipDefaultWeapon;
 
 	private void InitializePlayerWeapon(AttackConfig attackConfig)
 	{
@@ -82,6 +84,15 @@ public class Protagonist : TopDownCharacterController
 		equipMeleeWeapon.OnEventRaised -= InitializePlayerWeapon;
 		equipRangeWeapon.OnEventRaised -= InitializePlayerWeapon;
 		//...
+	}
+
+	private IEnumerator Start()
+	{
+		while (equipDefaultWeapon.OnEventRaised == null)
+		{
+			yield return null;
+		}
+		equipDefaultWeapon.RaiseEvent();
 	}
 
 	private void Update()

@@ -52,11 +52,11 @@ AnimationClip:
     curve:
     - time: 0
       value: {fileID: -3470008734739329033, guid: 0ac4c9d685bc73a48a4b6c0e5edab0ed, type: 3}
-    - time: 0.175
+    - time: 0.18
       value: {fileID: -1239123714488000534, guid: 0ac4c9d685bc73a48a4b6c0e5edab0ed, type: 3}
     - time: 0.35
       value: {fileID: 8614656822932637323, guid: 0ac4c9d685bc73a48a4b6c0e5edab0ed, type: 3}
-    - time: 0.525
+    - time: 0.52
       value: {fileID: -7412858350466427986, guid: 0ac4c9d685bc73a48a4b6c0e5edab0ed, type: 3}
     - time: 0.7
       value: {fileID: -7412858350466427986, guid: 0ac4c9d685bc73a48a4b6c0e5edab0ed, type: 3}
@@ -158,7 +158,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.52
+  - time: 0.35
     functionName: ConsumeAttackInput
     data: 
     objectReferenceParameter: {fileID: 0}

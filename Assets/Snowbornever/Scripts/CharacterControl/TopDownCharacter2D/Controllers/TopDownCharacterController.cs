@@ -43,9 +43,10 @@ namespace TopDownCharacter2D.Controllers
         private float timeSinceLastAttack = float.MaxValue;
         private const float comboWindow = 1.5f;
         private int comboIndex = 0;
-        private int cashedComboIndex = 0;
+        private int cachedComboIndex = 0;
+        private bool cacheComboOnce = false;
         private int comboLength = 3;
-        
+
         public bool IsAttacking { get; set; }
         public bool IsBlocking { get; set; }
         public CharacterStatsHandler Stats { get; private set; }
@@ -126,6 +127,13 @@ namespace TopDownCharacter2D.Controllers
             {
                 timeSinceLastAttack += Time.deltaTime;
             }
+
+            if (!IsAttacking && cacheComboOnce)
+            {
+                TriggerCombo();
+                IsAttacking = true;
+                cacheComboOnce = false;
+            }
         }
 
         public void SchedulePath(Vector3 target)
@@ -174,10 +182,12 @@ namespace TopDownCharacter2D.Controllers
             if (Stats.CurrentStats.attackConfig is RangedAttackConfig)
             {
                 return WeaponController.WeaponType.Range;
-            }else if (Stats.CurrentStats.attackConfig is MeleeAttackConfig)
+            }
+            else if (Stats.CurrentStats.attackConfig is MeleeAttackConfig)
             {
                 return WeaponController.WeaponType.Melee;
             }
+
             return WeaponController.WeaponType.Melee;
         }
 
@@ -190,7 +200,6 @@ namespace TopDownCharacter2D.Controllers
             {
                 return;
             }
-
             if (!IsAttacking)
             {
                 IsAttacking = true;
@@ -202,6 +211,7 @@ namespace TopDownCharacter2D.Controllers
                     {
                         comboIndex = 0;
                     }
+
                     comboIndex++;
                 }
                 else
@@ -209,26 +219,37 @@ namespace TopDownCharacter2D.Controllers
                     comboIndex = 1;
                 }
 
-                switch (comboIndex)
-                {
-                    case 1:
-                        Debug.Log("!!! 1");
-                        _animator.SetTrigger(Combo1);
-                        break;
-                    case 2:
-                        Debug.Log("!!! 2");
-                        _animator.SetTrigger(Combo2);
-                        break;
-                    case 3:
-                        Debug.Log("!!! 3");
-                        _animator.SetTrigger(Combo3);
-                        break;
-                }
-                timeSinceLastAttack = 0;
-            }
-            else
-            {
+                TriggerCombo();
                 
+                // reset time and cache
+                timeSinceLastAttack = 0;
+                cacheComboOnce = false;
+            }
+            else if (!cacheComboOnce)
+            {
+                cacheComboOnce = true;
+                if (comboIndex >= 3)
+                {
+                    comboIndex = 0;
+                }
+            
+                comboIndex++;
+            }
+        }
+
+        private void TriggerCombo()
+        {
+            switch (comboIndex)
+            {
+                case 1:
+                    _animator.SetTrigger(Combo1);
+                    break;
+                case 2:
+                    _animator.SetTrigger(Combo2);
+                    break;
+                case 3:
+                    _animator.SetTrigger(Combo3);
+                    break;
             }
         }
 
@@ -250,7 +271,7 @@ namespace TopDownCharacter2D.Controllers
         {
             _animator.SetTrigger(ComboAttack);
         }
-        
+
         public void ResetTrigerAttackCombo()
         {
             _animator.ResetTrigger(ComboAttack);

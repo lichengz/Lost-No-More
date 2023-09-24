@@ -35,6 +35,12 @@ MonoBehaviour:
   - _item: {fileID: 11400000, guid: be909baf705d4fa49910776bc707ce1b, type: 2}
     Amount: 1
   _defaultItems:
+  - _item: {fileID: 11400000, guid: 5c27babf1c8e02444a9ea11f31522bc3, type: 2}
+    Amount: 1
+  - _item: {fileID: 11400000, guid: a0ca86b3ecc4860498144ce2655b1f12, type: 2}
+    Amount: 1
+  - _item: {fileID: 11400000, guid: aeff0385e3ee7bc4e8195787743d24f5, type: 2}
+    Amount: 1
   - _item: {fileID: 11400000, guid: 540c35ca6164bf3438e37e4f8087d47c, type: 2}
     Amount: 1
   - _item: {fileID: 11400000, guid: 42396f680e5649c4b91e2b29ff34f811, type: 2}

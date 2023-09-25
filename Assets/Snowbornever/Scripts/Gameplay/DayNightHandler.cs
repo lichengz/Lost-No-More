@@ -48,7 +48,7 @@ using HappyHarvest;
         public AnimationCurve ShadowLength;
         
         private List<ShadowUnit> m_Shadows = new();
-        private List<LightInterpolator> m_LightBlenders = new();
+        private List<DayNightInterpolator> m_LightBlenders = new();
 
         private void Awake()
         {
@@ -171,7 +171,7 @@ using HappyHarvest;
 #endif
         }
 
-        public static void RegisterLightBlender(LightInterpolator interpolator)
+        public static void RegisterLightBlender(DayNightInterpolator interpolator)
         {
 #if UNITY_EDITOR
             //in the editor when not running, we find the instance manually. Less efficient but not a problem at edit time
@@ -193,7 +193,7 @@ using HappyHarvest;
 #endif
         }
 
-        public static void UnregisterLightBlender(LightInterpolator interpolator)
+        public static void UnregisterLightBlender(DayNightInterpolator interpolator)
         {
 #if UNITY_EDITOR
             //in the editor when not running, we find the instance manually. Less efficient but not a problem at edit time

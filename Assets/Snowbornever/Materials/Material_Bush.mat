@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Material_Bush
-  m_Shader: {fileID: -6465566751694194690, guid: 48710f89102237f42886d5f23b64524f, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 295a90cd85aaf3944ac14d718ad2ee6f, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -103,8 +103,8 @@ Material:
     - _WindIntensity: 0.5
     - _Wind_Density: 0
     - _Wind_Direction: 0
-    - _Wind_Scale: 1
-    - _Wind_Speed: 1
+    - _Wind_Scale: 0.3
+    - _Wind_Speed: 0.26
     - _Wind_Strength: 0
     - _height: 0.53
     m_Colors:

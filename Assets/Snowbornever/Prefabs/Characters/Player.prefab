@@ -510,6 +510,7 @@ GameObject:
   - component: {fileID: 6361855182263705020}
   - component: {fileID: -8850940645323317601}
   - component: {fileID: 1961741076631191618}
+  - component: {fileID: 2003205209676301576}
   - component: {fileID: 8874140642617418979}
   m_Layer: 6
   m_Name: Player
@@ -850,6 +851,39 @@ MonoBehaviour:
   attackObject: {fileID: 5921577697177155323, guid: b71474726cd9ef34e9e15441dcab3545, type: 3}
   equipMeleeWeapon: {fileID: 11400000, guid: fc3eeee67357e7146b1ff2bc9b04cef2, type: 2}
   unEquipWeapons: {fileID: 11400000, guid: 167047f52dd29d34c9cbd6b4a754c0a8, type: 2}
+--- !u!114 &2003205209676301576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7638343534337580418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a64578247383140469c45370654a984a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actor: Player
+  persistentDataName: 
+  portrait: {fileID: 0}
+  spritePortrait: {fileID: 0}
+  barkUISettings:
+    barkUI: {fileID: 0}
+    barkUIOffset: {x: 0, y: 2, z: 0}
+  standardDialogueUISettings:
+    subtitlePanelNumber: 0
+    customSubtitlePanel: {fileID: 0}
+    customSubtitlePanelOffset: {x: 0, y: 0, z: 0}
+    menuPanelNumber: 0
+    customMenuPanel: {fileID: 0}
+    customMenuPanelOffset: {x: 0, y: 0, z: 0}
+    useMenuPanelFor: 0
+    portraitAnimatorController: {fileID: 0}
+    setSubtitleColor: 0
+    applyColorToPrependedName: 0
+    prependActorNameSeparator: ': '
+    prependActorNameFormat: '{0}{1}'
+    subtitleColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &8874140642617418979
 MonoBehaviour:
   m_ObjectHideFlags: 0

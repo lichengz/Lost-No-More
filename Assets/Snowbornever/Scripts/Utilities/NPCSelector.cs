@@ -28,13 +28,16 @@ public class NPCSelector : ProximitySelector
     public override void SetCurrentUsable(Usable usable)
     {
         base.SetCurrentUsable(usable);
-        if (usable != null)
+        InteractionType type = InteractionType.None;
+        if (usable == null)
         {
-            _setInteractionEvent.RaiseEvent(true, InteractionType.Talk);
+            _setInteractionEvent.RaiseEvent(false, type);
+            return;
         }
-        else
+        if (usable.GetComponent<DialogueSystemTrigger>() != null)
         {
-            _setInteractionEvent.RaiseEvent(false, InteractionType.Talk);
+            type = InteractionType.Talk;
         }
+        _setInteractionEvent.RaiseEvent(true, type);
     }
 }

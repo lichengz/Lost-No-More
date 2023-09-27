@@ -13,7 +13,7 @@ public class UIInteraction : MonoBehaviour
 			&& _listInteractions.Exists(o => o.InteractionType == interactionType))
 		{
 			Sprite icon = (_listInteractions.Find(o => o.InteractionType == interactionType)).InteractionIcon;
-			_interactionIcon.sprite = icon;
+			// _interactionIcon.sprite = icon;
 		}
 	}
 }

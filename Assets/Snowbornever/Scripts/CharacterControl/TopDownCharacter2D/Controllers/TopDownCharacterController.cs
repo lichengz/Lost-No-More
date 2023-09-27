@@ -253,14 +253,21 @@ namespace TopDownCharacter2D.Controllers
             }
         }
 
-        protected void HandleAim(Vector2 look)
+        protected void HandleAimWithMouse(Vector2 look)
         {
             if (!(look.normalized == look))
             {
                 Vector2 worldPos = Camera.main.ScreenToWorldPoint(look);
                 look = (worldPos - (Vector2)transform.position).normalized;
             }
-
+            if (look.magnitude >= .9f)
+            {
+                LookEvent.Invoke(look);
+            }
+        }
+        
+        protected void HandleAimWithController(Vector2 look)
+        {
             if (look.magnitude >= .9f)
             {
                 LookEvent.Invoke(look);

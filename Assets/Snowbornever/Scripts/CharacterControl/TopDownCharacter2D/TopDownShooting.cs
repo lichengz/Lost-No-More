@@ -70,7 +70,7 @@ namespace TopDownCharacter2D
         /// <param name="newAimDirection"> The new aim direction </param>
         public void OnAim(Vector2 newAimDirection)
         {
-            _aimDirection = newAimDirection;
+            _aimDirection = newAimDirection.normalized;
         }
 
         /// <summary>

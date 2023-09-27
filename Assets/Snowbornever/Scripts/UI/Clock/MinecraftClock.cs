@@ -9,48 +9,22 @@ public class MinecraftClock : MonoBehaviour
     [SerializeField] private FloatEventChannelSO updateTimeChannel;
 
     [SerializeField] private TextMeshProUGUI time;
-    private float hoursInDay;
-    private float sunriseHour;
-    private float sunsetHour;
-    private float dayDuration;
-    private float nightDuration;
 
     public RectTransform skyDome;
-
-    float nightHoursToDegrees, dayHoursToDegrees;
-
+    
     private void Awake()
     {
         updateTimeChannel.OnEventRaised += UpdateTime;
     }
 
-    // void Start()
-    // {
-    //     nightHoursToDegrees = 180 / (hoursInDay * nightDuration);
-    //     dayHoursToDegrees = 180 / (hoursInDay * (1 - nightDuration));
-    //
-    //     skyDome.rotation = Quaternion.Euler(0, 0, 90 + sunriseHour * nightHoursToDegrees);
-    // }
-    //
-    // void UpdateTime(float hour)
-    // {
-    //     if (((hour < sunriseHour || hour > sunsetHour) && sunriseHour < sunsetHour) ||
-    //         ((hour < sunriseHour && hour > sunsetHour) && sunriseHour > sunsetHour))
-    //     {
-    //         skyDome.Rotate(0, 0, -Time.deltaTime * TimeManager.hoursInDay * nightHoursToDegrees / dayDuration);
-    //     }
-    //     else
-    //     {
-    //         skyDome.Rotate(0, 0, -Time.deltaTime * TimeManager.hoursInDay * dayHoursToDegrees / dayDuration);
-    //     }
-    // }
-    
     private void UpdateTime(float ratio)
     {
         var hour = GetHourFromRatio(ratio);
         var minute = GetMinuteFromRatio(ratio);
 
         time.text = $"{hour}:{minute:00}";
+        
+        skyDome.rotation = Quaternion.Euler(0, 0, 180 - ratio * 360);
     }
     
     private int GetHourFromRatio(float ratio)

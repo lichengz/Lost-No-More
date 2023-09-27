@@ -16,7 +16,8 @@ public class InputReader : DescriptionBaseSO, GameInput.IGameplayActions, GameIn
 	public event UnityAction JumpCanceledEvent = delegate { };
 	public event UnityAction AttackEvent = delegate { };
 	public event UnityAction BlockEvent = delegate { };
-	public event UnityAction<Vector2> LookEvent = delegate { };
+	public event UnityAction<Vector2> LookMouseEvent = delegate { };
+	public event UnityAction<Vector2> LookStickEvent = delegate { };
 
 	public event UnityAction AttackCanceledEvent = delegate { };
 	public event UnityAction BlockCancelEvent = delegate { };
@@ -100,9 +101,14 @@ public class InputReader : DescriptionBaseSO, GameInput.IGameplayActions, GameIn
 		}
 	}
 
-	public void OnLook(InputAction.CallbackContext context)
+	public void OnLookMouse(InputAction.CallbackContext context)
 	{
-		LookEvent.Invoke(context.ReadValue<Vector2>());
+		LookMouseEvent.Invoke(context.ReadValue<Vector2>());
+	}
+	
+	public void OnLookStick(InputAction.CallbackContext context)
+	{
+		LookStickEvent.Invoke(context.ReadValue<Vector2>());
 	}
 
 	public void OnOpenInventory(InputAction.CallbackContext context)

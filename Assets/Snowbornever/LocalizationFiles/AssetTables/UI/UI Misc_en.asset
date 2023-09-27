@@ -277,5 +277,10 @@ MonoBehaviour:
     m_Localized: '*You need to be near a pot to cook'
     m_Metadata:
       m_Items: []
+  - m_Id: 312167518538137600
+    m_Localized: Interact
+    m_Metadata:
+      m_Items: []
   references:
-    version: 1
+    version: 2
+    RefIds: []

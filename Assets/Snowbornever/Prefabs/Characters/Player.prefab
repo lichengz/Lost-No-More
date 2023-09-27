@@ -106,7 +106,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1471039481
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 1393562879, guid: b5616b197af956a4593416783381319b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -190,7 +190,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1471039481
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -286249253, guid: b5616b197af956a4593416783381319b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -274,7 +274,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1471039481
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -690038006, guid: b5616b197af956a4593416783381319b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -473,7 +473,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1471039481
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 1628002782, guid: b5616b197af956a4593416783381319b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -497,6 +497,7 @@ GameObject:
   - component: {fileID: 8179573950085412907}
   - component: {fileID: 8127585959316505608}
   - component: {fileID: 1922533964451116184}
+  - component: {fileID: 295038223635633285}
   - component: {fileID: 3510791494366125247}
   - component: {fileID: 4668513031300450213}
   - component: {fileID: 8210321524277904729}
@@ -509,6 +510,7 @@ GameObject:
   - component: {fileID: 6361855182263705020}
   - component: {fileID: -8850940645323317601}
   - component: {fileID: 1961741076631191618}
+  - component: {fileID: 8874140642617418979}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -608,6 +610,41 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!58 &295038223635633285
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7638343534337580418}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1
 --- !u!95 &3510791494366125247
 Animator:
   serializedVersion: 5
@@ -689,7 +726,6 @@ MonoBehaviour:
   tiles: []
   _inputReader: {fileID: 11400000, guid: 945ec0365077176418488737deed54be, type: 2}
   _gameplayCameraTransform: {fileID: 0}
-  movementVector: {x: 0, y: 0}
   equipMeleeWeapon: {fileID: 11400000, guid: fc3eeee67357e7146b1ff2bc9b04cef2, type: 2}
   equipRangeWeapon: {fileID: 11400000, guid: 84c48f920becce84b985399bfdb14e70, type: 2}
   equipDefaultWeapon: {fileID: 11400000, guid: 86a7d0ad4e1689f4aa72d3821eef42cf, type: 2}
@@ -814,6 +850,56 @@ MonoBehaviour:
   attackObject: {fileID: 5921577697177155323, guid: b71474726cd9ef34e9e15441dcab3545, type: 3}
   equipMeleeWeapon: {fileID: 11400000, guid: fc3eeee67357e7146b1ff2bc9b04cef2, type: 2}
   unEquipWeapons: {fileID: 11400000, guid: 167047f52dd29d34c9cbd6b4a754c0a8, type: 2}
+--- !u!114 &8874140642617418979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7638343534337580418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea115ff1e528a98419f821bb8f5523d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useDefaultGUI: 1
+  guiSkin: {fileID: 0}
+  guiStyleName: label
+  alignment: 1
+  color: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  textStyle: 1
+  textStyleColor: {r: 0, g: 0, b: 0, a: 1}
+  defaultUseMessage: (spacebar to interact)
+  useKey: 32
+  useButton: Fire2
+  enableTouch: 0
+  touchArea:
+    origin: 0
+    alignment: 0
+    x:
+      scale: 0
+      value: 0
+    y:
+      scale: 0
+      value: 0
+    width:
+      scale: 0
+      value: 0
+    height:
+      scale: 0
+      value: 0
+    minPixelWidth: 0
+    minPixelHeight: 0
+  broadcastToChildren: 1
+  actorTransform: {fileID: 0}
+  onSelectedUsable:
+    m_PersistentCalls:
+      m_Calls: []
+  onDeselectedUsable:
+    m_PersistentCalls:
+      m_Calls: []
+  _inputReader: {fileID: 11400000, guid: 945ec0365077176418488737deed54be, type: 2}
+  _setInteractionEvent: {fileID: 11400000, guid: 818cc55cb05226248bdb15ace58eab84, type: 2}
 --- !u!1 &8983955389799877034
 GameObject:
   m_ObjectHideFlags: 0
@@ -885,7 +971,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1471039481
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -3470008734739329033, guid: 0ac4c9d685bc73a48a4b6c0e5edab0ed, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

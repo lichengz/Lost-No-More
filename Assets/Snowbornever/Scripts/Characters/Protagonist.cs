@@ -60,7 +60,8 @@ public class Protagonist : TopDownCharacterController
 		_inputReader.JumpEvent += OnJumpInitiated;
 		_inputReader.JumpCanceledEvent += OnJumpCanceled;
 		_inputReader.MoveEvent += OnMove;
-		_inputReader.LookEvent += OnLook;
+		_inputReader.LookMouseEvent += OnLookMouse;
+		_inputReader.LookStickEvent += OnLookStick;
 		_inputReader.StartedRunning += OnStartedRunning;
 		_inputReader.StoppedRunning += OnStoppedRunning;
 		_inputReader.AttackEvent += OnStartedAttack;
@@ -76,7 +77,8 @@ public class Protagonist : TopDownCharacterController
 		_inputReader.JumpEvent -= OnJumpInitiated;
 		_inputReader.JumpCanceledEvent -= OnJumpCanceled;
 		_inputReader.MoveEvent -= OnMove;
-		_inputReader.LookEvent -= OnLook;
+		_inputReader.LookMouseEvent -= OnLookMouse;
+		_inputReader.LookStickEvent -= OnLookStick;
 		_inputReader.StartedRunning -= OnStartedRunning;
 		_inputReader.StoppedRunning -= OnStoppedRunning;
 		_inputReader.AttackEvent -= OnStartedAttack;
@@ -197,8 +199,13 @@ public class Protagonist : TopDownCharacterController
 		IsBlocking = false;
 	}
 
-	private void OnLook(Vector2 look)
+	private void OnLookMouse(Vector2 look)
 	{
-		HandleAim(look);
+		HandleAimWithMouse(look);
+		
+	}
+	private void OnLookStick(Vector2 look)
+	{
+		HandleAimWithController(look);
 	}
 }

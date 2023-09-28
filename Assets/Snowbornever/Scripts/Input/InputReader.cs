@@ -46,6 +46,8 @@ public class InputReader : DescriptionBaseSO, GameInput.IGameplayActions, GameIn
 	public event UnityAction MenuCloseEvent = delegate { };
 	public event UnityAction OpenInventoryEvent = delegate { }; // Used to bring up the inventory
 	public event UnityAction CloseInventoryEvent = delegate { }; // Used to bring up the inventory
+	public event UnityAction OpenQuestEvent = delegate { }; // Used to bring up the inventory
+	public event UnityAction CloseQuestEvent = delegate { }; // Used to bring up the inventory
 	public event UnityAction<float> TabSwitched = delegate { };
 
 	// Cheats (has effect only in the Editor)
@@ -116,6 +118,23 @@ public class InputReader : DescriptionBaseSO, GameInput.IGameplayActions, GameIn
 		if (context.phase == InputActionPhase.Performed)
 			OpenInventoryEvent.Invoke();
 	}
+	
+	public void OnCloseInventory(InputAction.CallbackContext context)
+	{
+		CloseInventoryEvent.Invoke();
+	}
+	
+	public void OnOpenQuest(InputAction.CallbackContext context)
+	{
+		if (context.phase == InputActionPhase.Performed)
+			OpenQuestEvent.Invoke();
+	}
+	
+	public void OnCloseQuest(InputAction.CallbackContext context)
+	{
+		CloseQuestEvent.Invoke();
+	}
+	
 	public void OnCancel(InputAction.CallbackContext context)
 	{
 		if (context.phase == InputActionPhase.Performed)
@@ -294,10 +313,5 @@ public class InputReader : DescriptionBaseSO, GameInput.IGameplayActions, GameIn
 	public void OnNavigate(InputAction.CallbackContext context)
 	{
 
-	}
-
-	public void OnCloseInventory(InputAction.CallbackContext context)
-	{
-		CloseInventoryEvent.Invoke();
 	}
 }

@@ -94,6 +94,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "OpenQuest",
+                    "type": "Button",
+                    "id": "17330f5b-46ae-4621-b813-bfc0565f1bd0",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -437,6 +446,28 @@
                     "action": "LookStick",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ccda3edd-8651-4b85-9ca8-45214cd77861",
+                    "path": "<Keyboard>/j",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OpenQuest",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b51f6ab9-5858-4bd5-8927-be066f530c36",
+                    "path": "<Gamepad>/select",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OpenQuest",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -574,6 +605,15 @@
                     "name": "CloseInventory",
                     "type": "Button",
                     "id": "43e7e8b3-1957-4ce6-9d0e-92ed54cb4e41",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "CloseQuest",
+                    "type": "Button",
+                    "id": "9b4cb0aa-5de7-46d2-b771-2d25f96fcaae",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -1372,6 +1412,28 @@
                     "action": "ResetActionButton",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "47e09564-0ed8-4aae-9efa-3422a8846232",
+                    "path": "<Keyboard>/j",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CloseQuest",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2acd65c3-8c71-4331-b5cc-a6b0e579c198",
+                    "path": "<Gamepad>/select",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CloseQuest",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -1651,6 +1713,34 @@
                     "action": "MoveSelection",
                     "isComposite": false,
                     "isPartOfComposite": true
+                }
+            ]
+        },
+        {
+            "name": "Quests",
+            "id": "f6b18774-4a5a-47f8-b7c8-3d89b1840ab9",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "8d479701-3523-4e87-a8aa-01cd94e27db5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "b477e301-2e5e-44cd-a02e-dfaab9ebe8e8",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },

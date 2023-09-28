@@ -116,6 +116,15 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""OpenQuest"",
+                    ""type"": ""Button"",
+                    ""id"": ""17330f5b-46ae-4621-b813-bfc0565f1bd0"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -459,6 +468,28 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
                     ""action"": ""LookStick"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ccda3edd-8651-4b85-9ca8-45214cd77861"",
+                    ""path"": ""<Keyboard>/j"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""OpenQuest"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b51f6ab9-5858-4bd5-8927-be066f530c36"",
+                    ""path"": ""<Gamepad>/select"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""OpenQuest"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -596,6 +627,15 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
                     ""name"": ""CloseInventory"",
                     ""type"": ""Button"",
                     ""id"": ""43e7e8b3-1957-4ce6-9d0e-92ed54cb4e41"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""CloseQuest"",
+                    ""type"": ""Button"",
+                    ""id"": ""9b4cb0aa-5de7-46d2-b771-2d25f96fcaae"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -1394,6 +1434,28 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
                     ""action"": ""ResetActionButton"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""47e09564-0ed8-4aae-9efa-3422a8846232"",
+                    ""path"": ""<Keyboard>/j"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CloseQuest"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2acd65c3-8c71-4331-b5cc-a6b0e579c198"",
+                    ""path"": ""<Gamepad>/select"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CloseQuest"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -1677,6 +1739,34 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
             ]
         },
         {
+            ""name"": ""Quests"",
+            ""id"": ""f6b18774-4a5a-47f8-b7c8-3d89b1840ab9"",
+            ""actions"": [
+                {
+                    ""name"": ""New action"",
+                    ""type"": ""Button"",
+                    ""id"": ""8d479701-3523-4e87-a8aa-01cd94e27db5"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""b477e301-2e5e-44cd-a02e-dfaab9ebe8e8"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""New action"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
             ""name"": ""Cheats"",
             ""id"": ""a58ec1e7-2c80-488a-a58c-690c816dd1f7"",
             ""actions"": [
@@ -1763,6 +1853,7 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
         m_Gameplay_Pause = m_Gameplay.FindAction("Pause", throwIfNotFound: true);
         m_Gameplay_OpenInventory = m_Gameplay.FindAction("OpenInventory", throwIfNotFound: true);
         m_Gameplay_Run = m_Gameplay.FindAction("Run", throwIfNotFound: true);
+        m_Gameplay_OpenQuest = m_Gameplay.FindAction("OpenQuest", throwIfNotFound: true);
         // Menus
         m_Menus = asset.FindActionMap("Menus", throwIfNotFound: true);
         m_Menus_MoveSelection = m_Menus.FindAction("MoveSelection", throwIfNotFound: true);
@@ -1780,10 +1871,14 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
         m_Menus_Point = m_Menus.FindAction("Point", throwIfNotFound: true);
         m_Menus_RightClick = m_Menus.FindAction("RightClick", throwIfNotFound: true);
         m_Menus_CloseInventory = m_Menus.FindAction("CloseInventory", throwIfNotFound: true);
+        m_Menus_CloseQuest = m_Menus.FindAction("CloseQuest", throwIfNotFound: true);
         // Dialogues
         m_Dialogues = asset.FindActionMap("Dialogues", throwIfNotFound: true);
         m_Dialogues_MoveSelection = m_Dialogues.FindAction("MoveSelection", throwIfNotFound: true);
         m_Dialogues_AdvanceDialogue = m_Dialogues.FindAction("AdvanceDialogue", throwIfNotFound: true);
+        // Quests
+        m_Quests = asset.FindActionMap("Quests", throwIfNotFound: true);
+        m_Quests_Newaction = m_Quests.FindAction("New action", throwIfNotFound: true);
         // Cheats
         m_Cheats = asset.FindActionMap("Cheats", throwIfNotFound: true);
         m_Cheats_OpenCheatMenu = m_Cheats.FindAction("OpenCheatMenu", throwIfNotFound: true);
@@ -1858,6 +1953,7 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Gameplay_Pause;
     private readonly InputAction m_Gameplay_OpenInventory;
     private readonly InputAction m_Gameplay_Run;
+    private readonly InputAction m_Gameplay_OpenQuest;
     public struct GameplayActions
     {
         private @GameInput m_Wrapper;
@@ -1872,6 +1968,7 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
         public InputAction @Pause => m_Wrapper.m_Gameplay_Pause;
         public InputAction @OpenInventory => m_Wrapper.m_Gameplay_OpenInventory;
         public InputAction @Run => m_Wrapper.m_Gameplay_Run;
+        public InputAction @OpenQuest => m_Wrapper.m_Gameplay_OpenQuest;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1911,6 +2008,9 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
             @Run.started += instance.OnRun;
             @Run.performed += instance.OnRun;
             @Run.canceled += instance.OnRun;
+            @OpenQuest.started += instance.OnOpenQuest;
+            @OpenQuest.performed += instance.OnOpenQuest;
+            @OpenQuest.canceled += instance.OnOpenQuest;
         }
 
         private void UnregisterCallbacks(IGameplayActions instance)
@@ -1945,6 +2045,9 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
             @Run.started -= instance.OnRun;
             @Run.performed -= instance.OnRun;
             @Run.canceled -= instance.OnRun;
+            @OpenQuest.started -= instance.OnOpenQuest;
+            @OpenQuest.performed -= instance.OnOpenQuest;
+            @OpenQuest.canceled -= instance.OnOpenQuest;
         }
 
         public void RemoveCallbacks(IGameplayActions instance)
@@ -1981,6 +2084,7 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Menus_Point;
     private readonly InputAction m_Menus_RightClick;
     private readonly InputAction m_Menus_CloseInventory;
+    private readonly InputAction m_Menus_CloseQuest;
     public struct MenusActions
     {
         private @GameInput m_Wrapper;
@@ -2000,6 +2104,7 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
         public InputAction @Point => m_Wrapper.m_Menus_Point;
         public InputAction @RightClick => m_Wrapper.m_Menus_RightClick;
         public InputAction @CloseInventory => m_Wrapper.m_Menus_CloseInventory;
+        public InputAction @CloseQuest => m_Wrapper.m_Menus_CloseQuest;
         public InputActionMap Get() { return m_Wrapper.m_Menus; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -2054,6 +2159,9 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
             @CloseInventory.started += instance.OnCloseInventory;
             @CloseInventory.performed += instance.OnCloseInventory;
             @CloseInventory.canceled += instance.OnCloseInventory;
+            @CloseQuest.started += instance.OnCloseQuest;
+            @CloseQuest.performed += instance.OnCloseQuest;
+            @CloseQuest.canceled += instance.OnCloseQuest;
         }
 
         private void UnregisterCallbacks(IMenusActions instance)
@@ -2103,6 +2211,9 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
             @CloseInventory.started -= instance.OnCloseInventory;
             @CloseInventory.performed -= instance.OnCloseInventory;
             @CloseInventory.canceled -= instance.OnCloseInventory;
+            @CloseQuest.started -= instance.OnCloseQuest;
+            @CloseQuest.performed -= instance.OnCloseQuest;
+            @CloseQuest.canceled -= instance.OnCloseQuest;
         }
 
         public void RemoveCallbacks(IMenusActions instance)
@@ -2175,6 +2286,52 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
     }
     public DialoguesActions @Dialogues => new DialoguesActions(this);
 
+    // Quests
+    private readonly InputActionMap m_Quests;
+    private List<IQuestsActions> m_QuestsActionsCallbackInterfaces = new List<IQuestsActions>();
+    private readonly InputAction m_Quests_Newaction;
+    public struct QuestsActions
+    {
+        private @GameInput m_Wrapper;
+        public QuestsActions(@GameInput wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Newaction => m_Wrapper.m_Quests_Newaction;
+        public InputActionMap Get() { return m_Wrapper.m_Quests; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(QuestsActions set) { return set.Get(); }
+        public void AddCallbacks(IQuestsActions instance)
+        {
+            if (instance == null || m_Wrapper.m_QuestsActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_QuestsActionsCallbackInterfaces.Add(instance);
+            @Newaction.started += instance.OnNewaction;
+            @Newaction.performed += instance.OnNewaction;
+            @Newaction.canceled += instance.OnNewaction;
+        }
+
+        private void UnregisterCallbacks(IQuestsActions instance)
+        {
+            @Newaction.started -= instance.OnNewaction;
+            @Newaction.performed -= instance.OnNewaction;
+            @Newaction.canceled -= instance.OnNewaction;
+        }
+
+        public void RemoveCallbacks(IQuestsActions instance)
+        {
+            if (m_Wrapper.m_QuestsActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IQuestsActions instance)
+        {
+            foreach (var item in m_Wrapper.m_QuestsActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_QuestsActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public QuestsActions @Quests => new QuestsActions(this);
+
     // Cheats
     private readonly InputActionMap m_Cheats;
     private List<ICheatsActions> m_CheatsActionsCallbackInterfaces = new List<ICheatsActions>();
@@ -2241,6 +2398,7 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
         void OnPause(InputAction.CallbackContext context);
         void OnOpenInventory(InputAction.CallbackContext context);
         void OnRun(InputAction.CallbackContext context);
+        void OnOpenQuest(InputAction.CallbackContext context);
     }
     public interface IMenusActions
     {
@@ -2259,11 +2417,16 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
         void OnPoint(InputAction.CallbackContext context);
         void OnRightClick(InputAction.CallbackContext context);
         void OnCloseInventory(InputAction.CallbackContext context);
+        void OnCloseQuest(InputAction.CallbackContext context);
     }
     public interface IDialoguesActions
     {
         void OnMoveSelection(InputAction.CallbackContext context);
         void OnAdvanceDialogue(InputAction.CallbackContext context);
+    }
+    public interface IQuestsActions
+    {
+        void OnNewaction(InputAction.CallbackContext context);
     }
     public interface ICheatsActions
     {

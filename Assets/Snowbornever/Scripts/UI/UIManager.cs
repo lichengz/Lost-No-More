@@ -52,7 +52,7 @@ public class UIManager : MonoBehaviour
 		_inputReader.MenuPauseEvent += OpenUIPause; // subscription to open Pause UI event happens in OnEnabled, but the close Event is only subscribed to when the popup is open
 		_openInventoryScreenForCookingEvent.OnEventRaised += SetInventoryScreenForCooking;
 		_setInteractionEvent.OnEventRaised += SetInteractionPanel;
-		_startInteractionEvent.OnEventRaised += DismissInteractionPanel;
+		_startInteractionEvent.OnEventRaised += HideInteractionPanel;
 		_inputReader.OpenInventoryEvent += SetInventoryScreen;
 		_inventoryPanel.Closed += CloseInventoryScreen;
 		_cookRecipeEvent.OnEventRaised += PlayCookingAnimation;
@@ -66,7 +66,7 @@ public class UIManager : MonoBehaviour
 		_inputReader.MenuPauseEvent -= OpenUIPause;
 		_openInventoryScreenForCookingEvent.OnEventRaised -= SetInventoryScreenForCooking;
 		_setInteractionEvent.OnEventRaised -= SetInteractionPanel;
-		_startInteractionEvent.OnEventRaised -= DismissInteractionPanel;
+		_startInteractionEvent.OnEventRaised -= HideInteractionPanel;
 		_inputReader.OpenInventoryEvent -= SetInventoryScreen;
 		_inventoryPanel.Closed -= CloseInventoryScreen;
 		_cookRecipeEvent.OnEventRaised -= PlayCookingAnimation;
@@ -92,16 +92,21 @@ public class UIManager : MonoBehaviour
 		// _dialogueController.gameObject.SetActive(true);
 	}
 
-	void DismissInteractionPanel()
+	void HideInteractionPanel()
 	{
 		_interactionPanel.gameObject.SetActive(false);
 	}
-
+	
+	void ShowInteractionPanel()
+	{
+		_interactionPanel.gameObject.SetActive(true);
+	}
 	void CloseUIDialogue(int dialogueType)
 	{
 		_selectionHandler.Unselect();
 		_dialogueController.gameObject.SetActive(false);
 		_onInteractionEndedEvent.RaiseEvent();
+		ShowInteractionPanel();
 	}
 
 	void OpenUIPause()

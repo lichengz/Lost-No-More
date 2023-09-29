@@ -7,7 +7,6 @@ public class UIActionButton : MonoBehaviour
 {
 	[SerializeField] private LocalizeStringEvent _buttonActionText = default;
 	[SerializeField] private Button _buttonAction = default;
-	[SerializeField] private UIButtonPrompt _buttonPromptSetter = default;
 	[SerializeField] private InputReader _inputReader = default;
 
 	public UnityAction Clicked;
@@ -19,8 +18,6 @@ public class UIActionButton : MonoBehaviour
 		_buttonAction.interactable = isInteractable;
 		_buttonActionText.StringReference = itemType.ActionName;
 
-		bool isKeyboard = true;
-		_buttonPromptSetter.SetButtonPrompt(isKeyboard);
 		if (isInteractable)
 		{
 			if (_inputReader != null)

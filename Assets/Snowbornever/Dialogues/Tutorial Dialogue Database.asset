@@ -287,13 +287,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 1
         destinationConversationID: 1
-        destinationDialogueID: 5
-        isConnector: 0
-        priority: 2
-      - originConversationID: 1
-        originDialogueID: 1
-        destinationConversationID: 1
-        destinationDialogueID: 9
+        destinationDialogueID: 10
         isConnector: 0
         priority: 2
       conditionsString: HasQuest("KillOrc")  == false
@@ -303,8 +297,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 80
-        y: 134
+        x: 89.17432
+        y: 33.152527
         width: 160
         height: 30
     - id: 2
@@ -360,7 +354,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 287
-        y: 134
+        y: 125.07143
         width: 160
         height: 30
     - id: 3
@@ -515,7 +509,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 5
+        destinationConversationID: 1
+        destinationDialogueID: 11
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 'GiveQuest("Villager", "KillOrc");
 
@@ -526,8 +526,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 9
-        y: 244
+        x: 1
+        y: 260.51376
         width: 160
         height: 30
     - id: 6
@@ -700,7 +700,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: Talk to you later.
         type: 0
         typeString: 
       - title: Sequence
@@ -722,13 +722,123 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 192
-        y: 244
+        x: 204.5
+        y: 260.9643
+        width: 160
+        height: 30
+    - id: 10
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Can you help me?
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 10
+        destinationConversationID: 1
+        destinationDialogueID: 5
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 10
+        destinationConversationID: 1
+        destinationDialogueID: 9
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 109.35779
+        y: 130.789
+        width: 160
+        height: 30
+    - id: 11
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: GOGOGO
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 17.483513
+        y: 362.05994
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 8}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 0, y: 24.175812}
+    canvasZoom: 0.9100001
   syncInfo:
     syncActors: 0
     syncItems: 0

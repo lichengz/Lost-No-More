@@ -22,6 +22,7 @@ public class Protagonist : TopDownCharacterController
 	public bool blockInput => IsBlocking;
 	[NonSerialized] public Vector2 movementInput; //Initial input coming from the Protagonist script
 	[NonSerialized] public Vector2 movementVector; //Final movement vector, manipulated by the StateMachine actions
+	[NonSerialized] public Vector2 lookVector; //Final movement vector, manipulated by the StateMachine actions
 	[NonSerialized] public ControllerColliderHit lastHit;
 	[NonSerialized] public bool isRunning; // Used when using the keyboard to run, brings the normalised speed to 1
 
@@ -201,11 +202,10 @@ public class Protagonist : TopDownCharacterController
 
 	private void OnLookMouse(Vector2 look)
 	{
-		HandleAimWithMouse(look);
-		
+		lookVector = HandleAimWithMouse(look);
 	}
 	private void OnLookStick(Vector2 look)
 	{
-		HandleAimWithController(look);
+		lookVector = HandleAimWithController(look);
 	}
 }

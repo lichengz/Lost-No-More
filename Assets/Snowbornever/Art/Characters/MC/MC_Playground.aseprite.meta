@@ -1,0 +1,808 @@
+fileFormatVersion: 2
+guid: 472b8a92eb6bd9940836a9415c6e9193
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: MC_Playground_Frame_0
+    originalName: 
+    pivot: {x: 0.6994536, y: -0.07096774}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1608
+      y: 3186
+      width: 366
+      height: 775
+    spriteID: 180ddb6b9fdcb4346abc6755f3f79e90
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1608, y: 3186}
+  - name: MC_Playground_Frame_1
+    originalName: 
+    pivot: {x: 0.6038339, y: -0.06875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1270
+      y: 2428
+      width: 313
+      height: 800
+    spriteID: 9ebbebe583f02ce4093afc19a19599e7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1020, y: 2428}
+  - name: MC_Playground_Frame_2
+    originalName: 
+    pivot: {x: 0.54875, y: -0.06875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 800
+      height: 800
+    spriteID: 87bef8e086f36f6438d7558351f7aef2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: MC_Playground_Frame_3
+    originalName: 
+    pivot: {x: 0.58666664, y: -0.06875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 812
+      y: 2428
+      width: 450
+      height: 800
+    spriteID: 67d6aa9ebcebf72489ac481a22acd518
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 637, y: 2428}
+  - name: MC_Playground_Frame_4
+    originalName: 
+    pivot: {x: 0.6618182, y: -0.06875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 812
+      y: 1620
+      width: 550
+      height: 800
+    spriteID: 1067f3c647b6e914b912f14e5c0454c3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 737, y: 1620}
+  - name: MC_Playground_Frame_5
+    originalName: 
+    pivot: {x: 0.54875, y: -0.06875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 812
+      width: 800
+      height: 800
+    spriteID: f25eee39004bd734db339a3d53f291f6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 812}
+  - name: MC_Playground_Frame_6
+    originalName: 
+    pivot: {x: 0.5412961, y: -0.06875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 812
+      y: 812
+      width: 787
+      height: 800
+    spriteID: eb989c78ebbd4214e907155b6d20470d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 799, y: 812}
+  - name: MC_Playground_Frame_7
+    originalName: 
+    pivot: {x: 0.55710655, y: -0.06875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 812
+      y: 4
+      width: 788
+      height: 800
+    spriteID: b44ca1cae7d90fc43bf2bfc2d1548c32
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 812, y: 4}
+  - name: MC_Playground_Frame_8
+    originalName: 
+    pivot: {x: 0.54875, y: -0.08502538}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1608
+      y: 4
+      width: 800
+      height: 788
+    spriteID: e0504f85426f74e4f9c6773dd0c5ecb8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1608, y: -8}
+  - name: MC_Playground_Frame_9
+    originalName: 
+    pivot: {x: 0.6159793, y: -0.08502538}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1608
+      y: 800
+      width: 388
+      height: 788
+    spriteID: aea755205721b8b4e89a9f14c53b5130
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1408, y: 788}
+  - name: MC_Playground_Frame_10
+    originalName: 
+    pivot: {x: 0.54875, y: -0.06875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1620
+      width: 800
+      height: 800
+    spriteID: 42e2844b4ea0c3140aeabf4d4ca968da
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1620}
+  - name: MC_Playground_Frame_11
+    originalName: 
+    pivot: {x: 0.54875, y: -0.06875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2428
+      width: 800
+      height: 800
+    spriteID: 2fb6174b063dce94aaac95a3fa386563
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 2428}
+  - name: MC_Playground_Frame_12
+    originalName: 
+    pivot: {x: 0.54875, y: -0.06875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3236
+      width: 800
+      height: 800
+    spriteID: c21903d23e3ddf14a8e121874e0d47b0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 3236}
+  - name: MC_Playground_Frame_13
+    originalName: 
+    pivot: {x: 0.5905882, y: -0.06875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 812
+      y: 3236
+      width: 425
+      height: 800
+    spriteID: dff1310317780224db32f37c8c19c91d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 624, y: 3236}
+  - name: MC_Playground_Frame_14
+    originalName: 
+    pivot: {x: 0.6442308, y: -0.06875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2416
+      y: 4
+      width: 312
+      height: 800
+    spriteID: f1ee8b610cfed0e43ad1643b1e12739a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2178, y: 4}
+  - name: MC_Playground_Frame_15
+    originalName: 
+    pivot: {x: 0.61142856, y: -0.06875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1245
+      y: 3236
+      width: 350
+      height: 800
+    spriteID: a7a9df1b169f9b449893d74b86524843
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1020, y: 3236}
+  - name: MC_Playground_Frame_16
+    originalName: 
+    pivot: {x: 0.6038339, y: -0.06875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2004
+      y: 2416
+      width: 313
+      height: 800
+    spriteID: 710171860a065b8468d3f62f16fb2e01
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1754, y: 2416}
+  - name: MC_Playground_Frame_17
+    originalName: 
+    pivot: {x: 0.6038339, y: -0.06875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2004
+      y: 3224
+      width: 313
+      height: 800
+    spriteID: 1c16d7b69574bca4ebe62ddda048d07b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1754, y: 3224}
+  - name: MC_Playground_Frame_18
+    originalName: 
+    pivot: {x: 0.5839793, y: -0.06988565}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1608
+      y: 2391
+      width: 387
+      height: 787
+    spriteID: 6ceaa2216c9ba2d459107d9b88a5d50b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1395, y: 2391}
+  - name: MC_Playground_Frame_19
+    originalName: 
+    pivot: {x: 0.5866667, y: -0.07096774}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2416
+      y: 812
+      width: 300
+      height: 775
+    spriteID: bbf5e4e13274baf40910166fa5f09801
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2153, y: 812}
+  - name: MC_Playground_Frame_20
+    originalName: 
+    pivot: {x: 0.61142856, y: -0.06875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2004
+      y: 800
+      width: 350
+      height: 800
+    spriteID: f484f884442f49d48a1792fee2f6531c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1779, y: 800}
+  - name: MC_Playground_Frame_21
+    originalName: 
+    pivot: {x: 0.6159793, y: -0.06988565}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1608
+      y: 1596
+      width: 388
+      height: 787
+    spriteID: 4c79c4240deb10d4685866ed16ae1a91
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1408, y: 1596}
+  - name: MC_Playground_Frame_22
+    originalName: 
+    pivot: {x: 0.67, y: -0.07096774}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2416
+      y: 1595
+      width: 300
+      height: 775
+    spriteID: 86fabbc8c7a2e51439471b893a17ac52
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2178, y: 1595}
+  - name: MC_Playground_Frame_23
+    originalName: 
+    pivot: {x: 0.61142856, y: -0.06875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2004
+      y: 1608
+      width: 350
+      height: 800
+    spriteID: 874a0c77e3244b84c9781b472e70e285
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1779, y: 1608}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 708539134
+    name: MC_Playground
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: MC_Playground_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 144
+        y: 55
+        width: 366
+        height: 775
+      spriteId: 180ddb6b9fdcb4346abc6755f3f79e90
+    - name: MC_Playground_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: -39
+        y: 55
+        width: 800
+        height: 800
+      spriteId: 9ebbebe583f02ce4093afc19a19599e7
+    - name: MC_Playground_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: -39
+        y: 55
+        width: 800
+        height: 800
+      spriteId: 87bef8e086f36f6438d7558351f7aef2
+    - name: MC_Playground_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: -39
+        y: 55
+        width: 800
+        height: 800
+      spriteId: 67d6aa9ebcebf72489ac481a22acd518
+    - name: MC_Playground_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: -39
+        y: 55
+        width: 800
+        height: 800
+      spriteId: 1067f3c647b6e914b912f14e5c0454c3
+    - name: MC_Playground_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: -39
+        y: 55
+        width: 800
+        height: 800
+      spriteId: f25eee39004bd734db339a3d53f291f6
+    - name: MC_Playground_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: -39
+        y: 55
+        width: 800
+        height: 800
+      spriteId: eb989c78ebbd4214e907155b6d20470d
+    - name: MC_Playground_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: -39
+        y: 55
+        width: 800
+        height: 800
+      spriteId: b44ca1cae7d90fc43bf2bfc2d1548c32
+    - name: MC_Playground_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: -39
+        y: 55
+        width: 800
+        height: 800
+      spriteId: e0504f85426f74e4f9c6773dd0c5ecb8
+    - name: MC_Playground_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: -39
+        y: 55
+        width: 800
+        height: 800
+      spriteId: aea755205721b8b4e89a9f14c53b5130
+    - name: MC_Playground_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: -39
+        y: 55
+        width: 800
+        height: 800
+      spriteId: 42e2844b4ea0c3140aeabf4d4ca968da
+    - name: MC_Playground_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: -39
+        y: 55
+        width: 800
+        height: 800
+      spriteId: 2fb6174b063dce94aaac95a3fa386563
+    - name: MC_Playground_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: -39
+        y: 55
+        width: 800
+        height: 800
+      spriteId: c21903d23e3ddf14a8e121874e0d47b0
+    - name: MC_Playground_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: -39
+        y: 55
+        width: 800
+        height: 800
+      spriteId: dff1310317780224db32f37c8c19c91d
+    - name: MC_Playground_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: -39
+        y: 55
+        width: 800
+        height: 800
+      spriteId: f1ee8b610cfed0e43ad1643b1e12739a
+    - name: MC_Playground_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: -39
+        y: 55
+        width: 800
+        height: 800
+      spriteId: a7a9df1b169f9b449893d74b86524843
+    - name: MC_Playground_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: -39
+        y: 55
+        width: 800
+        height: 800
+      spriteId: 710171860a065b8468d3f62f16fb2e01
+    - name: MC_Playground_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: -39
+        y: 55
+        width: 800
+        height: 800
+      spriteId: 1c16d7b69574bca4ebe62ddda048d07b
+    - name: MC_Playground_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: -39
+        y: 55
+        width: 800
+        height: 800
+      spriteId: 6ceaa2216c9ba2d459107d9b88a5d50b
+    - name: MC_Playground_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: -39
+        y: 55
+        width: 800
+        height: 800
+      spriteId: bbf5e4e13274baf40910166fa5f09801
+    - name: MC_Playground_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: -39
+        y: 55
+        width: 800
+        height: 800
+      spriteId: f484f884442f49d48a1792fee2f6531c
+    - name: MC_Playground_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: -39
+        y: 55
+        width: 800
+        height: 800
+      spriteId: 4c79c4240deb10d4685866ed16ae1a91
+    - name: MC_Playground_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: -39
+        y: 55
+        width: 800
+        height: 800
+      spriteId: 86fabbc8c7a2e51439471b893a17ac52
+    - name: MC_Playground_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: -39
+        y: 55
+        width: 800
+        height: 800
+      spriteId: 874a0c77e3244b84c9781b472e70e285
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 800, y: 800}

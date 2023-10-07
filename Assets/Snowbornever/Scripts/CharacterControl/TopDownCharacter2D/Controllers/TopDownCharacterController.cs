@@ -132,6 +132,7 @@ namespace TopDownCharacter2D.Controllers
             {
                 TriggerCombo();
                 IsAttacking = true;
+                timeSinceLastAttack = 0;
                 cacheComboOnce = false;
             }
         }
@@ -204,21 +205,6 @@ namespace TopDownCharacter2D.Controllers
             {
                 IsAttacking = true;
                 ResetTrigerAttackCombo();
-
-                if (timeSinceLastAttack <= comboWindow)
-                {
-                    if (comboIndex >= 3)
-                    {
-                        comboIndex = 0;
-                    }
-
-                    comboIndex++;
-                }
-                else
-                {
-                    comboIndex = 1;
-                }
-
                 TriggerCombo();
                 
                 // reset time and cache
@@ -228,17 +214,24 @@ namespace TopDownCharacter2D.Controllers
             else if (!cacheComboOnce)
             {
                 cacheComboOnce = true;
-                if (comboIndex >= 3)
-                {
-                    comboIndex = 0;
-                }
-            
-                comboIndex++;
             }
         }
 
         private void TriggerCombo()
         {
+            if (timeSinceLastAttack <= comboWindow)
+            {
+                if (comboIndex >= 3)
+                {
+                    comboIndex = 0;
+                }
+
+                comboIndex++;
+            }
+            else
+            {
+                comboIndex = 1;
+            }
             switch (comboIndex)
             {
                 case 1:
@@ -253,7 +246,7 @@ namespace TopDownCharacter2D.Controllers
             }
         }
 
-        protected void HandleAimWithMouse(Vector2 look)
+        protected Vector2 HandleAimWithMouse(Vector2 look)
         {
             if (!(look.normalized == look))
             {
@@ -264,14 +257,16 @@ namespace TopDownCharacter2D.Controllers
             {
                 LookEvent.Invoke(look);
             }
+            return look;
         }
         
-        protected void HandleAimWithController(Vector2 look)
+        protected Vector2 HandleAimWithController(Vector2 look)
         {
             if (look.magnitude >= .9f)
             {
                 LookEvent.Invoke(look);
             }
+            return look;
         }
 
         public void TrigerAttackCombo()

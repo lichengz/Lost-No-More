@@ -90,6 +90,11 @@ namespace TopDownCharacter2D.Attacks.Range
                 }
             }
         }
+        
+        private void OnCollisionEnter2D(Collision2D other)
+        {
+            DestroyProjectile(other.transform.position, true);
+        }
 
         /// <summary>
         ///     Initializes the ranged attack with the given configuration

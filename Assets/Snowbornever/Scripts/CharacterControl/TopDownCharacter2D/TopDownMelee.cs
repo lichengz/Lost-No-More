@@ -21,6 +21,7 @@ namespace TopDownCharacter2D
 
         private Rigidbody2D _rb;
         private TopDownCharacterController _controller;
+        private bool rush;
 
         [SerializeField] private EquipMeleeWeaponEventChannelSO equipMeleeWeapon;
         [SerializeField] private VoidEventChannelSO unEquipWeapons;
@@ -50,6 +51,15 @@ namespace TopDownCharacter2D
                 equipMeleeWeapon.OnEventRaised -= EquipMeleeWeapon;
             if (unEquipWeapons != null)
                 unEquipWeapons.OnEventRaised -= UnEquipMeleeWeapon;
+        }
+
+        private void FixedUpdate()
+        {
+            if (rush)
+            {
+                AddRush();
+                rush = false;
+            }
         }
 
         private void EquipMeleeWeapon(MeleeAttackConfig config)
@@ -91,12 +101,14 @@ namespace TopDownCharacter2D
                 Quaternion.Euler(0, 0, Vector2.SignedAngle(Vector2.right, _attackDirection)), attackPivot);
             MeleeAttackController attackController = obj.GetComponent<MeleeAttackController>();
             attackController.InitializeAttack(attackConfig, _controller.weaponRenderer);
-            AddRush();
+            // AddRush();
+            rush = true;
         }
 
         private void AddRush()
         {
             if (_rb == null) return;
+            _rb.velocity = Vector2.zero;
             _rb.AddForce(_attackDirection * rushStrength * 100f, ForceMode2D.Impulse);
         }
 

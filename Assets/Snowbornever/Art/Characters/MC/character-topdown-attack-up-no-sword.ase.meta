@@ -1,0 +1,388 @@
+fileFormatVersion: 2
+guid: 5e08380fcd044b942b0bc9e1c0ac7455
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: character-topdown-attack-up-no-sword_Frame_0
+    originalName: 
+    pivot: {x: 0.53125, y: -0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 16
+      height: 20
+    spriteID: 484aaa44a360f7d449360c04fed9d614
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: character-topdown-attack-up-no-sword_Frame_1
+    originalName: 
+    pivot: {x: 0.5, y: -0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 76
+      y: 4
+      width: 15
+      height: 20
+    spriteID: 634e27299595f294aab4086caf3892eb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 76, y: 4}
+  - name: character-topdown-attack-up-no-sword_Frame_2
+    originalName: 
+    pivot: {x: 0.5357143, y: -0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 26
+      y: 32
+      width: 14
+      height: 20
+    spriteID: 9d0b3c1bf1c60b54e894db7c5297143b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 26, y: 32}
+  - name: character-topdown-attack-up-no-sword_Frame_3
+    originalName: 
+    pivot: {x: 0.5357143, y: -0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 48
+      y: 32
+      width: 14
+      height: 20
+    spriteID: 1ec3420b8cb35e0429060ba61584a20f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 48, y: 32}
+  - name: character-topdown-attack-up-no-sword_Frame_4
+    originalName: 
+    pivot: {x: 0.5357143, y: -0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 70
+      y: 32
+      width: 14
+      height: 20
+    spriteID: ba94fa166256fd145a5f5ab87d48cd69
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 70, y: 32}
+  - name: character-topdown-attack-up-no-sword_Frame_5
+    originalName: 
+    pivot: {x: 0.5, y: -0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 99
+      y: 4
+      width: 15
+      height: 20
+    spriteID: b84ee94dd7ad8a347952c3034ad050dd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 99, y: 4}
+  - name: character-topdown-attack-up-no-sword_Frame_6
+    originalName: 
+    pivot: {x: 0.46875003, y: -0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 28
+      y: 4
+      width: 16
+      height: 20
+    spriteID: 7097863aa241a134c98edf1e0f89ddfe
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 28, y: 4}
+  - name: character-topdown-attack-up-no-sword_Frame_7
+    originalName: 
+    pivot: {x: 0.5357143, y: -0.1904762}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 32
+      width: 14
+      height: 21
+    spriteID: 8ca73725bc2e3ed4da0aed6e3c4c84e0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 32}
+  - name: character-topdown-attack-up-no-sword_Frame_8
+    originalName: 
+    pivot: {x: 0.53125, y: -0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 52
+      y: 4
+      width: 16
+      height: 20
+    spriteID: dfa44f2887b9abd4bbe4cc836c6d364d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 52, y: 4}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -2061268516
+    name: character-topdown-attack-up-no-sword
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: character-topdown-attack-up-no-sword_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 18
+        y: 5
+        width: 16
+        height: 20
+      spriteId: 484aaa44a360f7d449360c04fed9d614
+    - name: character-topdown-attack-up-no-sword_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 19
+        y: 5
+        width: 15
+        height: 20
+      spriteId: 634e27299595f294aab4086caf3892eb
+    - name: character-topdown-attack-up-no-sword_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 19
+        y: 5
+        width: 14
+        height: 20
+      spriteId: 9d0b3c1bf1c60b54e894db7c5297143b
+    - name: character-topdown-attack-up-no-sword_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 19
+        y: 5
+        width: 14
+        height: 20
+      spriteId: 1ec3420b8cb35e0429060ba61584a20f
+    - name: character-topdown-attack-up-no-sword_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 19
+        y: 5
+        width: 14
+        height: 20
+      spriteId: ba94fa166256fd145a5f5ab87d48cd69
+    - name: character-topdown-attack-up-no-sword_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 19
+        y: 5
+        width: 15
+        height: 20
+      spriteId: b84ee94dd7ad8a347952c3034ad050dd
+    - name: character-topdown-attack-up-no-sword_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 19
+        y: 5
+        width: 16
+        height: 20
+      spriteId: 7097863aa241a134c98edf1e0f89ddfe
+    - name: character-topdown-attack-up-no-sword_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 19
+        y: 4
+        width: 14
+        height: 21
+      spriteId: 8ca73725bc2e3ed4da0aed6e3c4c84e0
+    - name: character-topdown-attack-up-no-sword_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 18
+        y: 5
+        width: 16
+        height: 20
+      spriteId: dfa44f2887b9abd4bbe4cc836c6d364d
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 53, y: 36}

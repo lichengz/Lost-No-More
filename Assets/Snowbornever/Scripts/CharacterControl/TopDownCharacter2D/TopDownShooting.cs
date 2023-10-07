@@ -27,6 +27,8 @@ namespace TopDownCharacter2D
         private ProjectileManager projectileManager;
         private TopDownCharacterController _controller;
         private Rigidbody2D _rb;
+        private RangedAttackConfig rangedAttackConfig;
+        private bool recoil;
 
         [SerializeField]
         private EquipRangeWeaponEventChannelSO equipRangeWeapon;
@@ -50,6 +52,18 @@ namespace TopDownCharacter2D
         {
             equipRangeWeapon.OnEventRaised -= EquipRangeWeapon;
             unEquipWeapons.OnEventRaised -= UnEquipRangeWeapon;
+        }
+
+        private void FixedUpdate()
+        {
+            if (recoil)
+            {
+                if (_rb != null)
+                {
+                    AddRecoil(rangedAttackConfig);
+                }
+                recoil = false;
+            }
         }
 
         public void EquipRangeWeapon(RangedAttackConfig config)
@@ -79,7 +93,7 @@ namespace TopDownCharacter2D
         /// <param name="attackConfig"> The stats of the projectile to shoot </param>
         public void OnShoot(AttackConfig attackConfig)
         {
-            RangedAttackConfig rangedAttackConfig = (RangedAttackConfig) attackConfig;
+            rangedAttackConfig = (RangedAttackConfig) attackConfig;
             float projectilesAngleSpace = rangedAttackConfig.multipleProjectilesAngle;
             float minAngle = -(rangedAttackConfig.numberOfProjectilesPerShot / 2f) * projectilesAngleSpace +
                              0.5f * rangedAttackConfig.multipleProjectilesAngle;
@@ -92,10 +106,7 @@ namespace TopDownCharacter2D
                 CreateProjectile(rangedAttackConfig, angle);
             }
 
-            if (_rb != null)
-            {
-                AddRecoil(rangedAttackConfig);
-            }
+            recoil = true;
         }
 
         /// <summary>
@@ -126,6 +137,7 @@ namespace TopDownCharacter2D
         /// <param name="rangedAttackConfig"> the configuration of the projectile shot </param>
         private void AddRecoil(RangedAttackConfig rangedAttackConfig)
         {
+            _rb.velocity = Vector2.zero;
             if (projectileSizeModifyRecoil)
             {
                 _rb.AddForce(-(_aimDirection * (rangedAttackConfig.size * recoilStrength * 100f)), ForceMode2D.Impulse);

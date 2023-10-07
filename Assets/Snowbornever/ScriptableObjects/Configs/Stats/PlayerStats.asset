@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statsChangeType: 0
   maxHealth: 10
-  speed: 1
+  speed: 0.8
   attackConfig: {fileID: 0}

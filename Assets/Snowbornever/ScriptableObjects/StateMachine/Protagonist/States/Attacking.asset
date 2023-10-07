@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Attacking
   m_EditorClassIdentifier: 
   _actions:
-  - {fileID: 11400000, guid: 201885673bd707f4c9b5f3a92eca204f, type: 2}
   - {fileID: 11400000, guid: 5aac41c53e47f1040a52303b2000ceb5, type: 2}
-  - {fileID: 11400000, guid: 74800142628360a42bb516b1e5c630e1, type: 2}
   - {fileID: 11400000, guid: 5cb6e4529b034ff4dbc7a7aa863ce969, type: 2}
   - {fileID: 11400000, guid: 23e8862a3aca1b6439bda3bf27d03897, type: 2}
+  - {fileID: 11400000, guid: 93f5e076490f2da40b3477df458c25e2, type: 2}

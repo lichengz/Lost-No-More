@@ -22,10 +22,11 @@ namespace TopDownCharacter2D.Controllers
     {
         protected Rigidbody2D _rb;
         protected Animator _animator;
-        private static readonly int ComboAttack = Animator.StringToHash("ComboAttacking");
-        private static readonly int Combo1 = Animator.StringToHash("Combo1");
-        private static readonly int Combo2 = Animator.StringToHash("Combo2");
-        private static readonly int Combo3 = Animator.StringToHash("Combo3");
+        public static readonly int ComboAttack = Animator.StringToHash("ComboAttacking");
+        public static readonly int Combo1 = Animator.StringToHash("Combo1");
+        public static readonly int Combo2 = Animator.StringToHash("Combo2");
+        public static readonly int Combo3 = Animator.StringToHash("Combo3");
+        public static readonly int ShieldHit = Animator.StringToHash("ShieldHit");
 
 
         [Tooltip("The origin point of the arm to aim with")]
@@ -244,6 +245,11 @@ namespace TopDownCharacter2D.Controllers
                     _animator.SetTrigger(Combo3);
                     break;
             }
+        }
+
+        public void TriggerShieldBlock()
+        {
+            _animator.SetTrigger(ShieldHit);
         }
 
         protected Vector2 HandleAimWithMouse(Vector2 look)

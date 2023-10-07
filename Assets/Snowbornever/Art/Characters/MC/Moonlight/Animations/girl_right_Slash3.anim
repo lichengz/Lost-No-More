@@ -101,7 +101,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.46
+  - time: 0.52
     functionName: ConsumeAttackInput
     data: 
     objectReferenceParameter: {fileID: 0}

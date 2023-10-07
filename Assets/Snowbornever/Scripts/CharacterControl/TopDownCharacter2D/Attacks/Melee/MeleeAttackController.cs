@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using TopDownCharacter2D.Controllers;
 using TopDownCharacter2D.Health;
 using UnityEngine;
 
@@ -48,6 +49,16 @@ namespace TopDownCharacter2D.Attacks.Melee
         {
             if (attackConfig.target.value == (attackConfig.target.value | (1 << other.gameObject.layer)))
             {
+                TopDownCharacterController topDownCharacterController =
+                    other.GetComponent<TopDownCharacterController>();
+                if (topDownCharacterController != null)
+                {
+                    if (topDownCharacterController.IsBlocking)
+                    {
+                        topDownCharacterController.TriggerShieldBlock();
+                        return;
+                    }
+                }
                 Damageable health = other.GetComponent<Damageable>();
                 if (health != null)
                 {

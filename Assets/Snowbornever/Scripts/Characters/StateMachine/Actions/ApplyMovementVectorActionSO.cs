@@ -28,8 +28,8 @@ public class ApplyMovementVectorAction : StateAction
         _protagonistScript.movementVector = _topDownCharacterController.velocity;
         if (_protagonistScript.movementInput.magnitude != 0)
         {
-            _animator.SetFloat(Animator.StringToHash("moveX"), Mathf.RoundToInt(_protagonistScript.movementInput.x));
-            _animator.SetFloat(Animator.StringToHash("moveY"), Mathf.RoundToInt(_protagonistScript.movementInput.y));
+            _animator.SetFloat(Animator.StringToHash("moveX"), _protagonistScript.movementInput.x);
+            _animator.SetFloat(Animator.StringToHash("moveY"), _protagonistScript.movementInput.y);
         }
     }
 }

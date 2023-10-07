@@ -427,6 +427,17 @@
                 },
                 {
                     "name": "",
+                    "id": "0a34b7e2-d168-4a91-8daa-679a8f0f7407",
+                    "path": "<Keyboard>/c",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Block",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "f908d271-0d8d-4486-b07b-6005c1dd3315",
                     "path": "<Mouse>/position",
                     "interactions": "",

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.Playables;
 
 /// <summary>
@@ -59,5 +60,13 @@ public class CutsceneTrigger : MonoBehaviour
 	{
 		//Fake event raise to test quicker
 		_playSpeceficCutscene.RaiseEvent();
+	}
+
+	private void Update()
+	{
+		if (Input.GetKeyDown(KeyCode.Space))
+		{
+			_playSpeceficCutscene.RaiseEvent();
+		}
 	}
 }

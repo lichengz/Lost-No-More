@@ -12,12 +12,18 @@ public class LocationExit : MonoBehaviour
 	[Header("Broadcasting on")]
 	[SerializeField] private LoadEventChannelSO _locationExitLoadChannel = default;
 
-	private void OnTriggerEnter(Collider other)
+	private void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.CompareTag("Player"))
-		{
-			_pathStorage.lastPathTaken = _leadsToPath;
-			_locationExitLoadChannel.RaiseEvent(_locationToLoad, false, true);
-		}
+		// if (other.CompareTag("Player"))
+		// {
+		// 	_pathStorage.lastPathTaken = _leadsToPath;
+		// 	_locationExitLoadChannel.RaiseEvent(_locationToLoad, false, true);
+		// }
+	}
+
+	public void Exit()
+	{
+		_pathStorage.lastPathTaken = _leadsToPath;
+		_locationExitLoadChannel.RaiseEvent(_locationToLoad, false, true);
 	}
 }

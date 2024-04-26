@@ -10,6 +10,8 @@ public class CameraManager : MonoBehaviour
 	public CinemachineVirtualCamera VCam;
 	public CinemachineImpulseSource impulseSource;
 	private bool _isRMBPressed;
+	private Protagonist _protagonist;
+	private CinemachineFramingTransposer _transposer;
 
 	[SerializeField][Range(.5f, 3f)] private float _speedMultiplier = 1f; //TODO: make this modifiable in the game settings											
 	[SerializeField] private TransformAnchor _cameraTransformAnchor = default;
@@ -44,6 +46,17 @@ public class CameraManager : MonoBehaviour
 			SetupProtagonistVirtualCamera();
 	}
 
+	private void Update()
+	{
+		if (_protagonist != null)
+		{
+			if (_protagonist.inputVector.magnitude > 0)
+			{
+				_transposer.m_TrackedObjectOffset = _protagonist.inputVector * 0.3f;
+			}
+		}
+	}
+
 	/// <summary>
 	/// Provides Cinemachine with its target, taken from the TransformAnchor SO containing a reference to the player's Transform component.
 	/// This method is called every time the player is reinstantiated.
@@ -51,10 +64,10 @@ public class CameraManager : MonoBehaviour
 	public void SetupProtagonistVirtualCamera()
 	{
 		Transform target = _protagonistTransformAnchor.Value;
-
+		_protagonist = _protagonistTransformAnchor.Value.GetComponent<Protagonist>();
+		_transposer = VCam.GetCinemachineComponent<CinemachineFramingTransposer>();
 		Vector3 tempFollow = VCam.Follow.position;
 		VCam.Follow = target;
-		VCam.LookAt = target;
 		VCam.OnTargetObjectWarped(target, target.position - tempFollow);
 	}
 }

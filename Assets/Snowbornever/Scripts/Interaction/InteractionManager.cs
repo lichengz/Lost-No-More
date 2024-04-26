@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
 
-public enum InteractionType { None = 0, PickUp, Cook, Talk };
+public enum InteractionType { None = 0, PickUp, Cook, Talk};
 
 public class InteractionManager : MonoBehaviour
 {

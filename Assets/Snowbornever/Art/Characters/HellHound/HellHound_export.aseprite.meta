@@ -1,0 +1,4392 @@
+fileFormatVersion: 2
+guid: 5ba26937062509b468cc6ee8a887145c
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: hound idle
+    second: {fileID: 7400000, guid: df7e4d3128a2fa74bbf09889d125626e, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: hound melee attack
+    second: {fileID: 7400000, guid: 669522ea756aaa845824241ca8d0bde7, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: hound range attack
+    second: {fileID: 7400000, guid: 2f2df26d2efa23e43ab8ad05a166a6ea, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: hound run
+    second: {fileID: 7400000, guid: db1d96e6f7b7c634e95d44f442314e0c, type: 2}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 32
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 638325455110026663
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: HellHound_export_Frame_0
+    originalName: 
+    pivot: {x: 0.49275362, y: -0.078125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 415
+      y: 1126
+      width: 138
+      height: 128
+    spriteID: 46c7b76eb6c14ac4992f98135ef5f8e1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 319, y: 1018}
+  - name: HellHound_export_Frame_1
+    originalName: 
+    pivot: {x: 0.49635038, y: -0.069767445}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1729
+      y: 845
+      width: 137
+      height: 129
+    spriteID: eba6ac66abff0cc47b7c205f0223c26a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1633, y: 738}
+  - name: HellHound_export_Frame_2
+    originalName: 
+    pivot: {x: 0.49635038, y: -0.062015507}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1874
+      y: 845
+      width: 137
+      height: 129
+    spriteID: 19d93970a2cb06348b91db0e9799bcf1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1778, y: 739}
+  - name: HellHound_export_Frame_3
+    originalName: 
+    pivot: {x: 0.49629632, y: -0.053846154}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1280
+      y: 1126
+      width: 135
+      height: 130
+    spriteID: 837af37b41e06f047b790a3403cb748a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1183, y: 1021}
+  - name: HellHound_export_Frame_4
+    originalName: 
+    pivot: {x: 0.49629632, y: -0.046153847}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1423
+      y: 1126
+      width: 135
+      height: 130
+    spriteID: 5757ab6ae918140419daa1e43a2146a9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1326, y: 1022}
+  - name: HellHound_export_Frame_5
+    originalName: 
+    pivot: {x: 0.50000006, y: -0.046153847}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1271
+      width: 134
+      height: 130
+    spriteID: 4d34574b8fb9a96459e3e26d43f5ca41
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -93, y: 1167}
+  - name: HellHound_export_Frame_6
+    originalName: 
+    pivot: {x: 0.5037594, y: -0.04651163}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 584
+      y: 989
+      width: 133
+      height: 129
+    spriteID: 5a146b17b87981f4490beec2cc4f31eb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 487, y: 885}
+  - name: HellHound_export_Frame_7
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.04651163}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1153
+      y: 989
+      width: 132
+      height: 129
+    spriteID: 4b1c9917ddd05b345a7885b255a91623
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1055, y: 885}
+  - name: HellHound_export_Frame_8
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.04651163}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1293
+      y: 989
+      width: 132
+      height: 129
+    spriteID: e004422e51d5d0945bc5b5e2225a39dc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1195, y: 885}
+  - name: HellHound_export_Frame_9
+    originalName: 
+    pivot: {x: 0.49624056, y: -0.05426357}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 725
+      y: 989
+      width: 133
+      height: 129
+    spriteID: ac23b7cb9c6c1b0469833808fcee3bd4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 627, y: 884}
+  - name: HellHound_export_Frame_10
+    originalName: 
+    pivot: {x: 0.4925373, y: -0.070866145}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1574
+      y: 989
+      width: 134
+      height: 127
+    spriteID: dd24407e44345854e97b748b2264aaa1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1476, y: 882}
+  - name: HellHound_export_Frame_11
+    originalName: 
+    pivot: {x: 0.4925373, y: -0.078740165}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1716
+      y: 989
+      width: 134
+      height: 127
+    spriteID: 4b69a4f16283a7445b4ca9811c331b9b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1618, y: 881}
+  - name: HellHound_export_Frame_12
+    originalName: 
+    pivot: {x: 0.48888883, y: -0.08661418}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 866
+      y: 989
+      width: 135
+      height: 127
+    spriteID: a763b1dd484a7c54f9370505c03da32b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 768, y: 880}
+  - name: HellHound_export_Frame_13
+    originalName: 
+    pivot: {x: 0.48529407, y: -0.094488196}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 295
+      y: 989
+      width: 136
+      height: 127
+    spriteID: 749fb06552a89e14c8e77891d9d19659
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 197, y: 879}
+  - name: HellHound_export_Frame_14
+    originalName: 
+    pivot: {x: 0.48529407, y: -0.103174604}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1009
+      y: 989
+      width: 136
+      height: 126
+    spriteID: 3deeadb51f263a04c99eaa7e7fc1049b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 911, y: 878}
+  - name: HellHound_export_Frame_15
+    originalName: 
+    pivot: {x: 0.48175177, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 439
+      y: 989
+      width: 137
+      height: 126
+    spriteID: 0144665e53c21064a9f929366c5223a2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 341, y: 877}
+  - name: HellHound_export_Frame_16
+    originalName: 
+    pivot: {x: 0.47826082, y: -0.11023623}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1703
+      y: 1126
+      width: 138
+      height: 127
+    spriteID: 3587bbb8997e0c349b625330f01b8a63
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1605, y: 1014}
+  - name: HellHound_export_Frame_17
+    originalName: 
+    pivot: {x: 0.47101444, y: -0.11811024}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1849
+      y: 1126
+      width: 138
+      height: 127
+    spriteID: e850f3d611778bc4db4b7ae718ec2b3b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1750, y: 1013}
+  - name: HellHound_export_Frame_18
+    originalName: 
+    pivot: {x: 0.4637681, y: -0.11811024}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 149
+      y: 989
+      width: 138
+      height: 127
+    spriteID: d05768e2e0b6f0e41b879e757e347328
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 49, y: 876}
+  - name: HellHound_export_Frame_19
+    originalName: 
+    pivot: {x: 0.4604316, y: -0.1171875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 868
+      y: 845
+      width: 139
+      height: 128
+    spriteID: 21909f85fd9457646aff68fc2e7eec02
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 768, y: 732}
+  - name: HellHound_export_Frame_20
+    originalName: 
+    pivot: {x: 0.45323738, y: -0.12598427}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 853
+      y: 1126
+      width: 139
+      height: 127
+    spriteID: 1da49402afaf18448ad08f09ecaee7b9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 752, y: 1012}
+  - name: HellHound_export_Frame_21
+    originalName: 
+    pivot: {x: 0.45, y: -0.125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 661
+      y: 352
+      width: 140
+      height: 128
+    spriteID: b4ea95db94da99545adb2acf57653b7c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 560, y: 238}
+  - name: HellHound_export_Frame_22
+    originalName: 
+    pivot: {x: 0.44285715, y: -0.1328125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 809
+      y: 352
+      width: 140
+      height: 128
+    spriteID: 295a9c83d57342f4485c1ae4cee13b2d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 707, y: 237}
+  - name: HellHound_export_Frame_23
+    originalName: 
+    pivot: {x: 0.44285715, y: -0.1328125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 957
+      y: 352
+      width: 140
+      height: 128
+    spriteID: 4f76215823698ad4db5e99000cc3851e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 855, y: 237}
+  - name: HellHound_export_Frame_24
+    originalName: 
+    pivot: {x: 0.4388489, y: -0.125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1015
+      y: 845
+      width: 139
+      height: 128
+    spriteID: 06f1a8e20b8b59845bc8e6d18a333938
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 912, y: 731}
+  - name: HellHound_export_Frame_25
+    originalName: 
+    pivot: {x: 0.4347826, y: -0.11627907}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 722
+      y: 845
+      width: 138
+      height: 129
+    spriteID: 3b7c79704ccd080479b74c896faa47d8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 618, y: 732}
+  - name: HellHound_export_Frame_26
+    originalName: 
+    pivot: {x: 0.4347826, y: -0.1171875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 561
+      y: 1126
+      width: 138
+      height: 128
+    spriteID: 92621c986b9f7e84586e8534fe0deede
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 457, y: 1013}
+  - name: HellHound_export_Frame_27
+    originalName: 
+    pivot: {x: 0.43065694, y: -0.10852714}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 989
+      width: 137
+      height: 129
+    spriteID: acc3855d421f6aa42b2e3027b09c6bde
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -101, y: 877}
+  - name: HellHound_export_Frame_28
+    originalName: 
+    pivot: {x: 0.43065694, y: -0.092307694}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 287
+      y: 845
+      width: 137
+      height: 130
+    spriteID: 78a31f4880c33a6488390713fb28016a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 182, y: 735}
+  - name: HellHound_export_Frame_29
+    originalName: 
+    pivot: {x: 0.42962965, y: -0.07633588}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1304
+      y: 845
+      width: 135
+      height: 131
+    spriteID: 328273a58b78afb41a5bc54dc8065be9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1198, y: 737}
+  - name: HellHound_export_Frame_30
+    originalName: 
+    pivot: {x: 0.4253732, y: -0.05263158}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1105
+      y: 352
+      width: 134
+      height: 133
+    spriteID: 72bbca624a0e52f4d87664b3d9263a48
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 998, y: 247}
+  - name: HellHound_export_Frame_31
+    originalName: 
+    pivot: {x: 0.42962965, y: -0.05263158}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 518
+      y: 352
+      width: 135
+      height: 133
+    spriteID: 4e6cb6235cdbc0840934bce13dc675cc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 412, y: 247}
+  - name: HellHound_export_Frame_32
+    originalName: 
+    pivot: {x: 0.43283588, y: -0.05263158}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1247
+      y: 352
+      width: 134
+      height: 133
+    spriteID: 33d9ed60d2bddcd498d6f17a27fd2dd1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1141, y: 247}
+  - name: HellHound_export_Frame_33
+    originalName: 
+    pivot: {x: 0.43609023, y: -0.044776123}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1389
+      y: 352
+      width: 133
+      height: 134
+    spriteID: 3b09a5197cda8614a847ca7ca94127bf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1283, y: 248}
+  - name: HellHound_export_Frame_34
+    originalName: 
+    pivot: {x: 0.44360903, y: -0.044776123}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1530
+      y: 352
+      width: 133
+      height: 134
+    spriteID: 59fae33e16438804eb363b65f2e19fd1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1425, y: 248}
+  - name: HellHound_export_Frame_35
+    originalName: 
+    pivot: {x: 0.44696972, y: -0.037037037}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1671
+      y: 352
+      width: 132
+      height: 135
+    spriteID: 74d922ff0956a364288ff053496f9ddc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1566, y: 249}
+  - name: HellHound_export_Frame_36
+    originalName: 
+    pivot: {x: 0.4503817, y: -0.037037037}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1447
+      y: 845
+      width: 131
+      height: 135
+    spriteID: cd4ca9452b5b10b428cd3016f2e8cfdf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1342, y: 742}
+  - name: HellHound_export_Frame_37
+    originalName: 
+    pivot: {x: 0.4580153, y: -0.029411767}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 845
+      width: 131
+      height: 136
+    spriteID: f9fcca059477ca34b81b559ffa5e4a49
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -100, y: 743}
+  - name: HellHound_export_Frame_38
+    originalName: 
+    pivot: {x: 0.4615385, y: -0.037313435}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1409
+      width: 130
+      height: 134
+    spriteID: 183ef0f064e54e845ad06cca906a725c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -100, y: 1306}
+  - name: HellHound_export_Frame_39
+    originalName: 
+    pivot: {x: 0.46564886, y: -0.044776123}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1141
+      y: 1126
+      width: 131
+      height: 134
+    spriteID: 62654b561df1ea9489dcbe50f6b30e7c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1038, y: 1022}
+  - name: HellHound_export_Frame_40
+    originalName: 
+    pivot: {x: 0.4736842, y: -0.053030305}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1000
+      y: 1126
+      width: 133
+      height: 132
+    spriteID: 85d3ae1d2d763c64084f90c428fce72e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 899, y: 1021}
+  - name: HellHound_export_Frame_41
+    originalName: 
+    pivot: {x: 0.47761193, y: -0.053030305}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1162
+      y: 845
+      width: 134
+      height: 132
+    spriteID: ffdb5fd5c9bb87647923101324da783e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1062, y: 740}
+  - name: HellHound_export_Frame_42
+    originalName: 
+    pivot: {x: 0.48148143, y: -0.061068706}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1586
+      y: 845
+      width: 135
+      height: 131
+    spriteID: b10555027a213934bbc90fc7e1885b18
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1487, y: 739}
+  - name: HellHound_export_Frame_43
+    originalName: 
+    pivot: {x: 0.48529407, y: -0.061068706}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 143
+      y: 845
+      width: 136
+      height: 131
+    spriteID: 08ebaf966596ed643b2111bf7e9d2128
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 45, y: 739}
+  - name: HellHound_export_Frame_44
+    originalName: 
+    pivot: {x: 0.4890511, y: -0.06923077}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 432
+      y: 845
+      width: 137
+      height: 130
+    spriteID: d8c638831ddd9dc43b4b77c985b1db90
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 335, y: 738}
+  - name: HellHound_export_Frame_45
+    originalName: 
+    pivot: {x: 0.4890511, y: -0.06923077}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 577
+      y: 845
+      width: 137
+      height: 130
+    spriteID: b422be6915e302348aa7bc86e52a05be
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 480, y: 738}
+  - name: HellHound_export_Frame_46
+    originalName: 
+    pivot: {x: 0.3271028, y: -0.05988024}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 214
+      height: 167
+    spriteID: 531944defde0c264e87a15e6df63db17
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -90, y: -104}
+  - name: HellHound_export_Frame_47
+    originalName: 
+    pivot: {x: 0.3703704, y: -0.0625}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 401
+      y: 505
+      width: 189
+      height: 160
+    spriteID: f84fa242ff121504189c13ada1c26881
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 307, y: 397}
+  - name: HellHound_export_Frame_48
+    originalName: 
+    pivot: {x: 0.36649215, y: -0.061728396}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 610
+      y: 179
+      width: 191
+      height: 162
+    spriteID: 512b81d0749b2ad4a86dd8e064d96b54
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 516, y: 71}
+  - name: HellHound_export_Frame_49
+    originalName: 
+    pivot: {x: 0.37634408, y: -0.0625}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 991
+      y: 505
+      width: 186
+      height: 160
+    spriteID: c637e88ef5850d7409f4470ce0df2ba2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 897, y: 397}
+  - name: HellHound_export_Frame_50
+    originalName: 
+    pivot: {x: 0.3703704, y: -0.06329114}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 794
+      y: 505
+      width: 189
+      height: 158
+    spriteID: 5c2a7e9035c500447aa810f37549860a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 700, y: 397}
+  - name: HellHound_export_Frame_51
+    originalName: 
+    pivot: {x: 0.38251367, y: -0.0625}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1185
+      y: 505
+      width: 183
+      height: 160
+    spriteID: c8f1a1758636fd14d95984942f18a3b5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1091, y: 397}
+  - name: HellHound_export_Frame_52
+    originalName: 
+    pivot: {x: 0.37634408, y: -0.061728396}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 198
+      y: 674
+      width: 186
+      height: 162
+    spriteID: a734bd63ff8993b40b683daaf0417a79
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 104, y: 566}
+  - name: HellHound_export_Frame_53
+    originalName: 
+    pivot: {x: 0.37433156, y: -0.06097561}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1230
+      y: 179
+      width: 187
+      height: 164
+    spriteID: a2d67927f2ef59a4cae60b8f3c01ce19
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1136, y: 71}
+  - name: HellHound_export_Frame_54
+    originalName: 
+    pivot: {x: 0.36842105, y: -0.062111802}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1817
+      y: 179
+      width: 190
+      height: 161
+    spriteID: 8f9ba133be3196645b3bc0fdc59c7389
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1723, y: 71}
+  - name: HellHound_export_Frame_55
+    originalName: 
+    pivot: {x: 0.37234044, y: -0.061349697}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1425
+      y: 179
+      width: 188
+      height: 163
+    spriteID: 767854e588eb55d49b7e0fba352761a5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1331, y: 71}
+  - name: HellHound_export_Frame_56
+    originalName: 
+    pivot: {x: 0.37234044, y: -0.060606062}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 179
+      width: 188
+      height: 165
+    spriteID: 104bd132754c2b5488f847d7d14c13a4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 107, y: 71}
+  - name: HellHound_export_Frame_57
+    originalName: 
+    pivot: {x: 0.3703704, y: -0.062111802}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 505
+      width: 189
+      height: 161
+    spriteID: f1c5b4ad9dd4e5c44bd438ed60a47910
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -90, y: 397}
+  - name: HellHound_export_Frame_58
+    originalName: 
+    pivot: {x: 0.37634408, y: -0.061349697}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 674
+      width: 186
+      height: 163
+    spriteID: 174aca2f42043d443acc8c0620f7e9fc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -90, y: 566}
+  - name: HellHound_export_Frame_59
+    originalName: 
+    pivot: {x: 0.3703704, y: -0.060606062}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 179
+      width: 189
+      height: 165
+    spriteID: 2975ab171f75de64cbf55246c0f59916
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -90, y: 71}
+  - name: HellHound_export_Frame_60
+    originalName: 
+    pivot: {x: 0.36458334, y: -0.060606062}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1282
+      y: 4
+      width: 192
+      height: 165
+    spriteID: ce14c3e7ca78c2247b9b662cca4b6c7f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1188, y: -104}
+  - name: HellHound_export_Frame_61
+    originalName: 
+    pivot: {x: 0.35897437, y: -0.05988024}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 653
+      y: 4
+      width: 195
+      height: 167
+    spriteID: 258aa2810c2a2874b89ca1a04ccf07a0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 559, y: -104}
+  - name: HellHound_export_Frame_62
+    originalName: 
+    pivot: {x: 0.35353535, y: -0.06329114}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1704
+      y: 4
+      width: 198
+      height: 158
+    spriteID: d6334146250769d4ebfd68305096a6dc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1610, y: -104}
+  - name: HellHound_export_Frame_63
+    originalName: 
+    pivot: {x: 0.34825873, y: -0.0625}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1073
+      y: 4
+      width: 201
+      height: 160
+    spriteID: 7979d20dd88f8d24fb5f5aa7db4c6a98
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 979, y: -104}
+  - name: HellHound_export_Frame_64
+    originalName: 
+    pivot: {x: 0.34313726, y: -0.061728396}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 441
+      y: 4
+      width: 204
+      height: 162
+    spriteID: b7c54dca28775e8478b1874429f76927
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 347, y: -104}
+  - name: HellHound_export_Frame_65
+    originalName: 
+    pivot: {x: 0.33816427, y: -0.060606062}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 226
+      y: 4
+      width: 207
+      height: 165
+    spriteID: 2f81e5eb654a9884c800392ad3a109dd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 132, y: -104}
+  - name: HellHound_export_Frame_66
+    originalName: 
+    pivot: {x: 0.33333334, y: -0.068965524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 352
+      width: 210
+      height: 145
+    spriteID: c1b5ca56b11ba89449497f7072016ee6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -90, y: 244}
+  - name: HellHound_export_Frame_67
+    originalName: 
+    pivot: {x: 0.3271028, y: -0.06802721}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1482
+      y: 4
+      width: 214
+      height: 147
+    spriteID: 9f357a67b996e5d4c964880551faf02a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1388, y: -104}
+  - name: HellHound_export_Frame_68
+    originalName: 
+    pivot: {x: 0.33816427, y: -0.0671141}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1015
+      y: 179
+      width: 207
+      height: 149
+    spriteID: 9f0dff6dd6aea544b8f43dfb70bb0937
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 921, y: 71}
+  - name: HellHound_export_Frame_69
+    originalName: 
+    pivot: {x: 0.34146342, y: -0.06622517}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 397
+      y: 179
+      width: 205
+      height: 151
+    spriteID: d2c72b80f2cbbe84abc540e405c3c749
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 303, y: 71}
+  - name: HellHound_export_Frame_70
+    originalName: 
+    pivot: {x: 0.33492824, y: -0.064935066}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 856
+      y: 4
+      width: 209
+      height: 154
+    spriteID: 8bd63b8d6ef3ce24db1d1c918d749382
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 762, y: -104}
+  - name: HellHound_export_Frame_71
+    originalName: 
+    pivot: {x: 0.35353535, y: -0.06410257}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 809
+      y: 179
+      width: 198
+      height: 156
+    spriteID: f4d5c16fb0fce1f49927dba9906d4174
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 715, y: 71}
+  - name: HellHound_export_Frame_72
+    originalName: 
+    pivot: {x: 0.36458334, y: -0.06329114}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 505
+      width: 192
+      height: 158
+    spriteID: 5db898bc844ed29449ab12c43f455746
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 107, y: 397}
+  - name: HellHound_export_Frame_73
+    originalName: 
+    pivot: {x: 0.37234044, y: -0.0625}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 598
+      y: 505
+      width: 188
+      height: 160
+    spriteID: 41727cd349610304b8b60fa29cce1797
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 504, y: 397}
+  - name: HellHound_export_Frame_74
+    originalName: 
+    pivot: {x: 0.37234044, y: -0.061349697}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1621
+      y: 179
+      width: 188
+      height: 163
+    spriteID: 0ea5e9b32eef4dd409ed91507f632c6b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1527, y: 71}
+  - name: HellHound_export_Frame_75
+    originalName: 
+    pivot: {x: 0.5426357, y: -0.08}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 940
+      y: 1409
+      width: 129
+      height: 125
+    spriteID: 65fca5391a1c137498b1c3f4f42299a7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 846, y: 1301}
+  - name: HellHound_export_Frame_76
+    originalName: 
+    pivot: {x: 0.546875, y: -0.08}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 274
+      y: 1551
+      width: 128
+      height: 125
+    spriteID: 64da420e33280b24d9e5a620aa93f89b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 180, y: 1443}
+  - name: HellHound_export_Frame_77
+    originalName: 
+    pivot: {x: 0.546875, y: -0.07936508}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1087
+      y: 1271
+      width: 128
+      height: 126
+    spriteID: d723eb4e1816f4b4ba09d94a7629708a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 993, y: 1163}
+  - name: HellHound_export_Frame_78
+    originalName: 
+    pivot: {x: 0.5511811, y: -0.07936508}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1551
+      width: 127
+      height: 126
+    spriteID: 2fbb1e6cbe3573d479bb6cd8318de228
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -90, y: 1443}
+  - name: HellHound_export_Frame_79
+    originalName: 
+    pivot: {x: 0.5511811, y: -0.07936508}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 139
+      y: 1551
+      width: 127
+      height: 126
+    spriteID: 7c886c3cb7063e548b0c77b2371c06a3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 45, y: 1443}
+  - name: HellHound_export_Frame_80
+    originalName: 
+    pivot: {x: 0.5555556, y: -0.078740165}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1685
+      width: 126
+      height: 127
+    spriteID: c78685030485fee47ade1f6b7c4a9e05
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -90, y: 1577}
+  - name: HellHound_export_Frame_81
+    originalName: 
+    pivot: {x: 0.56, y: -0.078740165}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 138
+      y: 1685
+      width: 125
+      height: 127
+    spriteID: 5219aa8359b8a5b4cb6eb2a50289810f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 44, y: 1577}
+  - name: HellHound_export_Frame_82
+    originalName: 
+    pivot: {x: 0.56, y: -0.078740165}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 271
+      y: 1685
+      width: 125
+      height: 127
+    spriteID: 4a4c90ff81842c341b2a0e74c653bea9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 177, y: 1577}
+  - name: HellHound_export_Frame_83
+    originalName: 
+    pivot: {x: 0.5645162, y: -0.078125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 133
+      y: 1820
+      width: 124
+      height: 128
+    spriteID: 4bfae47b9f86a9e4bb2eabb185a58e74
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 39, y: 1712}
+  - name: HellHound_export_Frame_84
+    originalName: 
+    pivot: {x: 0.5645162, y: -0.078125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 265
+      y: 1820
+      width: 124
+      height: 128
+    spriteID: d125ddfba1b54b2478463adeb60edd2b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 171, y: 1712}
+  - name: HellHound_export_Frame_85
+    originalName: 
+    pivot: {x: 0.56910574, y: -0.078125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 655
+      y: 1820
+      width: 123
+      height: 128
+    spriteID: cfd3526b69f1cf640a2e978abbd28c0c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 561, y: 1712}
+  - name: HellHound_export_Frame_86
+    originalName: 
+    pivot: {x: 0.57377046, y: -0.07751939}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 786
+      y: 1820
+      width: 122
+      height: 129
+    spriteID: 74fe02a96ea4372419ebfaadee9e0012
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 692, y: 1712}
+  - name: HellHound_export_Frame_87
+    originalName: 
+    pivot: {x: 0.57377046, y: -0.07751939}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 916
+      y: 1820
+      width: 122
+      height: 129
+    spriteID: ef8e8ed304e14894e84e56762c67b883
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 822, y: 1712}
+  - name: HellHound_export_Frame_88
+    originalName: 
+    pivot: {x: 0.57851243, y: -0.07751939}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1174
+      y: 1820
+      width: 121
+      height: 129
+    spriteID: e9c89383091ef1243a990ec4bb411ccb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1080, y: 1712}
+  - name: HellHound_export_Frame_89
+    originalName: 
+    pivot: {x: 0.5833334, y: -0.07692308}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1303
+      y: 1820
+      width: 120
+      height: 130
+    spriteID: 8c4c1a08dc084a044b1e5a7daa8917cf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1209, y: 1712}
+  - name: HellHound_export_Frame_90
+    originalName: 
+    pivot: {x: 0.5833334, y: -0.07692308}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1431
+      y: 1820
+      width: 120
+      height: 130
+    spriteID: 7978772d46788d24899a3753178b7470
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1337, y: 1712}
+  - name: HellHound_export_Frame_91
+    originalName: 
+    pivot: {x: 0.5833334, y: -0.07692308}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1559
+      y: 1820
+      width: 120
+      height: 130
+    spriteID: a61f21b2433c3774882f24b24cfec861
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1465, y: 1712}
+  - name: HellHound_export_Frame_92
+    originalName: 
+    pivot: {x: 0.5833334, y: -0.07633588}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1046
+      y: 1820
+      width: 120
+      height: 131
+    spriteID: e514d73fd949c8b489ac7abe51fd484e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 952, y: 1712}
+  - name: HellHound_export_Frame_93
+    originalName: 
+    pivot: {x: 0.57851243, y: -0.07633588}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 397
+      y: 1820
+      width: 121
+      height: 131
+    spriteID: fa98ec1884f187d42963ca28fce79a4d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 303, y: 1712}
+  - name: HellHound_export_Frame_94
+    originalName: 
+    pivot: {x: 0.57851243, y: -0.07633588}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 526
+      y: 1820
+      width: 121
+      height: 131
+    spriteID: eca143a03e005ca4e8cc8b887ba1b6c4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 432, y: 1712}
+  - name: HellHound_export_Frame_95
+    originalName: 
+    pivot: {x: 0.57851243, y: -0.07575758}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1820
+      width: 121
+      height: 132
+    spriteID: 16759b1536dedc740bfd33c8d84de7af
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -90, y: 1712}
+  - name: HellHound_export_Frame_96
+    originalName: 
+    pivot: {x: 0.57377046, y: -0.07575758}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1606
+      y: 1409
+      width: 122
+      height: 132
+    spriteID: fc481d952ac4b874194465b8eb60e483
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1512, y: 1301}
+  - name: HellHound_export_Frame_97
+    originalName: 
+    pivot: {x: 0.57377046, y: -0.07575758}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1736
+      y: 1409
+      width: 122
+      height: 132
+    spriteID: e919dc44524af664e8dd8e0cfb98c0f7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1642, y: 1301}
+  - name: HellHound_export_Frame_98
+    originalName: 
+    pivot: {x: 0.57377046, y: -0.07575758}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1866
+      y: 1409
+      width: 122
+      height: 132
+    spriteID: 85b5b73e88efdf642b660c3d7bd96a45
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1772, y: 1301}
+  - name: HellHound_export_Frame_99
+    originalName: 
+    pivot: {x: 0.56910574, y: -0.07575758}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 406
+      y: 1409
+      width: 123
+      height: 132
+    spriteID: 032a2b320232b404a83d354b1cb6408d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 312, y: 1301}
+  - name: HellHound_export_Frame_100
+    originalName: 
+    pivot: {x: 0.56910574, y: -0.07575758}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 537
+      y: 1409
+      width: 123
+      height: 132
+    spriteID: e32db83261221424b9913ed089b0caa9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 443, y: 1301}
+  - name: HellHound_export_Frame_101
+    originalName: 
+    pivot: {x: 0.56910574, y: -0.07633588}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1475
+      y: 1409
+      width: 123
+      height: 131
+    spriteID: f2be6bda3c9b6cc4c857d6cc534155b6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1381, y: 1301}
+  - name: HellHound_export_Frame_102
+    originalName: 
+    pivot: {x: 0.5645162, y: -0.07633588}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 142
+      y: 1409
+      width: 124
+      height: 131
+    spriteID: da5e5551a238ef24d83f2431f58d4184
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 48, y: 1301}
+  - name: HellHound_export_Frame_103
+    originalName: 
+    pivot: {x: 0.5645162, y: -0.07633588}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 274
+      y: 1409
+      width: 124
+      height: 131
+    spriteID: fab5541a607bfb84c8d9626993ba9e85
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 180, y: 1301}
+  - name: HellHound_export_Frame_104
+    originalName: 
+    pivot: {x: 0.5645162, y: -0.07692308}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1343
+      y: 1409
+      width: 124
+      height: 130
+    spriteID: a4fd82fa82b68444faf187a1f187beef
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1249, y: 1301}
+  - name: HellHound_export_Frame_105
+    originalName: 
+    pivot: {x: 0.56, y: -0.07692308}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 416
+      y: 1271
+      width: 125
+      height: 130
+    spriteID: 3c3d741669a820d4bb142b5e621fa4bc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 322, y: 1163}
+  - name: HellHound_export_Frame_106
+    originalName: 
+    pivot: {x: 0.56, y: -0.07692308}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 549
+      y: 1271
+      width: 125
+      height: 130
+    spriteID: 7e02b8a90c07e964f99f06990cd46835
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 455, y: 1163}
+  - name: HellHound_export_Frame_107
+    originalName: 
+    pivot: {x: 0.56, y: -0.07751939}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1077
+      y: 1409
+      width: 125
+      height: 129
+    spriteID: fe34613420e8afc41804c873d1664f67
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 983, y: 1301}
+  - name: HellHound_export_Frame_108
+    originalName: 
+    pivot: {x: 0.56, y: -0.07751939}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1210
+      y: 1409
+      width: 125
+      height: 129
+    spriteID: 09d23a9d103a66848b5f8fead246c875
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1116, y: 1301}
+  - name: HellHound_export_Frame_109
+    originalName: 
+    pivot: {x: 0.5555556, y: -0.07751939}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 282
+      y: 1271
+      width: 126
+      height: 129
+    spriteID: 33aef2b5861e17145b5fc98f632db540
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 188, y: 1163}
+  - name: HellHound_export_Frame_110
+    originalName: 
+    pivot: {x: 0.5555556, y: -0.078125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1223
+      y: 1271
+      width: 126
+      height: 128
+    spriteID: 5103f1bf3d354724f812aaf0da09f996
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1129, y: 1163}
+  - name: HellHound_export_Frame_111
+    originalName: 
+    pivot: {x: 0.5555556, y: -0.078125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1357
+      y: 1271
+      width: 126
+      height: 128
+    spriteID: 19b2ab93bc17eba42af93e4354e6245c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1263, y: 1163}
+  - name: HellHound_export_Frame_112
+    originalName: 
+    pivot: {x: 0.5511811, y: -0.078125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1858
+      y: 989
+      width: 127
+      height: 128
+    spriteID: 2973d392aaaf66f419e4f26ae88516f3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1764, y: 881}
+  - name: HellHound_export_Frame_113
+    originalName: 
+    pivot: {x: 0.5511811, y: -0.078740165}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 682
+      y: 1271
+      width: 127
+      height: 127
+    spriteID: 4d87dae1c9f3c0242a06fe60ce9e6a28
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 588, y: 1163}
+  - name: HellHound_export_Frame_114
+    originalName: 
+    pivot: {x: 0.5511811, y: -0.078740165}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 817
+      y: 1271
+      width: 127
+      height: 127
+    spriteID: 121ba8f77f2b12044bf70721af6dff75
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 723, y: 1163}
+  - name: HellHound_export_Frame_115
+    originalName: 
+    pivot: {x: 0.5511811, y: -0.078740165}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 952
+      y: 1271
+      width: 127
+      height: 127
+    spriteID: 825afbcc1303c8d469cbd99c27430971
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 858, y: 1163}
+  - name: HellHound_export_Frame_116
+    originalName: 
+    pivot: {x: 0.546875, y: -0.07936508}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1491
+      y: 1271
+      width: 128
+      height: 126
+    spriteID: 69f68851fd5fc2d408d51491d5646920
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1397, y: 1163}
+  - name: HellHound_export_Frame_117
+    originalName: 
+    pivot: {x: 0.546875, y: -0.07936508}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1627
+      y: 1271
+      width: 128
+      height: 126
+    spriteID: 2f4087a642455814f8fe5d73d33052b4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1533, y: 1163}
+  - name: HellHound_export_Frame_118
+    originalName: 
+    pivot: {x: 0.546875, y: -0.07936508}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1763
+      y: 1271
+      width: 128
+      height: 126
+    spriteID: a364ee8eb0ddd344da5e5de29df807ca
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1669, y: 1163}
+  - name: HellHound_export_Frame_119
+    originalName: 
+    pivot: {x: 0.546875, y: -0.08}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 410
+      y: 1551
+      width: 128
+      height: 125
+    spriteID: 3b9587c66c4836845b50cee341fe2308
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 316, y: 1443}
+  - name: HellHound_export_Frame_120
+    originalName: 
+    pivot: {x: 0.546875, y: -0.071428575}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1899
+      y: 1271
+      width: 128
+      height: 126
+    spriteID: 0a47bbe985916654a907971914109366
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1805, y: 1164}
+  - name: HellHound_export_Frame_121
+    originalName: 
+    pivot: {x: 0.546875, y: -0.08}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 546
+      y: 1551
+      width: 128
+      height: 125
+    spriteID: cc2a84a235ffec247b1d2b1ff773e87a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 452, y: 1443}
+  - name: HellHound_export_Frame_122
+    originalName: 
+    pivot: {x: 0.546875, y: -0.07936508}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 668
+      y: 1409
+      width: 128
+      height: 126
+    spriteID: 3d7afdf5166e6974d8eb6ee0e7095b8c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 574, y: 1301}
+  - name: HellHound_export_Frame_123
+    originalName: 
+    pivot: {x: 0.546875, y: -0.07936508}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 804
+      y: 1409
+      width: 128
+      height: 126
+    spriteID: cf75a33988dc7314fa8dc2b2c654a90c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 710, y: 1301}
+  - name: HellHound_export_Frame_124
+    originalName: 
+    pivot: {x: 0.546875, y: -0.078740165}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 146
+      y: 1271
+      width: 128
+      height: 127
+    spriteID: 036b556c66a553848bfe48eb8ecc5de1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 52, y: 1163}
+  - name: HellHound_export_Frame_125
+    originalName: 
+    pivot: {x: 0.5263158, y: -0.078125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1433
+      y: 989
+      width: 133
+      height: 128
+    spriteID: 0c6cebcc5106d6347bf53a823a94bc5f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1339, y: 881}
+  - name: HellHound_export_Frame_126
+    originalName: 
+    pivot: {x: 0.5072464, y: -0.078125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 707
+      y: 1126
+      width: 138
+      height: 128
+    spriteID: ffac85fa797d71741b9f9b17ab3aa11b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 613, y: 1018}
+  - name: HellHound_export_Frame_127
+    originalName: 
+    pivot: {x: 0.49645388, y: -0.07751939}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 369
+      y: 352
+      width: 141
+      height: 129
+    spriteID: 51bb8f4eb12a63241bc61ea0f0bf5dbe
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 275, y: 244}
+  - name: HellHound_export_Frame_128
+    originalName: 
+    pivot: {x: 0.48951048, y: -0.07751939}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1892
+      y: 674
+      width: 143
+      height: 129
+    spriteID: c5a34b8b77b969c458afdef61b900f97
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1798, y: 566}
+  - name: HellHound_export_Frame_129
+    originalName: 
+    pivot: {x: 0.4861111, y: -0.07692308}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1444
+      y: 674
+      width: 144
+      height: 130
+    spriteID: 98226e906a157ad4788ddd2a8b42d833
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1350, y: 566}
+  - name: HellHound_export_Frame_130
+    originalName: 
+    pivot: {x: 0.48275864, y: -0.07692308}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 844
+      y: 674
+      width: 145
+      height: 130
+    spriteID: 75ee68ef9a5f8d145bd45aea6722dd1c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 750, y: 566}
+  - name: HellHound_export_Frame_131
+    originalName: 
+    pivot: {x: 0.4861111, y: -0.07633588}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 692
+      y: 674
+      width: 144
+      height: 131
+    spriteID: 2848c302c1e9f764285c1d408e66ae5b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 598, y: 566}
+  - name: HellHound_export_Frame_132
+    originalName: 
+    pivot: {x: 0.48951048, y: -0.07633588}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1293
+      y: 674
+      width: 143
+      height: 131
+    spriteID: ff00034b84fb6b54c8632814fb814364
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1199, y: 566}
+  - name: HellHound_export_Frame_133
+    originalName: 
+    pivot: {x: 0.49645388, y: -0.07633588}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1743
+      y: 674
+      width: 141
+      height: 131
+    spriteID: 36f45b894ed848142a0a68be9a349c75
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1649, y: 566}
+  - name: HellHound_export_Frame_134
+    originalName: 
+    pivot: {x: 0.50359714, y: -0.07575758}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 222
+      y: 352
+      width: 139
+      height: 132
+    spriteID: 132cbe89f2288db45968145c5f96ff7a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 128, y: 244}
+  - name: HellHound_export_Frame_135
+    originalName: 
+    pivot: {x: 0.5185185, y: -0.07575758}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1811
+      y: 352
+      width: 135
+      height: 132
+    spriteID: 549dbf9fd327dc7418fcba980a3b5e63
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1717, y: 244}
+  - name: HellHound_export_Frame_136
+    originalName: 
+    pivot: {x: 0.50359714, y: -0.07518797}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1596
+      y: 674
+      width: 139
+      height: 133
+    spriteID: 7010604ab834ef240a390e042e7d1e2b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1502, y: 566}
+  - name: HellHound_export_Frame_137
+    originalName: 
+    pivot: {x: 0.49645388, y: -0.07518797}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1144
+      y: 674
+      width: 141
+      height: 133
+    spriteID: 147d4ddd43e8d7248a449228763f3654
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1050, y: 566}
+  - name: HellHound_export_Frame_138
+    originalName: 
+    pivot: {x: 0.48951048, y: -0.07518797}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 541
+      y: 674
+      width: 143
+      height: 133
+    spriteID: 170e5f4a9b478ce4083551af442ded3b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 447, y: 566}
+  - name: HellHound_export_Frame_139
+    originalName: 
+    pivot: {x: 0.4861111, y: -0.07462687}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1833
+      y: 505
+      width: 144
+      height: 134
+    spriteID: 09dd89309141db44791da8508d5d11bd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1739, y: 397}
+  - name: HellHound_export_Frame_140
+    originalName: 
+    pivot: {x: 0.48275864, y: -0.07462687}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1529
+      y: 505
+      width: 145
+      height: 134
+    spriteID: 34e24383d45cbcc4da7fca3c38bba219
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1435, y: 397}
+  - name: HellHound_export_Frame_141
+    originalName: 
+    pivot: {x: 0.4896552, y: -0.074074075}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1376
+      y: 505
+      width: 145
+      height: 135
+    spriteID: 1169b2a6a04d1704a8d2381288097ee0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1283, y: 397}
+  - name: HellHound_export_Frame_142
+    originalName: 
+    pivot: {x: 0.48951048, y: -0.074074075}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1682
+      y: 505
+      width: 143
+      height: 135
+    spriteID: a6a5c670337189e48bfa3a7bc07fca4d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1588, y: 397}
+  - name: HellHound_export_Frame_143
+    originalName: 
+    pivot: {x: 0.49645388, y: -0.074074075}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 392
+      y: 674
+      width: 141
+      height: 135
+    spriteID: 2e13725a21e245749b5d8cf7e9bce9bd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 298, y: 566}
+  - name: HellHound_export_Frame_144
+    originalName: 
+    pivot: {x: 0.51079136, y: -0.074074075}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 997
+      y: 674
+      width: 139
+      height: 135
+    spriteID: e11612e4261f59845b1f10b91d9a406c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 904, y: 566}
+  - name: HellHound_export_Frame_145
+    originalName: 
+    pivot: {x: 0.5298508, y: -0.073529415}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1910
+      y: 4
+      width: 134
+      height: 136
+    spriteID: e683eab2bf7045b4ebf22f0f25d4c53e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1817, y: -104}
+  - name: HellHound_export_Frame_146
+    originalName: 
+    pivot: {x: 0.5503876, y: -0.073529415}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1566
+      y: 1126
+      width: 129
+      height: 136
+    spriteID: 82428570d8affa544b6fe51e85f67ffd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1473, y: 1018}
+  - name: HellHound_export_Frame_147
+    originalName: 
+    pivot: {x: 0.5503876, y: -0.072992705}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1126
+      width: 129
+      height: 137
+    spriteID: 8f98622b28d54154b8bf9213b20aa8d8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -89, y: 1018}
+  - name: HellHound_export_Frame_148
+    originalName: 
+    pivot: {x: 0.5503876, y: -0.072992705}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 141
+      y: 1126
+      width: 129
+      height: 137
+    spriteID: eeccdd1f84fcdcc44ad819f5e9686f4b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 48, y: 1018}
+  - name: HellHound_export_Frame_149
+    originalName: 
+    pivot: {x: 0.5503876, y: -0.072992705}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 278
+      y: 1126
+      width: 129
+      height: 137
+    spriteID: 1b30b91317629bc4aacefdc231c0eef9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 185, y: 1018}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 1719724260
+    name: HellHound_export
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: HellHound_export_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 46c7b76eb6c14ac4992f98135ef5f8e1
+    - name: HellHound_export_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: eba6ac66abff0cc47b7c205f0223c26a
+    - name: HellHound_export_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 19d93970a2cb06348b91db0e9799bcf1
+    - name: HellHound_export_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 837af37b41e06f047b790a3403cb748a
+    - name: HellHound_export_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 5757ab6ae918140419daa1e43a2146a9
+    - name: HellHound_export_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 4d34574b8fb9a96459e3e26d43f5ca41
+    - name: HellHound_export_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 5a146b17b87981f4490beec2cc4f31eb
+    - name: HellHound_export_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 4b1c9917ddd05b345a7885b255a91623
+    - name: HellHound_export_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: e004422e51d5d0945bc5b5e2225a39dc
+    - name: HellHound_export_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: ac23b7cb9c6c1b0469833808fcee3bd4
+    - name: HellHound_export_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: dd24407e44345854e97b748b2264aaa1
+    - name: HellHound_export_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 4b69a4f16283a7445b4ca9811c331b9b
+    - name: HellHound_export_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: a763b1dd484a7c54f9370505c03da32b
+    - name: HellHound_export_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 749fb06552a89e14c8e77891d9d19659
+    - name: HellHound_export_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 3deeadb51f263a04c99eaa7e7fc1049b
+    - name: HellHound_export_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 0144665e53c21064a9f929366c5223a2
+    - name: HellHound_export_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 3587bbb8997e0c349b625330f01b8a63
+    - name: HellHound_export_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: e850f3d611778bc4db4b7ae718ec2b3b
+    - name: HellHound_export_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: d05768e2e0b6f0e41b879e757e347328
+    - name: HellHound_export_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 21909f85fd9457646aff68fc2e7eec02
+    - name: HellHound_export_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 1da49402afaf18448ad08f09ecaee7b9
+    - name: HellHound_export_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: b4ea95db94da99545adb2acf57653b7c
+    - name: HellHound_export_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 295a9c83d57342f4485c1ae4cee13b2d
+    - name: HellHound_export_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 4f76215823698ad4db5e99000cc3851e
+    - name: HellHound_export_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 06f1a8e20b8b59845bc8e6d18a333938
+    - name: HellHound_export_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 3b7c79704ccd080479b74c896faa47d8
+    - name: HellHound_export_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 92621c986b9f7e84586e8534fe0deede
+    - name: HellHound_export_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: acc3855d421f6aa42b2e3027b09c6bde
+    - name: HellHound_export_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 78a31f4880c33a6488390713fb28016a
+    - name: HellHound_export_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 328273a58b78afb41a5bc54dc8065be9
+    - name: HellHound_export_Frame_30
+      frameIndex: 30
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 72bbca624a0e52f4d87664b3d9263a48
+    - name: HellHound_export_Frame_31
+      frameIndex: 31
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 4e6cb6235cdbc0840934bce13dc675cc
+    - name: HellHound_export_Frame_32
+      frameIndex: 32
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 33d9ed60d2bddcd498d6f17a27fd2dd1
+    - name: HellHound_export_Frame_33
+      frameIndex: 33
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 3b09a5197cda8614a847ca7ca94127bf
+    - name: HellHound_export_Frame_34
+      frameIndex: 34
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 59fae33e16438804eb363b65f2e19fd1
+    - name: HellHound_export_Frame_35
+      frameIndex: 35
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 74d922ff0956a364288ff053496f9ddc
+    - name: HellHound_export_Frame_36
+      frameIndex: 36
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: cd4ca9452b5b10b428cd3016f2e8cfdf
+    - name: HellHound_export_Frame_37
+      frameIndex: 37
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: f9fcca059477ca34b81b559ffa5e4a49
+    - name: HellHound_export_Frame_38
+      frameIndex: 38
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 183ef0f064e54e845ad06cca906a725c
+    - name: HellHound_export_Frame_39
+      frameIndex: 39
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 62654b561df1ea9489dcbe50f6b30e7c
+    - name: HellHound_export_Frame_40
+      frameIndex: 40
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 85d3ae1d2d763c64084f90c428fce72e
+    - name: HellHound_export_Frame_41
+      frameIndex: 41
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: ffdb5fd5c9bb87647923101324da783e
+    - name: HellHound_export_Frame_42
+      frameIndex: 42
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: b10555027a213934bbc90fc7e1885b18
+    - name: HellHound_export_Frame_43
+      frameIndex: 43
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 08ebaf966596ed643b2111bf7e9d2128
+    - name: HellHound_export_Frame_44
+      frameIndex: 44
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: d8c638831ddd9dc43b4b77c985b1db90
+    - name: HellHound_export_Frame_45
+      frameIndex: 45
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: b422be6915e302348aa7bc86e52a05be
+    - name: HellHound_export_Frame_46
+      frameIndex: 46
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 531944defde0c264e87a15e6df63db17
+    - name: HellHound_export_Frame_47
+      frameIndex: 47
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: f84fa242ff121504189c13ada1c26881
+    - name: HellHound_export_Frame_48
+      frameIndex: 48
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 512b81d0749b2ad4a86dd8e064d96b54
+    - name: HellHound_export_Frame_49
+      frameIndex: 49
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: c637e88ef5850d7409f4470ce0df2ba2
+    - name: HellHound_export_Frame_50
+      frameIndex: 50
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 5c2a7e9035c500447aa810f37549860a
+    - name: HellHound_export_Frame_51
+      frameIndex: 51
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: c8f1a1758636fd14d95984942f18a3b5
+    - name: HellHound_export_Frame_52
+      frameIndex: 52
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: a734bd63ff8993b40b683daaf0417a79
+    - name: HellHound_export_Frame_53
+      frameIndex: 53
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: a2d67927f2ef59a4cae60b8f3c01ce19
+    - name: HellHound_export_Frame_54
+      frameIndex: 54
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 8f9ba133be3196645b3bc0fdc59c7389
+    - name: HellHound_export_Frame_55
+      frameIndex: 55
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 767854e588eb55d49b7e0fba352761a5
+    - name: HellHound_export_Frame_56
+      frameIndex: 56
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 104bd132754c2b5488f847d7d14c13a4
+    - name: HellHound_export_Frame_57
+      frameIndex: 57
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: f1c5b4ad9dd4e5c44bd438ed60a47910
+    - name: HellHound_export_Frame_58
+      frameIndex: 58
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 174aca2f42043d443acc8c0620f7e9fc
+    - name: HellHound_export_Frame_59
+      frameIndex: 59
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 2975ab171f75de64cbf55246c0f59916
+    - name: HellHound_export_Frame_60
+      frameIndex: 60
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: ce14c3e7ca78c2247b9b662cca4b6c7f
+    - name: HellHound_export_Frame_61
+      frameIndex: 61
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 258aa2810c2a2874b89ca1a04ccf07a0
+    - name: HellHound_export_Frame_62
+      frameIndex: 62
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: d6334146250769d4ebfd68305096a6dc
+    - name: HellHound_export_Frame_63
+      frameIndex: 63
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 7979d20dd88f8d24fb5f5aa7db4c6a98
+    - name: HellHound_export_Frame_64
+      frameIndex: 64
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: b7c54dca28775e8478b1874429f76927
+    - name: HellHound_export_Frame_65
+      frameIndex: 65
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 2f81e5eb654a9884c800392ad3a109dd
+    - name: HellHound_export_Frame_66
+      frameIndex: 66
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: c1b5ca56b11ba89449497f7072016ee6
+    - name: HellHound_export_Frame_67
+      frameIndex: 67
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 9f357a67b996e5d4c964880551faf02a
+    - name: HellHound_export_Frame_68
+      frameIndex: 68
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 9f0dff6dd6aea544b8f43dfb70bb0937
+    - name: HellHound_export_Frame_69
+      frameIndex: 69
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: d2c72b80f2cbbe84abc540e405c3c749
+    - name: HellHound_export_Frame_70
+      frameIndex: 70
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 8bd63b8d6ef3ce24db1d1c918d749382
+    - name: HellHound_export_Frame_71
+      frameIndex: 71
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: f4d5c16fb0fce1f49927dba9906d4174
+    - name: HellHound_export_Frame_72
+      frameIndex: 72
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 5db898bc844ed29449ab12c43f455746
+    - name: HellHound_export_Frame_73
+      frameIndex: 73
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 41727cd349610304b8b60fa29cce1797
+    - name: HellHound_export_Frame_74
+      frameIndex: 74
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 0ea5e9b32eef4dd409ed91507f632c6b
+    - name: HellHound_export_Frame_75
+      frameIndex: 75
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 65fca5391a1c137498b1c3f4f42299a7
+    - name: HellHound_export_Frame_76
+      frameIndex: 76
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 64da420e33280b24d9e5a620aa93f89b
+    - name: HellHound_export_Frame_77
+      frameIndex: 77
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: d723eb4e1816f4b4ba09d94a7629708a
+    - name: HellHound_export_Frame_78
+      frameIndex: 78
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 2fbb1e6cbe3573d479bb6cd8318de228
+    - name: HellHound_export_Frame_79
+      frameIndex: 79
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 7c886c3cb7063e548b0c77b2371c06a3
+    - name: HellHound_export_Frame_80
+      frameIndex: 80
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: c78685030485fee47ade1f6b7c4a9e05
+    - name: HellHound_export_Frame_81
+      frameIndex: 81
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 5219aa8359b8a5b4cb6eb2a50289810f
+    - name: HellHound_export_Frame_82
+      frameIndex: 82
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 4a4c90ff81842c341b2a0e74c653bea9
+    - name: HellHound_export_Frame_83
+      frameIndex: 83
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 4bfae47b9f86a9e4bb2eabb185a58e74
+    - name: HellHound_export_Frame_84
+      frameIndex: 84
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: d125ddfba1b54b2478463adeb60edd2b
+    - name: HellHound_export_Frame_85
+      frameIndex: 85
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: cfd3526b69f1cf640a2e978abbd28c0c
+    - name: HellHound_export_Frame_86
+      frameIndex: 86
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 74fe02a96ea4372419ebfaadee9e0012
+    - name: HellHound_export_Frame_87
+      frameIndex: 87
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: ef8e8ed304e14894e84e56762c67b883
+    - name: HellHound_export_Frame_88
+      frameIndex: 88
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: e9c89383091ef1243a990ec4bb411ccb
+    - name: HellHound_export_Frame_89
+      frameIndex: 89
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 8c4c1a08dc084a044b1e5a7daa8917cf
+    - name: HellHound_export_Frame_90
+      frameIndex: 90
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 7978772d46788d24899a3753178b7470
+    - name: HellHound_export_Frame_91
+      frameIndex: 91
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: a61f21b2433c3774882f24b24cfec861
+    - name: HellHound_export_Frame_92
+      frameIndex: 92
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: e514d73fd949c8b489ac7abe51fd484e
+    - name: HellHound_export_Frame_93
+      frameIndex: 93
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: fa98ec1884f187d42963ca28fce79a4d
+    - name: HellHound_export_Frame_94
+      frameIndex: 94
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: eca143a03e005ca4e8cc8b887ba1b6c4
+    - name: HellHound_export_Frame_95
+      frameIndex: 95
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 16759b1536dedc740bfd33c8d84de7af
+    - name: HellHound_export_Frame_96
+      frameIndex: 96
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: fc481d952ac4b874194465b8eb60e483
+    - name: HellHound_export_Frame_97
+      frameIndex: 97
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: e919dc44524af664e8dd8e0cfb98c0f7
+    - name: HellHound_export_Frame_98
+      frameIndex: 98
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 85b5b73e88efdf642b660c3d7bd96a45
+    - name: HellHound_export_Frame_99
+      frameIndex: 99
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 032a2b320232b404a83d354b1cb6408d
+    - name: HellHound_export_Frame_100
+      frameIndex: 100
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: e32db83261221424b9913ed089b0caa9
+    - name: HellHound_export_Frame_101
+      frameIndex: 101
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: f2be6bda3c9b6cc4c857d6cc534155b6
+    - name: HellHound_export_Frame_102
+      frameIndex: 102
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: da5e5551a238ef24d83f2431f58d4184
+    - name: HellHound_export_Frame_103
+      frameIndex: 103
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: fab5541a607bfb84c8d9626993ba9e85
+    - name: HellHound_export_Frame_104
+      frameIndex: 104
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: a4fd82fa82b68444faf187a1f187beef
+    - name: HellHound_export_Frame_105
+      frameIndex: 105
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 3c3d741669a820d4bb142b5e621fa4bc
+    - name: HellHound_export_Frame_106
+      frameIndex: 106
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 7e02b8a90c07e964f99f06990cd46835
+    - name: HellHound_export_Frame_107
+      frameIndex: 107
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: fe34613420e8afc41804c873d1664f67
+    - name: HellHound_export_Frame_108
+      frameIndex: 108
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 09d23a9d103a66848b5f8fead246c875
+    - name: HellHound_export_Frame_109
+      frameIndex: 109
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 33aef2b5861e17145b5fc98f632db540
+    - name: HellHound_export_Frame_110
+      frameIndex: 110
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 5103f1bf3d354724f812aaf0da09f996
+    - name: HellHound_export_Frame_111
+      frameIndex: 111
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 19b2ab93bc17eba42af93e4354e6245c
+    - name: HellHound_export_Frame_112
+      frameIndex: 112
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 2973d392aaaf66f419e4f26ae88516f3
+    - name: HellHound_export_Frame_113
+      frameIndex: 113
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 4d87dae1c9f3c0242a06fe60ce9e6a28
+    - name: HellHound_export_Frame_114
+      frameIndex: 114
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 121ba8f77f2b12044bf70721af6dff75
+    - name: HellHound_export_Frame_115
+      frameIndex: 115
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 825afbcc1303c8d469cbd99c27430971
+    - name: HellHound_export_Frame_116
+      frameIndex: 116
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 69f68851fd5fc2d408d51491d5646920
+    - name: HellHound_export_Frame_117
+      frameIndex: 117
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 2f4087a642455814f8fe5d73d33052b4
+    - name: HellHound_export_Frame_118
+      frameIndex: 118
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: a364ee8eb0ddd344da5e5de29df807ca
+    - name: HellHound_export_Frame_119
+      frameIndex: 119
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 3b9587c66c4836845b50cee341fe2308
+    - name: HellHound_export_Frame_120
+      frameIndex: 120
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 0a47bbe985916654a907971914109366
+    - name: HellHound_export_Frame_121
+      frameIndex: 121
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: cc2a84a235ffec247b1d2b1ff773e87a
+    - name: HellHound_export_Frame_122
+      frameIndex: 122
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 3d7afdf5166e6974d8eb6ee0e7095b8c
+    - name: HellHound_export_Frame_123
+      frameIndex: 123
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: cf75a33988dc7314fa8dc2b2c654a90c
+    - name: HellHound_export_Frame_124
+      frameIndex: 124
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 036b556c66a553848bfe48eb8ecc5de1
+    - name: HellHound_export_Frame_125
+      frameIndex: 125
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 0c6cebcc5106d6347bf53a823a94bc5f
+    - name: HellHound_export_Frame_126
+      frameIndex: 126
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: ffac85fa797d71741b9f9b17ab3aa11b
+    - name: HellHound_export_Frame_127
+      frameIndex: 127
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 51bb8f4eb12a63241bc61ea0f0bf5dbe
+    - name: HellHound_export_Frame_128
+      frameIndex: 128
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: c5a34b8b77b969c458afdef61b900f97
+    - name: HellHound_export_Frame_129
+      frameIndex: 129
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 98226e906a157ad4788ddd2a8b42d833
+    - name: HellHound_export_Frame_130
+      frameIndex: 130
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 75ee68ef9a5f8d145bd45aea6722dd1c
+    - name: HellHound_export_Frame_131
+      frameIndex: 131
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 2848c302c1e9f764285c1d408e66ae5b
+    - name: HellHound_export_Frame_132
+      frameIndex: 132
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: ff00034b84fb6b54c8632814fb814364
+    - name: HellHound_export_Frame_133
+      frameIndex: 133
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 36f45b894ed848142a0a68be9a349c75
+    - name: HellHound_export_Frame_134
+      frameIndex: 134
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 132cbe89f2288db45968145c5f96ff7a
+    - name: HellHound_export_Frame_135
+      frameIndex: 135
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 549dbf9fd327dc7418fcba980a3b5e63
+    - name: HellHound_export_Frame_136
+      frameIndex: 136
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 7010604ab834ef240a390e042e7d1e2b
+    - name: HellHound_export_Frame_137
+      frameIndex: 137
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 147d4ddd43e8d7248a449228763f3654
+    - name: HellHound_export_Frame_138
+      frameIndex: 138
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 170e5f4a9b478ce4083551af442ded3b
+    - name: HellHound_export_Frame_139
+      frameIndex: 139
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 09dd89309141db44791da8508d5d11bd
+    - name: HellHound_export_Frame_140
+      frameIndex: 140
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 34e24383d45cbcc4da7fca3c38bba219
+    - name: HellHound_export_Frame_141
+      frameIndex: 141
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 1169b2a6a04d1704a8d2381288097ee0
+    - name: HellHound_export_Frame_142
+      frameIndex: 142
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: a6a5c670337189e48bfa3a7bc07fca4d
+    - name: HellHound_export_Frame_143
+      frameIndex: 143
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 2e13725a21e245749b5d8cf7e9bce9bd
+    - name: HellHound_export_Frame_144
+      frameIndex: 144
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: e11612e4261f59845b1f10b91d9a406c
+    - name: HellHound_export_Frame_145
+      frameIndex: 145
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: e683eab2bf7045b4ebf22f0f25d4c53e
+    - name: HellHound_export_Frame_146
+      frameIndex: 146
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 82428570d8affa544b6fe51e85f67ffd
+    - name: HellHound_export_Frame_147
+      frameIndex: 147
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 8f98622b28d54154b8bf9213b20aa8d8
+    - name: HellHound_export_Frame_148
+      frameIndex: 148
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: eeccdd1f84fcdcc44ad819f5e9686f4b
+    - name: HellHound_export_Frame_149
+      frameIndex: 149
+      cellRect:
+        x: 0
+        y: -98
+        width: 328
+        height: 338
+      spriteId: 1b30b91317629bc4aacefdc231c0eef9
+    linkedCells: []
+    parentIndex: -1
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 328, y: 240}

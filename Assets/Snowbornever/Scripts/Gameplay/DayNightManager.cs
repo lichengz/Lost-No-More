@@ -68,7 +68,14 @@ public class DayNightManager : MonoBehaviour
 
     private void Awake()
     {
-        s_Instance = this;
+        if (s_Instance != null && s_Instance != this) 
+        { 
+            Destroy(gameObject); 
+        }
+        else
+        {
+            s_Instance = this;
+        }
         DontDestroyOnLoad(gameObject);
 
         m_IsTicking = true;
@@ -93,7 +100,7 @@ public class DayNightManager : MonoBehaviour
 #if UNITY_EDITOR
     private void OnDestroy()
     {
-        s_IsQuitting = true;
+        if(s_Instance == this) s_IsQuitting = true;
     }
 #endif
 

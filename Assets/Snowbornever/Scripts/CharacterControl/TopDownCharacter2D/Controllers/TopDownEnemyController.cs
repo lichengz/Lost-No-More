@@ -1,7 +1,10 @@
 ﻿
 
+using System;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.AI;
+using UnityEngine.PlayerLoop;
 
 namespace TopDownCharacter2D.Controllers
 {
@@ -12,6 +15,8 @@ namespace TopDownCharacter2D.Controllers
     {
         [Tooltip("The tag of the target of this enemy")] [SerializeField]
         private string targetTag = "Player";
+        private NavMeshAgent agent;
+
 
         protected string TargetTag => targetTag;
         protected Transform ClosestTarget { get; private set; }
@@ -19,9 +24,25 @@ namespace TopDownCharacter2D.Controllers
         protected override void Awake()
         {
             base.Awake();
-
+            agent = GetComponent<NavMeshAgent>();
             ClosestTarget = FindClosestTarget();
         }
+
+        // private void Update()
+        // {
+        //     base.Update();
+        //     if (characterRenderers != null)
+        //     {
+        //         foreach (var sprite in characterRenderers)
+        //         {
+        //             sprite.flipX = agent.destination.x <= transform.position.x;
+        //         }
+        //     }
+        //     // foreach (var sprite in characterRenderers)
+        //     // {
+        //     //     Debug.Log("!!!" +  sprite.flipX);
+        //     // }
+        // }
 
         protected virtual void FixedUpdate()
         {

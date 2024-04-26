@@ -94,19 +94,23 @@ public class UIManager : MonoBehaviour
 
 	void HideInteractionPanel()
 	{
+		if (_interactionPanel.gameObject.activeInHierarchy)
+		{
+			_closeUIDialogueEvent.OnEventRaised += ShowInteractionPanel;
+		}
 		_interactionPanel.gameObject.SetActive(false);
 	}
 	
-	void ShowInteractionPanel()
+	void ShowInteractionPanel(int tmp)
 	{
 		_interactionPanel.gameObject.SetActive(true);
+		_closeUIDialogueEvent.OnEventRaised -= ShowInteractionPanel;
 	}
 	void CloseUIDialogue(int dialogueType)
 	{
 		_selectionHandler.Unselect();
 		_dialogueController.gameObject.SetActive(false);
 		_onInteractionEndedEvent.RaiseEvent();
-		ShowInteractionPanel();
 	}
 
 	void OpenUIPause()
@@ -274,13 +278,13 @@ public class UIManager : MonoBehaviour
 			_inputReader.EnableGameplayInput();
 	}
 
-	void SetInteractionPanel(bool isOpen, InteractionType interactionType)
+	void SetInteractionPanel(bool isOpen, InteractionType interactionType, InteractionSO customInteract)
 	{
 		if (_gameStateManager.CurrentGameState != GameState.Combat)
 		{
 			if (isOpen)
 			{
-				_interactionPanel.FillInteractionPanel(interactionType);
+				_interactionPanel.FillInteractionPanel(interactionType, customInteract);
 			}
 		
 			_interactionPanel.gameObject.SetActive(isOpen);

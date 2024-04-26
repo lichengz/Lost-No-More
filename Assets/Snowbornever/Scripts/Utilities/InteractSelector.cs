@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using PixelCrushers.DialogueSystem;
+using UnityEngine.Localization;
 
 public class InteractSelector : ProximitySelector
 {
@@ -29,18 +30,33 @@ public class InteractSelector : ProximitySelector
     {
         base.SetCurrentUsable(usable);
         InteractionType type = InteractionType.None;
-        if (usable == null)
+
+        InteractionSO _customInteract = null;
+        if (usable is InteractUsable)
         {
-            _setInteractionEvent.RaiseEvent(false, type);
-            return;
+            InteractUsable interactUsable = (InteractUsable)usable;
+            _customInteract = interactUsable._customInteract;
         }
-        if (usable.GetComponent<DialogueSystemTrigger>() != null)
+        
+        if (_customInteract != null)
         {
-            type = InteractionType.Talk;
-        }else if (usable.GetComponent<BreakAndLoot>() != null)
-        {
-            type = InteractionType.PickUp;
+            _setInteractionEvent.RaiseEvent(true, type, _customInteract);
         }
-        _setInteractionEvent.RaiseEvent(true, type);
+        else
+        {
+            if (usable == null)
+            {
+                _setInteractionEvent.RaiseEvent(false, type, _customInteract);
+                return;
+            }
+            if (usable.GetComponent<DialogueSystemTrigger>() != null)
+            {
+                type = InteractionType.Talk;
+            }else if (usable.GetComponent<BreakAndLoot>() != null)
+            {
+                type = InteractionType.PickUp;
+            }
+            _setInteractionEvent.RaiseEvent(true, type, _customInteract);
+        }
     }
 }

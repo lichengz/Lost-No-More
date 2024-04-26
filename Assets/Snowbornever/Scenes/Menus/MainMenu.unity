@@ -357,7 +357,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dialogueRunner: {fileID: 1035537420}
-  _locationsToLoad: {fileID: 11400000, guid: 5be121a829afe0748ba5a2beeb1ff3f2, type: 2}
+  _locationsToLoad: {fileID: 11400000, guid: 2421fd6023270bd4c910db4a4ee2a0ce, type: 2}
   _saveSystem: {fileID: 11400000, guid: edc355c4a7d5028408d322b90814e19e, type: 2}
   _showLoadScreen: 0
   _loadLocation: {fileID: 11400000, guid: 00e3063edc5902e40832ea618644c597, type: 2}

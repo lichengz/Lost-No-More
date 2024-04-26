@@ -46,15 +46,15 @@ namespace TopDownCharacter2D
             }
         }
 
-        void Update()
-        {
-            if (_agent != null && _agent.isActiveAndEnabled && Input.GetMouseButtonDown(1))
-            {
-                var target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                target.z = 0;
-                _agent.destination = target;
-            }
-        }
+        // void Update()
+        // {
+        //     if (_agent != null && _agent.isActiveAndEnabled && Input.GetMouseButtonDown(1))
+        //     {
+        //         var target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        //         target.z = 0;
+        //         _agent.destination = target;
+        //     }
+        // }
 
         // private void FixedUpdate()
         // {

@@ -11,6 +11,7 @@ public class Protagonist : TopDownCharacterController
 {
 	[SerializeField] private InputReader _inputReader = default;
 	[SerializeField] private TransformAnchor _gameplayCameraTransform = default;
+	[SerializeField] private Transform _syncPlayerTransform = default;
 
 	private Vector2 _inputVector;
 	private float _previousSpeed;
@@ -18,6 +19,8 @@ public class Protagonist : TopDownCharacterController
 	//These fields are read and manipulated by the StateMachine actions
 	[NonSerialized] public bool jumpInput;
 	[NonSerialized] public bool extraActionInput;
+	
+	public Vector2 inputVector => _inputVector;
 	public bool attackInput => IsAttacking;
 	public bool blockInput => IsBlocking;
 	[NonSerialized] public Vector2 movementInput; //Initial input coming from the Protagonist script
@@ -103,6 +106,13 @@ public class Protagonist : TopDownCharacterController
 		base.Update();
 		RecalculateMovement();
 	}
+	
+	
+	protected void UpdateFaceDirection()
+	{
+		_animator.SetFloat(Animator.StringToHash("moveX"), lookVector.x);
+		_animator.SetFloat(Animator.StringToHash("moveY"), lookVector.y);
+	}
 
 	private void RecalculateMovement()
 	{
@@ -143,6 +153,7 @@ public class Protagonist : TopDownCharacterController
 
 			if (blockInput)
 				targetSpeed = 0.1f;
+			_syncPlayerTransform.localPosition = _inputVector * 0.3f;
 		}
 		
 		targetSpeed = Mathf.Lerp(_previousSpeed, targetSpeed, targetSpeed < _previousSpeed ? Time.deltaTime * 4f : Time.deltaTime * 10f);
@@ -150,6 +161,7 @@ public class Protagonist : TopDownCharacterController
 		movementInput = adjustedMovement.normalized * targetSpeed;
 
 		_previousSpeed = targetSpeed;
+
 	}
 
 	//---- EVENT LISTENERS ----
@@ -177,11 +189,13 @@ public class Protagonist : TopDownCharacterController
 
 	private void OnStartedAttack()
 	{
+		UpdateFaceDirection();
 		HandleAttackDelay();
 	}
 	
 	private void OnBlockdAttack()
 	{
+		UpdateFaceDirection();
 		IsBlocking = true;
 	}
 

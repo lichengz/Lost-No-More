@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &917192580526877636
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9136247344381878042}
+  m_Layer: 6
+  m_Name: SyncTransform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9136247344381878042
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917192580526877636}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8179573950085412907}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1165344903073795246
 GameObject:
   m_ObjectHideFlags: 0
@@ -649,6 +680,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 9136247344381878042}
   - {fileID: 4076751414441987551}
   - {fileID: 1543684274021897275}
   - {fileID: 6144511779009281444}
@@ -861,6 +893,7 @@ MonoBehaviour:
   tiles: []
   _inputReader: {fileID: 11400000, guid: 945ec0365077176418488737deed54be, type: 2}
   _gameplayCameraTransform: {fileID: 0}
+  _syncPlayerTransform: {fileID: 9136247344381878042}
   equipMeleeWeapon: {fileID: 11400000, guid: fc3eeee67357e7146b1ff2bc9b04cef2, type: 2}
   equipRangeWeapon: {fileID: 11400000, guid: 84c48f920becce84b985399bfdb14e70, type: 2}
   equipDefaultWeapon: {fileID: 11400000, guid: 86a7d0ad4e1689f4aa72d3821eef42cf, type: 2}

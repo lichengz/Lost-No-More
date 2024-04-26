@@ -12,6 +12,8 @@ public class UIMainMenu : MonoBehaviour
 	public UnityAction SettingsButtonAction;
 	public UnityAction CreditsButtonAction;
 	public UnityAction ExitButtonAction;
+	public UnityAction DebugCardGameButtonAction;
+
 
 	public void SetMenuScreen(bool hasSaveData)
 	{
@@ -50,4 +52,10 @@ public class UIMainMenu : MonoBehaviour
 	{
 		ExitButtonAction.Invoke();
 	}
+	
+	public void DebugCardGameButton()
+	{
+		DebugCardGameButtonAction.Invoke();
+	}
+
 }

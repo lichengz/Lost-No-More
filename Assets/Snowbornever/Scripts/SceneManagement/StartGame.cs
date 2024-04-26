@@ -12,6 +12,7 @@ public class StartGame : MonoBehaviour
 {
 	[SerializeField] private DialogueRunner _dialogueRunner = default;
 
+	[SerializeField] private GameSceneSO _locationDebugGame;
 	[SerializeField] private GameSceneSO _locationsToLoad;
 	[SerializeField] private SaveSystem _saveSystem = default;
 	[SerializeField] private bool _showLoadScreen = default;
@@ -22,6 +23,7 @@ public class StartGame : MonoBehaviour
 	[Header("Listening to")]
 	[SerializeField] private VoidEventChannelSO _onNewGameButton = default;
 	[SerializeField] private VoidEventChannelSO _onContinueButton = default;
+	[SerializeField] private VoidEventChannelSO _onDebugCardGame = default;
 
 	private bool _hasSaveData;
 
@@ -31,12 +33,14 @@ public class StartGame : MonoBehaviour
 		_onNewGameButton.OnEventRaised += StartNewGame;
 		_onContinueButton.OnEventRaised += ContinuePreviousGame;
 		_dialogueRunner.onDialogueComplete.AddListener(StartNewGame);
+		_onDebugCardGame.OnEventRaised += DebugCardGame;
 	}
 
 	private void OnDestroy()
 	{
 		_onNewGameButton.OnEventRaised -= StartNewGame;
 		_onContinueButton.OnEventRaised -= ContinuePreviousGame;
+		_onDebugCardGame.OnEventRaised -= DebugCardGame;
 	}
 
 	private void StartNewGame()
@@ -51,6 +55,11 @@ public class StartGame : MonoBehaviour
 	private void ContinuePreviousGame()
 	{
 		StartCoroutine(LoadSaveGame());
+	}
+
+	private void DebugCardGame()
+	{
+		_loadLocation.RaiseEvent(_locationDebugGame, _showLoadScreen);
 	}
 
 	private void OnResetSaveDataPress()

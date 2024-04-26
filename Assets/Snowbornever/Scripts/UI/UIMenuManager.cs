@@ -20,6 +20,8 @@ public class UIMenuManager : MonoBehaviour
 	private VoidEventChannelSO _startNewGameEvent = default;
 	[SerializeField]
 	private VoidEventChannelSO _continueGameEvent = default;
+	[SerializeField]
+	private VoidEventChannelSO _debugCardGameEvent = default;
 
 
 
@@ -40,6 +42,7 @@ public class UIMenuManager : MonoBehaviour
 		_mainMenuPanel.SettingsButtonAction += OpenSettingsScreen;
 		_mainMenuPanel.CreditsButtonAction += OpenCreditsScreen;
 		_mainMenuPanel.ExitButtonAction += ShowExitConfirmationPopup;
+		_mainMenuPanel.DebugCardGameButtonAction += ButtonDebugCardGameClicked;
 	}
 
 	void ButtonStartNewGameClicked()
@@ -55,6 +58,11 @@ public class UIMenuManager : MonoBehaviour
 
 		}
 
+	}
+
+	void ButtonDebugCardGameClicked()
+	{
+		_debugCardGameEvent.RaiseEvent();
 	}
 
 	void ConfirmStartNewGame()

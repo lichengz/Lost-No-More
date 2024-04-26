@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: CardGameScenes
+  m_EditorClassIdentifier: 
+  m_GroupName: CardGameScenes
+  m_Data:
+    m_SerializedData: []
+  m_GUID: da1e77bacadb43a47b9cd13de82bdf79
+  m_SerializeEntries:
+  - m_GUID: cf489242599d4104db74e9d28672d665
+    m_Address: Assets/Snowbornever/Scenes/CardGame
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: e0d4dd9d1fb2c27429b674d1383e2169, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: db1580e583403a64386cee7b8f6550f2, type: 2}
+    - {fileID: 11400000, guid: 8ff1dc846f8277e44a351438fd980402, type: 2}

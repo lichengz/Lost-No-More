@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a4a9aff793e557d4790d9a834c6560bc, type: 3}
-  m_Name: DebugCardGame
+  m_Name: DebugCardGame - Map
   m_EditorClassIdentifier: 
-  _guid: fc2ea366a436cd04d9f3da3af6faff2a
+  _guid: ea5bd62d8c7d5554282e34995ce98e5a
   description: 
   sceneType: 4
   sceneReference:
-    m_AssetGUID: a570cbdc6af00e0499074dc60628869a
+    m_AssetGUID: 64edbdd695cdb174f9161aed883d629c
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0

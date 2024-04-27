@@ -131,6 +131,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 643201121945004473, guid: e75f7099a69ce3b469d565d045c707d2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1045849248822126497, guid: e75f7099a69ce3b469d565d045c707d2, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2388636853995339446, guid: e75f7099a69ce3b469d565d045c707d2, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -178,6 +186,38 @@ PrefabInstance:
     - target: {fileID: 2388636854935074173, guid: e75f7099a69ce3b469d565d045c707d2, type: 3}
       propertyPath: m_Name
       value: UIManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 2388636854935074175, guid: e75f7099a69ce3b469d565d045c707d2, type: 3}
+      propertyPath: _map
+      value: 
+      objectReference: {fileID: 11400000, guid: ea5bd62d8c7d5554282e34995ce98e5a, type: 2}
+    - target: {fileID: 2388636854935074175, guid: e75f7099a69ce3b469d565d045c707d2, type: 3}
+      propertyPath: _menu
+      value: 
+      objectReference: {fileID: 11400000, guid: fc2ea366a436cd04d9f3da3af6faff2a, type: 2}
+    - target: {fileID: 2388636854935074175, guid: e75f7099a69ce3b469d565d045c707d2, type: 3}
+      propertyPath: _combat
+      value: 
+      objectReference: {fileID: 11400000, guid: 344126be55af7584cb3ad018059db838, type: 2}
+    - target: {fileID: 2388636854935074175, guid: e75f7099a69ce3b469d565d045c707d2, type: 3}
+      propertyPath: _loadLocation
+      value: 
+      objectReference: {fileID: 11400000, guid: 00e3063edc5902e40832ea618644c597, type: 2}
+    - target: {fileID: 2388636854935074175, guid: e75f7099a69ce3b469d565d045c707d2, type: 3}
+      propertyPath: _showLoadScreen
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2418618393364190034, guid: e75f7099a69ce3b469d565d045c707d2, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3086959936269261669, guid: e75f7099a69ce3b469d565d045c707d2, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6031985743275129060, guid: e75f7099a69ce3b469d565d045c707d2, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

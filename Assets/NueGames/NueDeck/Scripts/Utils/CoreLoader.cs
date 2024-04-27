@@ -8,12 +8,13 @@ namespace NueGames.NueDeck.Scripts.Utils
     [DefaultExecutionOrder(-11)]
     public class CoreLoader : MonoBehaviour
     {
+        [SerializeField] private GameSceneSO _cardCore;
         private void Awake()
         {
             try
             {
                 if (!NueGameManager.Instance)
-                    SceneManager.LoadScene("NueCore", LoadSceneMode.Additive);
+                    _cardCore.sceneReference.LoadSceneAsync(LoadSceneMode.Additive, true);
                 Destroy(gameObject);
             }
             catch (Exception e)

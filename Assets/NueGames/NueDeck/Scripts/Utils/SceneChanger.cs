@@ -20,12 +20,13 @@ namespace NueGames.NueDeck.Scripts.Utils
         }
         public void OpenMainMenuScene()
         {
-            StartCoroutine(DelaySceneChange(SceneType.MainMenu));
+            // StartCoroutine(DelaySceneChange(SceneType.MainMenu));
+            OnSceneChange(SceneType.MainMenu);
         }
-        private IEnumerator DelaySceneChange(SceneType type)
+        private void OnSceneChange(SceneType type)
         {
             NueUIManager.SetCanvas(NueUIManager.Instance.InventoryCanvas,false,true);
-            yield return StartCoroutine(NueUIManager.Instance.Fade(true));
+            // yield return StartCoroutine(NueUIManager.Instance.Fade(true));
 
             switch (type)
             {
@@ -58,11 +59,11 @@ namespace NueGames.NueDeck.Scripts.Utils
         }
         public void OpenMapScene()
         {
-            StartCoroutine(DelaySceneChange(SceneType.Map));
+            OnSceneChange(SceneType.Map);
         }
         public void OpenCombatScene()
         {
-            StartCoroutine(DelaySceneChange(SceneType.Combat));
+            OnSceneChange(SceneType.Combat);
         }
         public void ChangeScene(int sceneId)
         {

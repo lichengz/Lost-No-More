@@ -24,7 +24,15 @@ namespace NueGames.NueDeck.Scripts.Managers
         [Header("Fader")]
         [SerializeField] private CanvasGroup fader;
         [SerializeField] private float fadeSpeed = 1f;
-
+        
+        [Header("Broadcasting on")]
+        [SerializeField] private LoadEventChannelSO _loadLocation = default;
+        [SerializeField] private bool _showLoadScreen = default;
+        
+        [Header("Scenes")]
+        [SerializeField] private GameSceneSO _menu;
+        [SerializeField] private GameSceneSO _map;
+        [SerializeField] private GameSceneSO _combat;
 
         #region Cache
         public CombatCanvas CombatCanvas => combatCanvas;
@@ -71,14 +79,38 @@ namespace NueGames.NueDeck.Scripts.Managers
         }
         public void ChangeScene(int index)
         {
-            StartCoroutine(ChangeSceneRoutine(index));
+            // StartCoroutine(ChangeSceneRoutine(index));
+            switch (index)
+            {
+                case 0:
+                    _loadLocation.RaiseEvent(_menu, _showLoadScreen);
+                    break;
+                case 1:
+                    _loadLocation.RaiseEvent(_map, _showLoadScreen);
+                    break;
+                case 2:
+                    _loadLocation.RaiseEvent(_combat, _showLoadScreen);
+                    break;
+            }
         }
         #endregion
         
         #region Routines
         private IEnumerator ChangeSceneRoutine(int index)
         {
-            SceneManager.LoadScene(index);
+            // SceneManager.LoadScene(index);
+            switch (index)
+            {
+                case 0:
+                    _loadLocation.RaiseEvent(_menu, _showLoadScreen);
+                    break;
+                case 1:
+                    _loadLocation.RaiseEvent(_map, _showLoadScreen);
+                    break;
+                case 2:
+                    _loadLocation.RaiseEvent(_combat, _showLoadScreen);
+                    break;
+            }
             yield return StartCoroutine(Fade(false));
         }
         

@@ -9,7 +9,7 @@ using UnityEngine;
 namespace NueGames.NueDeck.Scripts.Data.Collection
 {
     [CreateAssetMenu(fileName = "Card Data",menuName = "NueDeck/Collection/Card",order = 0)]
-    public class CardData : ScriptableObject
+    public class CardData : ItemSO
     {
         [Header("Card Profile")] 
         [SerializeField] private string id;

@@ -7,7 +7,8 @@ public enum InventoryTabType
 {
 	Customization,
 	CookingItem,
-	Recipe
+	Recipe,
+	Card
 }
 
 [CreateAssetMenu(fileName = "InventoryTabType", menuName = "Inventory/Inventory Tab Type")]

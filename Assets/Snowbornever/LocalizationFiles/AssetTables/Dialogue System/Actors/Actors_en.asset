@@ -78,5 +78,10 @@ MonoBehaviour:
     m_Localized: Terra
     m_Metadata:
       m_Items: []
+  - m_Id: 457354545581314048
+    m_Localized: Attack
+    m_Metadata:
+      m_Items: []
   references:
-    version: 1
+    version: 2
+    RefIds: []

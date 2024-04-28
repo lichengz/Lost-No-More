@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.Events;
 
 /// <summary>
@@ -9,6 +10,15 @@ using UnityEngine.Events;
 public class VoidEventChannelSO : DescriptionBaseSO
 {
 	public UnityAction OnEventRaised;
+
+	public void OnEventRaisedOnce(UnityAction callback)
+	{
+		OnEventRaised += callback;
+		OnEventRaised += () =>
+		{
+			OnEventRaised -= callback;
+		};
+	}
 
 	public void RaiseEvent()
 	{

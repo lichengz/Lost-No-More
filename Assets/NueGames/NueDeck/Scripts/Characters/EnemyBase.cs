@@ -16,6 +16,9 @@ namespace NueGames.NueDeck.Scripts.Characters
         [SerializeField] protected EnemyCharacterData enemyCharacterData;
         [SerializeField] protected EnemyCanvas enemyCanvas;
         [SerializeField] protected SoundProfileData deathSoundProfileData;
+        [SerializeField] protected VoidEventChannelSO startCombatEvent;
+        [SerializeField] protected IntEventChannelSO _closeUIDialogueEvent;
+
         protected EnemyAbilityData NextAbility;
         
         public EnemyCharacterData EnemyCharacterData => enemyCharacterData;
@@ -146,5 +149,18 @@ namespace NueGames.NueDeck.Scripts.Characters
         }
 
         #endregion
+        
+        #region Event Calling
+
+        public void StartCombat()
+        {
+            _closeUIDialogueEvent.OnEventRaisedOnce(
+                (int tmp) =>
+                {
+                    startCombatEvent.RaiseEvent();
+                });
+        }
+        #endregion
+
     }
 }

@@ -16,4 +16,13 @@ public class IntEventChannelSO : DescriptionBaseSO
 		if (OnEventRaised != null)
 			OnEventRaised.Invoke(value);
 	}
+	
+	public void OnEventRaisedOnce(UnityAction<int> callback)
+	{
+		OnEventRaised += callback;
+		OnEventRaised += (int tmp) =>
+		{
+			OnEventRaised -= callback;
+		};
+	}
 }

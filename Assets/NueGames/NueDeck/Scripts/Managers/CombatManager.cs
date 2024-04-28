@@ -6,6 +6,7 @@ using NueGames.NueDeck.Scripts.Characters.Enemies;
 using NueGames.NueDeck.Scripts.Data.Containers;
 using NueGames.NueDeck.Scripts.Enums;
 using NueGames.NueDeck.Scripts.Utils.Background;
+using PixelCrushers.DialogueSystem.Wrappers;
 using UnityEngine;
 
 namespace NueGames.NueDeck.Scripts.Managers
@@ -19,6 +20,8 @@ namespace NueGames.NueDeck.Scripts.Managers
         [SerializeField] private BackgroundContainer backgroundContainer;
         [SerializeField] private List<Transform> enemyPosList;
         [SerializeField] private List<Transform> allyPosList;
+        [SerializeField] protected VoidEventChannelSO startCombatEvent;
+        [SerializeField] private IntEventChannelSO _closeUIDialogueEvent = default;
  
         
         #region Cache
@@ -74,6 +77,21 @@ namespace NueGames.NueDeck.Scripts.Managers
         private void Start()
         {
             StartCombat();
+            bool isDialogueTrigger = false;
+            foreach (var currentEnemy in CurrentEnemiesList)
+            {
+                DialogueSystemTrigger dialogueTrigger = currentEnemy.GetComponent<DialogueSystemTrigger>();
+                if (dialogueTrigger&& dialogueTrigger.isActiveAndEnabled)
+                {
+                    dialogueTrigger.OnUse();
+                    isDialogueTrigger = true;
+                }
+            }
+
+            if (!isDialogueTrigger)
+            {
+                CurrentCombatStateType = CombatStateType.AllyTurn;
+            }
         }
 
         public void StartCombat()
@@ -86,7 +104,11 @@ namespace NueGames.NueDeck.Scripts.Managers
            
             NueUIManager.CombatCanvas.gameObject.SetActive(true);
             NueUIManager.InformationCanvas.gameObject.SetActive(true);
-            CurrentCombatStateType = CombatStateType.AllyTurn;
+            // CurrentCombatStateType = CombatStateType.AllyTurn;
+            startCombatEvent.OnEventRaisedOnce(() =>
+            {
+                CurrentCombatStateType = CombatStateType.AllyTurn;
+            });
         }
         
         private void ExecuteCombatState(CombatStateType targetStateType)

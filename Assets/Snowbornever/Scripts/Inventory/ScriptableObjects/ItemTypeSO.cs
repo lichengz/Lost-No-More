@@ -10,6 +10,7 @@ public enum itemInventoryType
 	Ingredient,
 	Customisation,
 	Dish,
+	Card
 }
 
 public enum ItemInventoryActionType

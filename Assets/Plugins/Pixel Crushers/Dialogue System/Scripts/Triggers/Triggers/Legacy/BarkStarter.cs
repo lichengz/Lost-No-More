@@ -36,6 +36,9 @@ namespace PixelCrushers.DialogueSystem
         /// </summary>
         [Tooltip("Cache all lines during first bark. This can reduce stutter when barking on slower mobile devices, but barks' conditions are not reevaluated each time as the state changes, barks use no em formatting codes, and sequences are not played with barks.")]
         public bool cacheBarkLines = false;
+        
+        [Tooltip("Barks are triggered only once")]
+        public bool triggerOnce = false;
 
         /// <summary>
         /// Gets the sequencer used by the current bark, if a bark is playing.
@@ -91,9 +94,9 @@ namespace PixelCrushers.DialogueSystem
         /// Barks if the condition is true.
         /// </summary>
         /// <param name="target">Target.</param>
-        public void TryBark(Transform target)
+        public bool TryBark(Transform target)
         {
-            TryBark(target, target);
+            return TryBark(target, target);
         }
 
         /// <summary>
@@ -101,7 +104,7 @@ namespace PixelCrushers.DialogueSystem
         /// </summary>
         /// <param name="target">Target.</param>
         /// <param name="interactor">Interactor to test the condition against.</param>
-        public void TryBark(Transform target, Transform interactor)
+        public bool TryBark(Transform target, Transform interactor)
         {
             if (!tryingToBark)
             {
@@ -135,6 +138,7 @@ namespace PixelCrushers.DialogueSystem
                             sequencer = BarkController.LastSequencer;
                         }
                         DestroyIfOnce();
+                        return true;
                     }
                 }
                 finally
@@ -142,6 +146,7 @@ namespace PixelCrushers.DialogueSystem
                     tryingToBark = false;
                 }
             }
+            return false;
         }
 
         private Transform GetBarker()

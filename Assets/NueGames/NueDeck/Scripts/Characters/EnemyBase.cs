@@ -6,6 +6,7 @@ using NueGames.NueDeck.Scripts.Enums;
 using NueGames.NueDeck.Scripts.Interfaces;
 using NueGames.NueDeck.Scripts.Managers;
 using NueGames.NueDeck.Scripts.NueExtentions;
+using PixelCrushers.DialogueSystem;
 using UnityEngine;
 
 namespace NueGames.NueDeck.Scripts.Characters
@@ -35,6 +36,7 @@ namespace NueGames.NueDeck.Scripts.Characters
             CharacterStats.SetCurrentHealth(CharacterStats.CurrentHealth);
             CombatManager.OnAllyTurnStarted += ShowNextAbility;
             CombatManager.OnEnemyTurnStarted += CharacterStats.TriggerAllStatus;
+            OnHurtEvent.OnEventRaised += UpdateDialogueLua;
         }
         protected override void OnDeath()
         {
@@ -45,10 +47,17 @@ namespace NueGames.NueDeck.Scripts.Characters
             CombatManager.OnEnemyDeath(this);
             NueAudioManager.PlayOneShot(DeathSoundProfileData.GetRandomClip());
             Destroy(gameObject);
+            OnHurtEvent.OnEventRaised -= UpdateDialogueLua;
         }
         #endregion
         
         #region Private Methods
+
+        private void UpdateDialogueLua()
+        {
+            GetComponent<BarkOnIdle>().StartBarkLoop();
+            DialogueLua.SetVariable("EnemyIsHurt", true);
+        }
 
         private int _usedAbilityCount;
         private void ShowNextAbility()

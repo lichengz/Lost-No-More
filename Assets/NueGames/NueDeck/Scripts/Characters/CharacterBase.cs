@@ -10,6 +10,7 @@ namespace NueGames.NueDeck.Scripts.Characters
         [Header("Base settings")]
         [SerializeField] private CharacterType characterType;
         [SerializeField] private Transform textSpawnRoot;
+        [SerializeField] public VoidEventChannelSO OnHurtEvent;
 
         #region Cache
         public CharacterStats CharacterStats { get; protected set; }

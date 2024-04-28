@@ -6,8 +6,9 @@ using NueGames.NueDeck.Scripts.Characters.Enemies;
 using NueGames.NueDeck.Scripts.Data.Containers;
 using NueGames.NueDeck.Scripts.Enums;
 using NueGames.NueDeck.Scripts.Utils.Background;
-using PixelCrushers.DialogueSystem.Wrappers;
+using PixelCrushers.DialogueSystem;
 using UnityEngine;
+using DialogueSystemTrigger = PixelCrushers.DialogueSystem.Wrappers.DialogueSystemTrigger;
 
 namespace NueGames.NueDeck.Scripts.Managers
 {
@@ -77,21 +78,7 @@ namespace NueGames.NueDeck.Scripts.Managers
         private void Start()
         {
             StartCombat();
-            bool isDialogueTrigger = false;
-            foreach (var currentEnemy in CurrentEnemiesList)
-            {
-                DialogueSystemTrigger dialogueTrigger = currentEnemy.GetComponent<DialogueSystemTrigger>();
-                if (dialogueTrigger&& dialogueTrigger.isActiveAndEnabled)
-                {
-                    dialogueTrigger.OnUse();
-                    isDialogueTrigger = true;
-                }
-            }
-
-            if (!isDialogueTrigger)
-            {
-                CurrentCombatStateType = CombatStateType.AllyTurn;
-            }
+            PrepareDialogue();
         }
 
         public void StartCombat()
@@ -109,6 +96,29 @@ namespace NueGames.NueDeck.Scripts.Managers
             {
                 CurrentCombatStateType = CombatStateType.AllyTurn;
             });
+        }
+
+        private void PrepareDialogue()
+        {
+            // reset Dialogue variables
+            DialogueLua.SetVariable("EnemyIsHurt", false);
+            
+            // Dialogue trigger
+            bool isDialogueTrigger = false;
+            foreach (var currentEnemy in CurrentEnemiesList)
+            {
+                DialogueSystemTrigger dialogueTrigger = currentEnemy.GetComponent<DialogueSystemTrigger>();
+                if (dialogueTrigger&& dialogueTrigger.isActiveAndEnabled)
+                {
+                    dialogueTrigger.OnUse();
+                    isDialogueTrigger = true;
+                }
+            }
+
+            if (!isDialogueTrigger)
+            {
+                CurrentCombatStateType = CombatStateType.AllyTurn;
+            }
         }
         
         private void ExecuteCombatState(CombatStateType targetStateType)

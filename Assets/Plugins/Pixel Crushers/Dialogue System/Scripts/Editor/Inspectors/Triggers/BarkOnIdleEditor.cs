@@ -25,6 +25,7 @@ namespace PixelCrushers.DialogueSystem
             EditorGUILayout.PropertyField(serializedObject.FindProperty("skipIfNoValidEntries"), true);
             EditorGUILayout.PropertyField(serializedObject.FindProperty("allowDuringConversations"), true);
             EditorGUILayout.PropertyField(serializedObject.FindProperty("cacheBarkLines"), true);
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("triggerOnce"), true);
             EditorGUILayout.PropertyField(serializedObject.FindProperty("condition"), true);
             serializedObject.ApplyModifiedProperties();
         }

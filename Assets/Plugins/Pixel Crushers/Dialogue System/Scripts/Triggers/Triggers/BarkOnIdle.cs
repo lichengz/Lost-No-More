@@ -67,7 +67,11 @@ namespace PixelCrushers.DialogueSystem
                 yield return new WaitForSeconds(Random.Range(minSeconds, maxSeconds));
                 if (enabled && (!DialogueManager.isConversationActive || allowDuringConversations) && !DialogueTime.isPaused)
                 {
-                    TryBark(target);
+                    bool bark = TryBark(target);
+                    if (triggerOnce && bark)
+                    {
+                        break;
+                    }
                 }
             }
         }

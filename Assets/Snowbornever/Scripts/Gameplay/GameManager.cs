@@ -13,14 +13,17 @@ public class GameManager : MonoBehaviour
 	[SerializeField] private ItemSO[] _finalRecipes = default;
 	[SerializeField] private InventorySO _inventory = default;
 
-	[Header("Broadcasting on")]
+	[Header("Listening to")]
 	[SerializeField] private VoidEventChannelSO _addRockCandyRecipeEvent = default;
 	[SerializeField] private VoidEventChannelSO _cerisesMemoryEvent = default;
 	[SerializeField] private VoidEventChannelSO _decideOnDishesEvent = default;
+	
+	[Header("Broadcasting on")]
+	[SerializeField] private VoidEventChannelSO _GameManagerStartEvent = default;
 
 	private void Start()
 	{
-		StartGame();
+		_GameManagerStartEvent.RaiseEvent();
 	}
 
 	private void OnEnable()
@@ -53,11 +56,5 @@ public class GameManager : MonoBehaviour
 		{
 			_inventory.Add(item);
 		}
-	}
-
-	void StartGame()
-	{
-		_gameState.UpdateGameState(GameState.Gameplay);
-		_questManager.StartGame();
 	}
 }

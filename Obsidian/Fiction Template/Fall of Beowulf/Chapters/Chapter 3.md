@@ -1,0 +1,5 @@
+With each passing hour, the tension within the hall has grown palpable. The people of King Hrothgar's kingdom huddle together in fear, their eyes darting nervously toward the doors at the slightest sound.
+And then, in the dead of night, it happens.
+A thunderous crash echoes through the hall as the massive wooden doors are torn from their hinges, splintering into pieces as a shadowy figure looms in the doorway. It is Grendel, the foul creature that has plagued this land for too long, its eyes burning with hatred as it surveys the terrified occupants of Heorot.
+With a guttural roar, Grendel charges into the hall, its massive form crashing through the tables and benches with ease. The air is thick with the scent of blood and panic as the warriors of the Danes scramble to defend themselves, their swords flashing in the firelight as they confront the beast.
+But Grendel is relentless, its fury unmatched as it lashes out with clawed hands and gnashing teeth. 

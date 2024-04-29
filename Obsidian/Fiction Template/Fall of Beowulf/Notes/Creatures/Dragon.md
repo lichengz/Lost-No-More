@@ -1,0 +1,2 @@
+![[Dragon-20240209065659852.jpg]]
+In the third and final part of the poem, Beowulf faces a mighty dragon that has been awakened by the theft of a golden cup from its hoard. This dragon brings destruction to Beowulf's kingdom, leading to the hero's last great battle.

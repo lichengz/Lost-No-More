@@ -1,0 +1,1 @@
+ The Danish king who suffers under the attacks of Grendel until Beowulf arrives to help. Hrothgar is a wise and respected ruler who welcomes Beowulf and rewards him for his deeds.

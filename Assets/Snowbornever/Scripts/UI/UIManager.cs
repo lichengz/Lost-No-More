@@ -16,6 +16,7 @@ public class UIManager : MonoBehaviour
 	[SerializeField] private UIItemForAnimation _cookingAnimation = default;
 	[SerializeField] private UIPause _pauseScreen = default;
 	[SerializeField] private UISettingsController _settingScreen = default;
+	[SerializeField] private GameObject _openWorldUI = default;
 
 	[Header("Gameplay")]
 	[SerializeField] private GameStateSO _gameStateManager = default;
@@ -74,6 +75,7 @@ public class UIManager : MonoBehaviour
 
 	void ResetUI()
 	{
+		_openWorldUI.gameObject.SetActive(_gameStateManager.CurrentGameState == GameState.Gameplay);
 		_dialogueController.gameObject.SetActive(false);
 		_inventoryPanel.gameObject.SetActive(false);
 		_pauseScreen.gameObject.SetActive(false);

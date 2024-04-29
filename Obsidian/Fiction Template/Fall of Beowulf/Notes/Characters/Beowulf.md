@@ -1,0 +1,2 @@
+![[Pasted image 20240209064459.png]]
+The protagonist of the poem, Beowulf is a Geatish hero who comes to the aid of the Danish king, Hrothgar, to defeat the monstrous Grendel and later, Grendel's mother and the dragon. He embodies the heroic ideals of strength, courage, and loyalty.

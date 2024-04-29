@@ -1,0 +1,9 @@
+{
+	"nodes":[
+		{"id":"cd8201e86e832c13","type":"file","file":"Fall of Beowulf/Notes/Characters/Beowulf.md","x":-340,"y":-320,"width":320,"height":420},
+		{"id":"de118e0a9ad3885f","type":"file","file":"Fall of Beowulf/Notes/Characters/Wiglaf.md","x":-336,"y":160,"width":316,"height":420},
+		{"id":"4969dd81da05f002","type":"file","file":"Fall of Beowulf/Notes/Characters/King Hrothgar.md","x":40,"y":160,"width":300,"height":420},
+		{"id":"39df93f4e593ef84","type":"file","file":"Fall of Beowulf/Notes/Characters/Unferth.md","x":400,"y":160,"width":320,"height":420}
+	],
+	"edges":[]
+}

@@ -1,0 +1,169 @@
+{
+  "main": {
+    "id": "63de17aef97ea692",
+    "type": "split",
+    "children": [
+      {
+        "id": "ded6aab570569cf8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c1b35ed0b4fd6dc5",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "49db61af7c271202",
+    "type": "split",
+    "children": [
+      {
+        "id": "efede01df6e6c458",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fc0ebc647074e370",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "ca76f98cf264744c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 278.49999618530273
+  },
+  "right": {
+    "id": "e43bcb9858a2479d",
+    "type": "split",
+    "children": [
+      {
+        "id": "a3033d7104ab5798",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fbfeaba93cf51e2d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "3fde721a520b0478",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          },
+          {
+            "id": "5dabde40fe079e09",
+            "type": "leaf",
+            "state": {
+              "type": "copilot-chat-view",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 411.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "canvas:Create new canvas": true,
+      "copilot:Copilot Chat": false
+    }
+  },
+  "active": "c1b35ed0b4fd6dc5",
+  "lastOpenFiles": [
+    "_Start Here/_Start Here.md",
+    "_Start Here",
+    "Fall of Beowulf/Worldbuilding.canvas",
+    "Fall of Beowulf/Chapters/Chapter 3.md",
+    "Fall of Beowulf/Chapters/Chapter 2.md",
+    "Fall of Beowulf/Chapters/Chapter 1.md",
+    "Fall of Beowulf/Characters.canvas",
+    "Fall of Beowulf/Notes/Characters/Beowulf.md",
+    "Fall of Beowulf/Creatures.canvas",
+    "Fall of Beowulf/Locations.canvas",
+    "Fall of Beowulf/Scenes.md",
+    "Fall of Beowulf/Notes/Random/Pasted image 20240209065938.jpg",
+    "Demo Book/Chapters/Chapter 4.md",
+    "Fall of Beowulf/Notes/Random/Pasted image 20240209070244.png",
+    "Fall of Beowulf/Notes/Random/Pasted image 20240209065938.png",
+    "Fall of Beowulf/Notes/Random/Pasted image 20240209070204.png",
+    "Fall of Beowulf/Notes/Creatures/Dragon.md",
+    "Fall of Beowulf/Notes/Random/Dragon-20240209065659852.jpg",
+    "Fall of Beowulf/Notes/Creatures/Grendel's Dam.md",
+    "Fall of Beowulf/Notes/Random/Grendel's Mother-20240209065527376.jpg",
+    "Pasted image 20240209065403.png",
+    "Demo Book/Notes/Random/Pasted image 20240209065028.png",
+    "Fall of Beowulf/Notes/Characters/Wiglaf.md",
+    "Fall of Beowulf/Notes/Random/Pasted image 20240209065042.png",
+    "Fall of Beowulf/Notes/Characters/Unferth.md",
+    "Fall of Beowulf/Notes/Characters/King Hrothgar.md",
+    "Demo Book/Notes/Random/Game idea - Harmonic Realms.md",
+    "Demo Book/Notes/Locations/Gloomshade.md",
+    "Demo Book/Notes/Items/Carolball.md",
+    "Demo Book/Notes/Creatures/Bat People.md",
+    "Demo Book/Notes/Characters/Ba.md",
+    "Demo Book/Untitled",
+    "Fall of Beowulf/Notes/Random/Pasted image 20240209064459.png",
+    "Fall of Beowulf/Notes/Creatures/Grendel.md",
+    "Neverland/Book/Chapter 4 - Forest Morning.md",
+    "Neverland/Book/Chapter 3 - On the Roof.md",
+    "Neverland/Book/Chapter 1 - The Package.md",
+    "Neverland/Book/Chapter 2 - Bad News.md",
+    "Neverland/Book/Chapter 5 - Classroom.md",
+    "Neverland/Book/Chapter 6 - Cross Keys.md",
+    "Neverland/Notes/Outlines/Book 1.md",
+    "Neverland/Book/Untitled",
+    "Neverland/Characters.canvas",
+    "Neverland/Notes/Outlines/1 Worknotes.canvas",
+    "Neverland/Magic System.canvas",
+    "Neverland/Worldbuilding.canvas",
+    "Neverland/Items.canvas",
+    "Neverland/Creatures.canvas",
+    "Neverland/Notes/Locations",
+    "Neverland/Notes/Items",
+    "Neverland/Notes/Creatures",
+    "Neverland/Book",
+    "G",
+    "Random/Assets/JPEG/deleteme.txt",
+    "Random/Assets/JPEG"
+  ]
+}

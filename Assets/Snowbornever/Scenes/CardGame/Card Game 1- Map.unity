@@ -434,6 +434,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoreLoader
       objectReference: {fileID: 0}
+    - target: {fileID: 2456383433736743395, guid: cc6d636a6c3f5814bafe200c1e4ed46f, type: 3}
+      propertyPath: _cardCore
+      value: 
+      objectReference: {fileID: 11400000, guid: 8ec4c90f5342bdc41b10bfe850aa1ac0, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

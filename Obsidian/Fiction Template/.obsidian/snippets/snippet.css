@@ -1,0 +1,60 @@
+/* IMPROVE LINE HEIGHT AND BOLDED  */
+* body {
+    --inline-title-size: 2em;
+    --inline-title-weight: 600;
+    --h1-size: 1.9em;
+    --h2-size:1.6em;
+    --h3-size: 1.4em;
+    --h4-size: 1.3em;
+    --h5-size: 1.2em;
+    --h6-size: 1.1em;
+    --h1-weight: 600;
+    --h2-weight: 600;
+    --h3-weight: 400;
+    --h4-weight: 400;
+    --h5-weight: 400;
+    --h6-weight: 400;
+ --h1-line-height:2em;
+--h2-line-height:2em;
+  }
+
+/* Make Folder Titles Bold */
+.tree-item-self.is-clickable.nav-folder-title {
+    font-weight: 600;
+}
+
+/* Make Folder Titles Bold */
+.tree-item-self.is-clickable.nav-folder-title,
+.tree-item-self.is-clickable.nav-file-title {
+	 color: black; 
+	/*Change to white for dark mode*/
+}
+
+/*Make Title Sans Serif*/
+.inline-title {
+    font-family: 'Inter'; /*Delete or change to preferred font*/
+    font-weight: 700;
+    line-height: 1em;
+}
+
+/*Make Writing Text Width a Custom Size*/
+.workspace-tabs .markdown-source-view.mod-cm6 .cm-sizer {
+width: 50vw;
+     margin: 0 auto;
+}
+
+/*Remove Standard Border for File Structure*/
+.nav-folder.mod-root .nav-folder > .nav-folder-children {
+    border-left: 0;
+}
+
+/*Remove Padding*/
+.cm-editor .cm-line {
+    padding-bottom: 1em!important;
+}
+
+/*Add Pale Gray Background to Canvas*/
+.canvas-background {
+ background-color:#fafafa;
+}
+ 

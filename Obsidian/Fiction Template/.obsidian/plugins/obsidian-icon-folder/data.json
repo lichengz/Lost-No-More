@@ -1,0 +1,57 @@
+{
+  "settings": {
+    "migrated": 4,
+    "iconPacksPath": ".obsidian/icons",
+    "fontSize": 16,
+    "emojiStyle": "none",
+    "iconColor": null,
+    "recentlyUsedIcons": [
+      "LiFlag",
+      "LiGlobe2",
+      "LiSparkles",
+      "LiMapPin",
+      "LiStickyNote",
+      "LiFolder",
+      "LiKanbanSquare",
+      "LiUser",
+      "LiPenTool",
+      "LiBook"
+    ],
+    "recentlyUsedIconsSize": 19,
+    "rules": [],
+    "extraMargin": {
+      "top": 0,
+      "right": 4,
+      "bottom": 0,
+      "left": 0
+    },
+    "iconInTabsEnabled": true,
+    "iconInTitleEnabled": true,
+    "iconInFrontmatterEnabled": false,
+    "iconsBackgroundCheckEnabled": false,
+    "iconsInNotesEnabled": true,
+    "iconIdentifier": ":"
+  },
+  "Neverland/Book": "LiFolder",
+  "Neverland": "LiBook",
+  "Days of Merry & Bright": "LiBook",
+  "Neverland/Notes": "LiFolder",
+  "Neverland/Characters.canvas": "LiUser",
+  "Neverland/Creatures.canvas": "LiStickyNote",
+  "Neverland/Items.canvas": "LiStickyNote",
+  "Neverland/Locations.canvas": "LiMapPin",
+  "Neverland/Magic System.canvas": "LiSparkles",
+  "Neverland/Worldbuilding.canvas": "LiGlobe2",
+  "Fall of Beowulf": "LiBook",
+  "Fall of Beowulf/Scenes.md": "LiKanbanSquare",
+  "Fall of Beowulf/Locations.canvas": "LiMapPin",
+  "Fall of Beowulf/Creatures.canvas": "LiStickyNote",
+  "Fall of Beowulf/Worldbuilding.canvas": "LiGlobe2",
+  "Fall of Beowulf/Notes": "LiFolder",
+  "Fall of Beowulf/Chapters": "LiFolder",
+  "Fall of Beowulf/Characters.canvas": "LiUser",
+  "_Start Here/_Start Here.md": {
+    "iconName": "LiFlag",
+    "iconColor": "#e32416"
+  }
+}

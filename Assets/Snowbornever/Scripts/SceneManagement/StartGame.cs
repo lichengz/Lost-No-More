@@ -16,6 +16,8 @@ public class StartGame : MonoBehaviour
 	[SerializeField] private GameSceneSO _locationsToLoad;
 	[SerializeField] private SaveSystem _saveSystem = default;
 	[SerializeField] private bool _showLoadScreen = default;
+	[SerializeField] private GameStateSO _gameState = default;
+	[SerializeField] private QuestManagerSO _questManager = default;
 	
 	[Header("Broadcasting on")]
 	[SerializeField] private LoadEventChannelSO _loadLocation = default;
@@ -24,6 +26,7 @@ public class StartGame : MonoBehaviour
 	[SerializeField] private VoidEventChannelSO _onNewGameButton = default;
 	[SerializeField] private VoidEventChannelSO _onContinueButton = default;
 	[SerializeField] private VoidEventChannelSO _onDebugCardGame = default;
+	[SerializeField] private VoidEventChannelSO _GameManagerStartEvent = default;
 
 	private bool _hasSaveData;
 
@@ -50,6 +53,7 @@ public class StartGame : MonoBehaviour
 		_saveSystem. WriteEmptySaveFile();
 		_saveSystem.SetNewGameData();
 		_loadLocation.RaiseEvent(_locationsToLoad, _showLoadScreen);
+		_GameManagerStartEvent.OnEventRaised += OnStartOpenWorldGame;
 	}
 
 	private void ContinuePreviousGame()
@@ -59,7 +63,9 @@ public class StartGame : MonoBehaviour
 
 	private void DebugCardGame()
 	{
+		_gameState.UpdateGameState(GameState.CardGame);
 		_loadLocation.RaiseEvent(_locationDebugGame, _showLoadScreen);
+		_GameManagerStartEvent.OnEventRaised += OnStartCardGame;
 	}
 
 	private void OnResetSaveDataPress()
@@ -82,5 +88,17 @@ public class StartGame : MonoBehaviour
 			LocationSO locationSO = asyncOperationHandle.Result;
 			_loadLocation.RaiseEvent(locationSO, _showLoadScreen);
 		}
+	}
+	
+	void OnStartOpenWorldGame()
+	{
+		_gameState.UpdateGameState(GameState.Gameplay);
+		_questManager.StartGame();
+	}
+	
+	void OnStartCardGame()
+	{
+		_gameState.UpdateGameState(GameState.CardGame);
+		_questManager.StartGame();
 	}
 }

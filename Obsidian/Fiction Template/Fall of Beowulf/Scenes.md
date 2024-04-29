@@ -1,0 +1,68 @@
+---
+
+kanban-plugin: basic
+
+---
+
+## Act 1:Beowulf's Arrival and Grendel's Attacks
+
+- [ ] 1. Beowulf, a hero from the Geatish tribe, hears of the troubles in the Danish kingdom ruled by King Hrothgar, where the monstrous creature Grendel has been terrorizing the people.
+- [ ] 2. Beowulf and his band of warriors sail to Denmark, where they are warmly welcomed by King Hrothgar and his court.
+- [ ] 3. Beowulf boasts of his strength and bravery, declaring his intention to defeat Grendel in unarmed combat, without weapons.
+- [ ] 4. Grendel attacks Heorot, Hrothgar's great hall, during the night, killing and devouring many of the king's warriors.
+- [ ] 5. Beowulf confronts Grendel in Heorot and engages in a fierce battle with the monster,  causing the creature to flee.
+
+
+## Act 2: Grendel's Mother's Revenge
+
+- [ ] 1. Following Grendel's defeat, his vengeful mother, a powerful water-dwelling creature, seeks retribution for her son's death.
+- [ ] 2. Grendel's mother attacks Heorot, killing Hrothgar's trusted advisor, Aeschere, and taking him to her underwater lair.
+- [ ] Beowulf vows to avenge Aeschere's death and sets out to confront Grendel's mother in her watery domain.
+- [ ] Beowulf dives into the murky depths of the lake and engages in a brutal underwater battle with Grendel's mother.
+- [ ] Beowulf emerges victorious, slaying Grendel's mother with a magical sword found in her lair and returning triumphant to Heorot.
+
+
+## Act 3: Beowulf's Final Battle with the Dragon
+
+- [ ] Many years later, Beowulf has become king of the Geats and rules wisely for several decades.
+- [ ] A dragon, awakened by the theft of a golden cup from its hoard, begins to wreak havoc upon Beowulf's kingdom.
+- [ ] Despite his advanced age, Beowulf resolves to confront the dragon and protect his people once again.
+- [ ] Beowulf's loyal thane, Wiglaf, accompanies him to the dragon's lair, where they engage in a fierce battle.
+- [ ] During the battle, Beowulf is mortally wounded by the dragon's venomous bite, but with Wiglaf's help, he manages to deliver a fatal blow to the dragon, securing victory for the Geats. Beowulf dies from his injuries but is mourned and honored as a heroic figure by his people.
+
+
+***
+
+## Archive
+
+- [ ] The mice of NAME have become consumed by fear and despair due to the constant presence of Yulewraiths, dark creatures that threaten to bring eternal gloom to the Christmas world.<br><br> "Greensleeves," plays the haunting tune, she awakens the dormant emotions of the cursed being, breaking the spell and bringing back the vibrant colors and warmth to the Christmas realm. turning them to Emberlights. All spirit wear masks.<br><br>becomes a positive thing, and leads them to the lost ones. spirits in the yulora wesr masks until the right song reveals them
+- [ ] Changing the bells started healing the normal world, but the Yulora is now changing?<br><br>In the Yulora, they encounter a group of mischievous snow fairies who can manipulate the weather. These fairies are causing havoc by creating snowstorms and blizzards in the Christmas world. It goes wrong.
+- [ ] a snowstorm drops, cutting off everything, and they stumble upon a forgotten village inhabited by eccentric creatures that have never celebrated Christmas. they help them start doing it, and the storm fades away.  see herds of flying reindeer in the distance?<br><br>Meet a robin who guides them?
+- [ ] Along their path, they stumble upon a humble cottage where a kind-hearted old woman resides. She welcomes them with open arms and invites them inside to warm themselves by the crackling fireplace. The aroma of freshly baked gingerbread fills the air, and the group indulges in the sweet and spicy treat, savoring each delicious bite. The old woman shares stories of holiday traditions and imparts wisdom upon the group, reminding them of the importance of love, friendship, and spreading joy during the festive season. She is a star. She gifts Paz a sungem. <br><br>In the distance, they spot a magnificent Christmas tree adorned with twinkling lights and shimmering ornaments. As they approach, they encounter a group of ghostly carolers who are trapped in an endless loop of singing the same haunting melody. The group must find a way to break the curse and set the carolers free by composing a new song that resonates with their lost souls.
+- [ ] Merry throws a carolball into a lake, turning the whole thing into a speaker, and sending music up into the realm to keep them awake in the cold. here, music becomes color and solid things, and calls spirits out to dance. <br><br>Yulewraiths are dispelled.
+- [ ] Paz gets a sungem, but gives it up to allow her to into the cold alone. Risks freezing himself.
+- [ ] **The Grand Finale: Silent Night (Inspired by "Silent Night")** _Problem Puzzle Situation:_ Merry loses all her friends, and enters a dark night in a storm to rescue a last, frozen child. <br><br>The friends make soft, melodic hum, resonating with the silent night. This harmonious vibration transforms into a protective barrier?<br><br>Santa appears and opens her throat?
+- [ ] Ba learns to fly, and hops over the distance as the earth crumbles? Merry throws the child over, and Ba helps her fly across.
+- [ ] End with a concert, inviting the lizards and the bats, carolling and a festival? Ba flies up to the belfry, and back.
+- [ ] Into the wild: things have to progressively get worse and less Christmas... first, meet mice who don't have Christmas? Bellwalkers who help with first problem?<br><br>outside of Wendleford, no one know why Xmas matters, or is allowed to celebrate it, or cant.
+- [ ] **Carol of the Bells **<br>_Problem Puzzle Situation:_ Lines of bells haven't been tended, are clanging in the wind. they are silent. Belltenders refuse to let them through. Snowman tells them they have to go through? Belltenders panic at the sight of the snowman, don't want him to touch the bell. They race through, Snowman touches one, and it freezes and explodes. Merry picks one and throws it. suddenly the bells start ringing around them, but it is chaos. hard to hear, shouting, making them dizzy. the belltenders are so happy? run away from the noise. It is an ancient Bellwall. Northern Lights emerge above the wall, sound waves.<br><br>Sleighsprites burst into the air around them and fly off? Were they trapped? What happens?<br><br>Take refuge in Bellwall South, a small town. they all come out to see. Assume that snowman's magic helped.<br><br> The Jingle Bell Fern leaves are brewed into a calming Caroler's Bellflower Tea. As the mice sip the tea, softens their voices so they can sing the right song. Finally they can sing Carol of the Bells again; since the bells fell silent, been unable to.<br><br>Grousy old mouse is mad; the SOMETHING never wanted those bells rung. Don't know what you've done.<br><br>Yulewraiths attempt to cast a spell, threatening to plunge the Christmas world into eternal gloom. _Weird, Beautiful Solution:_ The mice discover ancient scrolls containing the forgotten lyrics of "God Rest Ye Merry, Gentlemen." By singing these powerful verses, they release a burst of radiant energy that dispels the darkness.
+- [ ] But the noise has attracted Jingle Sprites. going through forest and blocked by holly. No one is tending to the woods? They cause problems, but become Jolly Holly Dancers.
+- [ ] the path is blocked by a series of enchanted holly bushes that multiply each time they are touched. <br><br>**1. The Jingle Sprite's Solution to the Holly Bush Barrier:** _Problem:_ The enchanted holly bushes multiply each time touched. _Solution:_ Jingle Sprites, with their tinkling bell hats, join forces with the girl mouse. Their mischievous laughter parts the prickles, <br><br>_Plant:_ Mistletoe with Berries _Food:_ Mulled Berry Elixir _Inspiration:_ The holly and mistletoe tradition. they rest and drink create a Mulled Berry Elixir.
+- [ ] In the melodastery, they find an old [[Melodian]] who answers the door. he is a small owl, with a small apprentice. Snowman doesn't want to come inside; too infernally warm. Loves how cold it is outside<br><br>_Food:_ Snowberry Frost Cakes _Inspiration:_  . The Snowflower, a rare winter bloom, is harvested and incorporated into delectable Snowberry Frost Cakes. These cakes serve as an offering to the snowman, awakening him with a burst of magical energy. Melodian tells them they need to go into the Yulora, which is a dangerous place. - the furthest from all power of the waning bellwalls and melodasteries. Out there, the spirits are at war.<br><br>He teaches them the secrets of the carolballs and put it in a bowl of water to remind them of the music. It can dispel only the weakest glooms, only because mice are listening and humming along.<br><br>Takes a Candlewhisper with them, named Krispin. It lights up in the presence of the Christmas Spirit.
+- [ ] Following the trail of the fireflies, they come across a group of friendly woodland creatures gathered around a campfire. The creatures are roasting chestnuts and marshmallows, filling the air with a delightful aroma. They invite the group to join them and share in the warmth and delicious food. Merry and the others happily accept the invitation, enjoying the cozy atmosphere and the scrumptious treats.
+- [ ] On the way to the path, they have to get help from  Yule Owls.  <br><br>Snowman builds an igloo to keep them warm. <br><br>Owls come out, having watched them, and accept to help them. Fly them up for a meal in their homes? Say that Ba will be helpful? Gives Merry a harp; she'll need it if she can't sing.<br><br>The Yule Owls, once known for their wisdom and assistance during the holiday season, have become reclusive and refuse to help anyone. They have lost faith in the goodness of the world and have withdrawn into isolation. Solution: Merry and her friends seek out the Yule Owls and, through acts of kindness and genuine friendship, manage to earn their trust. They remind the owls of the importance of their role in guiding and assisting others during Christmas. Touched by their sincerity, the Yule Owls decide to return to their duties and use their wisdom to help those in need.
+- [ ] Enter the ruins of the crossing points, and into the Yulora.  <br><br>Ba feels stronger here. starts testing his wings, and talking more. Has a strong keening voice for singing. <br><br>Candlewhisper lights up and talks.
+- [ ] Merry's family lives above a bakery, their address is Overbaker.
+- [ ] Merry brings a snowman to life while bringing food to a mouse family? they ask her if she's going carolling, and she says no, she's helping with the food. Sees kids making them, stops to help, and puts a hat on one. sings the song about putting a hat on a snoman. it moving scares her into falling into the sewers
+- [ ] Merry meets Paz and Ba. Ba doesn't want to fly, and is afraid to talk - like Grogu. Was swept away by the water, and Paz is hunting the tunnels, trying to get him home. Paz dreams of getting a mythical sungem for Christmas so that he won't be cold. But santa doesn't come for lizards. - She's aghast - he comes for everyone.
+- [ ] They trek back to the lizard tribe to ask for help? Ba has fallen a very long way. Paz is comitted to helping him, and lizards are encouraged to be brave from young years. They will need to go above ground. Merry agrees to help. They will go to her family. Take a boat back to the grating.<br><br>On the way, They stumble upon a forgotten celestial orchestra hidden in a side room. Each instrument possesses a magical ability, and the mice must share them with musicians, tune their instruments, and perform a grand symphony under the starry skies to restore the harmony of the universe and save Christmas.
+- [ ] Her family has been worried, welcomes them to a feast. they go carolling, and people love it. Paz has never seen this. Merry wonders why they don't caroll the bats and lizards. Her other brothers make fun of her? <br><br> Snowman has disappeared. Family is in from out of town? Uncle tells them how bad the world is outside of Wendleford. He brings a carolball, and they all enjoy the new song. <br><br>The snowman pounds on the door in the night, mumbling, looking for Merry. can they take off the hat and make him a mouth and put it back on? no, he's cross now, and rams the hat back on. pulling her out the door. wants to go to the Yulora, but she objects.
+- [ ] The uncle tells them they have to follow the Snowhummer; no one safer to be with. This means a Christmas quest, when they come knocking. Paz and Ba want to come. First they need to find out what he's saying. Go to the library first?
+- [ ] _Food:_ Snowberry Frost Cakes _Inspiration:_ The awakening of Snowman. The Snowflower, a rare winter bloom, is harvested and incorporated into delectable Snowberry Frost Cakes. These cakes serve as an offering to the snowman, awakening him with a burst of magical energy. he tells them that there are lost mice in the Yulora, and they have to get them out in time for Christmas, or they'll freeze.
+- [ ] Librarian can't help them. Snowman is irritated, and draws a map, points at a location. It's an old melodastery, but librarian doesn't know of anything there. They have to go.
+
+%% kanban:settings
+```
+{"kanban-plugin":"basic","new-card-insertion-method":"append","new-line-trigger":"shift-enter","lane-width":400,"show-checkboxes":false,"hide-tags-display":false,"tag-colors":[],"show-view-as-markdown":false,"hide-card-count":true,"show-add-list":false,"hide-tags-in-title":true,"hide-date-in-title":true,"hide-date-display":true}
+```
+%%

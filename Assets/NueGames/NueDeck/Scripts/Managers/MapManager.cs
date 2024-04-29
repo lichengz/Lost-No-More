@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using NueGames.NueDeck.Scripts.Enums;
 using NueGames.NueDeck.Scripts.UI;
@@ -13,8 +14,9 @@ namespace NueGames.NueDeck.Scripts.Managers
         
         private NueGameManager NueGameManager => NueGameManager.Instance;
         
-        private void Start()
+        IEnumerator Start()
         {
+            while (NueGameManager.Instance == null) yield return null;
             PrepareEncounters();
         }
         

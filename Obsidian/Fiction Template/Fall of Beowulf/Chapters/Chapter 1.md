@@ -1,0 +1,7 @@
+"I can smell it," I declare to my comrades as we sail through the briny mist. "The stench of fear hangs heavy in the air."
+The wind whips at my cloak, carrying with it the cries of gulls and the distant roar of the waves crashing against the rocky shore. I grip the prow of our longship, feeling the smooth wood beneath my calloused fingers, as we cut through the choppy waters toward our destination.
+"There it is, Heorot," I say, pointing toward the looming silhouette on the horizon. "The great hall of King Hrothgar, where a shadow has fallen over his kingdom."
+My companions nod grimly, their eyes scanning the rugged coastline for signs of danger. They know as well as I do what awaits us upon those shores: a monstrous fiend, a terror in the night that has plagued the Danes for far too long.
+"But fear not," I continue, raising my voice above the howling wind. "For I, Beowulf, shall deliver them from this menace. With sword in hand and courage in my heart, I shall face this creature and send it back to the depths from whence it came."
+The men cheer at my words, their spirits lifted by the promise of battle and glory. But beneath their bravado, I can sense the fear that grips their hearts, the same fear that drives them to follow me into the unknown.
+And yet, despite the dangers that lie ahead, I cannot help but feel a surge of excitement coursing through my veins. For I am Beowulf, hero of legend, and I thrive on the thrill of the hunt.

@@ -1,0 +1,13 @@
+{
+  "accentColor": "#ff5e5b",
+  "theme": "moonstone",
+  "cssTheme": "",
+  "baseFontSize": 17,
+  "showViewHeader": false,
+  "translucency": false,
+  "interfaceFontFamily": "Inter",
+  "enabledCssSnippets": [
+    "snippet"
+  ],
+  "textFontFamily": "Hedvig Letters Serif 14pt"
+}

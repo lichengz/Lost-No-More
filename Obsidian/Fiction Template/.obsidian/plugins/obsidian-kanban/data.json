@@ -1,0 +1,8 @@
+{
+  "tag-colors": [],
+  "new-line-trigger": "enter",
+  "new-card-insertion-method": "prepend",
+  "hide-card-count": true,
+  "lane-width": 400,
+  "show-checkboxes": true
+}

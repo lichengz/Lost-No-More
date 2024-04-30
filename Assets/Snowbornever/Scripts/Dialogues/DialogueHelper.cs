@@ -5,13 +5,13 @@ using UnityEngine;
 public class DialogueHelper : MonoBehaviour
 {
     [SerializeField] private InputReader _inputReader = default;
-    [SerializeField] private VoidEventChannelSO _startInteractionEvent = default;
+    [SerializeField] private BoolEventChannelSO _startInteractionEvent = default;
     [SerializeField] private IntEventChannelSO _closeUIDialogueEvent = default;
 
     public void OpenUIDialogueEvent()
     {
         _inputReader.EnableDialogueInput();
-        _startInteractionEvent.RaiseEvent();
+        _startInteractionEvent.RaiseEvent(false);
     }
     
     public void CloseUIDialogueEvent()

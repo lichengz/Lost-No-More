@@ -425,6 +425,14 @@ PrefabInstance:
       propertyPath: _openWorldUI
       value: 
       objectReference: {fileID: 548718884}
+    - target: {fileID: 5434846252280455340, guid: 6f8cba39bc52a48df959f90d1c3e38ae, type: 3}
+      propertyPath: _startInteractionEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: d1391e040d0a1c148979595fe9e01a1d, type: 2}
+    - target: {fileID: 5434846252280455340, guid: 6f8cba39bc52a48df959f90d1c3e38ae, type: 3}
+      propertyPath: _dialogueSystemController
+      value: 
+      objectReference: {fileID: 769185344}
     - target: {fileID: 5434846252280455342, guid: 6f8cba39bc52a48df959f90d1c3e38ae, type: 3}
       propertyPath: m_Pivot.x
       value: 0

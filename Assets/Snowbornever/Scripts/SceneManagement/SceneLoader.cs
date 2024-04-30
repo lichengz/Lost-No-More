@@ -68,10 +68,16 @@ public class SceneLoader : MonoBehaviour
 			_gameplayManagerLoadingOpHandle.WaitForCompletion();
 			_gameplayManagerSceneInstance = _gameplayManagerLoadingOpHandle.Result;
 
-			StartGameplay();
+			StartCoroutine(DelayAndStartGamePlay());
 		}
 	}
 #endif
+
+	IEnumerator DelayAndStartGamePlay()
+	{
+		yield return new WaitForSeconds(0.5f);
+		StartGameplay();
+	}
 
 	/// <summary>
 	/// This function loads the location scenes passed as array parameter

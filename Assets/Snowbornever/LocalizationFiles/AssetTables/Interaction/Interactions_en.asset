@@ -46,6 +46,10 @@ MonoBehaviour:
     m_Localized: Do you want to jump down?
     m_Metadata:
       m_Items: []
+  - m_Id: 449350378640166912
+    m_Localized: Do you want to play card?
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

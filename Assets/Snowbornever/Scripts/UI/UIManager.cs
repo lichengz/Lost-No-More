@@ -37,7 +37,7 @@ public class UIManager : MonoBehaviour
 
 	[Header("Interaction Events")]
 	[SerializeField] private InteractionUIEventChannelSO _setInteractionEvent = default;
-	[SerializeField] private VoidEventChannelSO _startInteractionEvent = default;
+	[SerializeField] private BoolEventChannelSO _startInteractionEvent = default;
 
 	[Header("Broadcasting on ")]
 	[SerializeField] private LoadEventChannelSO _loadMenuEvent = default;
@@ -94,9 +94,9 @@ public class UIManager : MonoBehaviour
 		// _dialogueController.gameObject.SetActive(true);
 	}
 
-	void HideInteractionPanel()
+	void HideInteractionPanel(bool isReopenInteractionPanel)
 	{
-		if (_interactionPanel.gameObject.activeInHierarchy)
+		if (_interactionPanel.gameObject.activeInHierarchy && isReopenInteractionPanel)
 		{
 			_closeUIDialogueEvent.OnEventRaised += ShowInteractionPanel;
 		}

@@ -35,6 +35,53 @@ namespace NueGames.NueDeck.Scripts.Data.Characters
 
             return GetAbility();
         }
+        
+        public EnemyAbilityData GetAbility(List<KeyValuePair<EnemyAbilityData, float>> abilityList)
+        {
+            List<float> possibilityTiers = new List<float>();
+            float random = 0;
+            possibilityTiers.Add(0);
+            for(int i = 0; i < abilityList.Count - 1; i++)
+            {
+                random += abilityList[i].Value;
+                possibilityTiers.Add(random);
+            }
+
+            float nextAbilityRandom = Random.Range(0, 100);
+            int nextAbilityIndex = 0;
+            for (int i = 0; i < possibilityTiers.Count; i++)
+            {
+                if (nextAbilityRandom > possibilityTiers[i])
+                {
+                    nextAbilityIndex = i;
+                }
+                else
+                {
+                    break;
+                }
+            }
+            return abilityList[nextAbilityIndex].Key;
+        }
+
+        public List<KeyValuePair<EnemyAbilityData, float>> GetPossibleAbilitiesList()
+        {
+            int count = EnemyAbilityList.Count;
+            List<KeyValuePair<EnemyAbilityData, float>> list = new List<KeyValuePair<EnemyAbilityData, float>>();
+            float ranTotal = 0;
+            List<float> tmpRan = new List<float>();
+            for(int i = 0; i < count; i++)
+            {
+                float possibility = Random.Range(0, 100);
+                ranTotal += possibility;
+                tmpRan.Add(possibility);
+            }
+
+            for (int i = 0; i < count; i++)
+            {
+                list.Add(new KeyValuePair<EnemyAbilityData, float>(enemyAbilityList[i], tmpRan[i] / ranTotal * 100));
+            }
+            return list;
+        }
     }
     
     [Serializable]

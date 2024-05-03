@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using NueGames.NueDeck.Scripts.Data.Characters;
 using NueGames.NueDeck.Scripts.Data.Containers;
 using NueGames.NueDeck.Scripts.EnemyBehaviour;
@@ -7,7 +8,10 @@ using NueGames.NueDeck.Scripts.Interfaces;
 using NueGames.NueDeck.Scripts.Managers;
 using NueGames.NueDeck.Scripts.NueExtentions;
 using PixelCrushers.DialogueSystem;
+using TMPro;
 using UnityEngine;
+using UnityEngine.Assertions;
+using UnityEngine.UI;
 
 namespace NueGames.NueDeck.Scripts.Characters
 {
@@ -62,8 +66,12 @@ namespace NueGames.NueDeck.Scripts.Characters
         private int _usedAbilityCount;
         private void ShowNextAbility()
         {
-            NextAbility = EnemyCharacterData.GetAbility(_usedAbilityCount);
+            List<KeyValuePair<EnemyAbilityData, float>> abilityList = EnemyCharacterData.GetPossibleAbilitiesList();
+            DisplayPossibleIntents(abilityList);
+            // NextAbility = EnemyCharacterData.GetAbility(_usedAbilityCount);
+            NextAbility = EnemyCharacterData.GetAbility(abilityList);
             EnemyCanvas.IntentImage.sprite = NextAbility.Intention.IntentionSprite;
+
             
             if (NextAbility.HideActionValue)
             {
@@ -76,7 +84,38 @@ namespace NueGames.NueDeck.Scripts.Characters
             }
 
             _usedAbilityCount++;
-            EnemyCanvas.IntentImage.gameObject.SetActive(true);
+            EnemyCanvas.IntentImage.gameObject.SetActive(false);
+            EnemyCanvas.PossibleIntentsRoot.gameObject.SetActive(true);
+        }
+
+        private void DisplayPossibleIntents(List<KeyValuePair<EnemyAbilityData, float>> list)
+        {
+            Transform intentsRoot = enemyCanvas.PossibleIntentsRoot;
+            Assert.IsTrue(intentsRoot.childCount > 0);
+            Transform intentPrefab = intentsRoot.GetChild(0);
+            int expectedCount = list.Count;
+            int currentCount = intentsRoot.childCount;
+            if (currentCount < expectedCount)
+            {
+                for (int i = currentCount; i < expectedCount; i++)
+                {
+                    Instantiate(intentPrefab, Vector3.zero, Quaternion.identity, intentsRoot);
+                }
+            }else if (currentCount > expectedCount)
+            {
+                for (int i = expectedCount; i < currentCount; i++)
+                {
+                    Destroy(intentsRoot.GetChild(0));
+                }
+            }
+
+            for (int i = 0; i < expectedCount; i++)
+            {
+                KeyValuePair<EnemyAbilityData, float> pair = list[i];
+                Transform intent = intentsRoot.GetChild(i);
+                intent.GetComponent<Image>().sprite = pair.Key.Intention.IntentionSprite;
+                intent.GetComponentInChildren<TextMeshProUGUI>().text = pair.Value.ToString("0.##\\%");
+            }
         }
         #endregion
         
@@ -86,7 +125,8 @@ namespace NueGames.NueDeck.Scripts.Characters
             if (CharacterStats.IsStunned)
                 yield break;
             
-            EnemyCanvas.IntentImage.gameObject.SetActive(false);
+            EnemyCanvas.IntentImage.gameObject.SetActive(true);
+            EnemyCanvas.PossibleIntentsRoot.gameObject.SetActive(false);
             if (NextAbility.Intention.EnemyIntentionType == EnemyIntentionType.Attack || NextAbility.Intention.EnemyIntentionType == EnemyIntentionType.Debuff)
             {
                 yield return StartCoroutine(AttackRoutine(NextAbility));

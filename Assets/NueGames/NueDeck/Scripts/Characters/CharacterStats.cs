@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using NueGames.NueDeck.Scripts.Data.Characters;
 using NueGames.NueDeck.Scripts.Enums;
 using UnityEngine;
 
@@ -30,6 +31,7 @@ namespace NueGames.NueDeck.Scripts.Characters
     }
     public class CharacterStats
     { 
+        public int MaxFocus { get; set; }
         public int CurrentFocus { get; set; }
         public int MaxHealth { get; set; }
         public int CurrentHealth { get; set; }
@@ -48,10 +50,12 @@ namespace NueGames.NueDeck.Scripts.Characters
         public readonly Dictionary<StatusType, StatusStats> StatusDict = new Dictionary<StatusType, StatusStats>();
         
         #region Setup
-        public CharacterStats(int maxHealth, CharacterCanvas characterCanvas)
+        public CharacterStats(CharacterDataBase characterDataBase, CharacterCanvas characterCanvas)
         {
-            MaxHealth = maxHealth;
-            CurrentHealth = maxHealth;
+            MaxFocus = characterDataBase.MaxFocus;
+            CurrentFocus = 0;
+            MaxHealth = characterDataBase.MaxHealth;
+            CurrentHealth = characterDataBase.MaxHealth;
             SetAllStatus();
             
             OnHealthChanged += characterCanvas.UpdateHealthText;

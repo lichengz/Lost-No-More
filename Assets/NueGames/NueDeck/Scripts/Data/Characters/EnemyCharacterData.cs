@@ -64,45 +64,60 @@ namespace NueGames.NueDeck.Scripts.Data.Characters
             }
             return abilityList[nextAbilityIndex].Key;
         }
+        
+        private bool IsNeedFocus(CharacterStats characterStats)
+        {
+            return characterStats.CurrentFocus < characterStats.MaxFocus;
+        }
 
         public List<KeyValuePair<EnemyAbilityData, float>> GetPossibleAbilitiesList(CharacterStats characterStats)
         {
             float currentFocus = characterStats.CurrentFocus;
 
             List<KeyValuePair<EnemyAbilityData, float>> list = new List<KeyValuePair<EnemyAbilityData, float>>();
-            int count = EnemyAbilityList.Count;
+            int abilityCount = EnemyAbilityList.Count;
             float ranTotal = 0;
             List<float> tmpRan = new List<float>();
             
-            // Ability
-            for(int i = 0; i < count; i++)
+            // Focus Possibility
+            bool isNeedFocus = IsNeedFocus(characterStats);
+            float focusPossibility = 0;
+            if (isNeedFocus)
+            {
+                focusPossibility = characterStats.CurrentFocus == 0 ? 100 : Random.Range(0, 100);
+                ranTotal += focusPossibility;
+            }
+
+            // Ability Possibility
+            for(int i = 0; i < abilityCount; i++)
             {
                 float possibility = Random.Range(0, 100);
                 ranTotal += possibility;
                 tmpRan.Add(possibility);
             }
             
+            // Add Focus and Ability to result list
+            float curPossibility = tmpRan[0] / ranTotal * 100;
+            
             // Focus
-            if (currentFocus == 0)
+            if (characterStats.CurrentFocus == 0)
             {
-                float possibility = Random.Range(0, 100);
-                ranTotal += possibility;
-                tmpRan.Add(possibility);
+                // must focus since current focus is 0
+                list.Add(new KeyValuePair<EnemyAbilityData, float>(enemyFocusList[0], focusPossibility));
+                return list;
             }
-
-            for (int i = 0; i < tmpRan.Count; i++)
+            
+            if(isNeedFocus)
             {
-                float curPossibility = tmpRan[i] / ranTotal * 100;
-                if (i > enemyAbilityList.Count - 1)
-                {
-                    // Focus
-                    list.Add(new KeyValuePair<EnemyAbilityData, float>(enemyFocusList[0], curPossibility));
-                }
-                else
-                {
-                    // Ability
-                    list.Add(new KeyValuePair<EnemyAbilityData, float>(enemyAbilityList[i], curPossibility));
-                }
+                list.Add(new KeyValuePair<EnemyAbilityData, float>(enemyFocusList[0], focusPossibility / ranTotal * 100));
+            }
+            
+            for (int i = 0; i < abilityCount; i++)
+            {
+                curPossibility = tmpRan[i] / ranTotal * 100;
+
+                // Ability
+                list.Add(new KeyValuePair<EnemyAbilityData, float>(enemyAbilityList[i], curPossibility));
             }
             
             return list;

@@ -66,13 +66,13 @@ namespace NueGames.NueDeck.Scripts.Characters
         private int _usedAbilityCount;
         private void ShowNextAbility()
         {
-            List<KeyValuePair<EnemyAbilityData, float>> abilityList = EnemyCharacterData.GetPossibleAbilitiesList();
+            List<KeyValuePair<EnemyAbilityData, float>> abilityList = EnemyCharacterData.GetPossibleAbilitiesList(CharacterStats);
             DisplayPossibleIntents(abilityList);
             // NextAbility = EnemyCharacterData.GetAbility(_usedAbilityCount);
             NextAbility = EnemyCharacterData.GetAbility(abilityList);
             EnemyCanvas.IntentImage.sprite = NextAbility.Intention.IntentionSprite;
 
-            
+
             if (NextAbility.HideActionValue)
             {
                 EnemyCanvas.NextActionValueText.gameObject.SetActive(false);
@@ -95,26 +95,29 @@ namespace NueGames.NueDeck.Scripts.Characters
             Transform intentPrefab = intentsRoot.GetChild(0);
             int expectedCount = list.Count;
             int currentCount = intentsRoot.childCount;
+            // spawn more if need more
             if (currentCount < expectedCount)
             {
                 for (int i = currentCount; i < expectedCount; i++)
                 {
                     Instantiate(intentPrefab, Vector3.zero, Quaternion.identity, intentsRoot);
                 }
-            }else if (currentCount > expectedCount)
-            {
-                for (int i = expectedCount; i < currentCount; i++)
-                {
-                    Destroy(intentsRoot.GetChild(0));
-                }
             }
-
+            // setup what are needed
             for (int i = 0; i < expectedCount; i++)
             {
                 KeyValuePair<EnemyAbilityData, float> pair = list[i];
                 Transform intent = intentsRoot.GetChild(i);
                 intent.GetComponent<Image>().sprite = pair.Key.Intention.IntentionSprite;
                 intent.GetComponentInChildren<TextMeshProUGUI>().text = pair.Value.ToString("0.##\\%");
+            }
+            // destroy what are not needed
+            if (currentCount > expectedCount)
+            {
+                for (int i = expectedCount; i < currentCount; i++)
+                {
+                    Destroy(intentsRoot.GetChild(i).gameObject);
+                }
             }
         }
         #endregion

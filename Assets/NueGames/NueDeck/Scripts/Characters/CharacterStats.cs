@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using NueGames.NueDeck.Scripts.Enums;
+using UnityEngine;
 
 namespace NueGames.NueDeck.Scripts.Characters
 {
@@ -29,6 +30,7 @@ namespace NueGames.NueDeck.Scripts.Characters
     }
     public class CharacterStats
     { 
+        public int CurrentFocus { get; set; }
         public int MaxHealth { get; set; }
         public int CurrentHealth { get; set; }
         public bool IsStunned { get;  set; }
@@ -103,7 +105,13 @@ namespace NueGames.NueDeck.Scripts.Characters
         {
             CurrentHealth = targetCurrentHealth <=0 ? 1 : targetCurrentHealth;
             OnHealthChanged?.Invoke(CurrentHealth,MaxHealth);
-        } 
+        }
+
+        public void Focus(int value)
+        {
+            CurrentFocus += value;
+            Debug.Log("!!! Enemy now has fucos " + CurrentFocus);
+        }
         
         public void Heal(int value)
         {

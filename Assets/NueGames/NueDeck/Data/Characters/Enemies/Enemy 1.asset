@@ -26,6 +26,7 @@ MonoBehaviour:
     - actionType: 0
       minActionValue: 6
       maxActionValue: 6
+    focusCost: 0
   - name: Block
     intention: {fileID: 11400000, guid: b0b1e7f2f78bb444eb1666e4accf22ee, type: 2}
     hideActionValue: 0
@@ -33,3 +34,14 @@ MonoBehaviour:
     - actionType: 3
       minActionValue: 5
       maxActionValue: 8
+    focusCost: 0
+  enemyFocusList:
+  - name: Focus Small
+    intention: {fileID: 11400000, guid: 735eb78c01aaec647847e376da831e65, type: 2}
+    hideActionValue: 0
+    actionList:
+    - actionType: 4
+      minActionValue: 1
+      maxActionValue: 1
+    focusCost: 0
+    focusEarned: 1

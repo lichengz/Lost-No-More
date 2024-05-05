@@ -17,6 +17,8 @@ namespace NueGames.NueDeck.Scripts.Data.Characters
         [SerializeField] private bool followAbilityPattern;
         [SerializeField] private List<EnemyAbilityData> enemyAbilityList;
         public List<EnemyAbilityData> EnemyAbilityList => enemyAbilityList;
+        [SerializeField] private List<EnemyFocusData> enemyFocusList;
+        public List<EnemyFocusData> EnemyFocusList => enemyFocusList;
 
         public EnemyBase EnemyPrefab => enemyPrefab;
 
@@ -63,23 +65,46 @@ namespace NueGames.NueDeck.Scripts.Data.Characters
             return abilityList[nextAbilityIndex].Key;
         }
 
-        public List<KeyValuePair<EnemyAbilityData, float>> GetPossibleAbilitiesList()
+        public List<KeyValuePair<EnemyAbilityData, float>> GetPossibleAbilitiesList(CharacterStats characterStats)
         {
-            int count = EnemyAbilityList.Count;
+            float currentFocus = characterStats.CurrentFocus;
+
             List<KeyValuePair<EnemyAbilityData, float>> list = new List<KeyValuePair<EnemyAbilityData, float>>();
+            int count = EnemyAbilityList.Count;
             float ranTotal = 0;
             List<float> tmpRan = new List<float>();
+            
+            // Ability
             for(int i = 0; i < count; i++)
             {
                 float possibility = Random.Range(0, 100);
                 ranTotal += possibility;
                 tmpRan.Add(possibility);
             }
-
-            for (int i = 0; i < count; i++)
+            
+            // Focus
+            if (currentFocus == 0)
             {
-                list.Add(new KeyValuePair<EnemyAbilityData, float>(enemyAbilityList[i], tmpRan[i] / ranTotal * 100));
+                float possibility = Random.Range(0, 100);
+                ranTotal += possibility;
+                tmpRan.Add(possibility);
             }
+
+            for (int i = 0; i < tmpRan.Count; i++)
+            {
+                float curPossibility = tmpRan[i] / ranTotal * 100;
+                if (i > enemyAbilityList.Count - 1)
+                {
+                    // Focus
+                    list.Add(new KeyValuePair<EnemyAbilityData, float>(enemyFocusList[0], curPossibility));
+                }
+                else
+                {
+                    // Ability
+                    list.Add(new KeyValuePair<EnemyAbilityData, float>(enemyAbilityList[i], curPossibility));
+                }
+            }
+            
             return list;
         }
     }
@@ -92,6 +117,7 @@ namespace NueGames.NueDeck.Scripts.Data.Characters
         [SerializeField] private EnemyIntentionData intention;
         [SerializeField] private bool hideActionValue;
         [SerializeField] private List<EnemyActionData> actionList;
+        [SerializeField] private float focusCost;
         public string Name => name;
         public EnemyIntentionData Intention => intention;
         public List<EnemyActionData> ActionList => actionList;
@@ -106,6 +132,12 @@ namespace NueGames.NueDeck.Scripts.Data.Characters
         [SerializeField] private int maxActionValue;
         public EnemyActionType ActionType => actionType;
         public int ActionValue => Random.Range(minActionValue,maxActionValue);
+        
+    }
+    
+    [Serializable]
+    public class EnemyFocusData : EnemyAbilityData
+    {
         
     }
     

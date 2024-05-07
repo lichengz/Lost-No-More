@@ -10,6 +10,7 @@ namespace NueGames.NueDeck.Scripts.Characters.Allies
             if (NueUIManager != null)
                 CharacterStats.OnHealthChanged += NueUIManager.InformationCanvas.SetHealthText;
             CharacterStats.SetCurrentHealth(CharacterStats.CurrentHealth);
+            CharacterStats.SetCurrentFocus(CharacterStats.CurrentFocus);
         }
     }
 }

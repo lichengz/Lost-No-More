@@ -40,6 +40,7 @@ namespace NueGames.NueDeck.Scripts.Characters
        
         public Action OnDeath;
         public Action<int, int> OnHealthChanged;
+        public Action<int, int> OnFocusChanged;
         private readonly Action<StatusType,int> OnStatusChanged;
         private readonly Action<StatusType, int> OnStatusApplied;
         private readonly Action<StatusType> OnStatusCleared;
@@ -59,6 +60,7 @@ namespace NueGames.NueDeck.Scripts.Characters
             SetAllStatus();
             
             OnHealthChanged += characterCanvas.UpdateHealthText;
+            OnFocusChanged += characterCanvas.UpdateFocusText;
             OnStatusChanged += characterCanvas.UpdateStatusText;
             OnStatusApplied += characterCanvas.ApplyStatus;
             OnStatusCleared += characterCanvas.ClearStatus;
@@ -110,11 +112,23 @@ namespace NueGames.NueDeck.Scripts.Characters
             CurrentHealth = targetCurrentHealth <=0 ? 1 : targetCurrentHealth;
             OnHealthChanged?.Invoke(CurrentHealth,MaxHealth);
         }
+        
+        public void SetCurrentFocus(int targetCurrentFocus)
+        {
+            CurrentFocus = targetCurrentFocus <=0 ? 0 : targetCurrentFocus;
+            OnFocusChanged?.Invoke(CurrentFocus,MaxFocus);
+        }
 
-        public void Focus(int value)
+        public void EarnFocus(int value)
         {
             CurrentFocus += value;
-            Debug.Log("!!! Enemy now has fucos " + CurrentFocus);
+            OnFocusChanged?.Invoke(CurrentFocus,MaxFocus);
+        }
+        
+        public void SpendFocus(int value)
+        {
+            CurrentFocus -= value;
+            OnFocusChanged?.Invoke(CurrentFocus,MaxFocus);
         }
         
         public void Heal(int value)

@@ -74,13 +74,17 @@ namespace NueGames.NueDeck.Scripts.Card
         {
             if (!IsPlayable) return;
          
+#if ACTION_QUEUE
+            CombatManager.PlayerActionQueue.Enqueue(CardUseRoutine(self, targetCharacter, allEnemies, allAllies));
+#else
             StartCoroutine(CardUseRoutine(self, targetCharacter, allEnemies, allAllies));
+#endif
         }
 
         private IEnumerator CardUseRoutine(CharacterBase self,CharacterBase targetCharacter, List<EnemyBase> allEnemies, List<AllyBase> allAllies)
         {
             SpendMana(CardData.ManaCost);
-            
+            self.CharacterStats.SpendFocus(CardData.ManaCost);
             foreach (var playerAction in CardData.CardActionDataList)
             {
                 yield return new WaitForSeconds(playerAction.ActionDelay);

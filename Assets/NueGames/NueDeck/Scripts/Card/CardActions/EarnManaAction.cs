@@ -14,6 +14,7 @@ namespace NueGames.NueDeck.Scripts.Card.CardActions
             else
                 Debug.LogError("There is no CombatManager");
 
+            actionParameters.SelfCharacter.CharacterStats.EarnFocus(Mathf.RoundToInt(actionParameters.Value));
             if (FxManager != null)
                 FxManager.PlayFx(actionParameters.SelfCharacter.transform, FxType.Buff);
             

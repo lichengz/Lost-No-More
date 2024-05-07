@@ -56,6 +56,9 @@ namespace NueGames.NueDeck.Scripts.Managers
         protected NueUIManager NueUIManager => NueUIManager.Instance;
 
         protected CollectionManager CollectionManager => CollectionManager.Instance;
+        
+        private Queue<IEnumerator> playerActionQueue = new Queue<IEnumerator> ();
+        public Queue<IEnumerator> PlayerActionQueue => playerActionQueue;
 
         #endregion
         
@@ -136,8 +139,10 @@ namespace NueGames.NueDeck.Scripts.Managers
                         EndTurn();
                         return;
                     }
-                    
+
+#if AUTO_MANA
                     NueGameManager.PersistentGameplayData.CurrentMana = NueGameManager.PersistentGameplayData.MaxMana;
+#endif
                    
                     CollectionManager.DrawCards(NueGameManager.PersistentGameplayData.DrawCount);
                     
@@ -169,7 +174,34 @@ namespace NueGames.NueDeck.Scripts.Managers
         #region Public Methods
         public void EndTurn()
         {
+#if ACTION_QUEUE
+            StartCoroutine(ExecutePlayerActionQueue(() =>
+            {
+                CurrentCombatStateType = CombatStateType.EnemyTurn;
+            }));
+#else
             CurrentCombatStateType = CombatStateType.EnemyTurn;
+#endif
+            
+        }
+
+        private IEnumerator ExecutePlayerActionQueue(Action callback)
+        {
+            yield return StartCoroutine(ExecuteNextActionInPlayerActionQueue());
+            callback();
+        }
+        
+        IEnumerator ExecuteNextActionInPlayerActionQueue()
+        {
+            if (PlayerActionQueue.Count > 0)
+            {
+                yield return StartCoroutine(PlayerActionQueue.Dequeue());
+            }
+            else
+            {
+                yield break;
+            }
+            StartCoroutine(ExecuteNextActionInPlayerActionQueue());
         }
         public void OnAllyDeath(AllyBase targetAlly)
         {

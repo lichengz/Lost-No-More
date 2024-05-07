@@ -24,6 +24,7 @@ namespace NueGames.NueDeck.Scripts.Characters
         [SerializeField] protected Transform descriptionRoot;
         [SerializeField] protected StatusIconsData statusIconsData;
         [SerializeField] protected TextMeshProUGUI currentHealthText;
+        [SerializeField] protected TextMeshProUGUI currentFocusText;
         
         #region Cache
 
@@ -92,6 +93,7 @@ namespace NueGames.NueDeck.Scripts.Characters
         }
         
         public void UpdateHealthText(int currentHealth,int maxHealth) =>  currentHealthText.text = $"{currentHealth}/{maxHealth}";
+        public void UpdateFocusText(int currentFocus,int maxFocus) =>  currentFocusText.text = $"{currentFocus}/{maxFocus}";
         public void SetHighlight(bool open) => highlightRoot.gameObject.SetActive(open);
        
         #endregion

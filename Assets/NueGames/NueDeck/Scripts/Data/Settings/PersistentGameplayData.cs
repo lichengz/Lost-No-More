@@ -53,7 +53,11 @@ namespace NueGames.NueDeck.Scripts.Data.Settings
         {
             DrawCount = _gameplayData.DrawCount;
             MaxMana = _gameplayData.MaxMana;
+#if AUTO_MANA
             CurrentMana = MaxMana;
+#else
+            CurrentMana = 0;
+#endif
             CanUseCards = true;
             CanSelectCards = true;
             IsRandomHand = _gameplayData.IsRandomHand;

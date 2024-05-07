@@ -58,7 +58,7 @@ MonoBehaviour:
   textSpawnRoot: {fileID: 2463341200963954810}
   OnHurtEvent: {fileID: 11400000, guid: efc258764f832a3499fe1f3a375b6787, type: 2}
   enemyCharacterData: {fileID: 11400000, guid: ab4b1aaf78f9c8747a5708430c68f051, type: 2}
-  enemyCanvas: {fileID: 7422249267346903092}
+  enemyCanvas: {fileID: 4744915083427692604}
   deathSoundProfileData: {fileID: 11400000, guid: 7e15e2a10065ab54c8eaf26154af0156, type: 2}
   startCombatEvent: {fileID: 11400000, guid: 38cdb510ef9fd0147aec19fc9b0c0972, type: 2}
   _closeUIDialogueEvent: {fileID: 11400000, guid: 42c4c250df06bf84b97d11a23c36d47c, type: 2}
@@ -617,9 +617,9 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4144906860905666486, guid: 4a531535fdf794e4893297aa72798b93, type: 3}
   m_PrefabInstance: {fileID: 4120552361307352797}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7422249267346903092 stripped
+--- !u!114 &4744915083427692604 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6786367083920932585, guid: 4a531535fdf794e4893297aa72798b93, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8716285703182806753, guid: 4a531535fdf794e4893297aa72798b93, type: 3}
   m_PrefabInstance: {fileID: 4120552361307352797}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}

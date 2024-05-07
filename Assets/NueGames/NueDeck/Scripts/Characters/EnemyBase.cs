@@ -38,6 +38,7 @@ namespace NueGames.NueDeck.Scripts.Characters
             CharacterStats = new CharacterStats(EnemyCharacterData,EnemyCanvas);
             CharacterStats.OnDeath += OnDeath;
             CharacterStats.SetCurrentHealth(CharacterStats.CurrentHealth);
+            CharacterStats.SetCurrentFocus(CharacterStats.CurrentFocus);
             CombatManager.OnAllyTurnStarted += ShowNextAbility;
             CombatManager.OnEnemyTurnStarted += CharacterStats.TriggerAllStatus;
             OnHurtEvent.OnEventRaised += UpdateDialogueLua;
@@ -153,6 +154,8 @@ namespace NueGames.NueDeck.Scripts.Characters
 
             var startRot = transform.localRotation;
             var endRot = Quaternion.Euler(60, 0, 60);
+
+            CharacterStats.SpendFocus(targetAbility.FocusCost);
             
             yield return StartCoroutine(MoveToTargetRoutine(waitFrame, startPos, endPos, startRot, endRot, 5));
           

@@ -13,14 +13,9 @@ MonoBehaviour:
   m_Name: InitalDeck
   m_EditorClassIdentifier: 
   deckId: deck_default
+  deckName: 
   cardList:
   - {fileID: 11400000, guid: 1e43cdb39f5836b44942f367125cadde, type: 2}
-  - {fileID: 11400000, guid: 1e43cdb39f5836b44942f367125cadde, type: 2}
-  - {fileID: 11400000, guid: 1e43cdb39f5836b44942f367125cadde, type: 2}
-  - {fileID: 11400000, guid: 1e43cdb39f5836b44942f367125cadde, type: 2}
   - {fileID: 11400000, guid: e1783ca46b526944c969405b4c0a29ec, type: 2}
-  - {fileID: 11400000, guid: e1783ca46b526944c969405b4c0a29ec, type: 2}
-  - {fileID: 11400000, guid: e1783ca46b526944c969405b4c0a29ec, type: 2}
-  - {fileID: 11400000, guid: e1783ca46b526944c969405b4c0a29ec, type: 2}
-  - {fileID: 11400000, guid: 1e43cdb39f5836b44942f367125cadde, type: 2}
   - {fileID: 11400000, guid: 1e5671bf6b0f90b428df809497a2f125, type: 2}
+  - {fileID: 11400000, guid: 5d6b018bf7dec554ba0a2eabfd89d3b1, type: 2}

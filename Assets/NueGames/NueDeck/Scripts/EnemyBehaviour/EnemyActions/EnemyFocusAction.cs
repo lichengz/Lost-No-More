@@ -12,7 +12,7 @@ namespace NueGames.NueDeck.Scripts.EnemyBehaviour.EnemyActions
         {
             if (!actionParameters.TargetCharacter) return;
             int value = (int)actionParameters.Value;
-            actionParameters.TargetCharacter.CharacterStats.Focus(value);
+            actionParameters.TargetCharacter.CharacterStats.EarnFocus(value);
             if (FxManager != null)
             {
                 FxManager.PlayFx(actionParameters.TargetCharacter.transform,FxType.Buff);

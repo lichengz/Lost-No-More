@@ -38,6 +38,7 @@ namespace NueGames.NueDeck.Scripts.Characters
             
             CharacterStats.OnDeath += OnDeath;
             CharacterStats.SetCurrentHealth(CharacterStats.CurrentHealth);
+            CharacterStats.SetCurrentFocus(CharacterStats.CurrentFocus);
             
             if (CombatManager != null)
                 CombatManager.OnAllyTurnStarted += CharacterStats.TriggerAllStatus;

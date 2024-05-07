@@ -75,7 +75,15 @@ namespace NueGames.NueDeck.Scripts.Data.Characters
             float currentFocus = characterStats.CurrentFocus;
 
             List<KeyValuePair<EnemyAbilityData, float>> list = new List<KeyValuePair<EnemyAbilityData, float>>();
-            int abilityCount = EnemyAbilityList.Count;
+            List<EnemyAbilityData> enemyAbilityWithEnoughFocus = new List<EnemyAbilityData>();
+            foreach (var ability in EnemyAbilityList)
+            {
+                if (ability.FocusCost <= currentFocus)
+                {
+                    enemyAbilityWithEnoughFocus.Add(ability);
+                }
+            }
+            int abilityCount = enemyAbilityWithEnoughFocus.Count;
             float ranTotal = 0;
             List<float> tmpRan = new List<float>();
             
@@ -117,7 +125,7 @@ namespace NueGames.NueDeck.Scripts.Data.Characters
                 curPossibility = tmpRan[i] / ranTotal * 100;
 
                 // Ability
-                list.Add(new KeyValuePair<EnemyAbilityData, float>(enemyAbilityList[i], curPossibility));
+                list.Add(new KeyValuePair<EnemyAbilityData, float>(enemyAbilityWithEnoughFocus[i], curPossibility));
             }
             
             return list;
@@ -132,10 +140,11 @@ namespace NueGames.NueDeck.Scripts.Data.Characters
         [SerializeField] private EnemyIntentionData intention;
         [SerializeField] private bool hideActionValue;
         [SerializeField] private List<EnemyActionData> actionList;
-        [SerializeField] private float focusCost;
+        [SerializeField] private int focusCost;
         public string Name => name;
         public EnemyIntentionData Intention => intention;
         public List<EnemyActionData> ActionList => actionList;
+        public int FocusCost => focusCost;
         public bool HideActionValue => hideActionValue;
     }
     

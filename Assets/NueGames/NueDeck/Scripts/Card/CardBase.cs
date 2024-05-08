@@ -75,7 +75,10 @@ namespace NueGames.NueDeck.Scripts.Card
             if (!IsPlayable) return;
          
 #if ACTION_QUEUE
-            CombatManager.PlayerActionQueue.Enqueue(CardUseRoutine(self, targetCharacter, allEnemies, allAllies));
+            SpendMana(CardData.ManaCost);
+            self.CharacterStats.SpendFocus(CardData.ManaCost);
+            CollectionManager.OnCardPlayed(this);
+            CombatManager.PlayerActionQueue.Enqueue(new KeyValuePair<CardActionType, IEnumerator>(GetActionType(), CardUseRoutine(self, targetCharacter, allEnemies, allAllies)));
 #else
             StartCoroutine(CardUseRoutine(self, targetCharacter, allEnemies, allAllies));
 #endif
@@ -83,8 +86,10 @@ namespace NueGames.NueDeck.Scripts.Card
 
         private IEnumerator CardUseRoutine(CharacterBase self,CharacterBase targetCharacter, List<EnemyBase> allEnemies, List<AllyBase> allAllies)
         {
+#if !ACTION_QUEUE
             SpendMana(CardData.ManaCost);
             self.CharacterStats.SpendFocus(CardData.ManaCost);
+#endif
             foreach (var playerAction in CardData.CardActionDataList)
             {
                 yield return new WaitForSeconds(playerAction.ActionDelay);
@@ -95,7 +100,14 @@ namespace NueGames.NueDeck.Scripts.Card
                         .DoAction(new CardActionParameters(playerAction.ActionValue,
                             target,self,CardData,this));
             }
+#if !ACTION_QUEUE
             CollectionManager.OnCardPlayed(this);
+#endif
+        }
+
+        private CardActionType GetActionType()
+        {
+            return CardData.CardActionDataList[0].CardActionType;
         }
 
         private static List<CharacterBase> DetermineTargets(CharacterBase targetCharacter, List<EnemyBase> allEnemies, List<AllyBase> allAllies,

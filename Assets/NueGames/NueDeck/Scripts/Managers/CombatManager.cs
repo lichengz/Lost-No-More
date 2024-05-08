@@ -57,8 +57,23 @@ namespace NueGames.NueDeck.Scripts.Managers
 
         protected CollectionManager CollectionManager => CollectionManager.Instance;
         
-        private Queue<IEnumerator> playerActionQueue = new Queue<IEnumerator> ();
-        public Queue<IEnumerator> PlayerActionQueue => playerActionQueue;
+        private Queue<KeyValuePair<CardActionType, IEnumerator>> playerActionQueue = new Queue<KeyValuePair<CardActionType, IEnumerator>> ();
+        public Queue<KeyValuePair<CardActionType, IEnumerator>> PlayerActionQueue => playerActionQueue;
+        private Queue<IEnumerator> playerFocusActionQueue = new Queue<IEnumerator> ();
+        public Queue<IEnumerator> PlayerFocusActionQueue => playerFocusActionQueue;
+        private Queue<IEnumerator> playerPrepareActionQueue = new Queue<IEnumerator> ();
+        public Queue<IEnumerator> PlayerPrepareActionQueue => playerPrepareActionQueue;
+        private Queue<IEnumerator> playerAttackActionQueue = new Queue<IEnumerator> ();
+        public Queue<IEnumerator> PlayerAttackActionQueue => playerAttackActionQueue;
+        
+        private Queue<KeyValuePair<EnemyIntentionType, IEnumerator>> enemyActionQueue = new Queue<KeyValuePair<EnemyIntentionType, IEnumerator>> ();
+        public Queue<KeyValuePair<EnemyIntentionType, IEnumerator>> EnemyActionQueue => enemyActionQueue;
+        private Queue<IEnumerator> enemyFocusActionQueue = new Queue<IEnumerator> ();
+        public Queue<IEnumerator> EnemyFocusActionQueue => enemyFocusActionQueue;
+        private Queue<IEnumerator> enemyPrepareActionQueue = new Queue<IEnumerator> ();
+        public Queue<IEnumerator> EnemyPrepareActionQueue => enemyPrepareActionQueue;
+        private Queue<IEnumerator> enemyAttackActionQueue = new Queue<IEnumerator> ();
+        public Queue<IEnumerator> EnemyAttackActionQueue => enemyAttackActionQueue;
 
         #endregion
         
@@ -174,28 +189,89 @@ namespace NueGames.NueDeck.Scripts.Managers
         #region Public Methods
         public void EndTurn()
         {
-#if ACTION_QUEUE
-            StartCoroutine(ExecutePlayerActionQueue(() =>
-            {
-                CurrentCombatStateType = CombatStateType.EnemyTurn;
-            }));
-#else
             CurrentCombatStateType = CombatStateType.EnemyTurn;
-#endif
+        }
+
+        IEnumerator EndTurnCalculation()
+        {
+            while (playerActionQueue.Count > 0)
+            {
+                var playerAction = playerActionQueue.Dequeue();
+                if (playerAction.Key == CardActionType.EarnMana)
+                {
+                    playerFocusActionQueue.Enqueue(playerAction.Value);
+                }else if (playerAction.Key == CardActionType.Attack)
+                {
+                    playerAttackActionQueue.Enqueue(playerAction.Value);
+                }
+                else
+                {
+                    playerPrepareActionQueue.Enqueue(playerAction.Value);
+                }
+            }
             
+            while (enemyActionQueue.Count > 0)
+            {
+                var enemyAction = enemyActionQueue.Dequeue();
+                if (enemyAction.Key == EnemyIntentionType.Focus)
+                {
+                    enemyFocusActionQueue.Enqueue(enemyAction.Value);
+                }else if (enemyAction.Key == EnemyIntentionType.Attack)
+                {
+                    enemyAttackActionQueue.Enqueue(enemyAction.Value);
+                }
+                else
+                {
+                    enemyPrepareActionQueue.Enqueue(enemyAction.Value);
+                }
+            }
+
+            yield return ExecutePlayerAndEnemyActionQueues(playerFocusActionQueue, enemyFocusActionQueue);
+            yield return ExecutePlayerAndEnemyActionQueues(playerPrepareActionQueue, enemyPrepareActionQueue);
+            yield return ExecutePlayerAndEnemyActionQueues(playerAttackActionQueue, enemyAttackActionQueue);
+        }
+
+        IEnumerator ExecutePlayerAndEnemyActionQueues(Queue<IEnumerator> playerQueue, Queue<IEnumerator> enemyQueue)
+        {
+            List<IEnumerator> focusActions = new List<IEnumerator>();
+            focusActions.Add(ExecuteActionQueue(playerQueue, null));
+            focusActions.Add(ExecuteActionQueue(enemyQueue, null));
+            yield return StartCoroutine(WaitForAll(focusActions));
+        }
+        
+        private IEnumerator WaitForAll(List<IEnumerator> coroutines)
+        {
+            int tally = 0;
+
+            foreach(IEnumerator c in coroutines)
+            {
+                StartCoroutine(RunCoroutine(c));
+            }
+
+            while (tally > 0)
+            {
+                yield return null;
+            }
+
+            IEnumerator RunCoroutine(IEnumerator c)
+            {
+                tally++;
+                yield return StartCoroutine(c);
+                tally--;
+            }
         }
 
         private IEnumerator ExecutePlayerActionQueue(Action callback)
         {
             yield return StartCoroutine(ExecuteNextActionInPlayerActionQueue());
-            callback();
+            callback?.Invoke();
         }
         
         IEnumerator ExecuteNextActionInPlayerActionQueue()
         {
             if (PlayerActionQueue.Count > 0)
             {
-                yield return StartCoroutine(PlayerActionQueue.Dequeue());
+                yield return StartCoroutine(PlayerActionQueue.Dequeue().Value);
             }
             else
             {
@@ -203,6 +279,45 @@ namespace NueGames.NueDeck.Scripts.Managers
             }
             StartCoroutine(ExecuteNextActionInPlayerActionQueue());
         }
+        
+        private IEnumerator ExecutePEnemyActionQueue(Action callback)
+        {
+            yield return StartCoroutine(ExecuteNextActionInEnemyActionQueue());
+            callback?.Invoke();
+        }
+        
+        IEnumerator ExecuteNextActionInEnemyActionQueue()
+        {
+            if (EnemyActionQueue.Count > 0)
+            {
+                yield return StartCoroutine(EnemyActionQueue.Dequeue().Value);
+            }
+            else
+            {
+                yield break;
+            }
+            StartCoroutine(ExecuteNextActionInEnemyActionQueue());
+        }
+        
+        private IEnumerator ExecuteActionQueue(Queue<IEnumerator> actionQueue, Action callback)
+        {
+            yield return StartCoroutine(ExecuteNextInActionQueue(actionQueue));
+            callback?.Invoke();
+        }
+        
+        IEnumerator ExecuteNextInActionQueue(Queue<IEnumerator> actionQueue)
+        {
+            if (actionQueue.Count > 0)
+            {
+                yield return StartCoroutine(actionQueue.Dequeue());
+            }
+            else
+            {
+                yield break;
+            }
+            StartCoroutine(ExecuteNextInActionQueue(actionQueue));
+        }
+        
         public void OnAllyDeath(AllyBase targetAlly)
         {
             var targetAllyData = NueGameManager.PersistentGameplayData.AllyList.Find(x =>
@@ -349,6 +464,10 @@ namespace NueGames.NueDeck.Scripts.Managers
                 yield return currentEnemy.StartCoroutine(nameof(EnemyExample.ActionRoutine));
                 yield return waitDelay;
             }
+
+#if ACTION_QUEUE
+            StartCoroutine(EndTurnCalculation());
+#endif
 
             if (CurrentCombatStateType != CombatStateType.EndCombat)
                 CurrentCombatStateType = CombatStateType.AllyTurn;

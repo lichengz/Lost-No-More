@@ -131,6 +131,23 @@ namespace NueGames.NueDeck.Scripts.Characters
             
             EnemyCanvas.IntentImage.gameObject.SetActive(true);
             EnemyCanvas.PossibleIntentsRoot.gameObject.SetActive(false);
+#if ACTION_QUEUE
+            CombatManager.EnemyActionQueue.Enqueue(new KeyValuePair<EnemyIntentionType, IEnumerator>(NextAbility.Intention.EnemyIntentionType, EnemyActionRoutine()));
+#else
+            if (NextAbility.Intention.EnemyIntentionType == EnemyIntentionType.Attack || NextAbility.Intention.EnemyIntentionType == EnemyIntentionType.Debuff)
+            {
+                yield return StartCoroutine(AttackRoutine(NextAbility));
+            }
+            else
+            {
+                yield return StartCoroutine(BuffRoutine(NextAbility));
+            }
+#endif
+            
+        }
+
+        IEnumerator EnemyActionRoutine()
+        {
             if (NextAbility.Intention.EnemyIntentionType == EnemyIntentionType.Attack || NextAbility.Intention.EnemyIntentionType == EnemyIntentionType.Debuff)
             {
                 yield return StartCoroutine(AttackRoutine(NextAbility));

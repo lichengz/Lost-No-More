@@ -466,7 +466,7 @@ namespace NueGames.NueDeck.Scripts.Managers
             }
 
 #if ACTION_QUEUE
-            StartCoroutine(EndTurnCalculation());
+            yield return StartCoroutine(EndTurnCalculation());
 #endif
 
             if (CurrentCombatStateType != CombatStateType.EndCombat)

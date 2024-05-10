@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using NueGames.NueDeck.Scripts.Characters;
+using NueGames.NueDeck.Scripts.Collection;
 using NueGames.NueDeck.Scripts.Data.Collection;
 using NueGames.NueDeck.Scripts.Enums;
 using NueGames.NueDeck.Scripts.Managers;
@@ -79,6 +80,32 @@ namespace NueGames.NueDeck.Scripts.Card
             self.CharacterStats.SpendFocus(CardData.ManaCost);
             CollectionManager.OnCardPlayed(this);
             CombatManager.PlayerActionQueue.Enqueue(new KeyValuePair<CardActionType, IEnumerator>(GetActionType(), CardUseRoutine(self, targetCharacter, allEnemies, allAllies)));
+            if (GetActionType() == CardActionType.EarnMana)
+            {
+                CombatManager.EndTurn();
+            }
+            else
+            {
+                if (CollectionManager.HandController.hand.Count > 0)
+                {
+                    CardBase manaCard = null;
+                    foreach (CardBase card in CollectionManager.HandController.hand)
+                    {
+                        if (card.GetActionType() == CardActionType.EarnMana)
+                        {
+                            manaCard = card;
+                            
+                        }
+                    }
+
+                    if (manaCard != null)
+                    {
+                        CollectionManager.HandController.RemoveCardFromHand(manaCard);
+                        CollectionManager.OnCardPlayed(manaCard);
+                    }
+                }
+                
+            }
 #else
             StartCoroutine(CardUseRoutine(self, targetCharacter, allEnemies, allAllies));
 #endif

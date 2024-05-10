@@ -12,11 +12,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6903f06e96c43789549f142f8956d64, type: 3}
   m_Name: 3-Block_Basic
   m_EditorClassIdentifier: 
+  _guid: e1783ca46b526944c969405b4c0a29ec
+  _name:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _previewImage: {fileID: 0}
+  _description:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _healthResorationValue: 0
+  _itemType: {fileID: 0}
+  _prefab: {fileID: 0}
   id: 3_block_basic
   cardName: Basic block
-  manaCost: 1
+  manaCost: 0
   cardSprite: {fileID: -1513487178384027574, guid: a707003c96586cc41b22ae32a9cdb636, type: 3}
+  rarity: 0
   usableWithoutTarget: 1
+  exhaustAfterPlay: 0
   cardActionDataList:
   - cardActionType: 2
     actionTargetType: 1
@@ -52,3 +77,6 @@ MonoBehaviour:
     overrideColorOnValueScaled: 0
   specialKeywordsList: 00000000
   audioType: 2
+  references:
+    version: 2
+    RefIds: []

@@ -12,11 +12,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6903f06e96c43789549f142f8956d64, type: 3}
   m_Name: 7-Power_Strength
   m_EditorClassIdentifier: 
+  _guid: 1e5671bf6b0f90b428df809497a2f125
+  _name:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _previewImage: {fileID: 0}
+  _description:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _healthResorationValue: 0
+  _itemType: {fileID: 0}
+  _prefab: {fileID: 0}
   id: 7_power_strength
   cardName: Increase strength
-  manaCost: 2
+  manaCost: 1
   cardSprite: {fileID: 21300000, guid: a0c75614ede963a46af4bc352b3faabd, type: 3}
+  rarity: 0
   usableWithoutTarget: 1
+  exhaustAfterPlay: 0
   cardActionDataList:
   - cardActionType: 3
     actionTargetType: 1
@@ -43,3 +68,6 @@ MonoBehaviour:
     overrideColorOnValueScaled: 0
   specialKeywordsList: 01000000
   audioType: 9
+  references:
+    version: 2
+    RefIds: []

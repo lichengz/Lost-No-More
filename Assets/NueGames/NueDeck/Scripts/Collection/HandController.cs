@@ -525,6 +525,17 @@ namespace NueGames.NueDeck.Scripts.Collection
 
             hand.RemoveAt(index);
         }
+        
+        public void RemoveCardFromHand(CardBase card)
+        {
+            if (updateHierarchyOrder)
+            {
+                card.transform.SetParent(transform.parent);
+                card.transform.SetSiblingIndex(transform.GetSiblingIndex() + 1);
+            }
+
+            hand.Remove(card);
+        }
 
         #endregion
 

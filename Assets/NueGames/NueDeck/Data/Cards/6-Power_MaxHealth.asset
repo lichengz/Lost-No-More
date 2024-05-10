@@ -12,11 +12,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6903f06e96c43789549f142f8956d64, type: 3}
   m_Name: 6-Power_MaxHealth
   m_EditorClassIdentifier: 
+  _guid: 9706119fd5cc9f34e90cb73be068200c
+  _name:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _previewImage: {fileID: 0}
+  _description:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _healthResorationValue: 0
+  _itemType: {fileID: 0}
+  _prefab: {fileID: 0}
   id: 6_power_maxhealth
   cardName: Increase max health
   manaCost: 2
   cardSprite: {fileID: 21300000, guid: f699460fbf1b2404bb6c2e727663fc86, type: 3}
+  rarity: 0
   usableWithoutTarget: 1
+  exhaustAfterPlay: 0
   cardActionDataList:
   - cardActionType: 4
     actionTargetType: 1
@@ -43,3 +68,6 @@ MonoBehaviour:
     overrideColorOnValueScaled: 0
   specialKeywordsList: 
   audioType: 9
+  references:
+    version: 2
+    RefIds: []

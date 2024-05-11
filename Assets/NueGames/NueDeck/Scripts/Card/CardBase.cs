@@ -80,7 +80,7 @@ namespace NueGames.NueDeck.Scripts.Card
             self.CharacterStats.SpendFocus(CardData.ManaCost);
             CollectionManager.OnCardPlayed(this);
             CombatManager.PlayerActionQueue.Enqueue(new KeyValuePair<CardActionType, IEnumerator>(GetActionType(), CardUseRoutine(self, targetCharacter, allEnemies, allAllies)));
-            if (GetActionType() == CardActionType.EarnMana)
+            if (GetActionType() == CardActionType.EarnMana || GetActionType() == CardActionType.Block)
             {
                 CombatManager.EndTurn();
             }
@@ -88,20 +88,20 @@ namespace NueGames.NueDeck.Scripts.Card
             {
                 if (CollectionManager.HandController.hand.Count > 0)
                 {
-                    CardBase manaCard = null;
+                    List<CardBase> cardsToRemove = new List<CardBase>();
                     foreach (CardBase card in CollectionManager.HandController.hand)
                     {
-                        if (card.GetActionType() == CardActionType.EarnMana)
+                        CardActionType cardActionType = card.GetActionType();
+                        if (cardActionType == CardActionType.EarnMana || cardActionType == CardActionType.Block)
                         {
-                            manaCard = card;
-                            
+                            cardsToRemove.Add(card);
                         }
                     }
 
-                    if (manaCard != null)
+                    foreach (var card in cardsToRemove)
                     {
-                        CollectionManager.HandController.RemoveCardFromHand(manaCard);
-                        CollectionManager.OnCardPlayed(manaCard);
+                        CollectionManager.HandController.RemoveCardFromHand(card);
+                        CollectionManager.OnCardPlayed(card);
                     }
                 }
                 

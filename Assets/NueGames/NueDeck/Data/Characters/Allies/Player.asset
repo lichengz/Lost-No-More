@@ -16,4 +16,4 @@ MonoBehaviour:
   characterName: Player
   characterDescription: Player Description
   maxFocus: 3
-  maxHealth: 150
+  maxHealth: 5
